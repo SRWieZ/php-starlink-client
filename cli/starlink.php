@@ -16,7 +16,7 @@ if (class_exists('\NunoMaduro\Collision\Provider')) {
 
 $dishy = new Dishy;
 
-// dump($dishy->getStatus());
+dump($dishy->getStatus());
 // dump($dishy->getObstructionMap());
 // $dishy->setSleepModeConfig(
 //     start: 120,

@@ -632,6 +632,7 @@ message DishGetDiagnosticsResponse {
 	optional 	.SpaceX.API.Device.DishGetDiagnosticsResponse.Alerts alerts = 5 [json_name="alerts"];
 	optional 	.SpaceX.API.Device.DishGetDiagnosticsResponse.DisablementCode disablement_code = 6 [json_name="disablementCode"];
 	optional 	.SpaceX.API.Device.DishGetDiagnosticsResponse.Location location = 8 [json_name="location"];
+	optional 	.SpaceX.API.Device.DishGetDiagnosticsResponse.AlignmentStats alignment_stats = 9 [json_name="alignmentStats"];
 message Alerts {
 	optional 	bool dish_is_heating = 1 [json_name="dishIsHeating"];
 	optional 	bool dish_thermal_throttle = 2 [json_name="dishThermalThrottle"];
@@ -652,6 +653,13 @@ message Location {
 	optional 	double altitude_meters = 4 [json_name="altitudeMeters"];
 	optional 	bool uncertainty_meters_valid = 5 [json_name="uncertaintyMetersValid"];
 	optional 	double uncertainty_meters = 6 [json_name="uncertaintyMeters"];
+}
+
+message AlignmentStats {
+	optional 	float boresight_azimuth_deg = 1 [json_name="boresightAzimuthDeg"];
+	optional 	float boresight_elevation_deg = 2 [json_name="boresightElevationDeg"];
+	optional 	float desired_boresight_azimuth_deg = 3 [json_name="desiredBoresightAzimuthDeg"];
+	optional 	float desired_boresight_elevation_deg = 4 [json_name="desiredBoresightElevationDeg"];
 }
 
 	enum TestResult {

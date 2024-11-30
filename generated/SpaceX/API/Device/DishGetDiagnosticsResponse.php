@@ -54,6 +54,11 @@ class DishGetDiagnosticsResponse extends \Google\Protobuf\Internal\Message
     protected $location = null;
 
     /**
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.DishGetDiagnosticsResponse.AlignmentStats alignment_stats = 9 [json_name = "alignmentStats"];</code>
+     */
+    protected $alignment_stats = null;
+
+    /**
      * Constructor.
      *
      * @param  array  $data  {
@@ -67,7 +72,8 @@ class DishGetDiagnosticsResponse extends \Google\Protobuf\Internal\Message
      * @type \SpaceX\API\Device\DishGetDiagnosticsResponse\Alerts $alerts
      * @type int $disablement_code
      * @type \SpaceX\API\Device\DishGetDiagnosticsResponse\Location $location
-     *                                                              }
+     * @type \SpaceX\API\Device\DishGetDiagnosticsResponse\AlignmentStats $alignment_stats
+     *                                                                    }
      */
     public function __construct($data = null)
     {
@@ -343,6 +349,40 @@ class DishGetDiagnosticsResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \SpaceX\API\Device\DishGetDiagnosticsResponse\Location::class);
         $this->location = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.DishGetDiagnosticsResponse.AlignmentStats alignment_stats = 9 [json_name = "alignmentStats"];</code>
+     *
+     * @return \SpaceX\API\Device\DishGetDiagnosticsResponse\AlignmentStats|null
+     */
+    public function getAlignmentStats()
+    {
+        return $this->alignment_stats;
+    }
+
+    public function hasAlignmentStats()
+    {
+        return isset($this->alignment_stats);
+    }
+
+    public function clearAlignmentStats()
+    {
+        unset($this->alignment_stats);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.DishGetDiagnosticsResponse.AlignmentStats alignment_stats = 9 [json_name = "alignmentStats"];</code>
+     *
+     * @param  \SpaceX\API\Device\DishGetDiagnosticsResponse\AlignmentStats  $var
+     * @return $this
+     */
+    public function setAlignmentStats($var)
+    {
+        GPBUtil::checkMessage($var, \SpaceX\API\Device\DishGetDiagnosticsResponse\AlignmentStats::class);
+        $this->alignment_stats = $var;
 
         return $this;
     }

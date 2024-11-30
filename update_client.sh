@@ -28,3 +28,6 @@ protoc \
   --plugin=protoc-gen-grpc=$(which grpc_php_plugin) \
   -I./proto \
   $PROTO_FILES
+
+echo -e "\033[0;32m  → Linting .php files \033[0m"
+./vendor/bin/pint
