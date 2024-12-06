@@ -95,6 +95,19 @@ class Dishy
         );
     }
 
+    public function getAlerts(): array
+    {
+        $alerts = $this->handle(new GetStatusRequest)->getDishGetStatus()->getAlerts();
+
+        $defaults = array_map(function ($key) {
+            return [substr($key, 1) => false];
+        }, array_keys(get_object_vars($alerts)));
+
+        $defaults = array_merge(...$defaults);
+
+        return array_merge($defaults, self::responseToArray($alerts));
+    }
+
     public function getObstructionMap(): array
     {
         return self::responseToArray(
