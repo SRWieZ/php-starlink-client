@@ -29,10 +29,12 @@ class Dishy
 
     public function __construct(
         public string $host = '192.168.100.1:9200',
+        public int $timeout = 1,
     ) {
         // Create a generic stub
         $this->client = new DeviceClient($this->host, [
             'credentials' => ChannelCredentials::createInsecure(),
+            'timeout' => $this->timeout,
         ]);
     }
 
