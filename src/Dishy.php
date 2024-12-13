@@ -5,6 +5,7 @@ namespace SRWieZ\StarlinkClient;
 use const Grpc\STATUS_OK;
 use const Grpc\STATUS_PERMISSION_DENIED;
 
+use DateTime;
 use Google\Protobuf\Internal\Message;
 use Grpc\ChannelCredentials;
 use SpaceX\API\Device\DeviceClient;
@@ -29,7 +30,7 @@ class Dishy
 
     public function __construct(
         public string $host = '192.168.100.1:9200',
-        public int $timeout = 1,
+        public int $timeout = 2,
     ) {
         // Create a generic stub
         $this->client = new DeviceClient($this->host, [
@@ -57,15 +58,23 @@ class Dishy
 
     /**
      * @throws GrpcCallFailedException
+     * @throws PermissionDeniedException
      */
-    public function handle(Message $request): Response
+    public function handle(Message $request, ?int $timeout = null): Response
     {
+        $options = [];
+
+        if (! is_null($timeout)) {
+            $options['timeout'] = (new DateTime)->modify("+{$timeout} seconds")->format('U.u');
+        }
+
         /** @var Response $response */
         /** @var object{code: int, details: string, metadata:array} $status */
         [$response, $status] = $this->client->Handle(
             argument: new Request([
                 self::getRequestKey($request) => new $request,
-            ])
+            ]),
+            options: $options
         )->wait();
 
         if ($status->code === STATUS_PERMISSION_DENIED) {
@@ -139,7 +148,10 @@ class Dishy
     public function getStatsHistory(): array
     {
         return self::responseToArray(
-            $this->handle(new GetHistoryRequest)->getDishGetHistory()
+            $this->handle(
+                request: new GetHistoryRequest,
+                // timeout: max($this->timeout, 10)
+            )->getDishGetHistory()
         );
     }
 
