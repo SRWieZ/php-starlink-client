@@ -15,6 +15,13 @@ if (class_exists('\NunoMaduro\Collision\Provider')) {
 }
 
 $dishy = new Dishy;
+$history = $dishy->getStatsHistory();
+
+foreach ($history as $key => $value) {
+    echo $key.': '.(is_array($value) ? count($value) : $value).PHP_EOL;
+}
+
+// dump($history['outages']);
 
 dump($dishy->getAlerts());
 // dump($dishy->getObstructionMap());
@@ -24,19 +31,19 @@ dump($dishy->getAlerts());
 // );
 // dump($dishy->getStatus());
 
-$obsMap = $dishy->getObstructionMap();
-
-(new ObstructionMapGenerator($obsMap))
-    ->transparent()
-    ->generate()
-    ->asFile('assets/obstruction_map.png');
-
-(new ObstructionMapGenerator($obsMap))
-    ->transparent(false)
-    ->grayscale()
-    ->opacity(0.95)
-    ->generate()
-    ->asFile('assets/obstruction_map_grayscale.png');
+// $obsMap = $dishy->getObstructionMap();
+//
+// (new ObstructionMapGenerator($obsMap))
+//     ->transparent()
+//     ->generate()
+//     ->asFile('assets/obstruction_map.png');
+//
+// (new ObstructionMapGenerator($obsMap))
+//     ->transparent(false)
+//     ->grayscale()
+//     ->opacity(0.95)
+//     ->generate()
+//     ->asFile('assets/obstruction_map_grayscale.png');
 
 /*
  * TODO: Some basic function to:

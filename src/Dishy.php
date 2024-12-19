@@ -28,6 +28,8 @@ class Dishy
 {
     private DeviceClient $client;
 
+    protected static int $historyBufferSize = 900;
+
     public function __construct(
         public string $host = '192.168.100.1:9200',
         public int $timeout = 2,
@@ -147,12 +149,23 @@ class Dishy
 
     public function getStatsHistory(): array
     {
-        return self::responseToArray(
+        $array = self::responseToArray(
             $this->handle(
                 request: new GetHistoryRequest,
                 // timeout: max($this->timeout, 10)
             )->getDishGetHistory()
         );
+
+        $current = (int) ($array['current'] ?? 0);
+
+        // History data is stored in a circular buffer, reorder it to be chronological
+        foreach ($array as $key => $value) {
+            if (is_array($value) && count($value) == self::$historyBufferSize) {
+                $array[$key] = self::reorderHistoryData($value, $current);
+            }
+        }
+
+        return $array;
     }
 
     public function unstow(): void
@@ -238,6 +251,23 @@ class Dishy
         ]);
 
         $this->handle($request);
+    }
+
+    public static function reorderHistoryData(array $array, int $current): array
+    {
+        // If current is less than buffer size, return valid samples
+        if ($current < self::$historyBufferSize) {
+            return $array;
+        }
+
+        // Calculate the rotation point
+        $startIndex = $current % self::$historyBufferSize;
+
+        // Slice and combine the array to reorder
+        return array_merge(
+            array_slice($array, $startIndex),
+            array_slice($array, 0, $startIndex)
+        );
     }
 
     public function __destruct()
