@@ -108,12 +108,20 @@ class Dishy
         );
     }
 
+    private function snakeToCamel(string $string): string
+    {
+        $parts = explode('_', strtolower($string));
+        $parts = array_map('mb_ucfirst', $parts);
+
+        return mb_lcfirst(implode('', $parts));
+    }
+
     public function getAlerts(): array
     {
         $alerts = $this->handle(new GetStatusRequest)->getDishGetStatus()->getAlerts();
 
-        $defaults = array_map(function ($key) {
-            return [substr($key, 1) => false];
+        $defaults = array_map(function (string $key) {
+            return [self::snakeToCamel(substr($key, 1)) => false];
         }, array_keys(get_object_vars($alerts)));
 
         $defaults = array_merge(...$defaults);
