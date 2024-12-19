@@ -114,6 +114,7 @@ message DishGetStatusResponse {
 	optional 	int32 seconds_until_swupdate_reboot_possible = 1031 [json_name="secondsUntilSwupdateRebootPossible"];
 	optional 	bool high_power_test_mode = 1033 [json_name="highPowerTestMode"];
 	repeated 	string connected_routers = 1040 [json_name="connectedRouters"];
+	optional 	.SpaceX.API.Device.PLCStats plc_stats = 1041 [json_name="plcStats"];
 }
 
 message DishGetObstructionMapRequest {
@@ -189,9 +190,6 @@ message DishObstructionStats {
 	optional 	float time_obstructed = 9 [json_name="timeObstructed"];
 	optional 	float valid_s = 4 [json_name="validS"];
 	optional 	uint32 patches_valid = 10 [json_name="patchesValid"];
-	optional 	float avg_prolonged_obstruction_duration_s = 6 [json_name="avgProlongedObstructionDurationS"];
-	optional 	float avg_prolonged_obstruction_interval_s = 7 [json_name="avgProlongedObstructionIntervalS"];
-	optional 	bool avg_prolonged_obstruction_valid = 8 [json_name="avgProlongedObstructionValid"];
 }
 
 message InitializationDurationSeconds {
@@ -298,6 +296,36 @@ message ResetButtonRequest {
 }
 
 message ResetButtonResponse {
+}
+
+message PLCStats {
+	optional 	bool receiving_plc = 1 [json_name="receivingPlc"];
+	optional 	uint32 average_time_to_empty = 2 [json_name="averageTimeToEmpty"];
+	optional 	uint32 average_time_to_full = 3 [json_name="averageTimeToFull"];
+	optional 	uint32 battery_health = 4 [json_name="batteryHealth"];
+	optional 	uint32 hardware_revision_id = 5 [json_name="hardwareRevisionId"];
+	optional 	bool permanent_failure = 6 [json_name="permanentFailure"];
+	optional 	.SpaceX.API.Device.PLCPortStats port_1_stats = 7 [json_name="port1Stats"];
+	optional 	.SpaceX.API.Device.PLCPortStats port_2_stats = 8 [json_name="port2Stats"];
+	optional 	.SpaceX.API.Device.PLCPortStats port_3_stats = 9 [json_name="port3Stats"];
+	optional 	.SpaceX.API.Device.PLCStats.ProtocolRevision plc_revision = 10 [json_name="plcRevision"];
+	optional 	bool safety_mode_active = 11 [json_name="safetyModeActive"];
+	optional 	uint32 state_of_charge = 12 [json_name="stateOfCharge"];
+	optional 	uint32 thermal_throttle_level = 13 [json_name="thermalThrottleLevel"];
+	enum ProtocolRevision {
+		REV_D = 0;
+	}
+}
+
+message PLCPortStats {
+	optional 	uint32 power = 1 [json_name="power"];
+	optional 	.SpaceX.API.Device.PLCPortStats.PortStatus status = 2 [json_name="status"];
+	enum PortStatus {
+		INACTIVE = 0;
+		CHARGING = 1;
+		DISCHARGING = 2;
+		MOISTURE_DETECTED = 3;
+	}
 }
 
 enum UserMobilityClass {

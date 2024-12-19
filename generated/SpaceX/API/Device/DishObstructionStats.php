@@ -39,21 +39,6 @@ class DishObstructionStats extends \Google\Protobuf\Internal\Message
     protected $patches_valid = null;
 
     /**
-     * Generated from protobuf field <code>optional float avg_prolonged_obstruction_duration_s = 6 [json_name = "avgProlongedObstructionDurationS"];</code>
-     */
-    protected $avg_prolonged_obstruction_duration_s = null;
-
-    /**
-     * Generated from protobuf field <code>optional float avg_prolonged_obstruction_interval_s = 7 [json_name = "avgProlongedObstructionIntervalS"];</code>
-     */
-    protected $avg_prolonged_obstruction_interval_s = null;
-
-    /**
-     * Generated from protobuf field <code>optional bool avg_prolonged_obstruction_valid = 8 [json_name = "avgProlongedObstructionValid"];</code>
-     */
-    protected $avg_prolonged_obstruction_valid = null;
-
-    /**
      * Constructor.
      *
      * @param  array  $data  {
@@ -64,10 +49,7 @@ class DishObstructionStats extends \Google\Protobuf\Internal\Message
      * @type float $time_obstructed
      * @type float $valid_s
      * @type int $patches_valid
-     * @type float $avg_prolonged_obstruction_duration_s
-     * @type float $avg_prolonged_obstruction_interval_s
-     * @type bool $avg_prolonged_obstruction_valid
-     *            }
+     *           }
      */
     public function __construct($data = null)
     {
@@ -241,108 +223,6 @@ class DishObstructionStats extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->patches_valid = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>optional float avg_prolonged_obstruction_duration_s = 6 [json_name = "avgProlongedObstructionDurationS"];</code>
-     *
-     * @return float
-     */
-    public function getAvgProlongedObstructionDurationS()
-    {
-        return isset($this->avg_prolonged_obstruction_duration_s) ? $this->avg_prolonged_obstruction_duration_s : 0.0;
-    }
-
-    public function hasAvgProlongedObstructionDurationS()
-    {
-        return isset($this->avg_prolonged_obstruction_duration_s);
-    }
-
-    public function clearAvgProlongedObstructionDurationS()
-    {
-        unset($this->avg_prolonged_obstruction_duration_s);
-    }
-
-    /**
-     * Generated from protobuf field <code>optional float avg_prolonged_obstruction_duration_s = 6 [json_name = "avgProlongedObstructionDurationS"];</code>
-     *
-     * @param  float  $var
-     * @return $this
-     */
-    public function setAvgProlongedObstructionDurationS($var)
-    {
-        GPBUtil::checkFloat($var);
-        $this->avg_prolonged_obstruction_duration_s = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>optional float avg_prolonged_obstruction_interval_s = 7 [json_name = "avgProlongedObstructionIntervalS"];</code>
-     *
-     * @return float
-     */
-    public function getAvgProlongedObstructionIntervalS()
-    {
-        return isset($this->avg_prolonged_obstruction_interval_s) ? $this->avg_prolonged_obstruction_interval_s : 0.0;
-    }
-
-    public function hasAvgProlongedObstructionIntervalS()
-    {
-        return isset($this->avg_prolonged_obstruction_interval_s);
-    }
-
-    public function clearAvgProlongedObstructionIntervalS()
-    {
-        unset($this->avg_prolonged_obstruction_interval_s);
-    }
-
-    /**
-     * Generated from protobuf field <code>optional float avg_prolonged_obstruction_interval_s = 7 [json_name = "avgProlongedObstructionIntervalS"];</code>
-     *
-     * @param  float  $var
-     * @return $this
-     */
-    public function setAvgProlongedObstructionIntervalS($var)
-    {
-        GPBUtil::checkFloat($var);
-        $this->avg_prolonged_obstruction_interval_s = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>optional bool avg_prolonged_obstruction_valid = 8 [json_name = "avgProlongedObstructionValid"];</code>
-     *
-     * @return bool
-     */
-    public function getAvgProlongedObstructionValid()
-    {
-        return isset($this->avg_prolonged_obstruction_valid) ? $this->avg_prolonged_obstruction_valid : false;
-    }
-
-    public function hasAvgProlongedObstructionValid()
-    {
-        return isset($this->avg_prolonged_obstruction_valid);
-    }
-
-    public function clearAvgProlongedObstructionValid()
-    {
-        unset($this->avg_prolonged_obstruction_valid);
-    }
-
-    /**
-     * Generated from protobuf field <code>optional bool avg_prolonged_obstruction_valid = 8 [json_name = "avgProlongedObstructionValid"];</code>
-     *
-     * @param  bool  $var
-     * @return $this
-     */
-    public function setAvgProlongedObstructionValid($var)
-    {
-        GPBUtil::checkBool($var);
-        $this->avg_prolonged_obstruction_valid = $var;
 
         return $this;
     }

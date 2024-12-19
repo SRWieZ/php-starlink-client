@@ -184,6 +184,11 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     private $connected_routers;
 
     /**
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.PLCStats plc_stats = 1041 [json_name = "plcStats"];</code>
+     */
+    protected $plc_stats = null;
+
+    /**
      * Constructor.
      *
      * @param  array  $data  {
@@ -223,7 +228,8 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
      * @type int $seconds_until_swupdate_reboot_possible
      * @type bool $high_power_test_mode
      * @type array<string>|\Google\Protobuf\Internal\RepeatedField $connected_routers
-     *                                                             }
+     * @type \SpaceX\API\Device\PLCStats $plc_stats
+     *                                   }
      */
     public function __construct($data = null)
     {
@@ -1373,6 +1379,40 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->connected_routers = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.PLCStats plc_stats = 1041 [json_name = "plcStats"];</code>
+     *
+     * @return \SpaceX\API\Device\PLCStats|null
+     */
+    public function getPlcStats()
+    {
+        return $this->plc_stats;
+    }
+
+    public function hasPlcStats()
+    {
+        return isset($this->plc_stats);
+    }
+
+    public function clearPlcStats()
+    {
+        unset($this->plc_stats);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.PLCStats plc_stats = 1041 [json_name = "plcStats"];</code>
+     *
+     * @param  \SpaceX\API\Device\PLCStats  $var
+     * @return $this
+     */
+    public function setPlcStats($var)
+    {
+        GPBUtil::checkMessage($var, \SpaceX\API\Device\PLCStats::class);
+        $this->plc_stats = $var;
 
         return $this;
     }
