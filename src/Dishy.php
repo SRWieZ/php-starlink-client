@@ -255,11 +255,6 @@ class Dishy
 
     public static function reorderHistoryData(array $array, int $current): array
     {
-        // If current is less than buffer size, return valid samples
-        if ($current < self::$historyBufferSize) {
-            return $array;
-        }
-
         // Calculate the rotation point
         $startIndex = $current % self::$historyBufferSize;
 

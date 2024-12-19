@@ -36,8 +36,12 @@ it('reorder history data with the circula buffer under 900', function () {
 
     expect($test_array[0])->toBe(1)
         ->and($test_array[99])->toBe(100)
-        ->and($result[0])->toBe(1)
-        ->and($result[99])->toBe(100);
+        ->and($test_array[100])->toBe(0)
+        ->and($test_array[799])->toBe(0)
+        ->and($result[0])->toBe(0)
+        ->and($result[799])->toBe(0)
+        ->and($result[800])->toBe(1)
+        ->and($result[899])->toBe(100);
 });
 
 it('reorder history data with the circula buffer at 900', function () {
