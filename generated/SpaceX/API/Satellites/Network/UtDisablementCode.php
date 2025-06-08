@@ -73,6 +73,16 @@ class UtDisablementCode
      */
     const UNSUPPORTED_VERSION = 13;
 
+    /**
+     * Generated from protobuf enum <code>MOVING_TOO_FAST_FOR_POLICY = 14;</code>
+     */
+    const MOVING_TOO_FAST_FOR_POLICY = 14;
+
+    /**
+     * Generated from protobuf enum <code>UNDER_AVIATION_FLYOVER_LIMITS = 15;</code>
+     */
+    const UNDER_AVIATION_FLYOVER_LIMITS = 15;
+
     private static $valueToName = [
         self::UNKNOWN_STATE => 'UNKNOWN_STATE',
         self::OKAY => 'OKAY',
@@ -86,6 +96,8 @@ class UtDisablementCode
         self::UNKNOWN_LOCATION => 'UNKNOWN_LOCATION',
         self::ACCOUNT_DISABLED => 'ACCOUNT_DISABLED',
         self::UNSUPPORTED_VERSION => 'UNSUPPORTED_VERSION',
+        self::MOVING_TOO_FAST_FOR_POLICY => 'MOVING_TOO_FAST_FOR_POLICY',
+        self::UNDER_AVIATION_FLYOVER_LIMITS => 'UNDER_AVIATION_FLYOVER_LIMITS',
     ];
 
     public static function name($value)

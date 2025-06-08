@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+# brew install grpcurl grpc protobuf
+
 # Get protoset file from your starlink
 echo -e "\033[0;32m→ Retrieving protoset file from your Starlink \033[0m"
 grpcurl -plaintext -protoset-out "assets/starlink.protoset" "192.168.100.1:9200" describe SpaceX.API.Device.Device
@@ -31,3 +33,5 @@ protoc \
 
 echo -e "\033[0;32m→ Linting .php files \033[0m"
 ./vendor/bin/pint
+
+composer dump-autoload

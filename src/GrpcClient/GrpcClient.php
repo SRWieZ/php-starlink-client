@@ -81,10 +81,16 @@ class GrpcClient
             return [];
         }
 
-        return (array) json_decode(
+        $return = (array) json_decode(
             json: $response->serializeToJsonString(),
             associative: true,
         );
+
+        if (json_last_error() !== JSON_ERROR_NONE) {
+            throw new \RuntimeException('Failed to decode JSON response: '.json_last_error_msg());
+        }
+
+        return $return;
     }
 
     public function disconnect(): void

@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package SpaceX.API.Telemetron.Public.Integrations;
+
+option go_package = "spacex.com/api/telemetron/public/integrations/utpoplink";
+
+import "spacex_api/telemetron/public/common/time.proto";
+
+message UtPoPLinkReport {
+	optional 	.SpaceX.API.Telemetron.Public.Common.TimestampInfo slot_timestamp = 1 [json_name="slotTimestamp"];
+	optional 	uint32 pop_id = 2 [json_name="popId"];
+	optional 	uint32 pop_rack_id = 3 [json_name="popRackId"];
+	repeated 	.SpaceX.API.Telemetron.Public.Integrations.UtPoPLinkStats stats = 4 [json_name="stats"];
+	optional 	string pop_version = 5 [json_name="popVersion"];
+}
+
+message UtPoPLinkStats {
+	optional 	.SpaceX.API.Telemetron.Public.Common.TimestampInfo measurement_timestamp = 1 [json_name="measurementTimestamp"];
+	optional 	string ut_id = 2 [json_name="utId"];
+	optional 	int64 pop_rx_sdu_cnt = 3 [json_name="popRxSduCnt"];
+	optional 	int64 sdu_loss_cnt = 4 [json_name="sduLossCnt"];
+	optional 	uint64 uplink_bytes_last_15s = 5 [json_name="uplinkBytesLast15s"];
+	optional 	uint64 downlink_bytes_last_15s = 6 [json_name="downlinkBytesLast15s"];
+	optional 	uint64 uplink_cplane_acl_other_violations_last_15s = 7 [json_name="uplinkCplaneAclOtherViolationsLast15s"];
+}
+
+enum RateLimitReason {
+	UNKNOWN = 0;
+	NO_LIMIT = 1;
+	POLICY_LIMIT = 2;
+	USER_CUSTOM_LIMIT = 3;
+	OVERAGE_LIMIT = 5;
+}
+

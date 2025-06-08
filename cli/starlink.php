@@ -36,7 +36,7 @@ $wifi = new Wifi;
 //     mac_address: '74:24:9f:77:eb:88',
 //     given_name: 'MacBookPro Corentin',
 // ));
-dump($wifi->getClients());
+// dump($wifi->getClients());
 // dd($wifi->getWifiGetClientHistory(
 //         mac_address: '74:24:9f:77:eb:88',
 // ));
@@ -44,6 +44,8 @@ dump($wifi->getClients());
 //         client_id: '1172153257',
 // ));
 // dump($dishy->getAlerts());
+// dump($dishy->getLocation());
+// dump($dishy->getStatsHistory());
 // dump($dishy->getObstructionMap());
 // $dishy->setSleepModeConfig(
 //     start: 120,
