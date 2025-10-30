@@ -88,6 +88,11 @@ class BootReason
      */
     const HARDWARE_WATCHDOG = 15;
 
+    /**
+     * Generated from protobuf enum <code>REPEATER_UNTRUSTED_FDIR = 16;</code>
+     */
+    const REPEATER_UNTRUSTED_FDIR = 16;
+
     private static $valueToName = [
         self::BOOT_REASON_UNKNOWN => 'BOOT_REASON_UNKNOWN',
         self::FORGOTTEN => 'FORGOTTEN',
@@ -104,6 +109,7 @@ class BootReason
         self::AVIATION_OUTAGE_FDIR => 'AVIATION_OUTAGE_FDIR',
         self::SOFTWARE_WATCHDOG => 'SOFTWARE_WATCHDOG',
         self::HARDWARE_WATCHDOG => 'HARDWARE_WATCHDOG',
+        self::REPEATER_UNTRUSTED_FDIR => 'REPEATER_UNTRUSTED_FDIR',
     ];
 
     public static function name($value)

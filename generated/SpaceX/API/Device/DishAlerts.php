@@ -74,16 +74,6 @@ class DishAlerts extends \Google\Protobuf\Internal\Message
     protected $is_power_save_idle = null;
 
     /**
-     * Generated from protobuf field <code>optional bool moving_while_not_mobile = 12 [json_name = "movingWhileNotMobile"];</code>
-     */
-    protected $moving_while_not_mobile = null;
-
-    /**
-     * Generated from protobuf field <code>optional bool moving_too_fast_for_policy = 15 [json_name = "movingTooFastForPolicy"];</code>
-     */
-    protected $moving_too_fast_for_policy = null;
-
-    /**
      * Generated from protobuf field <code>optional bool dbf_telem_stale = 14 [json_name = "dbfTelemStale"];</code>
      */
     protected $dbf_telem_stale = null;
@@ -114,6 +104,16 @@ class DishAlerts extends \Google\Protobuf\Internal\Message
     protected $router_water_detected = null;
 
     /**
+     * Generated from protobuf field <code>optional bool upsu_router_port_slow = 22 [json_name = "upsuRouterPortSlow"];</code>
+     */
+    protected $upsu_router_port_slow = null;
+
+    /**
+     * Generated from protobuf field <code>optional bool no_ethernet_link = 23 [json_name = "noEthernetLink"];</code>
+     */
+    protected $no_ethernet_link = null;
+
+    /**
      * Constructor.
      *
      * @param  array  $data  {
@@ -131,14 +131,14 @@ class DishAlerts extends \Google\Protobuf\Internal\Message
      * @type bool $is_heating
      * @type bool $power_supply_thermal_throttle
      * @type bool $is_power_save_idle
-     * @type bool $moving_while_not_mobile
-     * @type bool $moving_too_fast_for_policy
      * @type bool $dbf_telem_stale
      * @type bool $low_motor_current
      * @type bool $lower_signal_than_predicted
      * @type bool $obstruction_map_reset
      * @type bool $dish_water_detected
      * @type bool $router_water_detected
+     * @type bool $upsu_router_port_slow
+     * @type bool $no_ethernet_link
      *            }
      */
     public function __construct($data = null)
@@ -556,74 +556,6 @@ class DishAlerts extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>optional bool moving_while_not_mobile = 12 [json_name = "movingWhileNotMobile"];</code>
-     *
-     * @return bool
-     */
-    public function getMovingWhileNotMobile()
-    {
-        return isset($this->moving_while_not_mobile) ? $this->moving_while_not_mobile : false;
-    }
-
-    public function hasMovingWhileNotMobile()
-    {
-        return isset($this->moving_while_not_mobile);
-    }
-
-    public function clearMovingWhileNotMobile()
-    {
-        unset($this->moving_while_not_mobile);
-    }
-
-    /**
-     * Generated from protobuf field <code>optional bool moving_while_not_mobile = 12 [json_name = "movingWhileNotMobile"];</code>
-     *
-     * @param  bool  $var
-     * @return $this
-     */
-    public function setMovingWhileNotMobile($var)
-    {
-        GPBUtil::checkBool($var);
-        $this->moving_while_not_mobile = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>optional bool moving_too_fast_for_policy = 15 [json_name = "movingTooFastForPolicy"];</code>
-     *
-     * @return bool
-     */
-    public function getMovingTooFastForPolicy()
-    {
-        return isset($this->moving_too_fast_for_policy) ? $this->moving_too_fast_for_policy : false;
-    }
-
-    public function hasMovingTooFastForPolicy()
-    {
-        return isset($this->moving_too_fast_for_policy);
-    }
-
-    public function clearMovingTooFastForPolicy()
-    {
-        unset($this->moving_too_fast_for_policy);
-    }
-
-    /**
-     * Generated from protobuf field <code>optional bool moving_too_fast_for_policy = 15 [json_name = "movingTooFastForPolicy"];</code>
-     *
-     * @param  bool  $var
-     * @return $this
-     */
-    public function setMovingTooFastForPolicy($var)
-    {
-        GPBUtil::checkBool($var);
-        $this->moving_too_fast_for_policy = $var;
-
-        return $this;
-    }
-
-    /**
      * Generated from protobuf field <code>optional bool dbf_telem_stale = 14 [json_name = "dbfTelemStale"];</code>
      *
      * @return bool
@@ -823,6 +755,74 @@ class DishAlerts extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->router_water_detected = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional bool upsu_router_port_slow = 22 [json_name = "upsuRouterPortSlow"];</code>
+     *
+     * @return bool
+     */
+    public function getUpsuRouterPortSlow()
+    {
+        return isset($this->upsu_router_port_slow) ? $this->upsu_router_port_slow : false;
+    }
+
+    public function hasUpsuRouterPortSlow()
+    {
+        return isset($this->upsu_router_port_slow);
+    }
+
+    public function clearUpsuRouterPortSlow()
+    {
+        unset($this->upsu_router_port_slow);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional bool upsu_router_port_slow = 22 [json_name = "upsuRouterPortSlow"];</code>
+     *
+     * @param  bool  $var
+     * @return $this
+     */
+    public function setUpsuRouterPortSlow($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->upsu_router_port_slow = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional bool no_ethernet_link = 23 [json_name = "noEthernetLink"];</code>
+     *
+     * @return bool
+     */
+    public function getNoEthernetLink()
+    {
+        return isset($this->no_ethernet_link) ? $this->no_ethernet_link : false;
+    }
+
+    public function hasNoEthernetLink()
+    {
+        return isset($this->no_ethernet_link);
+    }
+
+    public function clearNoEthernetLink()
+    {
+        unset($this->no_ethernet_link);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional bool no_ethernet_link = 23 [json_name = "noEthernetLink"];</code>
+     *
+     * @param  bool  $var
+     * @return $this
+     */
+    public function setNoEthernetLink($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->no_ethernet_link = $var;
 
         return $this;
     }

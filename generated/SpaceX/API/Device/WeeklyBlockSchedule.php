@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WeeklyBlockSchedule</code>
@@ -29,7 +30,7 @@ class WeeklyBlockSchedule extends \Google\Protobuf\Internal\Message
      * @param  array  $data  {
      *                       Optional. Data for populating the Message object.
      *
-     * @type array<\SpaceX\API\Device\WeeklyBlockSchedule\BlockRange>|\Google\Protobuf\Internal\RepeatedField $block_ranges
+     * @type \SpaceX\API\Device\WeeklyBlockSchedule\BlockRange[] $block_ranges
      * @type string $group_id
      *              }
      */
@@ -42,7 +43,7 @@ class WeeklyBlockSchedule extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WeeklyBlockSchedule.BlockRange block_ranges = 1 [json_name = "blockRanges"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\SpaceX\API\Device\WeeklyBlockSchedule\BlockRange>
      */
     public function getBlockRanges()
     {
@@ -52,7 +53,7 @@ class WeeklyBlockSchedule extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WeeklyBlockSchedule.BlockRange block_ranges = 1 [json_name = "blockRanges"];</code>
      *
-     * @param  array<\SpaceX\API\Device\WeeklyBlockSchedule\BlockRange>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\WeeklyBlockSchedule\BlockRange[]  $var
      * @return $this
      */
     public function setBlockRanges($var)

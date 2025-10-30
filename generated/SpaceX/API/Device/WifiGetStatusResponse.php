@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiGetStatusResponse</code>
@@ -37,6 +38,11 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated string ipv6_wan_addresses = 1017 [json_name = "ipv6WanAddresses"];</code>
      */
     private $ipv6_wan_addresses;
+
+    /**
+     * Generated from protobuf field <code>optional uint32 hops_from_controller = 1034 [json_name = "hopsFromController"];</code>
+     */
+    protected $hops_from_controller = null;
 
     /**
      * Generated from protobuf field <code>optional float ping_drop_rate = 1004 [json_name = "pingDropRate"];</code>
@@ -189,6 +195,16 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
     protected $secs_since_last_public_ipv4_change = null;
 
     /**
+     * Generated from protobuf field <code>optional bool using_individualized_calibration = 1032 [json_name = "usingIndividualizedCalibration"];</code>
+     */
+    protected $using_individualized_calibration = null;
+
+    /**
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.CalibrationPartitionsState calibration_partitions_state = 1033 [json_name = "calibrationPartitionsState"];</code>
+     */
+    protected $calibration_partitions_state = null;
+
+    /**
      * Constructor.
      *
      * @param  array  $data  {
@@ -198,7 +214,8 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
      * @type \SpaceX\API\Device\DeviceState $device_state
      * @type bool $captive_portal_enabled
      * @type string $ipv4_wan_address
-     * @type array<string>|\Google\Protobuf\Internal\RepeatedField $ipv6_wan_addresses
+     * @type string[] $ipv6_wan_addresses
+     * @type int $hops_from_controller
      * @type float $ping_drop_rate
      * @type float $ping_drop_rate_5m
      * @type float $ping_latency_ms
@@ -216,12 +233,12 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
      * @type \SpaceX\API\Device\WifiAlerts $alerts
      * @type bool $is_aviation
      * @type \SpaceX\API\Device\WifiConfig $config
-     * @type array<\SpaceX\API\Device\WifiClient>|\Google\Protobuf\Internal\RepeatedField $clients
+     * @type \SpaceX\API\Device\WifiClient[] $clients
      * @type bool $has_client_index
      * @type int $client_index
      * @type bool $is_aviation_conformed
      * @type \SpaceX\API\Device\RadiusStatsMap $radius_stats
-     * @type array<\SpaceX\API\Device\DhcpServer>|\Google\Protobuf\Internal\RepeatedField $dhcp_servers
+     * @type \SpaceX\API\Device\DhcpServer[] $dhcp_servers
      * @type \SpaceX\API\Device\PoeStats $poe_stats
      * @type string $dish_id
      * @type int $dish_disablement_code
@@ -229,7 +246,9 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
      * @type \SpaceX\API\Device\WifiSoftwareUpdateStats $software_update_stats
      * @type \SpaceX\API\Device\WifiSetupRequirement $setup_requirement
      * @type float $secs_since_last_public_ipv4_change
-     *             }
+     * @type bool $using_individualized_calibration
+     * @type int $calibration_partitions_state
+     *           }
      */
     public function __construct($data = null)
     {
@@ -376,7 +395,7 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated string ipv6_wan_addresses = 1017 [json_name = "ipv6WanAddresses"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getIpv6WanAddresses()
     {
@@ -386,13 +405,47 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated string ipv6_wan_addresses = 1017 [json_name = "ipv6WanAddresses"];</code>
      *
-     * @param  array<string>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  string[]  $var
      * @return $this
      */
     public function setIpv6WanAddresses($var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->ipv6_wan_addresses = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional uint32 hops_from_controller = 1034 [json_name = "hopsFromController"];</code>
+     *
+     * @return int
+     */
+    public function getHopsFromController()
+    {
+        return isset($this->hops_from_controller) ? $this->hops_from_controller : 0;
+    }
+
+    public function hasHopsFromController()
+    {
+        return isset($this->hops_from_controller);
+    }
+
+    public function clearHopsFromController()
+    {
+        unset($this->hops_from_controller);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional uint32 hops_from_controller = 1034 [json_name = "hopsFromController"];</code>
+     *
+     * @param  int  $var
+     * @return $this
+     */
+    public function setHopsFromController($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->hops_from_controller = $var;
 
         return $this;
     }
@@ -978,7 +1031,7 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiClient clients = 3000 [json_name = "clients"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\SpaceX\API\Device\WifiClient>
      */
     public function getClients()
     {
@@ -988,7 +1041,7 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiClient clients = 3000 [json_name = "clients"];</code>
      *
-     * @param  array<\SpaceX\API\Device\WifiClient>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\WifiClient[]  $var
      * @return $this
      */
     public function setClients($var)
@@ -1138,7 +1191,7 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.DhcpServer dhcp_servers = 1019 [json_name = "dhcpServers"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\SpaceX\API\Device\DhcpServer>
      */
     public function getDhcpServers()
     {
@@ -1148,7 +1201,7 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.DhcpServer dhcp_servers = 1019 [json_name = "dhcpServers"];</code>
      *
-     * @param  array<\SpaceX\API\Device\DhcpServer>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\DhcpServer[]  $var
      * @return $this
      */
     public function setDhcpServers($var)
@@ -1393,6 +1446,74 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkFloat($var);
         $this->secs_since_last_public_ipv4_change = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional bool using_individualized_calibration = 1032 [json_name = "usingIndividualizedCalibration"];</code>
+     *
+     * @return bool
+     */
+    public function getUsingIndividualizedCalibration()
+    {
+        return isset($this->using_individualized_calibration) ? $this->using_individualized_calibration : false;
+    }
+
+    public function hasUsingIndividualizedCalibration()
+    {
+        return isset($this->using_individualized_calibration);
+    }
+
+    public function clearUsingIndividualizedCalibration()
+    {
+        unset($this->using_individualized_calibration);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional bool using_individualized_calibration = 1032 [json_name = "usingIndividualizedCalibration"];</code>
+     *
+     * @param  bool  $var
+     * @return $this
+     */
+    public function setUsingIndividualizedCalibration($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->using_individualized_calibration = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.CalibrationPartitionsState calibration_partitions_state = 1033 [json_name = "calibrationPartitionsState"];</code>
+     *
+     * @return int
+     */
+    public function getCalibrationPartitionsState()
+    {
+        return isset($this->calibration_partitions_state) ? $this->calibration_partitions_state : 0;
+    }
+
+    public function hasCalibrationPartitionsState()
+    {
+        return isset($this->calibration_partitions_state);
+    }
+
+    public function clearCalibrationPartitionsState()
+    {
+        unset($this->calibration_partitions_state);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.CalibrationPartitionsState calibration_partitions_state = 1033 [json_name = "calibrationPartitionsState"];</code>
+     *
+     * @param  int  $var
+     * @return $this
+     */
+    public function setCalibrationPartitionsState($var)
+    {
+        GPBUtil::checkEnum($var, \SpaceX\API\Device\CalibrationPartitionsState::class);
+        $this->calibration_partitions_state = $var;
 
         return $this;
     }

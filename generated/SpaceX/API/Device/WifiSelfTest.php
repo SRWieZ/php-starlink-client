@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiSelfTest</code>
@@ -46,8 +47,8 @@ class WifiSelfTest extends \Google\Protobuf\Internal\Message
      *
      * @type bool $total_success
      * @type \SpaceX\API\Device\WifiSelfTest\TestResult $fused
-     * @type array<\SpaceX\API\Device\WifiSelfTest\TestResult>|\Google\Protobuf\Internal\RepeatedField $eth_phys
-     * @type array<\SpaceX\API\Device\WifiSelfTest\TestResult>|\Google\Protobuf\Internal\RepeatedField $pcis
+     * @type \SpaceX\API\Device\WifiSelfTest\TestResult[] $eth_phys
+     * @type \SpaceX\API\Device\WifiSelfTest\TestResult[] $pcis
      * @type \SpaceX\API\Device\WifiSelfTest\TestResult $bl2_prod
      *                                                  }
      */
@@ -128,7 +129,7 @@ class WifiSelfTest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiSelfTest.TestResult eth_phys = 3 [json_name = "ethPhys"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\SpaceX\API\Device\WifiSelfTest\TestResult>
      */
     public function getEthPhys()
     {
@@ -138,7 +139,7 @@ class WifiSelfTest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiSelfTest.TestResult eth_phys = 3 [json_name = "ethPhys"];</code>
      *
-     * @param  array<\SpaceX\API\Device\WifiSelfTest\TestResult>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\WifiSelfTest\TestResult[]  $var
      * @return $this
      */
     public function setEthPhys($var)
@@ -152,7 +153,7 @@ class WifiSelfTest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiSelfTest.TestResult pcis = 4 [json_name = "pcis"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\SpaceX\API\Device\WifiSelfTest\TestResult>
      */
     public function getPcis()
     {
@@ -162,7 +163,7 @@ class WifiSelfTest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiSelfTest.TestResult pcis = 4 [json_name = "pcis"];</code>
      *
-     * @param  array<\SpaceX\API\Device\WifiSelfTest\TestResult>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\WifiSelfTest\TestResult[]  $var
      * @return $this
      */
     public function setPcis($var)

@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiGetClientHistoryResponse</code>
@@ -50,10 +51,10 @@ class WifiGetClientHistoryResponse extends \Google\Protobuf\Internal\Message
      *                       Optional. Data for populating the Message object.
      *
      * @type int|string $current
-     * @type array<float>|\Google\Protobuf\Internal\RepeatedField $tx_throughput_mbps
-     * @type array<float>|\Google\Protobuf\Internal\RepeatedField $rx_throughput_mbps
-     * @type array<int>|\Google\Protobuf\Internal\RepeatedField $throughput_limited
-     * @type array<float>|\Google\Protobuf\Internal\RepeatedField $rx_rate_mbps
+     * @type float[] $tx_throughput_mbps
+     * @type float[] $rx_throughput_mbps
+     * @type int[] $throughput_limited
+     * @type float[] $rx_rate_mbps
      * @type string $rssi
      *              }
      */
@@ -100,7 +101,7 @@ class WifiGetClientHistoryResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated float tx_throughput_mbps = 2 [json_name = "txThroughputMbps"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<float>
      */
     public function getTxThroughputMbps()
     {
@@ -110,7 +111,7 @@ class WifiGetClientHistoryResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated float tx_throughput_mbps = 2 [json_name = "txThroughputMbps"];</code>
      *
-     * @param  array<float>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  float[]  $var
      * @return $this
      */
     public function setTxThroughputMbps($var)
@@ -124,7 +125,7 @@ class WifiGetClientHistoryResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated float rx_throughput_mbps = 3 [json_name = "rxThroughputMbps"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<float>
      */
     public function getRxThroughputMbps()
     {
@@ -134,7 +135,7 @@ class WifiGetClientHistoryResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated float rx_throughput_mbps = 3 [json_name = "rxThroughputMbps"];</code>
      *
-     * @param  array<float>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  float[]  $var
      * @return $this
      */
     public function setRxThroughputMbps($var)
@@ -148,7 +149,7 @@ class WifiGetClientHistoryResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiGetClientHistoryResponse.WifiLimitedReason throughput_limited = 4 [json_name = "throughputLimited"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getThroughputLimited()
     {
@@ -158,7 +159,7 @@ class WifiGetClientHistoryResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiGetClientHistoryResponse.WifiLimitedReason throughput_limited = 4 [json_name = "throughputLimited"];</code>
      *
-     * @param  array<int>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  int[]  $var
      * @return $this
      */
     public function setThroughputLimited($var)
@@ -172,7 +173,7 @@ class WifiGetClientHistoryResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated float rx_rate_mbps = 5 [json_name = "rxRateMbps"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<float>
      */
     public function getRxRateMbps()
     {
@@ -182,7 +183,7 @@ class WifiGetClientHistoryResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated float rx_rate_mbps = 5 [json_name = "rxRateMbps"];</code>
      *
-     * @param  array<float>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  float[]  $var
      * @return $this
      */
     public function setRxRateMbps($var)

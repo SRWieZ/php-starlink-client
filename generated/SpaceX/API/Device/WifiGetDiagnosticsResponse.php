@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiGetDiagnosticsResponse</code>
@@ -42,8 +43,8 @@ class WifiGetDiagnosticsResponse extends \Google\Protobuf\Internal\Message
      * @type string $id
      * @type string $hardware_version
      * @type string $software_version
-     * @type array<\SpaceX\API\Device\WifiGetDiagnosticsResponse\Network>|\Google\Protobuf\Internal\RepeatedField $networks
-     *                                                                                                            }
+     * @type \SpaceX\API\Device\WifiGetDiagnosticsResponse\Network[] $networks
+     *                                                               }
      */
     public function __construct($data = null)
     {
@@ -156,7 +157,7 @@ class WifiGetDiagnosticsResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiGetDiagnosticsResponse.Network networks = 4 [json_name = "networks"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\SpaceX\API\Device\WifiGetDiagnosticsResponse\Network>
      */
     public function getNetworks()
     {
@@ -166,7 +167,7 @@ class WifiGetDiagnosticsResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiGetDiagnosticsResponse.Network networks = 4 [json_name = "networks"];</code>
      *
-     * @param  array<\SpaceX\API\Device\WifiGetDiagnosticsResponse\Network>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\WifiGetDiagnosticsResponse\Network[]  $var
      * @return $this
      */
     public function setNetworks($var)

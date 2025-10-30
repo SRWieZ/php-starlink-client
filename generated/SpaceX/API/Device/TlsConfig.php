@@ -24,6 +24,16 @@ class TlsConfig extends \Google\Protobuf\Internal\Message
     protected $cert = null;
 
     /**
+     * Generated from protobuf field <code>optional string client_ca_cert = 3 [json_name = "clientCaCert"];</code>
+     */
+    protected $client_ca_cert = null;
+
+    /**
+     * Generated from protobuf field <code>optional string server_ca_cert = 4 [json_name = "serverCaCert"];</code>
+     */
+    protected $server_ca_cert = null;
+
+    /**
      * Constructor.
      *
      * @param  array  $data  {
@@ -31,6 +41,8 @@ class TlsConfig extends \Google\Protobuf\Internal\Message
      *
      * @type string $key
      * @type string $cert
+     * @type string $client_ca_cert
+     * @type string $server_ca_cert
      *              }
      */
     public function __construct($data = null)
@@ -103,6 +115,74 @@ class TlsConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, true);
         $this->cert = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional string client_ca_cert = 3 [json_name = "clientCaCert"];</code>
+     *
+     * @return string
+     */
+    public function getClientCaCert()
+    {
+        return isset($this->client_ca_cert) ? $this->client_ca_cert : '';
+    }
+
+    public function hasClientCaCert()
+    {
+        return isset($this->client_ca_cert);
+    }
+
+    public function clearClientCaCert()
+    {
+        unset($this->client_ca_cert);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional string client_ca_cert = 3 [json_name = "clientCaCert"];</code>
+     *
+     * @param  string  $var
+     * @return $this
+     */
+    public function setClientCaCert($var)
+    {
+        GPBUtil::checkString($var, true);
+        $this->client_ca_cert = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional string server_ca_cert = 4 [json_name = "serverCaCert"];</code>
+     *
+     * @return string
+     */
+    public function getServerCaCert()
+    {
+        return isset($this->server_ca_cert) ? $this->server_ca_cert : '';
+    }
+
+    public function hasServerCaCert()
+    {
+        return isset($this->server_ca_cert);
+    }
+
+    public function clearServerCaCert()
+    {
+        unset($this->server_ca_cert);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional string server_ca_cert = 4 [json_name = "serverCaCert"];</code>
+     *
+     * @param  string  $var
+     * @return $this
+     */
+    public function setServerCaCert($var)
+    {
+        GPBUtil::checkString($var, true);
+        $this->server_ca_cert = $var;
 
         return $this;
     }

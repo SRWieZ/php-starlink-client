@@ -44,24 +44,29 @@ class PositionSource
     const STARLINK = 5;
 
     /**
-     * Generated from protobuf enum <code>GNC_GPS = 6;</code>
+     * Generated from protobuf enum <code>GNC_FUSED = 6;</code>
      */
-    const GNC_GPS = 6;
+    const GNC_FUSED = 6;
 
     /**
-     * Generated from protobuf enum <code>GNC_PNT = 7;</code>
+     * Generated from protobuf enum <code>GNC_BAD_SAT = 7;</code>
      */
-    const GNC_PNT = 7;
+    const GNC_BAD_SAT = 7;
 
     /**
-     * Generated from protobuf enum <code>GNC_FUSED = 8;</code>
+     * Generated from protobuf enum <code>GNC_GPS = 8;</code>
      */
-    const GNC_FUSED = 8;
+    const GNC_GPS = 8;
 
     /**
-     * Generated from protobuf enum <code>GNC_RAW = 9;</code>
+     * Generated from protobuf enum <code>GNC_PNT = 9;</code>
      */
-    const GNC_RAW = 9;
+    const GNC_PNT = 9;
+
+    /**
+     * Generated from protobuf enum <code>GNC_STATIC = 10;</code>
+     */
+    const GNC_STATIC = 10;
 
     private static $valueToName = [
         self::AUTO => 'AUTO',
@@ -70,10 +75,11 @@ class PositionSource
         self::EXTERNAL => 'EXTERNAL',
         self::GPS => 'GPS',
         self::STARLINK => 'STARLINK',
+        self::GNC_FUSED => 'GNC_FUSED',
+        self::GNC_BAD_SAT => 'GNC_BAD_SAT',
         self::GNC_GPS => 'GNC_GPS',
         self::GNC_PNT => 'GNC_PNT',
-        self::GNC_FUSED => 'GNC_FUSED',
-        self::GNC_RAW => 'GNC_RAW',
+        self::GNC_STATIC => 'GNC_STATIC',
     ];
 
     public static function name($value)

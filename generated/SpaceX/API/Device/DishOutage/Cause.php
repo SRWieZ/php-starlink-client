@@ -74,9 +74,9 @@ class Cause
     const SLEEPING = 11;
 
     /**
-     * Generated from protobuf enum <code>MOVING_WHILE_NOT_ALLOWED = 12;</code>
+     * Generated from protobuf enum <code>SKY_SEARCH = 13;</code>
      */
-    const MOVING_WHILE_NOT_ALLOWED = 12;
+    const SKY_SEARCH = 13;
 
     private static $valueToName = [
         self::UNKNOWN => 'UNKNOWN',
@@ -91,7 +91,7 @@ class Cause
         self::ACTUATOR_ACTIVITY => 'ACTUATOR_ACTIVITY',
         self::CABLE_TEST => 'CABLE_TEST',
         self::SLEEPING => 'SLEEPING',
-        self::MOVING_WHILE_NOT_ALLOWED => 'MOVING_WHILE_NOT_ALLOWED',
+        self::SKY_SEARCH => 'SKY_SEARCH',
     ];
 
     public static function name($value)

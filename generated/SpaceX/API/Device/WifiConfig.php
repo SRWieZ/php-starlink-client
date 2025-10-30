@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiConfig</code>
@@ -614,9 +615,29 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     protected $apply_unbridged_eth_ports = null;
 
     /**
+     * Generated from protobuf field <code>optional bool disable_sandbox_fail_open = 1115 [json_name = "disableSandboxFailOpen"];</code>
+     */
+    protected $disable_sandbox_fail_open = null;
+
+    /**
+     * Generated from protobuf field <code>optional bool apply_disable_sandbox_fail_open = 1116 [json_name = "applyDisableSandboxFailOpen"];</code>
+     */
+    protected $apply_disable_sandbox_fail_open = null;
+
+    /**
      * Generated from protobuf field <code>optional uint32 tag = 78 [json_name = "tag"];</code>
      */
     protected $tag = null;
+
+    /**
+     * Generated from protobuf field <code>optional bool custom_dns_disabled = 1117 [json_name = "customDnsDisabled"];</code>
+     */
+    protected $custom_dns_disabled = null;
+
+    /**
+     * Generated from protobuf field <code>optional bool apply_custom_dns_disabled = 1118 [json_name = "applyCustomDnsDisabled"];</code>
+     */
+    protected $apply_custom_dns_disabled = null;
 
     /**
      * Constructor.
@@ -641,10 +662,10 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
      * @type bool $apply_channel_5ghz
      * @type int $channel_5ghz_high
      * @type bool $apply_channel_5ghz_high
-     * @type array<\SpaceX\API\Device\WifiConfig\MeshConfigsEntry>|\Google\Protobuf\Internal\RepeatedField $mesh_configs
-     * @type array<\SpaceX\API\Device\WifiConfig\MeshConfigsUpdatesEntry>|\Google\Protobuf\Internal\RepeatedField $mesh_configs_updates
+     * @type \SpaceX\API\Device\WifiConfig\MeshConfigsEntry[] $mesh_configs
+     * @type \SpaceX\API\Device\WifiConfig\MeshConfigsUpdatesEntry[] $mesh_configs_updates
      * @type bool $apply_mesh_configs
-     * @type array<\SpaceX\API\Device\PublicKey>|\Google\Protobuf\Internal\RepeatedField $dynamic_keys
+     * @type \SpaceX\API\Device\PublicKey[] $dynamic_keys
      * @type bool $apply_dynamic_keys
      * @type bool $is_repeater
      * @type bool $apply_is_repeater
@@ -654,7 +675,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
      * @type bool $apply_is_aviation
      * @type int $boot_count
      * @type \SpaceX\API\Device\BootInfo $boot
-     * @type array<string>|\Google\Protobuf\Internal\RepeatedField $nameservers
+     * @type string[] $nameservers
      * @type bool $apply_nameservers
      * @type bool $secure_dns
      * @type bool $apply_secure_dns
@@ -668,7 +689,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
      * @type bool $apply_disable_wireless_mesh_onboarding
      * @type bool $apply_http_server
      * @type \SpaceX\API\Device\HttpServer $http_server
-     * @type array<\SpaceX\API\Device\WifiConfig\Network>|\Google\Protobuf\Internal\RepeatedField $networks
+     * @type \SpaceX\API\Device\WifiConfig\Network[] $networks
      * @type bool $apply_networks
      * @type int|string $incarnation
      * @type int $wireless_mode_2ghz
@@ -693,7 +714,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
      * @type bool $apply_disable_automated_speedtests
      * @type bool $enable_umbilical_vlan
      * @type bool $apply_enable_umbilical_vlan
-     * @type array<\SpaceX\API\Device\ClientName>|\Google\Protobuf\Internal\RepeatedField $client_names
+     * @type \SpaceX\API\Device\ClientName[] $client_names
      * @type bool $apply_client_names
      * @type bool $outdoor_mode
      * @type bool $apply_outdoor_mode
@@ -717,7 +738,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
      * @type bool $apply_tx_power_level_5ghz_high
      * @type bool $disable_pending_update_reboot
      * @type bool $apply_disable_pending_update_reboot
-     * @type array<\SpaceX\API\Device\ClientConfig>|\Google\Protobuf\Internal\RepeatedField $client_configs
+     * @type \SpaceX\API\Device\ClientConfig[] $client_configs
      * @type bool $apply_client_configs
      * @type bool $disable_set_wifi_config_from_controller
      * @type bool $apply_disable_set_wifi_config_from_controller
@@ -739,13 +760,17 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
      * @type bool $apply_asset_class
      * @type bool $disable_band_steering
      * @type bool $apply_disable_band_steering
-     * @type array<string>|\Google\Protobuf\Internal\RepeatedField $only_overflight_countries
+     * @type string[] $only_overflight_countries
      * @type bool $apply_only_overflight_countries
      * @type bool $only_overflight_countries_using_default
-     * @type array<\SpaceX\API\Device\WifiConfig\UnbridgedEthPort>|\Google\Protobuf\Internal\RepeatedField $unbridged_eth_ports
+     * @type \SpaceX\API\Device\WifiConfig\UnbridgedEthPort[] $unbridged_eth_ports
      * @type bool $apply_unbridged_eth_ports
+     * @type bool $disable_sandbox_fail_open
+     * @type bool $apply_disable_sandbox_fail_open
      * @type int $tag
-     *           }
+     * @type bool $custom_dns_disabled
+     * @type bool $apply_custom_dns_disabled
+     *            }
      */
     public function __construct($data = null)
     {
@@ -1334,7 +1359,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiConfig.MeshConfigsEntry mesh_configs = 33 [json_name = "meshConfigs"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\SpaceX\API\Device\WifiConfig\MeshConfigsEntry>
      */
     public function getMeshConfigs()
     {
@@ -1344,7 +1369,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiConfig.MeshConfigsEntry mesh_configs = 33 [json_name = "meshConfigs"];</code>
      *
-     * @param  array<\SpaceX\API\Device\WifiConfig\MeshConfigsEntry>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\WifiConfig\MeshConfigsEntry[]  $var
      * @return $this
      */
     public function setMeshConfigs($var)
@@ -1358,7 +1383,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiConfig.MeshConfigsUpdatesEntry mesh_configs_updates = 3033 [json_name = "meshConfigsUpdates"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\SpaceX\API\Device\WifiConfig\MeshConfigsUpdatesEntry>
      */
     public function getMeshConfigsUpdates()
     {
@@ -1368,7 +1393,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiConfig.MeshConfigsUpdatesEntry mesh_configs_updates = 3033 [json_name = "meshConfigsUpdates"];</code>
      *
-     * @param  array<\SpaceX\API\Device\WifiConfig\MeshConfigsUpdatesEntry>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\WifiConfig\MeshConfigsUpdatesEntry[]  $var
      * @return $this
      */
     public function setMeshConfigsUpdates($var)
@@ -1416,7 +1441,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.PublicKey dynamic_keys = 22 [json_name = "dynamicKeys"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\SpaceX\API\Device\PublicKey>
      */
     public function getDynamicKeys()
     {
@@ -1426,7 +1451,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.PublicKey dynamic_keys = 22 [json_name = "dynamicKeys"];</code>
      *
-     * @param  array<\SpaceX\API\Device\PublicKey>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\PublicKey[]  $var
      * @return $this
      */
     public function setDynamicKeys($var)
@@ -1746,7 +1771,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated string nameservers = 30 [json_name = "nameservers"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getNameservers()
     {
@@ -1756,7 +1781,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated string nameservers = 30 [json_name = "nameservers"];</code>
      *
-     * @param  array<string>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  string[]  $var
      * @return $this
      */
     public function setNameservers($var)
@@ -2212,7 +2237,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiConfig.Network networks = 1100 [json_name = "networks"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\SpaceX\API\Device\WifiConfig\Network>
      */
     public function getNetworks()
     {
@@ -2222,7 +2247,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiConfig.Network networks = 1100 [json_name = "networks"];</code>
      *
-     * @param  array<\SpaceX\API\Device\WifiConfig\Network>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\WifiConfig\Network[]  $var
      * @return $this
      */
     public function setNetworks($var)
@@ -3052,7 +3077,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.ClientName client_names = 62 [json_name = "clientNames"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\SpaceX\API\Device\ClientName>
      */
     public function getClientNames()
     {
@@ -3062,7 +3087,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.ClientName client_names = 62 [json_name = "clientNames"];</code>
      *
-     * @param  array<\SpaceX\API\Device\ClientName>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\ClientName[]  $var
      * @return $this
      */
     public function setClientNames($var)
@@ -3858,7 +3883,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.ClientConfig client_configs = 74 [json_name = "clientConfigs"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\SpaceX\API\Device\ClientConfig>
      */
     public function getClientConfigs()
     {
@@ -3868,7 +3893,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.ClientConfig client_configs = 74 [json_name = "clientConfigs"];</code>
      *
-     * @param  array<\SpaceX\API\Device\ClientConfig>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\ClientConfig[]  $var
      * @return $this
      */
     public function setClientConfigs($var)
@@ -4596,7 +4621,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated string only_overflight_countries = 1110 [json_name = "onlyOverflightCountries"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getOnlyOverflightCountries()
     {
@@ -4606,7 +4631,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated string only_overflight_countries = 1110 [json_name = "onlyOverflightCountries"];</code>
      *
-     * @param  array<string>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  string[]  $var
      * @return $this
      */
     public function setOnlyOverflightCountries($var)
@@ -4688,7 +4713,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiConfig.UnbridgedEthPort unbridged_eth_ports = 1112 [json_name = "unbridgedEthPorts"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\SpaceX\API\Device\WifiConfig\UnbridgedEthPort>
      */
     public function getUnbridgedEthPorts()
     {
@@ -4698,7 +4723,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiConfig.UnbridgedEthPort unbridged_eth_ports = 1112 [json_name = "unbridgedEthPorts"];</code>
      *
-     * @param  array<\SpaceX\API\Device\WifiConfig\UnbridgedEthPort>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\WifiConfig\UnbridgedEthPort[]  $var
      * @return $this
      */
     public function setUnbridgedEthPorts($var)
@@ -4744,6 +4769,74 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Generated from protobuf field <code>optional bool disable_sandbox_fail_open = 1115 [json_name = "disableSandboxFailOpen"];</code>
+     *
+     * @return bool
+     */
+    public function getDisableSandboxFailOpen()
+    {
+        return isset($this->disable_sandbox_fail_open) ? $this->disable_sandbox_fail_open : false;
+    }
+
+    public function hasDisableSandboxFailOpen()
+    {
+        return isset($this->disable_sandbox_fail_open);
+    }
+
+    public function clearDisableSandboxFailOpen()
+    {
+        unset($this->disable_sandbox_fail_open);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional bool disable_sandbox_fail_open = 1115 [json_name = "disableSandboxFailOpen"];</code>
+     *
+     * @param  bool  $var
+     * @return $this
+     */
+    public function setDisableSandboxFailOpen($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->disable_sandbox_fail_open = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional bool apply_disable_sandbox_fail_open = 1116 [json_name = "applyDisableSandboxFailOpen"];</code>
+     *
+     * @return bool
+     */
+    public function getApplyDisableSandboxFailOpen()
+    {
+        return isset($this->apply_disable_sandbox_fail_open) ? $this->apply_disable_sandbox_fail_open : false;
+    }
+
+    public function hasApplyDisableSandboxFailOpen()
+    {
+        return isset($this->apply_disable_sandbox_fail_open);
+    }
+
+    public function clearApplyDisableSandboxFailOpen()
+    {
+        unset($this->apply_disable_sandbox_fail_open);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional bool apply_disable_sandbox_fail_open = 1116 [json_name = "applyDisableSandboxFailOpen"];</code>
+     *
+     * @param  bool  $var
+     * @return $this
+     */
+    public function setApplyDisableSandboxFailOpen($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->apply_disable_sandbox_fail_open = $var;
+
+        return $this;
+    }
+
+    /**
      * Generated from protobuf field <code>optional uint32 tag = 78 [json_name = "tag"];</code>
      *
      * @return int
@@ -4773,6 +4866,74 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->tag = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional bool custom_dns_disabled = 1117 [json_name = "customDnsDisabled"];</code>
+     *
+     * @return bool
+     */
+    public function getCustomDnsDisabled()
+    {
+        return isset($this->custom_dns_disabled) ? $this->custom_dns_disabled : false;
+    }
+
+    public function hasCustomDnsDisabled()
+    {
+        return isset($this->custom_dns_disabled);
+    }
+
+    public function clearCustomDnsDisabled()
+    {
+        unset($this->custom_dns_disabled);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional bool custom_dns_disabled = 1117 [json_name = "customDnsDisabled"];</code>
+     *
+     * @param  bool  $var
+     * @return $this
+     */
+    public function setCustomDnsDisabled($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->custom_dns_disabled = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional bool apply_custom_dns_disabled = 1118 [json_name = "applyCustomDnsDisabled"];</code>
+     *
+     * @return bool
+     */
+    public function getApplyCustomDnsDisabled()
+    {
+        return isset($this->apply_custom_dns_disabled) ? $this->apply_custom_dns_disabled : false;
+    }
+
+    public function hasApplyCustomDnsDisabled()
+    {
+        return isset($this->apply_custom_dns_disabled);
+    }
+
+    public function clearApplyCustomDnsDisabled()
+    {
+        unset($this->apply_custom_dns_disabled);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional bool apply_custom_dns_disabled = 1118 [json_name = "applyCustomDnsDisabled"];</code>
+     *
+     * @param  bool  $var
+     * @return $this
+     */
+    public function setApplyCustomDnsDisabled($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->apply_custom_dns_disabled = $var;
 
         return $this;
     }

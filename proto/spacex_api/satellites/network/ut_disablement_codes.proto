@@ -17,6 +17,7 @@ enum UtDisablementCode {
 	UNSUPPORTED_VERSION = 13;
 	MOVING_TOO_FAST_FOR_POLICY = 14;
 	UNDER_AVIATION_FLYOVER_LIMITS = 15;
+	BLOCKED_AREA = 16;
 }
 
 enum AccountDisablementReason {

@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiBtmRequest</code>
@@ -36,8 +37,8 @@ class WifiBtmRequest extends \Google\Protobuf\Internal\Message
      *
      * @type int $bss_termination_duration_m
      * @type string $peer_bssid
-     * @type array<\SpaceX\API\Device\WifiBtmRequest\NeighborReport>|\Google\Protobuf\Internal\RepeatedField $neighbor_report
-     *                                                                                                       }
+     * @type \SpaceX\API\Device\WifiBtmRequest\NeighborReport[] $neighbor_report
+     *                                                          }
      */
     public function __construct($data = null)
     {
@@ -116,7 +117,7 @@ class WifiBtmRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiBtmRequest.NeighborReport neighbor_report = 4 [json_name = "neighborReport"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\SpaceX\API\Device\WifiBtmRequest\NeighborReport>
      */
     public function getNeighborReport()
     {
@@ -126,7 +127,7 @@ class WifiBtmRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiBtmRequest.NeighborReport neighbor_report = 4 [json_name = "neighborReport"];</code>
      *
-     * @param  array<\SpaceX\API\Device\WifiBtmRequest\NeighborReport>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\WifiBtmRequest\NeighborReport[]  $var
      * @return $this
      */
     public function setNeighborReport($var)

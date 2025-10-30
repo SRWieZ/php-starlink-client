@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiMeshJoin</code>
@@ -42,8 +43,8 @@ class WifiMeshJoin extends \Google\Protobuf\Internal\Message
      * @type int|string $incarnation
      * @type string $hardware_version
      * @type bool $supports_5ghz_high
-     * @type array<\SpaceX\API\Device\WifiSiteSurveyResult>|\Google\Protobuf\Internal\RepeatedField $siteSurveyScan
-     *                                                                                              }
+     * @type \SpaceX\API\Device\WifiSiteSurveyResult[] $siteSurveyScan
+     *                                                 }
      */
     public function __construct($data = null)
     {
@@ -156,7 +157,7 @@ class WifiMeshJoin extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiSiteSurveyResult siteSurveyScan = 4 [json_name = "siteSurveyScan"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\SpaceX\API\Device\WifiSiteSurveyResult>
      */
     public function getSiteSurveyScan()
     {
@@ -166,7 +167,7 @@ class WifiMeshJoin extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiSiteSurveyResult siteSurveyScan = 4 [json_name = "siteSurveyScan"];</code>
      *
-     * @param  array<\SpaceX\API\Device\WifiSiteSurveyResult>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\WifiSiteSurveyResult[]  $var
      * @return $this
      */
     public function setSiteSurveyScan($var)

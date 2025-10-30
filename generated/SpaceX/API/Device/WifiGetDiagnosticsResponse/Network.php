@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device\WifiGetDiagnosticsResponse;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiGetDiagnosticsResponse.Network</code>
@@ -51,7 +52,7 @@ class Network extends \Google\Protobuf\Internal\Message
      *
      * @type string $domain
      * @type string $ipv4
-     * @type array<string>|\Google\Protobuf\Internal\RepeatedField $ipv6
+     * @type string[] $ipv6
      * @type int $clients_ethernet
      * @type int $clients_2ghz
      * @type int $clients_5ghz
@@ -134,7 +135,7 @@ class Network extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated string ipv6 = 3 [json_name = "ipv6"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getIpv6()
     {
@@ -144,7 +145,7 @@ class Network extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated string ipv6 = 3 [json_name = "ipv6"];</code>
      *
-     * @param  array<string>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  string[]  $var
      * @return $this
      */
     public function setIpv6($var)

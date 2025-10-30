@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device\Services\Unlock;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.Services.Unlock.UnlockChallenge</code>
@@ -54,8 +55,8 @@ class UnlockChallenge extends \Google\Protobuf\Internal\Message
      * @type string $sign_spki
      * @type string $grant_keydata
      * @type string $service_keydata
-     * @type array<string>|\Google\Protobuf\Internal\RepeatedField $authority_grants
-     *                                                             }
+     * @type string[] $authority_grants
+     *                }
      */
     public function __construct($data = null)
     {
@@ -236,7 +237,7 @@ class UnlockChallenge extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated string authority_grants = 7 [json_name = "authorityGrants"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getAuthorityGrants()
     {
@@ -246,7 +247,7 @@ class UnlockChallenge extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated string authority_grants = 7 [json_name = "authorityGrants"];</code>
      *
-     * @param  array<string>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  string[]  $var
      * @return $this
      */
     public function setAuthorityGrants($var)

@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.NetworkInterface</code>
@@ -72,8 +73,8 @@ class NetworkInterface extends \Google\Protobuf\Internal\Message
      * @type string $name
      * @type bool $up
      * @type string $mac_address
-     * @type array<string>|\Google\Protobuf\Internal\RepeatedField $ipv4_addresses
-     * @type array<string>|\Google\Protobuf\Internal\RepeatedField $ipv6_addresses
+     * @type string[] $ipv4_addresses
+     * @type string[] $ipv6_addresses
      * @type \SpaceX\API\Device\NetworkInterface\RxStats $rx_stats
      * @type \SpaceX\API\Device\NetworkInterface\TxStats $tx_stats
      * @type \SpaceX\API\Device\EthernetNetworkInterface $ethernet
@@ -192,7 +193,7 @@ class NetworkInterface extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated string ipv4_addresses = 6 [json_name = "ipv4Addresses"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getIpv4Addresses()
     {
@@ -202,7 +203,7 @@ class NetworkInterface extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated string ipv4_addresses = 6 [json_name = "ipv4Addresses"];</code>
      *
-     * @param  array<string>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  string[]  $var
      * @return $this
      */
     public function setIpv4Addresses($var)
@@ -216,7 +217,7 @@ class NetworkInterface extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated string ipv6_addresses = 7 [json_name = "ipv6Addresses"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getIpv6Addresses()
     {
@@ -226,7 +227,7 @@ class NetworkInterface extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated string ipv6_addresses = 7 [json_name = "ipv6Addresses"];</code>
      *
-     * @param  array<string>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  string[]  $var
      * @return $this
      */
     public function setIpv6Addresses($var)

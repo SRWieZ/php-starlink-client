@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.DishGetRssiScanResult</code>
@@ -48,8 +49,8 @@ class DishGetRssiScanResult extends \Google\Protobuf\Internal\Message
      * @type int $channel
      * @type int|string $request_timestamp
      * @type int $number_samples
-     * @type array<\SpaceX\API\Device\RssiEntry>|\Google\Protobuf\Internal\RepeatedField $rssi_scan_points
-     *                                                                                   }
+     * @type \SpaceX\API\Device\RssiEntry[] $rssi_scan_points
+     *                                      }
      */
     public function __construct($data = null)
     {
@@ -196,7 +197,7 @@ class DishGetRssiScanResult extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.RssiEntry rssi_scan_points = 5 [json_name = "rssiScanPoints"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\SpaceX\API\Device\RssiEntry>
      */
     public function getRssiScanPoints()
     {
@@ -206,7 +207,7 @@ class DishGetRssiScanResult extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.RssiEntry rssi_scan_points = 5 [json_name = "rssiScanPoints"];</code>
      *
-     * @param  array<\SpaceX\API\Device\RssiEntry>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\RssiEntry[]  $var
      * @return $this
      */
     public function setRssiScanPoints($var)

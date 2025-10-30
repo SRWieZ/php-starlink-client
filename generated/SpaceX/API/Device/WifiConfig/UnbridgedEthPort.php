@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device\WifiConfig;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiConfig.UnbridgedEthPort</code>
@@ -52,7 +53,7 @@ class UnbridgedEthPort extends \Google\Protobuf\Internal\Message
      * @type int $lan_port_index
      * @type string $ip
      * @type string $gateway
-     * @type array<\SpaceX\API\Device\WifiConfig\UnbridgedEthPort\StaticRoute>|\Google\Protobuf\Internal\RepeatedField $static_routes
+     * @type \SpaceX\API\Device\WifiConfig\UnbridgedEthPort\StaticRoute[] $static_routes
      * @type \SpaceX\API\Device\WanNone $wan_none
      * @type \SpaceX\API\Device\WanStarlinkRouterPair $wan_starlink_router_pair
      *                                                }
@@ -168,7 +169,7 @@ class UnbridgedEthPort extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiConfig.UnbridgedEthPort.StaticRoute static_routes = 4 [json_name = "staticRoutes"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\SpaceX\API\Device\WifiConfig\UnbridgedEthPort\StaticRoute>
      */
     public function getStaticRoutes()
     {
@@ -178,7 +179,7 @@ class UnbridgedEthPort extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiConfig.UnbridgedEthPort.StaticRoute static_routes = 4 [json_name = "staticRoutes"];</code>
      *
-     * @param  array<\SpaceX\API\Device\WifiConfig\UnbridgedEthPort\StaticRoute>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\WifiConfig\UnbridgedEthPort\StaticRoute[]  $var
      * @return $this
      */
     public function setStaticRoutes($var)

@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device\WifiConfig;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiConfig.DnsStaticEntry</code>
@@ -29,9 +30,9 @@ class DnsStaticEntry extends \Google\Protobuf\Internal\Message
      * @param  array  $data  {
      *                       Optional. Data for populating the Message object.
      *
-     * @type array<string>|\Google\Protobuf\Internal\RepeatedField $domains
-     * @type array<string>|\Google\Protobuf\Internal\RepeatedField $addresses
-     *                                                             }
+     * @type string[] $domains
+     * @type string[] $addresses
+     *                }
      */
     public function __construct($data = null)
     {
@@ -42,7 +43,7 @@ class DnsStaticEntry extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated string domains = 1000 [json_name = "domains"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getDomains()
     {
@@ -52,7 +53,7 @@ class DnsStaticEntry extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated string domains = 1000 [json_name = "domains"];</code>
      *
-     * @param  array<string>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  string[]  $var
      * @return $this
      */
     public function setDomains($var)
@@ -66,7 +67,7 @@ class DnsStaticEntry extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated string addresses = 1001 [json_name = "addresses"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getAddresses()
     {
@@ -76,7 +77,7 @@ class DnsStaticEntry extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated string addresses = 1001 [json_name = "addresses"];</code>
      *
-     * @param  array<string>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  string[]  $var
      * @return $this
      */
     public function setAddresses($var)

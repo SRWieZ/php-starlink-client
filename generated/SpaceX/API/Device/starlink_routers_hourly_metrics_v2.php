@@ -114,6 +114,16 @@ class starlink_routers_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messa
     protected $sys_board_rev = null;
 
     /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value sys_calibration_state = 20 [json_name = "sysCalibrationState"];</code>
+     */
+    protected $sys_calibration_state = null;
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value sys_calibration_partitions_state = 21 [json_name = "sysCalibrationPartitionsState"];</code>
+     */
+    protected $sys_calibration_partitions_state = null;
+
+    /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_2ghz_channel = 100 [json_name = "radios2ghzChannel"];</code>
      */
     protected $radios_2ghz_channel = null;
@@ -1129,6 +1139,11 @@ class starlink_routers_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messa
     protected $config_offline_networks_disablement_enabled = null;
 
     /**
+     * Generated from protobuf field <code>optional .google.protobuf.BoolValue config_custom_dns_disabled = 1034 [json_name = "configCustomDnsDisabled"];</code>
+     */
+    protected $config_custom_dns_disabled = null;
+
+    /**
      * Generated from protobuf field <code>optional .google.protobuf.BoolValue config_disable_2ghz = 1018 [json_name = "configDisable2ghz"];</code>
      */
     protected $config_disable_2ghz = null;
@@ -1182,6 +1197,81 @@ class starlink_routers_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messa
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value config_networks_bands_split = 1027 [json_name = "configNetworksBandsSplit"];</code>
      */
     protected $config_networks_bands_split = null;
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value config_networks_user = 1035 [json_name = "configNetworksUser"];</code>
+     */
+    protected $config_networks_user = null;
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value wifi_reload_count = 1040 [json_name = "wifiReloadCount"];</code>
+     */
+    protected $wifi_reload_count = null;
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radius_reload_count = 1041 [json_name = "radiusReloadCount"];</code>
+     */
+    protected $radius_reload_count = null;
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value openssh_reload_count = 1042 [json_name = "opensshReloadCount"];</code>
+     */
+    protected $openssh_reload_count = null;
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value iptables_reload_count = 1043 [json_name = "iptablesReloadCount"];</code>
+     */
+    protected $iptables_reload_count = null;
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value ebtables_reload_count = 1044 [json_name = "ebtablesReloadCount"];</code>
+     */
+    protected $ebtables_reload_count = null;
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value traffic_control_reload_count = 1045 [json_name = "trafficControlReloadCount"];</code>
+     */
+    protected $traffic_control_reload_count = null;
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value dhcp_reload_count = 1046 [json_name = "dhcpReloadCount"];</code>
+     */
+    protected $dhcp_reload_count = null;
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value dhcpv6_reload_count = 1047 [json_name = "dhcpv6ReloadCount"];</code>
+     */
+    protected $dhcpv6_reload_count = null;
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value system_reload_count = 1048 [json_name = "systemReloadCount"];</code>
+     */
+    protected $system_reload_count = null;
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value dns_reload_count = 1049 [json_name = "dnsReloadCount"];</code>
+     */
+    protected $dns_reload_count = null;
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value https_reload_count = 1050 [json_name = "httpsReloadCount"];</code>
+     */
+    protected $https_reload_count = null;
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value band_steering_reload_count = 1051 [json_name = "bandSteeringReloadCount"];</code>
+     */
+    protected $band_steering_reload_count = null;
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value commit_count = 1052 [json_name = "commitCount"];</code>
+     */
+    protected $commit_count = null;
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value network_reload_count = 1053 [json_name = "networkReloadCount"];</code>
+     */
+    protected $network_reload_count = null;
 
     /**
      * Generated from protobuf field <code>optional .google.protobuf.Int64Value wan_traffic_control_cake_bytes = 1101 [json_name = "wanTrafficControlCakeBytes"];</code>
@@ -1294,6 +1384,8 @@ class starlink_routers_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messa
      * @type \Google\Protobuf\UInt32Value $sys_ubi_max_ec
      * @type \Google\Protobuf\UInt32Value $sys_ubi_bad_peb
      * @type \Google\Protobuf\UInt32Value $sys_board_rev
+     * @type \Google\Protobuf\UInt32Value $sys_calibration_state
+     * @type \Google\Protobuf\UInt32Value $sys_calibration_partitions_state
      * @type \Google\Protobuf\UInt32Value $radios_2ghz_channel
      * @type \Google\Protobuf\FloatValue $radios_2ghz_antenna1_rssi
      * @type \Google\Protobuf\FloatValue $radios_2ghz_antenna2_rssi
@@ -1497,6 +1589,7 @@ class starlink_routers_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messa
      * @type \Google\Protobuf\BoolValue $config_https_content_hosting_enabled
      * @type \Google\Protobuf\BoolValue $config_only_overflight_blocking_enabled
      * @type \Google\Protobuf\BoolValue $config_offline_networks_disablement_enabled
+     * @type \Google\Protobuf\BoolValue $config_custom_dns_disabled
      * @type \Google\Protobuf\BoolValue $config_disable_2ghz
      * @type \Google\Protobuf\BoolValue $config_disable_5ghz
      * @type \Google\Protobuf\BoolValue $config_disable_5ghz_high
@@ -1508,6 +1601,21 @@ class starlink_routers_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messa
      * @type \Google\Protobuf\UInt32Value $config_networks_hidden
      * @type \Google\Protobuf\UInt32Value $config_networks_client_isolation
      * @type \Google\Protobuf\UInt32Value $config_networks_bands_split
+     * @type \Google\Protobuf\UInt32Value $config_networks_user
+     * @type \Google\Protobuf\UInt32Value $wifi_reload_count
+     * @type \Google\Protobuf\UInt32Value $radius_reload_count
+     * @type \Google\Protobuf\UInt32Value $openssh_reload_count
+     * @type \Google\Protobuf\UInt32Value $iptables_reload_count
+     * @type \Google\Protobuf\UInt32Value $ebtables_reload_count
+     * @type \Google\Protobuf\UInt32Value $traffic_control_reload_count
+     * @type \Google\Protobuf\UInt32Value $dhcp_reload_count
+     * @type \Google\Protobuf\UInt32Value $dhcpv6_reload_count
+     * @type \Google\Protobuf\UInt32Value $system_reload_count
+     * @type \Google\Protobuf\UInt32Value $dns_reload_count
+     * @type \Google\Protobuf\UInt32Value $https_reload_count
+     * @type \Google\Protobuf\UInt32Value $band_steering_reload_count
+     * @type \Google\Protobuf\UInt32Value $commit_count
+     * @type \Google\Protobuf\UInt32Value $network_reload_count
      * @type \Google\Protobuf\Int64Value $wan_traffic_control_cake_bytes
      * @type \Google\Protobuf\Int64Value $wan_traffic_control_cake_packets
      * @type \Google\Protobuf\Int64Value $wan_traffic_control_cake_drops
@@ -2722,6 +2830,128 @@ class starlink_routers_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messa
     public function setSysBoardRevUnwrapped($var)
     {
         $this->writeWrapperValue('sys_board_rev', $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value sys_calibration_state = 20 [json_name = "sysCalibrationState"];</code>
+     *
+     * @return \Google\Protobuf\UInt32Value|null
+     */
+    public function getSysCalibrationState()
+    {
+        return $this->sys_calibration_state;
+    }
+
+    public function hasSysCalibrationState()
+    {
+        return isset($this->sys_calibration_state);
+    }
+
+    public function clearSysCalibrationState()
+    {
+        unset($this->sys_calibration_state);
+    }
+
+    /**
+     * Returns the unboxed value from <code>getSysCalibrationState()</code>
+
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value sys_calibration_state = 20 [json_name = "sysCalibrationState"];</code>
+     *
+     * @return int|null
+     */
+    public function getSysCalibrationStateUnwrapped()
+    {
+        return $this->readWrapperValue('sys_calibration_state');
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value sys_calibration_state = 20 [json_name = "sysCalibrationState"];</code>
+     *
+     * @param  \Google\Protobuf\UInt32Value  $var
+     * @return $this
+     */
+    public function setSysCalibrationState($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        $this->sys_calibration_state = $var;
+
+        return $this;
+    }
+
+    /**
+     * Sets the field by wrapping a primitive type in a Google\Protobuf\UInt32Value object.
+
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value sys_calibration_state = 20 [json_name = "sysCalibrationState"];</code>
+     *
+     * @param  int|null  $var
+     * @return $this
+     */
+    public function setSysCalibrationStateUnwrapped($var)
+    {
+        $this->writeWrapperValue('sys_calibration_state', $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value sys_calibration_partitions_state = 21 [json_name = "sysCalibrationPartitionsState"];</code>
+     *
+     * @return \Google\Protobuf\UInt32Value|null
+     */
+    public function getSysCalibrationPartitionsState()
+    {
+        return $this->sys_calibration_partitions_state;
+    }
+
+    public function hasSysCalibrationPartitionsState()
+    {
+        return isset($this->sys_calibration_partitions_state);
+    }
+
+    public function clearSysCalibrationPartitionsState()
+    {
+        unset($this->sys_calibration_partitions_state);
+    }
+
+    /**
+     * Returns the unboxed value from <code>getSysCalibrationPartitionsState()</code>
+
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value sys_calibration_partitions_state = 21 [json_name = "sysCalibrationPartitionsState"];</code>
+     *
+     * @return int|null
+     */
+    public function getSysCalibrationPartitionsStateUnwrapped()
+    {
+        return $this->readWrapperValue('sys_calibration_partitions_state');
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value sys_calibration_partitions_state = 21 [json_name = "sysCalibrationPartitionsState"];</code>
+     *
+     * @param  \Google\Protobuf\UInt32Value  $var
+     * @return $this
+     */
+    public function setSysCalibrationPartitionsState($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        $this->sys_calibration_partitions_state = $var;
+
+        return $this;
+    }
+
+    /**
+     * Sets the field by wrapping a primitive type in a Google\Protobuf\UInt32Value object.
+
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value sys_calibration_partitions_state = 21 [json_name = "sysCalibrationPartitionsState"];</code>
+     *
+     * @param  int|null  $var
+     * @return $this
+     */
+    public function setSysCalibrationPartitionsStateUnwrapped($var)
+    {
+        $this->writeWrapperValue('sys_calibration_partitions_state', $var);
 
         return $this;
     }
@@ -15110,6 +15340,67 @@ class starlink_routers_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messa
     }
 
     /**
+     * Generated from protobuf field <code>optional .google.protobuf.BoolValue config_custom_dns_disabled = 1034 [json_name = "configCustomDnsDisabled"];</code>
+     *
+     * @return \Google\Protobuf\BoolValue|null
+     */
+    public function getConfigCustomDnsDisabled()
+    {
+        return $this->config_custom_dns_disabled;
+    }
+
+    public function hasConfigCustomDnsDisabled()
+    {
+        return isset($this->config_custom_dns_disabled);
+    }
+
+    public function clearConfigCustomDnsDisabled()
+    {
+        unset($this->config_custom_dns_disabled);
+    }
+
+    /**
+     * Returns the unboxed value from <code>getConfigCustomDnsDisabled()</code>
+
+     * Generated from protobuf field <code>optional .google.protobuf.BoolValue config_custom_dns_disabled = 1034 [json_name = "configCustomDnsDisabled"];</code>
+     *
+     * @return bool|null
+     */
+    public function getConfigCustomDnsDisabledUnwrapped()
+    {
+        return $this->readWrapperValue('config_custom_dns_disabled');
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.BoolValue config_custom_dns_disabled = 1034 [json_name = "configCustomDnsDisabled"];</code>
+     *
+     * @param  \Google\Protobuf\BoolValue  $var
+     * @return $this
+     */
+    public function setConfigCustomDnsDisabled($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\BoolValue::class);
+        $this->config_custom_dns_disabled = $var;
+
+        return $this;
+    }
+
+    /**
+     * Sets the field by wrapping a primitive type in a Google\Protobuf\BoolValue object.
+
+     * Generated from protobuf field <code>optional .google.protobuf.BoolValue config_custom_dns_disabled = 1034 [json_name = "configCustomDnsDisabled"];</code>
+     *
+     * @param  bool|null  $var
+     * @return $this
+     */
+    public function setConfigCustomDnsDisabledUnwrapped($var)
+    {
+        $this->writeWrapperValue('config_custom_dns_disabled', $var);
+
+        return $this;
+    }
+
+    /**
      * Generated from protobuf field <code>optional .google.protobuf.BoolValue config_disable_2ghz = 1018 [json_name = "configDisable2ghz"];</code>
      *
      * @return \Google\Protobuf\BoolValue|null
@@ -15776,6 +16067,921 @@ class starlink_routers_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messa
     public function setConfigNetworksBandsSplitUnwrapped($var)
     {
         $this->writeWrapperValue('config_networks_bands_split', $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value config_networks_user = 1035 [json_name = "configNetworksUser"];</code>
+     *
+     * @return \Google\Protobuf\UInt32Value|null
+     */
+    public function getConfigNetworksUser()
+    {
+        return $this->config_networks_user;
+    }
+
+    public function hasConfigNetworksUser()
+    {
+        return isset($this->config_networks_user);
+    }
+
+    public function clearConfigNetworksUser()
+    {
+        unset($this->config_networks_user);
+    }
+
+    /**
+     * Returns the unboxed value from <code>getConfigNetworksUser()</code>
+
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value config_networks_user = 1035 [json_name = "configNetworksUser"];</code>
+     *
+     * @return int|null
+     */
+    public function getConfigNetworksUserUnwrapped()
+    {
+        return $this->readWrapperValue('config_networks_user');
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value config_networks_user = 1035 [json_name = "configNetworksUser"];</code>
+     *
+     * @param  \Google\Protobuf\UInt32Value  $var
+     * @return $this
+     */
+    public function setConfigNetworksUser($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        $this->config_networks_user = $var;
+
+        return $this;
+    }
+
+    /**
+     * Sets the field by wrapping a primitive type in a Google\Protobuf\UInt32Value object.
+
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value config_networks_user = 1035 [json_name = "configNetworksUser"];</code>
+     *
+     * @param  int|null  $var
+     * @return $this
+     */
+    public function setConfigNetworksUserUnwrapped($var)
+    {
+        $this->writeWrapperValue('config_networks_user', $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value wifi_reload_count = 1040 [json_name = "wifiReloadCount"];</code>
+     *
+     * @return \Google\Protobuf\UInt32Value|null
+     */
+    public function getWifiReloadCount()
+    {
+        return $this->wifi_reload_count;
+    }
+
+    public function hasWifiReloadCount()
+    {
+        return isset($this->wifi_reload_count);
+    }
+
+    public function clearWifiReloadCount()
+    {
+        unset($this->wifi_reload_count);
+    }
+
+    /**
+     * Returns the unboxed value from <code>getWifiReloadCount()</code>
+
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value wifi_reload_count = 1040 [json_name = "wifiReloadCount"];</code>
+     *
+     * @return int|null
+     */
+    public function getWifiReloadCountUnwrapped()
+    {
+        return $this->readWrapperValue('wifi_reload_count');
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value wifi_reload_count = 1040 [json_name = "wifiReloadCount"];</code>
+     *
+     * @param  \Google\Protobuf\UInt32Value  $var
+     * @return $this
+     */
+    public function setWifiReloadCount($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        $this->wifi_reload_count = $var;
+
+        return $this;
+    }
+
+    /**
+     * Sets the field by wrapping a primitive type in a Google\Protobuf\UInt32Value object.
+
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value wifi_reload_count = 1040 [json_name = "wifiReloadCount"];</code>
+     *
+     * @param  int|null  $var
+     * @return $this
+     */
+    public function setWifiReloadCountUnwrapped($var)
+    {
+        $this->writeWrapperValue('wifi_reload_count', $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radius_reload_count = 1041 [json_name = "radiusReloadCount"];</code>
+     *
+     * @return \Google\Protobuf\UInt32Value|null
+     */
+    public function getRadiusReloadCount()
+    {
+        return $this->radius_reload_count;
+    }
+
+    public function hasRadiusReloadCount()
+    {
+        return isset($this->radius_reload_count);
+    }
+
+    public function clearRadiusReloadCount()
+    {
+        unset($this->radius_reload_count);
+    }
+
+    /**
+     * Returns the unboxed value from <code>getRadiusReloadCount()</code>
+
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radius_reload_count = 1041 [json_name = "radiusReloadCount"];</code>
+     *
+     * @return int|null
+     */
+    public function getRadiusReloadCountUnwrapped()
+    {
+        return $this->readWrapperValue('radius_reload_count');
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radius_reload_count = 1041 [json_name = "radiusReloadCount"];</code>
+     *
+     * @param  \Google\Protobuf\UInt32Value  $var
+     * @return $this
+     */
+    public function setRadiusReloadCount($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        $this->radius_reload_count = $var;
+
+        return $this;
+    }
+
+    /**
+     * Sets the field by wrapping a primitive type in a Google\Protobuf\UInt32Value object.
+
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radius_reload_count = 1041 [json_name = "radiusReloadCount"];</code>
+     *
+     * @param  int|null  $var
+     * @return $this
+     */
+    public function setRadiusReloadCountUnwrapped($var)
+    {
+        $this->writeWrapperValue('radius_reload_count', $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value openssh_reload_count = 1042 [json_name = "opensshReloadCount"];</code>
+     *
+     * @return \Google\Protobuf\UInt32Value|null
+     */
+    public function getOpensshReloadCount()
+    {
+        return $this->openssh_reload_count;
+    }
+
+    public function hasOpensshReloadCount()
+    {
+        return isset($this->openssh_reload_count);
+    }
+
+    public function clearOpensshReloadCount()
+    {
+        unset($this->openssh_reload_count);
+    }
+
+    /**
+     * Returns the unboxed value from <code>getOpensshReloadCount()</code>
+
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value openssh_reload_count = 1042 [json_name = "opensshReloadCount"];</code>
+     *
+     * @return int|null
+     */
+    public function getOpensshReloadCountUnwrapped()
+    {
+        return $this->readWrapperValue('openssh_reload_count');
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value openssh_reload_count = 1042 [json_name = "opensshReloadCount"];</code>
+     *
+     * @param  \Google\Protobuf\UInt32Value  $var
+     * @return $this
+     */
+    public function setOpensshReloadCount($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        $this->openssh_reload_count = $var;
+
+        return $this;
+    }
+
+    /**
+     * Sets the field by wrapping a primitive type in a Google\Protobuf\UInt32Value object.
+
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value openssh_reload_count = 1042 [json_name = "opensshReloadCount"];</code>
+     *
+     * @param  int|null  $var
+     * @return $this
+     */
+    public function setOpensshReloadCountUnwrapped($var)
+    {
+        $this->writeWrapperValue('openssh_reload_count', $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value iptables_reload_count = 1043 [json_name = "iptablesReloadCount"];</code>
+     *
+     * @return \Google\Protobuf\UInt32Value|null
+     */
+    public function getIptablesReloadCount()
+    {
+        return $this->iptables_reload_count;
+    }
+
+    public function hasIptablesReloadCount()
+    {
+        return isset($this->iptables_reload_count);
+    }
+
+    public function clearIptablesReloadCount()
+    {
+        unset($this->iptables_reload_count);
+    }
+
+    /**
+     * Returns the unboxed value from <code>getIptablesReloadCount()</code>
+
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value iptables_reload_count = 1043 [json_name = "iptablesReloadCount"];</code>
+     *
+     * @return int|null
+     */
+    public function getIptablesReloadCountUnwrapped()
+    {
+        return $this->readWrapperValue('iptables_reload_count');
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value iptables_reload_count = 1043 [json_name = "iptablesReloadCount"];</code>
+     *
+     * @param  \Google\Protobuf\UInt32Value  $var
+     * @return $this
+     */
+    public function setIptablesReloadCount($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        $this->iptables_reload_count = $var;
+
+        return $this;
+    }
+
+    /**
+     * Sets the field by wrapping a primitive type in a Google\Protobuf\UInt32Value object.
+
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value iptables_reload_count = 1043 [json_name = "iptablesReloadCount"];</code>
+     *
+     * @param  int|null  $var
+     * @return $this
+     */
+    public function setIptablesReloadCountUnwrapped($var)
+    {
+        $this->writeWrapperValue('iptables_reload_count', $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value ebtables_reload_count = 1044 [json_name = "ebtablesReloadCount"];</code>
+     *
+     * @return \Google\Protobuf\UInt32Value|null
+     */
+    public function getEbtablesReloadCount()
+    {
+        return $this->ebtables_reload_count;
+    }
+
+    public function hasEbtablesReloadCount()
+    {
+        return isset($this->ebtables_reload_count);
+    }
+
+    public function clearEbtablesReloadCount()
+    {
+        unset($this->ebtables_reload_count);
+    }
+
+    /**
+     * Returns the unboxed value from <code>getEbtablesReloadCount()</code>
+
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value ebtables_reload_count = 1044 [json_name = "ebtablesReloadCount"];</code>
+     *
+     * @return int|null
+     */
+    public function getEbtablesReloadCountUnwrapped()
+    {
+        return $this->readWrapperValue('ebtables_reload_count');
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value ebtables_reload_count = 1044 [json_name = "ebtablesReloadCount"];</code>
+     *
+     * @param  \Google\Protobuf\UInt32Value  $var
+     * @return $this
+     */
+    public function setEbtablesReloadCount($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        $this->ebtables_reload_count = $var;
+
+        return $this;
+    }
+
+    /**
+     * Sets the field by wrapping a primitive type in a Google\Protobuf\UInt32Value object.
+
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value ebtables_reload_count = 1044 [json_name = "ebtablesReloadCount"];</code>
+     *
+     * @param  int|null  $var
+     * @return $this
+     */
+    public function setEbtablesReloadCountUnwrapped($var)
+    {
+        $this->writeWrapperValue('ebtables_reload_count', $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value traffic_control_reload_count = 1045 [json_name = "trafficControlReloadCount"];</code>
+     *
+     * @return \Google\Protobuf\UInt32Value|null
+     */
+    public function getTrafficControlReloadCount()
+    {
+        return $this->traffic_control_reload_count;
+    }
+
+    public function hasTrafficControlReloadCount()
+    {
+        return isset($this->traffic_control_reload_count);
+    }
+
+    public function clearTrafficControlReloadCount()
+    {
+        unset($this->traffic_control_reload_count);
+    }
+
+    /**
+     * Returns the unboxed value from <code>getTrafficControlReloadCount()</code>
+
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value traffic_control_reload_count = 1045 [json_name = "trafficControlReloadCount"];</code>
+     *
+     * @return int|null
+     */
+    public function getTrafficControlReloadCountUnwrapped()
+    {
+        return $this->readWrapperValue('traffic_control_reload_count');
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value traffic_control_reload_count = 1045 [json_name = "trafficControlReloadCount"];</code>
+     *
+     * @param  \Google\Protobuf\UInt32Value  $var
+     * @return $this
+     */
+    public function setTrafficControlReloadCount($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        $this->traffic_control_reload_count = $var;
+
+        return $this;
+    }
+
+    /**
+     * Sets the field by wrapping a primitive type in a Google\Protobuf\UInt32Value object.
+
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value traffic_control_reload_count = 1045 [json_name = "trafficControlReloadCount"];</code>
+     *
+     * @param  int|null  $var
+     * @return $this
+     */
+    public function setTrafficControlReloadCountUnwrapped($var)
+    {
+        $this->writeWrapperValue('traffic_control_reload_count', $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value dhcp_reload_count = 1046 [json_name = "dhcpReloadCount"];</code>
+     *
+     * @return \Google\Protobuf\UInt32Value|null
+     */
+    public function getDhcpReloadCount()
+    {
+        return $this->dhcp_reload_count;
+    }
+
+    public function hasDhcpReloadCount()
+    {
+        return isset($this->dhcp_reload_count);
+    }
+
+    public function clearDhcpReloadCount()
+    {
+        unset($this->dhcp_reload_count);
+    }
+
+    /**
+     * Returns the unboxed value from <code>getDhcpReloadCount()</code>
+
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value dhcp_reload_count = 1046 [json_name = "dhcpReloadCount"];</code>
+     *
+     * @return int|null
+     */
+    public function getDhcpReloadCountUnwrapped()
+    {
+        return $this->readWrapperValue('dhcp_reload_count');
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value dhcp_reload_count = 1046 [json_name = "dhcpReloadCount"];</code>
+     *
+     * @param  \Google\Protobuf\UInt32Value  $var
+     * @return $this
+     */
+    public function setDhcpReloadCount($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        $this->dhcp_reload_count = $var;
+
+        return $this;
+    }
+
+    /**
+     * Sets the field by wrapping a primitive type in a Google\Protobuf\UInt32Value object.
+
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value dhcp_reload_count = 1046 [json_name = "dhcpReloadCount"];</code>
+     *
+     * @param  int|null  $var
+     * @return $this
+     */
+    public function setDhcpReloadCountUnwrapped($var)
+    {
+        $this->writeWrapperValue('dhcp_reload_count', $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value dhcpv6_reload_count = 1047 [json_name = "dhcpv6ReloadCount"];</code>
+     *
+     * @return \Google\Protobuf\UInt32Value|null
+     */
+    public function getDhcpv6ReloadCount()
+    {
+        return $this->dhcpv6_reload_count;
+    }
+
+    public function hasDhcpv6ReloadCount()
+    {
+        return isset($this->dhcpv6_reload_count);
+    }
+
+    public function clearDhcpv6ReloadCount()
+    {
+        unset($this->dhcpv6_reload_count);
+    }
+
+    /**
+     * Returns the unboxed value from <code>getDhcpv6ReloadCount()</code>
+
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value dhcpv6_reload_count = 1047 [json_name = "dhcpv6ReloadCount"];</code>
+     *
+     * @return int|null
+     */
+    public function getDhcpv6ReloadCountUnwrapped()
+    {
+        return $this->readWrapperValue('dhcpv6_reload_count');
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value dhcpv6_reload_count = 1047 [json_name = "dhcpv6ReloadCount"];</code>
+     *
+     * @param  \Google\Protobuf\UInt32Value  $var
+     * @return $this
+     */
+    public function setDhcpv6ReloadCount($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        $this->dhcpv6_reload_count = $var;
+
+        return $this;
+    }
+
+    /**
+     * Sets the field by wrapping a primitive type in a Google\Protobuf\UInt32Value object.
+
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value dhcpv6_reload_count = 1047 [json_name = "dhcpv6ReloadCount"];</code>
+     *
+     * @param  int|null  $var
+     * @return $this
+     */
+    public function setDhcpv6ReloadCountUnwrapped($var)
+    {
+        $this->writeWrapperValue('dhcpv6_reload_count', $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value system_reload_count = 1048 [json_name = "systemReloadCount"];</code>
+     *
+     * @return \Google\Protobuf\UInt32Value|null
+     */
+    public function getSystemReloadCount()
+    {
+        return $this->system_reload_count;
+    }
+
+    public function hasSystemReloadCount()
+    {
+        return isset($this->system_reload_count);
+    }
+
+    public function clearSystemReloadCount()
+    {
+        unset($this->system_reload_count);
+    }
+
+    /**
+     * Returns the unboxed value from <code>getSystemReloadCount()</code>
+
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value system_reload_count = 1048 [json_name = "systemReloadCount"];</code>
+     *
+     * @return int|null
+     */
+    public function getSystemReloadCountUnwrapped()
+    {
+        return $this->readWrapperValue('system_reload_count');
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value system_reload_count = 1048 [json_name = "systemReloadCount"];</code>
+     *
+     * @param  \Google\Protobuf\UInt32Value  $var
+     * @return $this
+     */
+    public function setSystemReloadCount($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        $this->system_reload_count = $var;
+
+        return $this;
+    }
+
+    /**
+     * Sets the field by wrapping a primitive type in a Google\Protobuf\UInt32Value object.
+
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value system_reload_count = 1048 [json_name = "systemReloadCount"];</code>
+     *
+     * @param  int|null  $var
+     * @return $this
+     */
+    public function setSystemReloadCountUnwrapped($var)
+    {
+        $this->writeWrapperValue('system_reload_count', $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value dns_reload_count = 1049 [json_name = "dnsReloadCount"];</code>
+     *
+     * @return \Google\Protobuf\UInt32Value|null
+     */
+    public function getDnsReloadCount()
+    {
+        return $this->dns_reload_count;
+    }
+
+    public function hasDnsReloadCount()
+    {
+        return isset($this->dns_reload_count);
+    }
+
+    public function clearDnsReloadCount()
+    {
+        unset($this->dns_reload_count);
+    }
+
+    /**
+     * Returns the unboxed value from <code>getDnsReloadCount()</code>
+
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value dns_reload_count = 1049 [json_name = "dnsReloadCount"];</code>
+     *
+     * @return int|null
+     */
+    public function getDnsReloadCountUnwrapped()
+    {
+        return $this->readWrapperValue('dns_reload_count');
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value dns_reload_count = 1049 [json_name = "dnsReloadCount"];</code>
+     *
+     * @param  \Google\Protobuf\UInt32Value  $var
+     * @return $this
+     */
+    public function setDnsReloadCount($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        $this->dns_reload_count = $var;
+
+        return $this;
+    }
+
+    /**
+     * Sets the field by wrapping a primitive type in a Google\Protobuf\UInt32Value object.
+
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value dns_reload_count = 1049 [json_name = "dnsReloadCount"];</code>
+     *
+     * @param  int|null  $var
+     * @return $this
+     */
+    public function setDnsReloadCountUnwrapped($var)
+    {
+        $this->writeWrapperValue('dns_reload_count', $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value https_reload_count = 1050 [json_name = "httpsReloadCount"];</code>
+     *
+     * @return \Google\Protobuf\UInt32Value|null
+     */
+    public function getHttpsReloadCount()
+    {
+        return $this->https_reload_count;
+    }
+
+    public function hasHttpsReloadCount()
+    {
+        return isset($this->https_reload_count);
+    }
+
+    public function clearHttpsReloadCount()
+    {
+        unset($this->https_reload_count);
+    }
+
+    /**
+     * Returns the unboxed value from <code>getHttpsReloadCount()</code>
+
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value https_reload_count = 1050 [json_name = "httpsReloadCount"];</code>
+     *
+     * @return int|null
+     */
+    public function getHttpsReloadCountUnwrapped()
+    {
+        return $this->readWrapperValue('https_reload_count');
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value https_reload_count = 1050 [json_name = "httpsReloadCount"];</code>
+     *
+     * @param  \Google\Protobuf\UInt32Value  $var
+     * @return $this
+     */
+    public function setHttpsReloadCount($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        $this->https_reload_count = $var;
+
+        return $this;
+    }
+
+    /**
+     * Sets the field by wrapping a primitive type in a Google\Protobuf\UInt32Value object.
+
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value https_reload_count = 1050 [json_name = "httpsReloadCount"];</code>
+     *
+     * @param  int|null  $var
+     * @return $this
+     */
+    public function setHttpsReloadCountUnwrapped($var)
+    {
+        $this->writeWrapperValue('https_reload_count', $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value band_steering_reload_count = 1051 [json_name = "bandSteeringReloadCount"];</code>
+     *
+     * @return \Google\Protobuf\UInt32Value|null
+     */
+    public function getBandSteeringReloadCount()
+    {
+        return $this->band_steering_reload_count;
+    }
+
+    public function hasBandSteeringReloadCount()
+    {
+        return isset($this->band_steering_reload_count);
+    }
+
+    public function clearBandSteeringReloadCount()
+    {
+        unset($this->band_steering_reload_count);
+    }
+
+    /**
+     * Returns the unboxed value from <code>getBandSteeringReloadCount()</code>
+
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value band_steering_reload_count = 1051 [json_name = "bandSteeringReloadCount"];</code>
+     *
+     * @return int|null
+     */
+    public function getBandSteeringReloadCountUnwrapped()
+    {
+        return $this->readWrapperValue('band_steering_reload_count');
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value band_steering_reload_count = 1051 [json_name = "bandSteeringReloadCount"];</code>
+     *
+     * @param  \Google\Protobuf\UInt32Value  $var
+     * @return $this
+     */
+    public function setBandSteeringReloadCount($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        $this->band_steering_reload_count = $var;
+
+        return $this;
+    }
+
+    /**
+     * Sets the field by wrapping a primitive type in a Google\Protobuf\UInt32Value object.
+
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value band_steering_reload_count = 1051 [json_name = "bandSteeringReloadCount"];</code>
+     *
+     * @param  int|null  $var
+     * @return $this
+     */
+    public function setBandSteeringReloadCountUnwrapped($var)
+    {
+        $this->writeWrapperValue('band_steering_reload_count', $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value commit_count = 1052 [json_name = "commitCount"];</code>
+     *
+     * @return \Google\Protobuf\UInt32Value|null
+     */
+    public function getCommitCount()
+    {
+        return $this->commit_count;
+    }
+
+    public function hasCommitCount()
+    {
+        return isset($this->commit_count);
+    }
+
+    public function clearCommitCount()
+    {
+        unset($this->commit_count);
+    }
+
+    /**
+     * Returns the unboxed value from <code>getCommitCount()</code>
+
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value commit_count = 1052 [json_name = "commitCount"];</code>
+     *
+     * @return int|null
+     */
+    public function getCommitCountUnwrapped()
+    {
+        return $this->readWrapperValue('commit_count');
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value commit_count = 1052 [json_name = "commitCount"];</code>
+     *
+     * @param  \Google\Protobuf\UInt32Value  $var
+     * @return $this
+     */
+    public function setCommitCount($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        $this->commit_count = $var;
+
+        return $this;
+    }
+
+    /**
+     * Sets the field by wrapping a primitive type in a Google\Protobuf\UInt32Value object.
+
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value commit_count = 1052 [json_name = "commitCount"];</code>
+     *
+     * @param  int|null  $var
+     * @return $this
+     */
+    public function setCommitCountUnwrapped($var)
+    {
+        $this->writeWrapperValue('commit_count', $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value network_reload_count = 1053 [json_name = "networkReloadCount"];</code>
+     *
+     * @return \Google\Protobuf\UInt32Value|null
+     */
+    public function getNetworkReloadCount()
+    {
+        return $this->network_reload_count;
+    }
+
+    public function hasNetworkReloadCount()
+    {
+        return isset($this->network_reload_count);
+    }
+
+    public function clearNetworkReloadCount()
+    {
+        unset($this->network_reload_count);
+    }
+
+    /**
+     * Returns the unboxed value from <code>getNetworkReloadCount()</code>
+
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value network_reload_count = 1053 [json_name = "networkReloadCount"];</code>
+     *
+     * @return int|null
+     */
+    public function getNetworkReloadCountUnwrapped()
+    {
+        return $this->readWrapperValue('network_reload_count');
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value network_reload_count = 1053 [json_name = "networkReloadCount"];</code>
+     *
+     * @param  \Google\Protobuf\UInt32Value  $var
+     * @return $this
+     */
+    public function setNetworkReloadCount($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        $this->network_reload_count = $var;
+
+        return $this;
+    }
+
+    /**
+     * Sets the field by wrapping a primitive type in a Google\Protobuf\UInt32Value object.
+
+     * Generated from protobuf field <code>optional .google.protobuf.UInt32Value network_reload_count = 1053 [json_name = "networkReloadCount"];</code>
+     *
+     * @param  int|null  $var
+     * @return $this
+     */
+    public function setNetworkReloadCountUnwrapped($var)
+    {
+        $this->writeWrapperValue('network_reload_count', $var);
 
         return $this;
     }

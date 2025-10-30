@@ -22,6 +22,8 @@ message MeshConfig {
 message TlsConfig {
 	optional 	string key = 1 [json_name="key"];
 	optional 	string cert = 2 [json_name="cert"];
+	optional 	string client_ca_cert = 3 [json_name="clientCaCert"];
+	optional 	string server_ca_cert = 4 [json_name="serverCaCert"];
 }
 
 message HttpServer {
@@ -158,7 +160,11 @@ message WifiConfig {
 	optional 	bool only_overflight_countries_using_default = 1114 [json_name="onlyOverflightCountriesUsingDefault"];
 	repeated 	.SpaceX.API.Device.WifiConfig.UnbridgedEthPort unbridged_eth_ports = 1112 [json_name="unbridgedEthPorts"];
 	optional 	bool apply_unbridged_eth_ports = 1113 [json_name="applyUnbridgedEthPorts"];
+	optional 	bool disable_sandbox_fail_open = 1115 [json_name="disableSandboxFailOpen"];
+	optional 	bool apply_disable_sandbox_fail_open = 1116 [json_name="applyDisableSandboxFailOpen"];
 	optional 	uint32 tag = 78 [json_name="tag"];
+	optional 	bool custom_dns_disabled = 1117 [json_name="customDnsDisabled"];
+	optional 	bool apply_custom_dns_disabled = 1118 [json_name="applyCustomDnsDisabled"];
 message MeshConfigsEntry {
 	optional 	string key = 1 [json_name="key"];
 	optional 	.SpaceX.API.Device.MeshConfig value = 2 [json_name="value"];
@@ -178,6 +184,7 @@ message BasicServiceSet {
 	optional 	.SpaceX.API.Device.AuthWpa2Wpa3 auth_wpa2_wpa3 = 2004 [json_name="authWpa2Wpa3"];
 	optional 	.SpaceX.API.Device.AuthRadius auth_radius = 2005 [json_name="authRadius"];
 	optional 	.SpaceX.API.Device.AuthOpenEncrypted auth_open_encrypted = 2006 [json_name="authOpenEncrypted"];
+	optional 	.SpaceX.API.Device.AuthOnboardRadius auth_onboard_radius = 2007 [json_name="authOnboardRadius"];
 	optional 	.SpaceX.API.Device.WifiConfig.Band band = 1011 [json_name="band"];
 	optional 	string iface_name = 1017 [json_name="ifaceName"];
 	optional 	bool disable = 1013 [json_name="disable"];
@@ -220,8 +227,11 @@ message Network {
 	optional 	uint32 network_groups = 1026 [json_name="networkGroups"];
 	repeated 	.SpaceX.API.Device.WifiConfig.DnsStaticEntry dns_static_entries = 1027 [json_name="dnsStaticEntries"];
 	repeated 	.SpaceX.API.Device.WifiConfig.DnsForwardRule dns_forward_rules = 1028 [json_name="dnsForwardRules"];
-	optional 	bool disable_when_offline = 1029 [json_name="disableWhenOffline"];
+	optional 	bool disable_when_offline_old = 1029 [json_name="disableWhenOfflineOld"];
 	repeated 	.SpaceX.API.Device.WifiConfig.StaticRoute static_routes = 1030 [json_name="staticRoutes"];
+	optional 	bool disable_when_offline = 1031 [json_name="disableWhenOffline"];
+	optional 	.SpaceX.API.Device.TlsConfig onboard_radius_tls_config_old = 1032 [json_name="onboardRadiusTlsConfigOld"];
+	optional 	.SpaceX.API.Device.TlsConfig onboard_radius_tls_config = 1033 [json_name="onboardRadiusTlsConfig"];
 }
 
 message UnbridgedEthPort {
@@ -333,6 +343,9 @@ message AuthRadius {
 	optional 	string server_ca_base_64 = 4 [json_name="serverCaBase64"];
 	optional 	string password = 2 [json_name="password"];
 	optional 	.SpaceX.API.Device.Protocol transport = 5 [json_name="transport"];
+}
+
+message AuthOnboardRadius {
 }
 
 message NoTrafficControl {

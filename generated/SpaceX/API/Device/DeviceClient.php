@@ -32,7 +32,7 @@ class DeviceClient extends \Grpc\BaseStub
      * @param  \SpaceX\API\Device\Request  $argument  input argument
      * @param  array  $metadata  metadata
      * @param  array  $options  call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\SpaceX\API\Device\Response>
      */
     public function Handle(\SpaceX\API\Device\Request $argument,
         $metadata = [], $options = [])

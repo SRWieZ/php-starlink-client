@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.HttpServer</code>
@@ -48,8 +49,8 @@ class HttpServer extends \Google\Protobuf\Internal\Message
      * @type \SpaceX\API\Device\TlsConfig $tls
      * @type string $file_content_id
      * @type string $file_content_hash
-     * @type array<string>|\Google\Protobuf\Internal\RepeatedField $access_control_allow_origins
-     *                                                             }
+     * @type string[] $access_control_allow_origins
+     *                }
      */
     public function __construct($data = null)
     {
@@ -196,7 +197,7 @@ class HttpServer extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated string access_control_allow_origins = 5 [json_name = "accessControlAllowOrigins"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getAccessControlAllowOrigins()
     {
@@ -206,7 +207,7 @@ class HttpServer extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated string access_control_allow_origins = 5 [json_name = "accessControlAllowOrigins"];</code>
      *
-     * @param  array<string>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  string[]  $var
      * @return $this
      */
     public function setAccessControlAllowOrigins($var)

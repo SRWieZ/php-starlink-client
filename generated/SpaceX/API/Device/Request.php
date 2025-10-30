@@ -309,6 +309,11 @@ class Request extends \Google\Protobuf\Internal\Message
     protected $dish_aviation_test = null;
 
     /**
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.DishInhibitRfRequest dish_inhibit_rf = 2026 [json_name = "dishInhibitRf"];</code>
+     */
+    protected $dish_inhibit_rf = null;
+
+    /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiGetClientsRequest wifi_get_clients = 3002 [json_name = "wifiGetClients"];</code>
      */
     protected $wifi_get_clients = null;
@@ -419,6 +424,26 @@ class Request extends \Google\Protobuf\Internal\Message
     protected $wifi_client_sandbox = null;
 
     /**
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiRunDebugNetsysRequest wifi_run_debug_netsys = 3032 [json_name = "wifiRunDebugNetsys"];</code>
+     */
+    protected $wifi_run_debug_netsys = null;
+
+    /**
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiResetEthPhyRequest wifi_reset_eth_phy = 3033 [json_name = "wifiResetEthPhy"];</code>
+     */
+    protected $wifi_reset_eth_phy = null;
+
+    /**
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiFlushHardwareNatRequest wifi_flush_hardware_nat = 3034 [json_name = "wifiFlushHardwareNat"];</code>
+     */
+    protected $wifi_flush_hardware_nat = null;
+
+    /**
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiWriteCalibrationRequest wifi_write_calibration = 3035 [json_name = "wifiWriteCalibration"];</code>
+     */
+    protected $wifi_write_calibration = null;
+
+    /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.TransceiverIFLoopbackTestRequest transceiver_if_loopback_test = 4001 [json_name = "transceiverIfLoopbackTest"];</code>
      */
     protected $transceiver_if_loopback_test = null;
@@ -513,6 +538,7 @@ class Request extends \Google\Protobuf\Internal\Message
      * @type \SpaceX\API\Device\ResetButtonRequest $reset_button
      * @type \SpaceX\API\Device\SoftwareUpdateRequest $set_per_vehicle_config
      * @type \SpaceX\API\Device\DishAviationTestRequest $dish_aviation_test
+     * @type \SpaceX\API\Device\DishInhibitRfRequest $dish_inhibit_rf
      * @type \SpaceX\API\Device\WifiGetClientsRequest $wifi_get_clients
      * @type \SpaceX\API\Device\WifiGetPingMetricsRequest $wifi_get_ping_metrics
      * @type \SpaceX\API\Device\WifiSetConfigRequest $wifi_set_config
@@ -535,6 +561,10 @@ class Request extends \Google\Protobuf\Internal\Message
      * @type \SpaceX\API\Device\WifiBackhaulStatsRequest $wifi_backhaul_stats
      * @type \SpaceX\API\Device\WifiToggleUmbilicalModeRequest $wifi_toggle_umbilical_mode
      * @type \SpaceX\API\Device\WifiClientSandboxRequest $wifi_client_sandbox
+     * @type \SpaceX\API\Device\WifiRunDebugNetsysRequest $wifi_run_debug_netsys
+     * @type \SpaceX\API\Device\WifiResetEthPhyRequest $wifi_reset_eth_phy
+     * @type \SpaceX\API\Device\WifiFlushHardwareNatRequest $wifi_flush_hardware_nat
+     * @type \SpaceX\API\Device\WifiWriteCalibrationRequest $wifi_write_calibration
      * @type \SpaceX\API\Device\TransceiverIFLoopbackTestRequest $transceiver_if_loopback_test
      * @type \SpaceX\API\Device\TransceiverGetStatusRequest $transceiver_get_status
      * @type \SpaceX\API\Device\TransceiverGetTelemetryRequest $transceiver_get_telemetry
@@ -2556,6 +2586,40 @@ class Request extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.DishInhibitRfRequest dish_inhibit_rf = 2026 [json_name = "dishInhibitRf"];</code>
+     *
+     * @return \SpaceX\API\Device\DishInhibitRfRequest|null
+     */
+    public function getDishInhibitRf()
+    {
+        return $this->dish_inhibit_rf;
+    }
+
+    public function hasDishInhibitRf()
+    {
+        return isset($this->dish_inhibit_rf);
+    }
+
+    public function clearDishInhibitRf()
+    {
+        unset($this->dish_inhibit_rf);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.DishInhibitRfRequest dish_inhibit_rf = 2026 [json_name = "dishInhibitRf"];</code>
+     *
+     * @param  \SpaceX\API\Device\DishInhibitRfRequest  $var
+     * @return $this
+     */
+    public function setDishInhibitRf($var)
+    {
+        GPBUtil::checkMessage($var, \SpaceX\API\Device\DishInhibitRfRequest::class);
+        $this->dish_inhibit_rf = $var;
+
+        return $this;
+    }
+
+    /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiGetClientsRequest wifi_get_clients = 3002 [json_name = "wifiGetClients"];</code>
      *
      * @return \SpaceX\API\Device\WifiGetClientsRequest|null
@@ -3299,6 +3363,142 @@ class Request extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiClientSandboxRequest::class);
         $this->wifi_client_sandbox = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiRunDebugNetsysRequest wifi_run_debug_netsys = 3032 [json_name = "wifiRunDebugNetsys"];</code>
+     *
+     * @return \SpaceX\API\Device\WifiRunDebugNetsysRequest|null
+     */
+    public function getWifiRunDebugNetsys()
+    {
+        return $this->wifi_run_debug_netsys;
+    }
+
+    public function hasWifiRunDebugNetsys()
+    {
+        return isset($this->wifi_run_debug_netsys);
+    }
+
+    public function clearWifiRunDebugNetsys()
+    {
+        unset($this->wifi_run_debug_netsys);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiRunDebugNetsysRequest wifi_run_debug_netsys = 3032 [json_name = "wifiRunDebugNetsys"];</code>
+     *
+     * @param  \SpaceX\API\Device\WifiRunDebugNetsysRequest  $var
+     * @return $this
+     */
+    public function setWifiRunDebugNetsys($var)
+    {
+        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiRunDebugNetsysRequest::class);
+        $this->wifi_run_debug_netsys = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiResetEthPhyRequest wifi_reset_eth_phy = 3033 [json_name = "wifiResetEthPhy"];</code>
+     *
+     * @return \SpaceX\API\Device\WifiResetEthPhyRequest|null
+     */
+    public function getWifiResetEthPhy()
+    {
+        return $this->wifi_reset_eth_phy;
+    }
+
+    public function hasWifiResetEthPhy()
+    {
+        return isset($this->wifi_reset_eth_phy);
+    }
+
+    public function clearWifiResetEthPhy()
+    {
+        unset($this->wifi_reset_eth_phy);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiResetEthPhyRequest wifi_reset_eth_phy = 3033 [json_name = "wifiResetEthPhy"];</code>
+     *
+     * @param  \SpaceX\API\Device\WifiResetEthPhyRequest  $var
+     * @return $this
+     */
+    public function setWifiResetEthPhy($var)
+    {
+        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiResetEthPhyRequest::class);
+        $this->wifi_reset_eth_phy = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiFlushHardwareNatRequest wifi_flush_hardware_nat = 3034 [json_name = "wifiFlushHardwareNat"];</code>
+     *
+     * @return \SpaceX\API\Device\WifiFlushHardwareNatRequest|null
+     */
+    public function getWifiFlushHardwareNat()
+    {
+        return $this->wifi_flush_hardware_nat;
+    }
+
+    public function hasWifiFlushHardwareNat()
+    {
+        return isset($this->wifi_flush_hardware_nat);
+    }
+
+    public function clearWifiFlushHardwareNat()
+    {
+        unset($this->wifi_flush_hardware_nat);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiFlushHardwareNatRequest wifi_flush_hardware_nat = 3034 [json_name = "wifiFlushHardwareNat"];</code>
+     *
+     * @param  \SpaceX\API\Device\WifiFlushHardwareNatRequest  $var
+     * @return $this
+     */
+    public function setWifiFlushHardwareNat($var)
+    {
+        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiFlushHardwareNatRequest::class);
+        $this->wifi_flush_hardware_nat = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiWriteCalibrationRequest wifi_write_calibration = 3035 [json_name = "wifiWriteCalibration"];</code>
+     *
+     * @return \SpaceX\API\Device\WifiWriteCalibrationRequest|null
+     */
+    public function getWifiWriteCalibration()
+    {
+        return $this->wifi_write_calibration;
+    }
+
+    public function hasWifiWriteCalibration()
+    {
+        return isset($this->wifi_write_calibration);
+    }
+
+    public function clearWifiWriteCalibration()
+    {
+        unset($this->wifi_write_calibration);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiWriteCalibrationRequest wifi_write_calibration = 3035 [json_name = "wifiWriteCalibration"];</code>
+     *
+     * @param  \SpaceX\API\Device\WifiWriteCalibrationRequest  $var
+     * @return $this
+     */
+    public function setWifiWriteCalibration($var)
+    {
+        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiWriteCalibrationRequest::class);
+        $this->wifi_write_calibration = $var;
 
         return $this;
     }

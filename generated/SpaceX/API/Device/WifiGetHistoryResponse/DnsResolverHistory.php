@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device\WifiGetHistoryResponse;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiGetHistoryResponse.DnsResolverHistory</code>
@@ -24,8 +25,8 @@ class DnsResolverHistory extends \Google\Protobuf\Internal\Message
      * @param  array  $data  {
      *                       Optional. Data for populating the Message object.
      *
-     * @type array<float>|\Google\Protobuf\Internal\RepeatedField $drop_rate_last_15s
-     *                                                            }
+     * @type float[] $drop_rate_last_15s
+     *               }
      */
     public function __construct($data = null)
     {
@@ -36,7 +37,7 @@ class DnsResolverHistory extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated float drop_rate_last_15s = 2 [json_name = "dropRateLast15s"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<float>
      */
     public function getDropRateLast15S()
     {
@@ -46,7 +47,7 @@ class DnsResolverHistory extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated float drop_rate_last_15s = 2 [json_name = "dropRateLast15s"];</code>
      *
-     * @param  array<float>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  float[]  $var
      * @return $this
      */
     public function setDropRateLast15S($var)

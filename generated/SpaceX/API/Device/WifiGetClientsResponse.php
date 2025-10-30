@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiGetClientsResponse</code>
@@ -34,7 +35,7 @@ class WifiGetClientsResponse extends \Google\Protobuf\Internal\Message
      * @param  array  $data  {
      *                       Optional. Data for populating the Message object.
      *
-     * @type array<\SpaceX\API\Device\WifiClient>|\Google\Protobuf\Internal\RepeatedField $clients
+     * @type \SpaceX\API\Device\WifiClient[] $clients
      * @type bool $has_client_index
      * @type int $client_index
      *           }
@@ -48,7 +49,7 @@ class WifiGetClientsResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiClient clients = 1 [json_name = "clients"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\SpaceX\API\Device\WifiClient>
      */
     public function getClients()
     {
@@ -58,7 +59,7 @@ class WifiGetClientsResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiClient clients = 1 [json_name = "clients"];</code>
      *
-     * @param  array<\SpaceX\API\Device\WifiClient>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\WifiClient[]  $var
      * @return $this
      */
     public function setClients($var)

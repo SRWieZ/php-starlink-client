@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.SetTrustedKeysRequest</code>
@@ -24,8 +25,8 @@ class SetTrustedKeysRequest extends \Google\Protobuf\Internal\Message
      * @param  array  $data  {
      *                       Optional. Data for populating the Message object.
      *
-     * @type array<\SpaceX\API\Device\PublicKey>|\Google\Protobuf\Internal\RepeatedField $keys
-     *                                                                                   }
+     * @type \SpaceX\API\Device\PublicKey[] $keys
+     *                                      }
      */
     public function __construct($data = null)
     {
@@ -36,7 +37,7 @@ class SetTrustedKeysRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.PublicKey keys = 1 [json_name = "keys"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\SpaceX\API\Device\PublicKey>
      */
     public function getKeys()
     {
@@ -46,7 +47,7 @@ class SetTrustedKeysRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.PublicKey keys = 1 [json_name = "keys"];</code>
      *
-     * @param  array<\SpaceX\API\Device\PublicKey>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\PublicKey[]  $var
      * @return $this
      */
     public function setKeys($var)

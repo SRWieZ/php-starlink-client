@@ -9,7 +9,7 @@ import "spacex_api/device/common.proto";
 import "spacex_api/device/wifi_config.proto";
 import "spacex_api/device/wifi_util.proto";
 import "spacex_api/telemetron/public/common/time.proto";
-import "spacex/api/satellites/network/ut_disablement_codes.proto";
+import "spacex_api/satellites/network/ut_disablement_codes.proto";
 
 service Mesh {
 	rpc MeshStream(stream .SpaceX.API.Device.ToController) returns (stream .SpaceX.API.Device.FromController);
@@ -72,6 +72,7 @@ message WifiGlobalMeshStatus {
 	optional 	string hardware_version = 1 [json_name="hardwareVersion"];
 	optional 	string software_version = 2 [json_name="softwareVersion"];
 	repeated 	.SpaceX.API.Device.InflatedBasicServiceSet bss_list = 3 [json_name="bssList"];
+	optional 	uint32 hops_from_controller = 4 [json_name="hopsFromController"];
 }
 
 message BackhaulRequest {
@@ -199,6 +200,7 @@ message WifiGetHistoryResponse {
 	repeated 	float cloudflare_ipv4_ping_drop_rate_last_15s = 1007 [json_name="cloudflareIpv4PingDropRateLast15s"];
 	repeated 	float cloudflare_ipv6_ping_drop_rate_last_15s = 1008 [json_name="cloudflareIpv6PingDropRateLast15s"];
 	repeated 	.SpaceX.API.Device.WifiGetHistoryResponse.DnsResolverDropRateEntry dns_resolver_drop_rate = 1009 [json_name="dnsResolverDropRate"];
+	optional 	.SpaceX.API.Device.EventLog event_log = 1010 [json_name="eventLog"];
 message DnsResolverHistory {
 	repeated 	float drop_rate_last_15s = 2 [json_name="dropRateLast15s"];
 }
@@ -264,6 +266,8 @@ message WifiClient {
 	optional 	string captive_client_id = 53 [json_name="captiveClientId"];
 	optional 	.SpaceX.API.Device.WifiClient.FqcodelInfo fqcodel_info = 44 [json_name="fqcodelInfo"];
 	optional 	.SpaceX.API.Device.WifiClient.Alerts alerts = 52 [json_name="alerts"];
+	optional 	uint32 upload_mb = 54 [json_name="uploadMb"];
+	optional 	uint32 download_mb = 55 [json_name="downloadMb"];
 message RxStats {
 	optional 	uint64 bytes = 1 [json_name="bytes"];
 	optional 	uint64 count_errors = 2 [json_name="countErrors"];
@@ -376,6 +380,7 @@ message WifiAlerts {
 	optional 	bool sandbox_disabled = 22 [json_name="sandboxDisabled"];
 	optional 	bool only_overflight_blocked = 23 [json_name="onlyOverflightBlocked"];
 	optional 	bool offline_networks_disabled = 24 [json_name="offlineNetworksDisabled"];
+	optional 	bool wired_mesh_not_using_wan_iface = 25 [json_name="wiredMeshNotUsingWanIface"];
 }
 
 message WifiGetStatusResponse {
@@ -384,6 +389,7 @@ message WifiGetStatusResponse {
 	optional 	bool captive_portal_enabled = 1 [json_name="captivePortalEnabled"];
 	optional 	string ipv4_wan_address = 1003 [json_name="ipv4WanAddress"];
 	repeated 	string ipv6_wan_addresses = 1017 [json_name="ipv6WanAddresses"];
+	optional 	uint32 hops_from_controller = 1034 [json_name="hopsFromController"];
 	optional 	float ping_drop_rate = 1004 [json_name="pingDropRate"];
 	optional 	float ping_drop_rate_5m = 1021 [json_name="pingDropRate5m"];
 	optional 	float ping_latency_ms = 1005 [json_name="pingLatencyMs"];
@@ -414,6 +420,8 @@ message WifiGetStatusResponse {
 	optional 	.SpaceX.API.Device.WifiSoftwareUpdateStats software_update_stats = 1025 [json_name="softwareUpdateStats"];
 	optional 	.SpaceX.API.Device.WifiSetupRequirement setup_requirement = 1026 [json_name="setupRequirement"];
 	optional 	float secs_since_last_public_ipv4_change = 1030 [json_name="secsSinceLastPublicIpv4Change"];
+	optional 	bool using_individualized_calibration = 1032 [json_name="usingIndividualizedCalibration"];
+	optional 	.SpaceX.API.Device.CalibrationPartitionsState calibration_partitions_state = 1033 [json_name="calibrationPartitionsState"];
 }
 
 message WifiAuthenticateRequest {
@@ -537,6 +545,8 @@ message starlink_routers_hourly_metrics_v2 {
 	optional 	.google.protobuf.UInt32Value sys_ubi_max_ec = 17 [json_name="sysUbiMaxEc"];
 	optional 	.google.protobuf.UInt32Value sys_ubi_bad_peb = 18 [json_name="sysUbiBadPeb"];
 	optional 	.google.protobuf.UInt32Value sys_board_rev = 19 [json_name="sysBoardRev"];
+	optional 	.google.protobuf.UInt32Value sys_calibration_state = 20 [json_name="sysCalibrationState"];
+	optional 	.google.protobuf.UInt32Value sys_calibration_partitions_state = 21 [json_name="sysCalibrationPartitionsState"];
 	optional 	.google.protobuf.UInt32Value radios_2ghz_channel = 100 [json_name="radios2ghzChannel"];
 	optional 	.google.protobuf.FloatValue radios_2ghz_antenna1_rssi = 101 [json_name="radios2ghzAntenna1Rssi"];
 	optional 	.google.protobuf.FloatValue radios_2ghz_antenna2_rssi = 102 [json_name="radios2ghzAntenna2Rssi"];
@@ -740,6 +750,7 @@ message starlink_routers_hourly_metrics_v2 {
 	optional 	.google.protobuf.BoolValue config_https_content_hosting_enabled = 1031 [json_name="configHttpsContentHostingEnabled"];
 	optional 	.google.protobuf.BoolValue config_only_overflight_blocking_enabled = 1032 [json_name="configOnlyOverflightBlockingEnabled"];
 	optional 	.google.protobuf.BoolValue config_offline_networks_disablement_enabled = 1033 [json_name="configOfflineNetworksDisablementEnabled"];
+	optional 	.google.protobuf.BoolValue config_custom_dns_disabled = 1034 [json_name="configCustomDnsDisabled"];
 	optional 	.google.protobuf.BoolValue config_disable_2ghz = 1018 [json_name="configDisable2ghz"];
 	optional 	.google.protobuf.BoolValue config_disable_5ghz = 1019 [json_name="configDisable5ghz"];
 	optional 	.google.protobuf.BoolValue config_disable_5ghz_high = 1029 [json_name="configDisable5ghzHigh"];
@@ -751,6 +762,21 @@ message starlink_routers_hourly_metrics_v2 {
 	optional 	.google.protobuf.UInt32Value config_networks_hidden = 1025 [json_name="configNetworksHidden"];
 	optional 	.google.protobuf.UInt32Value config_networks_client_isolation = 1026 [json_name="configNetworksClientIsolation"];
 	optional 	.google.protobuf.UInt32Value config_networks_bands_split = 1027 [json_name="configNetworksBandsSplit"];
+	optional 	.google.protobuf.UInt32Value config_networks_user = 1035 [json_name="configNetworksUser"];
+	optional 	.google.protobuf.UInt32Value wifi_reload_count = 1040 [json_name="wifiReloadCount"];
+	optional 	.google.protobuf.UInt32Value radius_reload_count = 1041 [json_name="radiusReloadCount"];
+	optional 	.google.protobuf.UInt32Value openssh_reload_count = 1042 [json_name="opensshReloadCount"];
+	optional 	.google.protobuf.UInt32Value iptables_reload_count = 1043 [json_name="iptablesReloadCount"];
+	optional 	.google.protobuf.UInt32Value ebtables_reload_count = 1044 [json_name="ebtablesReloadCount"];
+	optional 	.google.protobuf.UInt32Value traffic_control_reload_count = 1045 [json_name="trafficControlReloadCount"];
+	optional 	.google.protobuf.UInt32Value dhcp_reload_count = 1046 [json_name="dhcpReloadCount"];
+	optional 	.google.protobuf.UInt32Value dhcpv6_reload_count = 1047 [json_name="dhcpv6ReloadCount"];
+	optional 	.google.protobuf.UInt32Value system_reload_count = 1048 [json_name="systemReloadCount"];
+	optional 	.google.protobuf.UInt32Value dns_reload_count = 1049 [json_name="dnsReloadCount"];
+	optional 	.google.protobuf.UInt32Value https_reload_count = 1050 [json_name="httpsReloadCount"];
+	optional 	.google.protobuf.UInt32Value band_steering_reload_count = 1051 [json_name="bandSteeringReloadCount"];
+	optional 	.google.protobuf.UInt32Value commit_count = 1052 [json_name="commitCount"];
+	optional 	.google.protobuf.UInt32Value network_reload_count = 1053 [json_name="networkReloadCount"];
 	optional 	.google.protobuf.Int64Value wan_traffic_control_cake_bytes = 1101 [json_name="wanTrafficControlCakeBytes"];
 	optional 	.google.protobuf.Int64Value wan_traffic_control_cake_packets = 1102 [json_name="wanTrafficControlCakePackets"];
 	optional 	.google.protobuf.Int64Value wan_traffic_control_cake_drops = 1103 [json_name="wanTrafficControlCakeDrops"];
@@ -1150,5 +1176,23 @@ message WifiToggleUmbilicalModeRequest {
 
 message WifiUpdateResponse {
 	optional 	.SpaceX.API.Device.WifiSoftwareUpdateStats stats = 1 [json_name="stats"];
+}
+
+message WifiRunDebugNetsysRequest {
+}
+
+message WifiRunDebugNetsysResponse {
+}
+
+message WifiResetEthPhyRequest {
+}
+
+message WifiResetEthPhyResponse {
+}
+
+message WifiFlushHardwareNatRequest {
+}
+
+message WifiFlushHardwareNatResponse {
 }
 

@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.SteerClientRequest</code>
@@ -30,8 +31,8 @@ class SteerClientRequest extends \Google\Protobuf\Internal\Message
      *                       Optional. Data for populating the Message object.
      *
      * @type string $client_mac_addr
-     * @type array<\SpaceX\API\Device\SteerClientRequest\SteerTarget>|\Google\Protobuf\Internal\RepeatedField $targets
-     *                                                                                                        }
+     * @type \SpaceX\API\Device\SteerClientRequest\SteerTarget[] $targets
+     *                                                           }
      */
     public function __construct($data = null)
     {
@@ -76,7 +77,7 @@ class SteerClientRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.SteerClientRequest.SteerTarget targets = 2 [json_name = "targets"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\SpaceX\API\Device\SteerClientRequest\SteerTarget>
      */
     public function getTargets()
     {
@@ -86,7 +87,7 @@ class SteerClientRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.SteerClientRequest.SteerTarget targets = 2 [json_name = "targets"];</code>
      *
-     * @param  array<\SpaceX\API\Device\SteerClientRequest\SteerTarget>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\SteerClientRequest\SteerTarget[]  $var
      * @return $this
      */
     public function setTargets($var)

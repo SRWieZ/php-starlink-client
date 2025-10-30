@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.GetRadioStatsResponse</code>
@@ -24,8 +25,8 @@ class GetRadioStatsResponse extends \Google\Protobuf\Internal\Message
      * @param  array  $data  {
      *                       Optional. Data for populating the Message object.
      *
-     * @type array<\SpaceX\API\Device\RadioStats>|\Google\Protobuf\Internal\RepeatedField $radio_stats
-     *                                                                                    }
+     * @type \SpaceX\API\Device\RadioStats[] $radio_stats
+     *                                       }
      */
     public function __construct($data = null)
     {
@@ -36,7 +37,7 @@ class GetRadioStatsResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.RadioStats radio_stats = 1 [json_name = "radioStats"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\SpaceX\API\Device\RadioStats>
      */
     public function getRadioStats()
     {
@@ -46,7 +47,7 @@ class GetRadioStatsResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.RadioStats radio_stats = 1 [json_name = "radioStats"];</code>
      *
-     * @param  array<\SpaceX\API\Device\RadioStats>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\RadioStats[]  $var
      * @return $this
      */
     public function setRadioStats($var)

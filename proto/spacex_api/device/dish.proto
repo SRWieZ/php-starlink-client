@@ -4,11 +4,12 @@ package SpaceX.API.Device;
 
 option go_package = "spacex.com/api/device";
 
+import "spacex_api/device/account_shard.proto";
 import "spacex_api/device/common.proto";
 import "spacex_api/device/dish_config.proto";
 import "spacex_api/device/rssi_scan.proto";
-import "spacex/api/satellites/network/ut_disablement_codes.proto";
-import "spacex_api/telemetron/public/integrations/ut_pop_link_report.proto";
+import "spacex_api/satellites/network/ut_disablement_codes.proto";
+import "spacex_api/telemetron/public/integrations/rate_limit_reason.proto";
 
 message DishStowRequest {
 	optional 	bool unstow = 1 [json_name="unstow"];
@@ -82,7 +83,7 @@ message DishOutage {
 		ACTUATOR_ACTIVITY = 9;
 		CABLE_TEST = 10;
 		SLEEPING = 11;
-		MOVING_WHILE_NOT_ALLOWED = 12;
+		SKY_SEARCH = 13;
 	}
 }
 
@@ -94,6 +95,7 @@ message DishGetHistoryResponse {
 	repeated 	float uplink_throughput_bps = 1004 [json_name="uplinkThroughputBps"];
 	repeated 	.SpaceX.API.Device.DishOutage outages = 1009 [json_name="outages"];
 	repeated 	float power_in = 1010 [json_name="powerIn"];
+	optional 	.SpaceX.API.Device.EventLog event_log = 1011 [json_name="eventLog"];
 }
 
 message RouterInfo {
@@ -144,6 +146,7 @@ message DishGetStatusResponse {
 	optional 	.SpaceX.API.Device.DishApsStats aps_stats = 1048 [json_name="apsStats"];
 	optional 	.SpaceX.API.Device.Quaternion ned2dish_quaternion = 1049 [json_name="ned2dishQuaternion"];
 	repeated 	.SpaceX.API.Device.DishGetStatusResponse.DownstreamRoutersEntry downstream_routers = 1050 [json_name="downstreamRouters"];
+	optional 	.SpaceX.API.Device.AccountShard account_shard = 1051 [json_name="accountShard"];
 message DownstreamRoutersEntry {
 	optional 	string key = 1 [json_name="key"];
 	optional 	.SpaceX.API.Device.RouterInfo value = 2 [json_name="value"];
@@ -176,14 +179,14 @@ message DishAlerts {
 	optional 	bool is_heating = 9 [json_name="isHeating"];
 	optional 	bool power_supply_thermal_throttle = 10 [json_name="powerSupplyThermalThrottle"];
 	optional 	bool is_power_save_idle = 11 [json_name="isPowerSaveIdle"];
-	optional 	bool moving_while_not_mobile = 12 [json_name="movingWhileNotMobile"];
-	optional 	bool moving_too_fast_for_policy = 15 [json_name="movingTooFastForPolicy"];
 	optional 	bool dbf_telem_stale = 14 [json_name="dbfTelemStale"];
 	optional 	bool low_motor_current = 16 [json_name="lowMotorCurrent"];
 	optional 	bool lower_signal_than_predicted = 17 [json_name="lowerSignalThanPredicted"];
 	optional 	bool obstruction_map_reset = 19 [json_name="obstructionMapReset"];
 	optional 	bool dish_water_detected = 20 [json_name="dishWaterDetected"];
 	optional 	bool router_water_detected = 21 [json_name="routerWaterDetected"];
+	optional 	bool upsu_router_port_slow = 22 [json_name="upsuRouterPortSlow"];
+	optional 	bool no_ethernet_link = 23 [json_name="noEthernetLink"];
 }
 
 message DishReadyStates {
@@ -317,6 +320,14 @@ message DishGetConfigRequest {
 
 message DishGetConfigResponse {
 	optional 	.SpaceX.API.Device.DishConfig dish_config = 1 [json_name="dishConfig"];
+}
+
+message DishInhibitRfRequest {
+	optional 	bool inhibit_rf = 1 [json_name="inhibitRf"];
+}
+
+message DishInhibitRfResponse {
+	optional 	bool inhibit_rf = 1 [json_name="inhibitRf"];
 }
 
 message DishInhibitGpsRequest {
@@ -474,6 +485,7 @@ enum RebootReason {
 	REBOOT_REASON_AAP_CRASH = 14;
 	REBOOT_REASON_XP70_SACS = 15;
 	REBOOT_REASON_INE_FAILED = 16;
+	REBOOT_REASON_KERNEL_TAINTED = 17;
 }
 
 enum RouterRole {

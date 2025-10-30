@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.BridgeNetworkInterface</code>
@@ -24,8 +25,8 @@ class BridgeNetworkInterface extends \Google\Protobuf\Internal\Message
      * @param  array  $data  {
      *                       Optional. Data for populating the Message object.
      *
-     * @type array<string>|\Google\Protobuf\Internal\RepeatedField $member_names
-     *                                                             }
+     * @type string[] $member_names
+     *                }
      */
     public function __construct($data = null)
     {
@@ -36,7 +37,7 @@ class BridgeNetworkInterface extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated string member_names = 1 [json_name = "memberNames"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getMemberNames()
     {
@@ -46,7 +47,7 @@ class BridgeNetworkInterface extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated string member_names = 1 [json_name = "memberNames"];</code>
      *
-     * @param  array<string>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  string[]  $var
      * @return $this
      */
     public function setMemberNames($var)

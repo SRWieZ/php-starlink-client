@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.BootInfo</code>
@@ -69,8 +70,8 @@ class BootInfo extends \Google\Protobuf\Internal\Message
      * @param  array  $data  {
      *                       Optional. Data for populating the Message object.
      *
-     * @type array<\SpaceX\API\Device\BootInfo\CountByReasonEntry>|\Google\Protobuf\Internal\RepeatedField $count_by_reason
-     * @type array<\SpaceX\API\Device\BootInfo\CountByReasonDeltaEntry>|\Google\Protobuf\Internal\RepeatedField $count_by_reason_delta
+     * @type \SpaceX\API\Device\BootInfo\CountByReasonEntry[] $count_by_reason
+     * @type \SpaceX\API\Device\BootInfo\CountByReasonDeltaEntry[] $count_by_reason_delta
      * @type int $last_reason
      * @type int $last_count
      * @type bool $crash_boot
@@ -90,7 +91,7 @@ class BootInfo extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.BootInfo.CountByReasonEntry count_by_reason = 1 [json_name = "countByReason"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\SpaceX\API\Device\BootInfo\CountByReasonEntry>
      */
     public function getCountByReason()
     {
@@ -100,7 +101,7 @@ class BootInfo extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.BootInfo.CountByReasonEntry count_by_reason = 1 [json_name = "countByReason"];</code>
      *
-     * @param  array<\SpaceX\API\Device\BootInfo\CountByReasonEntry>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\BootInfo\CountByReasonEntry[]  $var
      * @return $this
      */
     public function setCountByReason($var)
@@ -114,7 +115,7 @@ class BootInfo extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.BootInfo.CountByReasonDeltaEntry count_by_reason_delta = 4 [json_name = "countByReasonDelta"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\SpaceX\API\Device\BootInfo\CountByReasonDeltaEntry>
      */
     public function getCountByReasonDelta()
     {
@@ -124,7 +125,7 @@ class BootInfo extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.BootInfo.CountByReasonDeltaEntry count_by_reason_delta = 4 [json_name = "countByReasonDelta"];</code>
      *
-     * @param  array<\SpaceX\API\Device\BootInfo\CountByReasonDeltaEntry>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\BootInfo\CountByReasonDeltaEntry[]  $var
      * @return $this
      */
     public function setCountByReasonDelta($var)

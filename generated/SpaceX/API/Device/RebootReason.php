@@ -98,6 +98,11 @@ class RebootReason
      */
     const REBOOT_REASON_INE_FAILED = 16;
 
+    /**
+     * Generated from protobuf enum <code>REBOOT_REASON_KERNEL_TAINTED = 17;</code>
+     */
+    const REBOOT_REASON_KERNEL_TAINTED = 17;
+
     private static $valueToName = [
         self::REBOOT_REASON_NONE => 'REBOOT_REASON_NONE',
         self::REBOOT_REASON_MANUAL => 'REBOOT_REASON_MANUAL',
@@ -116,6 +121,7 @@ class RebootReason
         self::REBOOT_REASON_AAP_CRASH => 'REBOOT_REASON_AAP_CRASH',
         self::REBOOT_REASON_XP70_SACS => 'REBOOT_REASON_XP70_SACS',
         self::REBOOT_REASON_INE_FAILED => 'REBOOT_REASON_INE_FAILED',
+        self::REBOOT_REASON_KERNEL_TAINTED => 'REBOOT_REASON_KERNEL_TAINTED',
     ];
 
     public static function name($value)

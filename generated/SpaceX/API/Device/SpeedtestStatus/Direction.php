@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device\SpeedtestStatus;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.SpeedtestStatus.Direction</code>
@@ -29,7 +30,7 @@ class Direction extends \Google\Protobuf\Internal\Message
      * @param  array  $data  {
      *                       Optional. Data for populating the Message object.
      *
-     * @type array<float>|\Google\Protobuf\Internal\RepeatedField $throughputs_mbps
+     * @type float[] $throughputs_mbps
      * @type int $err
      *           }
      */
@@ -42,7 +43,7 @@ class Direction extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated float throughputs_mbps = 1 [json_name = "throughputsMbps"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<float>
      */
     public function getThroughputsMbps()
     {
@@ -52,7 +53,7 @@ class Direction extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated float throughputs_mbps = 1 [json_name = "throughputsMbps"];</code>
      *
-     * @param  array<float>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  float[]  $var
      * @return $this
      */
     public function setThroughputsMbps($var)

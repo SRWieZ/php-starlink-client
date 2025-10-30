@@ -20,7 +20,7 @@ class UnlockServiceClient extends \Grpc\BaseStub
      * @param  \SpaceX\API\Device\Services\Unlock\StartUnlockRequest  $argument  input argument
      * @param  array  $metadata  metadata
      * @param  array  $options  call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\SpaceX\API\Device\Services\Unlock\StartUnlockResponse>
      */
     public function StartUnlock(\SpaceX\API\Device\Services\Unlock\StartUnlockRequest $argument,
         $metadata = [], $options = [])
@@ -35,7 +35,7 @@ class UnlockServiceClient extends \Grpc\BaseStub
      * @param  \SpaceX\API\Device\Services\Unlock\FinishUnlockRequest  $argument  input argument
      * @param  array  $metadata  metadata
      * @param  array  $options  call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\SpaceX\API\Device\Services\Unlock\FinishUnlockResponse>
      */
     public function FinishUnlock(\SpaceX\API\Device\Services\Unlock\FinishUnlockRequest $argument,
         $metadata = [], $options = [])

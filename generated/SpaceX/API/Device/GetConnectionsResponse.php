@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.GetConnectionsResponse</code>
@@ -24,8 +25,8 @@ class GetConnectionsResponse extends \Google\Protobuf\Internal\Message
      * @param  array  $data  {
      *                       Optional. Data for populating the Message object.
      *
-     * @type array<\SpaceX\API\Device\GetConnectionsResponse\ServicesEntry>|\Google\Protobuf\Internal\RepeatedField $services
-     *                                                                                                              }
+     * @type \SpaceX\API\Device\GetConnectionsResponse\ServicesEntry[] $services
+     *                                                                 }
      */
     public function __construct($data = null)
     {
@@ -36,7 +37,7 @@ class GetConnectionsResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.GetConnectionsResponse.ServicesEntry services = 1 [json_name = "services"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\SpaceX\API\Device\GetConnectionsResponse\ServicesEntry>
      */
     public function getServices()
     {
@@ -46,7 +47,7 @@ class GetConnectionsResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.GetConnectionsResponse.ServicesEntry services = 1 [json_name = "services"];</code>
      *
-     * @param  array<\SpaceX\API\Device\GetConnectionsResponse\ServicesEntry>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\GetConnectionsResponse\ServicesEntry[]  $var
      * @return $this
      */
     public function setServices($var)

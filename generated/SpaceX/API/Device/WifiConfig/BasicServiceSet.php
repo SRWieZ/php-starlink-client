@@ -54,6 +54,11 @@ class BasicServiceSet extends \Google\Protobuf\Internal\Message
     protected $auth_open_encrypted = null;
 
     /**
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.AuthOnboardRadius auth_onboard_radius = 2007 [json_name = "authOnboardRadius"];</code>
+     */
+    protected $auth_onboard_radius = null;
+
+    /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiConfig.Band band = 1011 [json_name = "band"];</code>
      */
     protected $band = null;
@@ -87,6 +92,7 @@ class BasicServiceSet extends \Google\Protobuf\Internal\Message
      * @type \SpaceX\API\Device\AuthWpa2Wpa3 $auth_wpa2_wpa3
      * @type \SpaceX\API\Device\AuthRadius $auth_radius
      * @type \SpaceX\API\Device\AuthOpenEncrypted $auth_open_encrypted
+     * @type \SpaceX\API\Device\AuthOnboardRadius $auth_onboard_radius
      * @type int $band
      * @type string $iface_name
      * @type bool $disable
@@ -367,6 +373,40 @@ class BasicServiceSet extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \SpaceX\API\Device\AuthOpenEncrypted::class);
         $this->auth_open_encrypted = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.AuthOnboardRadius auth_onboard_radius = 2007 [json_name = "authOnboardRadius"];</code>
+     *
+     * @return \SpaceX\API\Device\AuthOnboardRadius|null
+     */
+    public function getAuthOnboardRadius()
+    {
+        return $this->auth_onboard_radius;
+    }
+
+    public function hasAuthOnboardRadius()
+    {
+        return isset($this->auth_onboard_radius);
+    }
+
+    public function clearAuthOnboardRadius()
+    {
+        unset($this->auth_onboard_radius);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.AuthOnboardRadius auth_onboard_radius = 2007 [json_name = "authOnboardRadius"];</code>
+     *
+     * @param  \SpaceX\API\Device\AuthOnboardRadius  $var
+     * @return $this
+     */
+    public function setAuthOnboardRadius($var)
+    {
+        GPBUtil::checkMessage($var, \SpaceX\API\Device\AuthOnboardRadius::class);
+        $this->auth_onboard_radius = $var;
 
         return $this;
     }

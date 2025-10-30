@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiClient</code>
@@ -259,6 +260,16 @@ class WifiClient extends \Google\Protobuf\Internal\Message
     protected $alerts = null;
 
     /**
+     * Generated from protobuf field <code>optional uint32 upload_mb = 54 [json_name = "uploadMb"];</code>
+     */
+    protected $upload_mb = null;
+
+    /**
+     * Generated from protobuf field <code>optional uint32 download_mb = 55 [json_name = "downloadMb"];</code>
+     */
+    protected $download_mb = null;
+
+    /**
      * Constructor.
      *
      * @param  array  $data  {
@@ -273,7 +284,7 @@ class WifiClient extends \Google\Protobuf\Internal\Message
      * @type bool $dhcp_lease_active
      * @type bool $dhcp_lease_renewed
      * @type float $seconds_until_dhcp_lease_expires
-     * @type array<string>|\Google\Protobuf\Internal\RepeatedField $ipv6_addresses
+     * @type string[] $ipv6_addresses
      * @type float $signal_strength
      * @type int $channel_width
      * @type \SpaceX\API\Device\WifiClient\RxStats $rx_stats
@@ -313,7 +324,9 @@ class WifiClient extends \Google\Protobuf\Internal\Message
      * @type string $captive_client_id
      * @type \SpaceX\API\Device\WifiClient\FqcodelInfo $fqcodel_info
      * @type \SpaceX\API\Device\WifiClient\Alerts $alerts
-     *                                            }
+     * @type int $upload_mb
+     * @type int $download_mb
+     *           }
      */
     public function __construct($data = null)
     {
@@ -630,7 +643,7 @@ class WifiClient extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated string ipv6_addresses = 41 [json_name = "ipv6Addresses"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getIpv6Addresses()
     {
@@ -640,7 +653,7 @@ class WifiClient extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated string ipv6_addresses = 41 [json_name = "ipv6Addresses"];</code>
      *
-     * @param  array<string>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  string[]  $var
      * @return $this
      */
     public function setIpv6Addresses($var)
@@ -1973,6 +1986,74 @@ class WifiClient extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiClient\Alerts::class);
         $this->alerts = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional uint32 upload_mb = 54 [json_name = "uploadMb"];</code>
+     *
+     * @return int
+     */
+    public function getUploadMb()
+    {
+        return isset($this->upload_mb) ? $this->upload_mb : 0;
+    }
+
+    public function hasUploadMb()
+    {
+        return isset($this->upload_mb);
+    }
+
+    public function clearUploadMb()
+    {
+        unset($this->upload_mb);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional uint32 upload_mb = 54 [json_name = "uploadMb"];</code>
+     *
+     * @param  int  $var
+     * @return $this
+     */
+    public function setUploadMb($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->upload_mb = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional uint32 download_mb = 55 [json_name = "downloadMb"];</code>
+     *
+     * @return int
+     */
+    public function getDownloadMb()
+    {
+        return isset($this->download_mb) ? $this->download_mb : 0;
+    }
+
+    public function hasDownloadMb()
+    {
+        return isset($this->download_mb);
+    }
+
+    public function clearDownloadMb()
+    {
+        unset($this->download_mb);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional uint32 download_mb = 55 [json_name = "downloadMb"];</code>
+     *
+     * @param  int  $var
+     * @return $this
+     */
+    public function setDownloadMb($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->download_mb = $var;
 
         return $this;
     }

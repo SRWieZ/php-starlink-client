@@ -29,6 +29,16 @@ class GetLocationResponse extends \Google\Protobuf\Internal\Message
     protected $source = null;
 
     /**
+     * Generated from protobuf field <code>optional double horizontal_speed_mps = 5 [json_name = "horizontalSpeedMps"];</code>
+     */
+    protected $horizontal_speed_mps = null;
+
+    /**
+     * Generated from protobuf field <code>optional double vertical_speed_mps = 6 [json_name = "verticalSpeedMps"];</code>
+     */
+    protected $vertical_speed_mps = null;
+
+    /**
      * Constructor.
      *
      * @param  array  $data  {
@@ -37,7 +47,9 @@ class GetLocationResponse extends \Google\Protobuf\Internal\Message
      * @type \SpaceX\API\Device\LLAPosition $lla
      * @type float $sigma_m
      * @type int $source
-     *           }
+     * @type float $horizontal_speed_mps
+     * @type float $vertical_speed_mps
+     *             }
      */
     public function __construct($data = null)
     {
@@ -143,6 +155,74 @@ class GetLocationResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \SpaceX\API\Device\PositionSource::class);
         $this->source = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional double horizontal_speed_mps = 5 [json_name = "horizontalSpeedMps"];</code>
+     *
+     * @return float
+     */
+    public function getHorizontalSpeedMps()
+    {
+        return isset($this->horizontal_speed_mps) ? $this->horizontal_speed_mps : 0.0;
+    }
+
+    public function hasHorizontalSpeedMps()
+    {
+        return isset($this->horizontal_speed_mps);
+    }
+
+    public function clearHorizontalSpeedMps()
+    {
+        unset($this->horizontal_speed_mps);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional double horizontal_speed_mps = 5 [json_name = "horizontalSpeedMps"];</code>
+     *
+     * @param  float  $var
+     * @return $this
+     */
+    public function setHorizontalSpeedMps($var)
+    {
+        GPBUtil::checkDouble($var);
+        $this->horizontal_speed_mps = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional double vertical_speed_mps = 6 [json_name = "verticalSpeedMps"];</code>
+     *
+     * @return float
+     */
+    public function getVerticalSpeedMps()
+    {
+        return isset($this->vertical_speed_mps) ? $this->vertical_speed_mps : 0.0;
+    }
+
+    public function hasVerticalSpeedMps()
+    {
+        return isset($this->vertical_speed_mps);
+    }
+
+    public function clearVerticalSpeedMps()
+    {
+        unset($this->vertical_speed_mps);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional double vertical_speed_mps = 6 [json_name = "verticalSpeedMps"];</code>
+     *
+     * @param  float  $var
+     * @return $this
+     */
+    public function setVerticalSpeedMps($var)
+    {
+        GPBUtil::checkDouble($var);
+        $this->vertical_speed_mps = $var;
 
         return $this;
     }

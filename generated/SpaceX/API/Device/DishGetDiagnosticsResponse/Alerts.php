@@ -54,11 +54,6 @@ class Alerts extends \Google\Protobuf\Internal\Message
     protected $software_install_pending = null;
 
     /**
-     * Generated from protobuf field <code>optional bool moving_too_fast_for_policy = 9 [json_name = "movingTooFastForPolicy"];</code>
-     */
-    protected $moving_too_fast_for_policy = null;
-
-    /**
      * Generated from protobuf field <code>optional bool obstructed = 10 [json_name = "obstructed"];</code>
      */
     protected $obstructed = null;
@@ -77,7 +72,6 @@ class Alerts extends \Google\Protobuf\Internal\Message
      * @type bool $mast_not_near_vertical
      * @type bool $slow_ethernet_speeds
      * @type bool $software_install_pending
-     * @type bool $moving_too_fast_for_policy
      * @type bool $obstructed
      *            }
      */
@@ -355,40 +349,6 @@ class Alerts extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->software_install_pending = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>optional bool moving_too_fast_for_policy = 9 [json_name = "movingTooFastForPolicy"];</code>
-     *
-     * @return bool
-     */
-    public function getMovingTooFastForPolicy()
-    {
-        return isset($this->moving_too_fast_for_policy) ? $this->moving_too_fast_for_policy : false;
-    }
-
-    public function hasMovingTooFastForPolicy()
-    {
-        return isset($this->moving_too_fast_for_policy);
-    }
-
-    public function clearMovingTooFastForPolicy()
-    {
-        unset($this->moving_too_fast_for_policy);
-    }
-
-    /**
-     * Generated from protobuf field <code>optional bool moving_too_fast_for_policy = 9 [json_name = "movingTooFastForPolicy"];</code>
-     *
-     * @param  bool  $var
-     * @return $this
-     */
-    public function setMovingTooFastForPolicy($var)
-    {
-        GPBUtil::checkBool($var);
-        $this->moving_too_fast_for_policy = $var;
 
         return $this;
     }

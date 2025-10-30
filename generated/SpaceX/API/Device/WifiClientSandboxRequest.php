@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiClientSandboxRequest</code>
@@ -34,8 +35,8 @@ class WifiClientSandboxRequest extends \Google\Protobuf\Internal\Message
      * @param  array  $data  {
      *                       Optional. Data for populating the Message object.
      *
-     * @type array<\SpaceX\API\Device\WifiClientSandboxStatus>|\Google\Protobuf\Internal\RepeatedField $client_sandbox_status
-     * @type array<int>|\Google\Protobuf\Internal\RepeatedField $alerts
+     * @type \SpaceX\API\Device\WifiClientSandboxStatus[] $client_sandbox_status
+     * @type int[] $alerts
      * @type int|string $unix_timestamp_ns
      *                  }
      */
@@ -48,7 +49,7 @@ class WifiClientSandboxRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiClientSandboxStatus client_sandbox_status = 1 [json_name = "clientSandboxStatus"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\SpaceX\API\Device\WifiClientSandboxStatus>
      */
     public function getClientSandboxStatus()
     {
@@ -58,7 +59,7 @@ class WifiClientSandboxRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiClientSandboxStatus client_sandbox_status = 1 [json_name = "clientSandboxStatus"];</code>
      *
-     * @param  array<\SpaceX\API\Device\WifiClientSandboxStatus>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\WifiClientSandboxStatus[]  $var
      * @return $this
      */
     public function setClientSandboxStatus($var)
@@ -72,7 +73,7 @@ class WifiClientSandboxRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiClientSandboxAlert alerts = 2 [json_name = "alerts"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getAlerts()
     {
@@ -82,7 +83,7 @@ class WifiClientSandboxRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiClientSandboxAlert alerts = 2 [json_name = "alerts"];</code>
      *
-     * @param  array<int>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  int[]  $var
      * @return $this
      */
     public function setAlerts($var)

@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.DhcpServer</code>
@@ -41,7 +42,7 @@ class DhcpServer extends \Google\Protobuf\Internal\Message
      *
      * @type string $domain
      * @type string $subnet
-     * @type array<\SpaceX\API\Device\DhcpLease>|\Google\Protobuf\Internal\RepeatedField $leases
+     * @type \SpaceX\API\Device\DhcpLease[] $leases
      * @type bool $ip_exhausted
      *            }
      */
@@ -122,7 +123,7 @@ class DhcpServer extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.DhcpLease leases = 3 [json_name = "leases"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\SpaceX\API\Device\DhcpLease>
      */
     public function getLeases()
     {
@@ -132,7 +133,7 @@ class DhcpServer extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.DhcpLease leases = 3 [json_name = "leases"];</code>
      *
-     * @param  array<\SpaceX\API\Device\DhcpLease>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\DhcpLease[]  $var
      * @return $this
      */
     public function setLeases($var)

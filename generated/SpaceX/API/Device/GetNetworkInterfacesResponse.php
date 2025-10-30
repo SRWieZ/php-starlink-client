@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.GetNetworkInterfacesResponse</code>
@@ -24,8 +25,8 @@ class GetNetworkInterfacesResponse extends \Google\Protobuf\Internal\Message
      * @param  array  $data  {
      *                       Optional. Data for populating the Message object.
      *
-     * @type array<\SpaceX\API\Device\NetworkInterface>|\Google\Protobuf\Internal\RepeatedField $network_interfaces
-     *                                                                                          }
+     * @type \SpaceX\API\Device\NetworkInterface[] $network_interfaces
+     *                                             }
      */
     public function __construct($data = null)
     {
@@ -36,7 +37,7 @@ class GetNetworkInterfacesResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.NetworkInterface network_interfaces = 1006 [json_name = "networkInterfaces"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\SpaceX\API\Device\NetworkInterface>
      */
     public function getNetworkInterfaces()
     {
@@ -46,7 +47,7 @@ class GetNetworkInterfacesResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.NetworkInterface network_interfaces = 1006 [json_name = "networkInterfaces"];</code>
      *
-     * @param  array<\SpaceX\API\Device\NetworkInterface>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\NetworkInterface[]  $var
      * @return $this
      */
     public function setNetworkInterfaces($var)

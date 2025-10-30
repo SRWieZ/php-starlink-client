@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.ClientConfig</code>
@@ -47,7 +48,7 @@ class ClientConfig extends \Google\Protobuf\Internal\Message
      * @type int $client_id
      * @type string $mac_address
      * @type string $given_name
-     * @type array<\SpaceX\API\Device\WeeklyBlockSchedule>|\Google\Protobuf\Internal\RepeatedField $weekly_block_schedules
+     * @type \SpaceX\API\Device\WeeklyBlockSchedule[] $weekly_block_schedules
      * @type string $group_id
      *              }
      */
@@ -162,7 +163,7 @@ class ClientConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WeeklyBlockSchedule weekly_block_schedules = 5 [json_name = "weeklyBlockSchedules"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\SpaceX\API\Device\WeeklyBlockSchedule>
      */
     public function getWeeklyBlockSchedules()
     {
@@ -172,7 +173,7 @@ class ClientConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WeeklyBlockSchedule weekly_block_schedules = 5 [json_name = "weeklyBlockSchedules"];</code>
      *
-     * @param  array<\SpaceX\API\Device\WeeklyBlockSchedule>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\WeeklyBlockSchedule[]  $var
      * @return $this
      */
     public function setWeeklyBlockSchedules($var)

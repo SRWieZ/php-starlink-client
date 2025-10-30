@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiGetHistoryResponse</code>
@@ -69,23 +70,29 @@ class WifiGetHistoryResponse extends \Google\Protobuf\Internal\Message
     private $dns_resolver_drop_rate;
 
     /**
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.EventLog event_log = 1010 [json_name = "eventLog"];</code>
+     */
+    protected $event_log = null;
+
+    /**
      * Constructor.
      *
      * @param  array  $data  {
      *                       Optional. Data for populating the Message object.
      *
      * @type int|string $current
-     * @type array<float>|\Google\Protobuf\Internal\RepeatedField $ping_drop_rate
-     * @type array<float>|\Google\Protobuf\Internal\RepeatedField $ping_latency_ms
+     * @type float[] $ping_drop_rate
+     * @type float[] $ping_latency_ms
      * @type int|string $current_index_15s
-     * @type array<float>|\Google\Protobuf\Internal\RepeatedField $pop_ipv4_ping_drop_rate_last_15s
-     * @type array<float>|\Google\Protobuf\Internal\RepeatedField $pop_ipv6_ping_drop_rate_last_15s
-     * @type array<float>|\Google\Protobuf\Internal\RepeatedField $google_ipv4_ping_drop_rate_last_15s
-     * @type array<float>|\Google\Protobuf\Internal\RepeatedField $google_ipv6_ping_drop_rate_last_15s
-     * @type array<float>|\Google\Protobuf\Internal\RepeatedField $cloudflare_ipv4_ping_drop_rate_last_15s
-     * @type array<float>|\Google\Protobuf\Internal\RepeatedField $cloudflare_ipv6_ping_drop_rate_last_15s
-     * @type array<\SpaceX\API\Device\WifiGetHistoryResponse\DnsResolverDropRateEntry>|\Google\Protobuf\Internal\RepeatedField $dns_resolver_drop_rate
-     *                                                                                                                         }
+     * @type float[] $pop_ipv4_ping_drop_rate_last_15s
+     * @type float[] $pop_ipv6_ping_drop_rate_last_15s
+     * @type float[] $google_ipv4_ping_drop_rate_last_15s
+     * @type float[] $google_ipv6_ping_drop_rate_last_15s
+     * @type float[] $cloudflare_ipv4_ping_drop_rate_last_15s
+     * @type float[] $cloudflare_ipv6_ping_drop_rate_last_15s
+     * @type \SpaceX\API\Device\WifiGetHistoryResponse\DnsResolverDropRateEntry[] $dns_resolver_drop_rate
+     * @type \SpaceX\API\Device\EventLog $event_log
+     *                                   }
      */
     public function __construct($data = null)
     {
@@ -130,7 +137,7 @@ class WifiGetHistoryResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated float ping_drop_rate = 1001 [json_name = "pingDropRate"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<float>
      */
     public function getPingDropRate()
     {
@@ -140,7 +147,7 @@ class WifiGetHistoryResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated float ping_drop_rate = 1001 [json_name = "pingDropRate"];</code>
      *
-     * @param  array<float>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  float[]  $var
      * @return $this
      */
     public function setPingDropRate($var)
@@ -154,7 +161,7 @@ class WifiGetHistoryResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated float ping_latency_ms = 1002 [json_name = "pingLatencyMs"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<float>
      */
     public function getPingLatencyMs()
     {
@@ -164,7 +171,7 @@ class WifiGetHistoryResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated float ping_latency_ms = 1002 [json_name = "pingLatencyMs"];</code>
      *
-     * @param  array<float>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  float[]  $var
      * @return $this
      */
     public function setPingLatencyMs($var)
@@ -212,7 +219,7 @@ class WifiGetHistoryResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated float pop_ipv4_ping_drop_rate_last_15s = 1003 [json_name = "popIpv4PingDropRateLast15s"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<float>
      */
     public function getPopIpv4PingDropRateLast15S()
     {
@@ -222,7 +229,7 @@ class WifiGetHistoryResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated float pop_ipv4_ping_drop_rate_last_15s = 1003 [json_name = "popIpv4PingDropRateLast15s"];</code>
      *
-     * @param  array<float>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  float[]  $var
      * @return $this
      */
     public function setPopIpv4PingDropRateLast15S($var)
@@ -236,7 +243,7 @@ class WifiGetHistoryResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated float pop_ipv6_ping_drop_rate_last_15s = 1004 [json_name = "popIpv6PingDropRateLast15s"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<float>
      */
     public function getPopIpv6PingDropRateLast15S()
     {
@@ -246,7 +253,7 @@ class WifiGetHistoryResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated float pop_ipv6_ping_drop_rate_last_15s = 1004 [json_name = "popIpv6PingDropRateLast15s"];</code>
      *
-     * @param  array<float>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  float[]  $var
      * @return $this
      */
     public function setPopIpv6PingDropRateLast15S($var)
@@ -260,7 +267,7 @@ class WifiGetHistoryResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated float google_ipv4_ping_drop_rate_last_15s = 1005 [json_name = "googleIpv4PingDropRateLast15s"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<float>
      */
     public function getGoogleIpv4PingDropRateLast15S()
     {
@@ -270,7 +277,7 @@ class WifiGetHistoryResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated float google_ipv4_ping_drop_rate_last_15s = 1005 [json_name = "googleIpv4PingDropRateLast15s"];</code>
      *
-     * @param  array<float>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  float[]  $var
      * @return $this
      */
     public function setGoogleIpv4PingDropRateLast15S($var)
@@ -284,7 +291,7 @@ class WifiGetHistoryResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated float google_ipv6_ping_drop_rate_last_15s = 1006 [json_name = "googleIpv6PingDropRateLast15s"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<float>
      */
     public function getGoogleIpv6PingDropRateLast15S()
     {
@@ -294,7 +301,7 @@ class WifiGetHistoryResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated float google_ipv6_ping_drop_rate_last_15s = 1006 [json_name = "googleIpv6PingDropRateLast15s"];</code>
      *
-     * @param  array<float>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  float[]  $var
      * @return $this
      */
     public function setGoogleIpv6PingDropRateLast15S($var)
@@ -308,7 +315,7 @@ class WifiGetHistoryResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated float cloudflare_ipv4_ping_drop_rate_last_15s = 1007 [json_name = "cloudflareIpv4PingDropRateLast15s"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<float>
      */
     public function getCloudflareIpv4PingDropRateLast15S()
     {
@@ -318,7 +325,7 @@ class WifiGetHistoryResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated float cloudflare_ipv4_ping_drop_rate_last_15s = 1007 [json_name = "cloudflareIpv4PingDropRateLast15s"];</code>
      *
-     * @param  array<float>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  float[]  $var
      * @return $this
      */
     public function setCloudflareIpv4PingDropRateLast15S($var)
@@ -332,7 +339,7 @@ class WifiGetHistoryResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated float cloudflare_ipv6_ping_drop_rate_last_15s = 1008 [json_name = "cloudflareIpv6PingDropRateLast15s"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<float>
      */
     public function getCloudflareIpv6PingDropRateLast15S()
     {
@@ -342,7 +349,7 @@ class WifiGetHistoryResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated float cloudflare_ipv6_ping_drop_rate_last_15s = 1008 [json_name = "cloudflareIpv6PingDropRateLast15s"];</code>
      *
-     * @param  array<float>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  float[]  $var
      * @return $this
      */
     public function setCloudflareIpv6PingDropRateLast15S($var)
@@ -356,7 +363,7 @@ class WifiGetHistoryResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiGetHistoryResponse.DnsResolverDropRateEntry dns_resolver_drop_rate = 1009 [json_name = "dnsResolverDropRate"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\SpaceX\API\Device\WifiGetHistoryResponse\DnsResolverDropRateEntry>
      */
     public function getDnsResolverDropRate()
     {
@@ -366,13 +373,47 @@ class WifiGetHistoryResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiGetHistoryResponse.DnsResolverDropRateEntry dns_resolver_drop_rate = 1009 [json_name = "dnsResolverDropRate"];</code>
      *
-     * @param  array<\SpaceX\API\Device\WifiGetHistoryResponse\DnsResolverDropRateEntry>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\WifiGetHistoryResponse\DnsResolverDropRateEntry[]  $var
      * @return $this
      */
     public function setDnsResolverDropRate($var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SpaceX\API\Device\WifiGetHistoryResponse\DnsResolverDropRateEntry::class);
         $this->dns_resolver_drop_rate = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.EventLog event_log = 1010 [json_name = "eventLog"];</code>
+     *
+     * @return \SpaceX\API\Device\EventLog|null
+     */
+    public function getEventLog()
+    {
+        return $this->event_log;
+    }
+
+    public function hasEventLog()
+    {
+        return isset($this->event_log);
+    }
+
+    public function clearEventLog()
+    {
+        unset($this->event_log);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.EventLog event_log = 1010 [json_name = "eventLog"];</code>
+     *
+     * @param  \SpaceX\API\Device\EventLog  $var
+     * @return $this
+     */
+    public function setEventLog($var)
+    {
+        GPBUtil::checkMessage($var, \SpaceX\API\Device\EventLog::class);
+        $this->event_log = $var;
 
         return $this;
     }

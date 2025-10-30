@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.PublicKey</code>
@@ -35,7 +36,7 @@ class PublicKey extends \Google\Protobuf\Internal\Message
      *                       Optional. Data for populating the Message object.
      *
      * @type string $key
-     * @type array<int>|\Google\Protobuf\Internal\RepeatedField $capabilities
+     * @type int[] $capabilities
      * @type int $user
      *           }
      */
@@ -82,7 +83,7 @@ class PublicKey extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.Capability capabilities = 2 [json_name = "capabilities"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getCapabilities()
     {
@@ -92,7 +93,7 @@ class PublicKey extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.Capability capabilities = 2 [json_name = "capabilities"];</code>
      *
-     * @param  array<int>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  int[]  $var
      * @return $this
      */
     public function setCapabilities($var)

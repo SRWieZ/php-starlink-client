@@ -58,6 +58,11 @@ class User
      */
     const LAN_TLS = 8;
 
+    /**
+     * Generated from protobuf enum <code>CLOUD_INDIA = 9;</code>
+     */
+    const CLOUD_INDIA = 9;
+
     private static $valueToName = [
         self::NO_USER => 'NO_USER',
         self::GOD => 'GOD',
@@ -68,6 +73,7 @@ class User
         self::GUEST_LAN => 'GUEST_LAN',
         self::SENSITIVE_COMMANDING => 'SENSITIVE_COMMANDING',
         self::LAN_TLS => 'LAN_TLS',
+        self::CLOUD_INDIA => 'CLOUD_INDIA',
     ];
 
     public static function name($value)

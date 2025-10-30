@@ -83,6 +83,11 @@ class DisablementCode
      */
     const UNDER_AVIATION_FLYOVER_LIMITS = 15;
 
+    /**
+     * Generated from protobuf enum <code>BLOCKED_AREA = 16;</code>
+     */
+    const BLOCKED_AREA = 16;
+
     private static $valueToName = [
         self::UNKNOWN => 'UNKNOWN',
         self::OKAY => 'OKAY',
@@ -98,6 +103,7 @@ class DisablementCode
         self::UNSUPPORTED_VERSION => 'UNSUPPORTED_VERSION',
         self::MOVING_TOO_FAST_FOR_POLICY => 'MOVING_TOO_FAST_FOR_POLICY',
         self::UNDER_AVIATION_FLYOVER_LIMITS => 'UNDER_AVIATION_FLYOVER_LIMITS',
+        self::BLOCKED_AREA => 'BLOCKED_AREA',
     ];
 
     public static function name($value)

@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiMeshStatus</code>
@@ -61,9 +62,9 @@ class WifiMeshStatus extends \Google\Protobuf\Internal\Message
      *
      * @type string $software_version
      * @type string $mac_lan
-     * @type array<string>|\Google\Protobuf\Internal\RepeatedField $source_mac_addresses
-     * @type array<\SpaceX\API\Device\WifiClient>|\Google\Protobuf\Internal\RepeatedField $clients
-     * @type array<\SpaceX\API\Device\InflatedBasicServiceSet>|\Google\Protobuf\Internal\RepeatedField $bss_list
+     * @type string[] $source_mac_addresses
+     * @type \SpaceX\API\Device\WifiClient[] $clients
+     * @type \SpaceX\API\Device\InflatedBasicServiceSet[] $bss_list
      * @type string $hardware_version
      * @type string $backhaul_bssid
      * @type int $backhaul_est_preference
@@ -146,7 +147,7 @@ class WifiMeshStatus extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated string source_mac_addresses = 7 [json_name = "sourceMacAddresses"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getSourceMacAddresses()
     {
@@ -156,7 +157,7 @@ class WifiMeshStatus extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated string source_mac_addresses = 7 [json_name = "sourceMacAddresses"];</code>
      *
-     * @param  array<string>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  string[]  $var
      * @return $this
      */
     public function setSourceMacAddresses($var)
@@ -170,7 +171,7 @@ class WifiMeshStatus extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiClient clients = 2 [json_name = "clients"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\SpaceX\API\Device\WifiClient>
      */
     public function getClients()
     {
@@ -180,7 +181,7 @@ class WifiMeshStatus extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiClient clients = 2 [json_name = "clients"];</code>
      *
-     * @param  array<\SpaceX\API\Device\WifiClient>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\WifiClient[]  $var
      * @return $this
      */
     public function setClients($var)
@@ -194,7 +195,7 @@ class WifiMeshStatus extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.InflatedBasicServiceSet bss_list = 3 [json_name = "bssList"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\SpaceX\API\Device\InflatedBasicServiceSet>
      */
     public function getBssList()
     {
@@ -204,7 +205,7 @@ class WifiMeshStatus extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.InflatedBasicServiceSet bss_list = 3 [json_name = "bssList"];</code>
      *
-     * @param  array<\SpaceX\API\Device\InflatedBasicServiceSet>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\InflatedBasicServiceSet[]  $var
      * @return $this
      */
     public function setBssList($var)

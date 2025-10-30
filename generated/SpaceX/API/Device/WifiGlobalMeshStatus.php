@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiGlobalMeshStatus</code>
@@ -29,6 +30,11 @@ class WifiGlobalMeshStatus extends \Google\Protobuf\Internal\Message
     private $bss_list;
 
     /**
+     * Generated from protobuf field <code>optional uint32 hops_from_controller = 4 [json_name = "hopsFromController"];</code>
+     */
+    protected $hops_from_controller = null;
+
+    /**
      * Constructor.
      *
      * @param  array  $data  {
@@ -36,8 +42,9 @@ class WifiGlobalMeshStatus extends \Google\Protobuf\Internal\Message
      *
      * @type string $hardware_version
      * @type string $software_version
-     * @type array<\SpaceX\API\Device\InflatedBasicServiceSet>|\Google\Protobuf\Internal\RepeatedField $bss_list
-     *                                                                                                 }
+     * @type \SpaceX\API\Device\InflatedBasicServiceSet[] $bss_list
+     * @type int $hops_from_controller
+     *           }
      */
     public function __construct($data = null)
     {
@@ -116,7 +123,7 @@ class WifiGlobalMeshStatus extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.InflatedBasicServiceSet bss_list = 3 [json_name = "bssList"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\SpaceX\API\Device\InflatedBasicServiceSet>
      */
     public function getBssList()
     {
@@ -126,13 +133,47 @@ class WifiGlobalMeshStatus extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.InflatedBasicServiceSet bss_list = 3 [json_name = "bssList"];</code>
      *
-     * @param  array<\SpaceX\API\Device\InflatedBasicServiceSet>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\InflatedBasicServiceSet[]  $var
      * @return $this
      */
     public function setBssList($var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SpaceX\API\Device\InflatedBasicServiceSet::class);
         $this->bss_list = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional uint32 hops_from_controller = 4 [json_name = "hopsFromController"];</code>
+     *
+     * @return int
+     */
+    public function getHopsFromController()
+    {
+        return isset($this->hops_from_controller) ? $this->hops_from_controller : 0;
+    }
+
+    public function hasHopsFromController()
+    {
+        return isset($this->hops_from_controller);
+    }
+
+    public function clearHopsFromController()
+    {
+        unset($this->hops_from_controller);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional uint32 hops_from_controller = 4 [json_name = "hopsFromController"];</code>
+     *
+     * @param  int  $var
+     * @return $this
+     */
+    public function setHopsFromController($var)
+    {
+        GPBUtil::checkUint32($var);
+        $this->hops_from_controller = $var;
 
         return $this;
     }

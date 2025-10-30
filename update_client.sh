@@ -32,6 +32,6 @@ protoc \
   $PROTO_FILES
 
 echo -e "\033[0;32m→ Linting .php files \033[0m"
-./vendor/bin/pint
+./vendor/bin/pint --parallel
 
 composer dump-autoload

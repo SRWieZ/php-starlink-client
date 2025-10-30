@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.RadiusStatsMap</code>
@@ -24,8 +25,8 @@ class RadiusStatsMap extends \Google\Protobuf\Internal\Message
      * @param  array  $data  {
      *                       Optional. Data for populating the Message object.
      *
-     * @type array<\SpaceX\API\Device\RadiusStatsMap\RadiusStatsEntry>|\Google\Protobuf\Internal\RepeatedField $radius_stats
-     *                                                                                                         }
+     * @type \SpaceX\API\Device\RadiusStatsMap\RadiusStatsEntry[] $radius_stats
+     *                                                            }
      */
     public function __construct($data = null)
     {
@@ -36,7 +37,7 @@ class RadiusStatsMap extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.RadiusStatsMap.RadiusStatsEntry radius_stats = 1 [json_name = "radiusStats"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\SpaceX\API\Device\RadiusStatsMap\RadiusStatsEntry>
      */
     public function getRadiusStats()
     {
@@ -46,7 +47,7 @@ class RadiusStatsMap extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.RadiusStatsMap.RadiusStatsEntry radius_stats = 1 [json_name = "radiusStats"];</code>
      *
-     * @param  array<\SpaceX\API\Device\RadiusStatsMap\RadiusStatsEntry>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\RadiusStatsMap\RadiusStatsEntry[]  $var
      * @return $this
      */
     public function setRadiusStats($var)

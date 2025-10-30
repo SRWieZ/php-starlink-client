@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.DishGetDiagnosticsResponse</code>
@@ -69,14 +70,9 @@ class DishGetDiagnosticsResponse extends \Google\Protobuf\Internal\Message
     protected $stowed = null;
 
     /**
-     * Generated from protobuf field <code>optional .SpaceX.API.Telemetron.Public.Integrations.RateLimitReason dl_bandwidth_restricted_reason = 12 [json_name = "dlBandwidthRestrictedReason"];</code>
+     * Generated from protobuf field <code>optional bool overage_rate_limited = 14 [json_name = "overageRateLimited"];</code>
      */
-    protected $dl_bandwidth_restricted_reason = null;
-
-    /**
-     * Generated from protobuf field <code>optional .SpaceX.API.Telemetron.Public.Integrations.RateLimitReason ul_bandwidth_restricted_reason = 13 [json_name = "ulBandwidthRestrictedReason"];</code>
-     */
-    protected $ul_bandwidth_restricted_reason = null;
+    protected $overage_rate_limited = null;
 
     /**
      * Constructor.
@@ -89,15 +85,14 @@ class DishGetDiagnosticsResponse extends \Google\Protobuf\Internal\Message
      * @type string $software_version
      * @type int $utc_offset_s
      * @type int $hardware_self_test
-     * @type array<int>|\Google\Protobuf\Internal\RepeatedField $hardware_self_test_codes
+     * @type int[] $hardware_self_test_codes
      * @type \SpaceX\API\Device\DishGetDiagnosticsResponse\Alerts $alerts
      * @type int $disablement_code
      * @type \SpaceX\API\Device\DishGetDiagnosticsResponse\Location $location
      * @type \SpaceX\API\Device\DishGetDiagnosticsResponse\AlignmentStats $alignment_stats
      * @type bool $stowed
-     * @type int $dl_bandwidth_restricted_reason
-     * @type int $ul_bandwidth_restricted_reason
-     *           }
+     * @type bool $overage_rate_limited
+     *            }
      */
     public function __construct($data = null)
     {
@@ -278,7 +273,7 @@ class DishGetDiagnosticsResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.DishGetDiagnosticsResponse.TestResultCode hardware_self_test_codes = 11 [json_name = "hardwareSelfTestCodes"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getHardwareSelfTestCodes()
     {
@@ -288,7 +283,7 @@ class DishGetDiagnosticsResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.DishGetDiagnosticsResponse.TestResultCode hardware_self_test_codes = 11 [json_name = "hardwareSelfTestCodes"];</code>
      *
-     * @param  array<int>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  int[]  $var
      * @return $this
      */
     public function setHardwareSelfTestCodes($var)
@@ -470,69 +465,35 @@ class DishGetDiagnosticsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>optional .SpaceX.API.Telemetron.Public.Integrations.RateLimitReason dl_bandwidth_restricted_reason = 12 [json_name = "dlBandwidthRestrictedReason"];</code>
+     * Generated from protobuf field <code>optional bool overage_rate_limited = 14 [json_name = "overageRateLimited"];</code>
      *
-     * @return int
+     * @return bool
      */
-    public function getDlBandwidthRestrictedReason()
+    public function getOverageRateLimited()
     {
-        return isset($this->dl_bandwidth_restricted_reason) ? $this->dl_bandwidth_restricted_reason : 0;
+        return isset($this->overage_rate_limited) ? $this->overage_rate_limited : false;
     }
 
-    public function hasDlBandwidthRestrictedReason()
+    public function hasOverageRateLimited()
     {
-        return isset($this->dl_bandwidth_restricted_reason);
+        return isset($this->overage_rate_limited);
     }
 
-    public function clearDlBandwidthRestrictedReason()
+    public function clearOverageRateLimited()
     {
-        unset($this->dl_bandwidth_restricted_reason);
+        unset($this->overage_rate_limited);
     }
 
     /**
-     * Generated from protobuf field <code>optional .SpaceX.API.Telemetron.Public.Integrations.RateLimitReason dl_bandwidth_restricted_reason = 12 [json_name = "dlBandwidthRestrictedReason"];</code>
+     * Generated from protobuf field <code>optional bool overage_rate_limited = 14 [json_name = "overageRateLimited"];</code>
      *
-     * @param  int  $var
+     * @param  bool  $var
      * @return $this
      */
-    public function setDlBandwidthRestrictedReason($var)
+    public function setOverageRateLimited($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Telemetron\PBPublic\Integrations\RateLimitReason::class);
-        $this->dl_bandwidth_restricted_reason = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>optional .SpaceX.API.Telemetron.Public.Integrations.RateLimitReason ul_bandwidth_restricted_reason = 13 [json_name = "ulBandwidthRestrictedReason"];</code>
-     *
-     * @return int
-     */
-    public function getUlBandwidthRestrictedReason()
-    {
-        return isset($this->ul_bandwidth_restricted_reason) ? $this->ul_bandwidth_restricted_reason : 0;
-    }
-
-    public function hasUlBandwidthRestrictedReason()
-    {
-        return isset($this->ul_bandwidth_restricted_reason);
-    }
-
-    public function clearUlBandwidthRestrictedReason()
-    {
-        unset($this->ul_bandwidth_restricted_reason);
-    }
-
-    /**
-     * Generated from protobuf field <code>optional .SpaceX.API.Telemetron.Public.Integrations.RateLimitReason ul_bandwidth_restricted_reason = 13 [json_name = "ulBandwidthRestrictedReason"];</code>
-     *
-     * @param  int  $var
-     * @return $this
-     */
-    public function setUlBandwidthRestrictedReason($var)
-    {
-        GPBUtil::checkEnum($var, \SpaceX\API\Telemetron\PBPublic\Integrations\RateLimitReason::class);
-        $this->ul_bandwidth_restricted_reason = $var;
+        GPBUtil::checkBool($var);
+        $this->overage_rate_limited = $var;
 
         return $this;
     }

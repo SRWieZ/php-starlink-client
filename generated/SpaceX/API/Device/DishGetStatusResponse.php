@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.DishGetStatusResponse</code>
@@ -224,6 +225,11 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     private $downstream_routers;
 
     /**
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.AccountShard account_shard = 1051 [json_name = "accountShard"];</code>
+     */
+    protected $account_shard = null;
+
+    /**
      * Constructor.
      *
      * @param  array  $data  {
@@ -264,14 +270,15 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
      * @type bool $is_cell_disabled
      * @type int $seconds_until_swupdate_reboot_possible
      * @type bool $high_power_test_mode
-     * @type array<string>|\Google\Protobuf\Internal\RepeatedField $connected_routers
+     * @type string[] $connected_routers
      * @type \SpaceX\API\Device\PLCStats $plc_stats
      * @type bool $is_moving_fast_persisted
      * @type \SpaceX\API\Device\DishUpsuStats $upsu_stats
      * @type \SpaceX\API\Device\DishApsStats $aps_stats
      * @type \SpaceX\API\Device\Quaternion $ned2dish_quaternion
-     * @type array<\SpaceX\API\Device\DishGetStatusResponse\DownstreamRoutersEntry>|\Google\Protobuf\Internal\RepeatedField $downstream_routers
-     *                                                                                                                      }
+     * @type \SpaceX\API\Device\DishGetStatusResponse\DownstreamRoutersEntry[] $downstream_routers
+     * @type int $account_shard
+     *           }
      */
     public function __construct($data = null)
     {
@@ -1472,7 +1479,7 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated string connected_routers = 1040 [json_name = "connectedRouters"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getConnectedRouters()
     {
@@ -1482,7 +1489,7 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated string connected_routers = 1040 [json_name = "connectedRouters"];</code>
      *
-     * @param  array<string>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  string[]  $var
      * @return $this
      */
     public function setConnectedRouters($var)
@@ -1666,7 +1673,7 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.DishGetStatusResponse.DownstreamRoutersEntry downstream_routers = 1050 [json_name = "downstreamRouters"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\SpaceX\API\Device\DishGetStatusResponse\DownstreamRoutersEntry>
      */
     public function getDownstreamRouters()
     {
@@ -1676,13 +1683,47 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.DishGetStatusResponse.DownstreamRoutersEntry downstream_routers = 1050 [json_name = "downstreamRouters"];</code>
      *
-     * @param  array<\SpaceX\API\Device\DishGetStatusResponse\DownstreamRoutersEntry>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\DishGetStatusResponse\DownstreamRoutersEntry[]  $var
      * @return $this
      */
     public function setDownstreamRouters($var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SpaceX\API\Device\DishGetStatusResponse\DownstreamRoutersEntry::class);
         $this->downstream_routers = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.AccountShard account_shard = 1051 [json_name = "accountShard"];</code>
+     *
+     * @return int
+     */
+    public function getAccountShard()
+    {
+        return isset($this->account_shard) ? $this->account_shard : 0;
+    }
+
+    public function hasAccountShard()
+    {
+        return isset($this->account_shard);
+    }
+
+    public function clearAccountShard()
+    {
+        unset($this->account_shard);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.AccountShard account_shard = 1051 [json_name = "accountShard"];</code>
+     *
+     * @param  int  $var
+     * @return $this
+     */
+    public function setAccountShard($var)
+    {
+        GPBUtil::checkEnum($var, \SpaceX\API\Device\AccountShard::class);
+        $this->account_shard = $var;
 
         return $this;
     }

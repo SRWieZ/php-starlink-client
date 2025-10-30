@@ -12,6 +12,7 @@ if (! class_exists('\Composer\InstalledVersions')) {
 }
 
 if (class_exists('\NunoMaduro\Collision\Provider')) {
+    /** @phpstan-ignore-next-line */
     (new \NunoMaduro\Collision\Provider)->register();
 }
 
@@ -45,7 +46,7 @@ $wifi = new Wifi;
 // ));
 // dump($dishy->getAlerts());
 // dump($dishy->getLocation());
-// dump($dishy->getStatsHistory());
+dump($dishy->getStatsHistory());
 // dump($dishy->getObstructionMap());
 // $dishy->setSleepModeConfig(
 //     start: 120,

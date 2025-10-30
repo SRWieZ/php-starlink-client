@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.DishGetObstructionMapResponse</code>
@@ -51,7 +52,7 @@ class DishGetObstructionMapResponse extends \Google\Protobuf\Internal\Message
      *
      * @type int $num_rows
      * @type int $num_cols
-     * @type array<float>|\Google\Protobuf\Internal\RepeatedField $snr
+     * @type float[] $snr
      * @type float $min_elevation_deg
      * @type float $max_theta_deg
      * @type int $map_reference_frame
@@ -134,7 +135,7 @@ class DishGetObstructionMapResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated float snr = 3 [json_name = "snr"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<float>
      */
     public function getSnr()
     {
@@ -144,7 +145,7 @@ class DishGetObstructionMapResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated float snr = 3 [json_name = "snr"];</code>
      *
-     * @param  array<float>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  float[]  $var
      * @return $this
      */
     public function setSnr($var)

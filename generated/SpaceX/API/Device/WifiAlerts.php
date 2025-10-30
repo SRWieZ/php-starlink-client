@@ -114,6 +114,11 @@ class WifiAlerts extends \Google\Protobuf\Internal\Message
     protected $offline_networks_disabled = null;
 
     /**
+     * Generated from protobuf field <code>optional bool wired_mesh_not_using_wan_iface = 25 [json_name = "wiredMeshNotUsingWanIface"];</code>
+     */
+    protected $wired_mesh_not_using_wan_iface = null;
+
+    /**
      * Constructor.
      *
      * @param  array  $data  {
@@ -139,6 +144,7 @@ class WifiAlerts extends \Google\Protobuf\Internal\Message
      * @type bool $sandbox_disabled
      * @type bool $only_overflight_blocked
      * @type bool $offline_networks_disabled
+     * @type bool $wired_mesh_not_using_wan_iface
      *            }
      */
     public function __construct($data = null)
@@ -823,6 +829,40 @@ class WifiAlerts extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->offline_networks_disabled = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional bool wired_mesh_not_using_wan_iface = 25 [json_name = "wiredMeshNotUsingWanIface"];</code>
+     *
+     * @return bool
+     */
+    public function getWiredMeshNotUsingWanIface()
+    {
+        return isset($this->wired_mesh_not_using_wan_iface) ? $this->wired_mesh_not_using_wan_iface : false;
+    }
+
+    public function hasWiredMeshNotUsingWanIface()
+    {
+        return isset($this->wired_mesh_not_using_wan_iface);
+    }
+
+    public function clearWiredMeshNotUsingWanIface()
+    {
+        unset($this->wired_mesh_not_using_wan_iface);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional bool wired_mesh_not_using_wan_iface = 25 [json_name = "wiredMeshNotUsingWanIface"];</code>
+     *
+     * @param  bool  $var
+     * @return $this
+     */
+    public function setWiredMeshNotUsingWanIface($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->wired_mesh_not_using_wan_iface = $var;
 
         return $this;
     }

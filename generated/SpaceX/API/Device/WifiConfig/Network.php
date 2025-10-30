@@ -7,6 +7,7 @@
 namespace SpaceX\API\Device\WifiConfig;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiConfig.Network</code>
@@ -114,14 +115,29 @@ class Network extends \Google\Protobuf\Internal\Message
     private $dns_forward_rules;
 
     /**
-     * Generated from protobuf field <code>optional bool disable_when_offline = 1029 [json_name = "disableWhenOffline"];</code>
+     * Generated from protobuf field <code>optional bool disable_when_offline_old = 1029 [json_name = "disableWhenOfflineOld"];</code>
      */
-    protected $disable_when_offline = null;
+    protected $disable_when_offline_old = null;
 
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiConfig.StaticRoute static_routes = 1030 [json_name = "staticRoutes"];</code>
      */
     private $static_routes;
+
+    /**
+     * Generated from protobuf field <code>optional bool disable_when_offline = 1031 [json_name = "disableWhenOffline"];</code>
+     */
+    protected $disable_when_offline = null;
+
+    /**
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.TlsConfig onboard_radius_tls_config_old = 1032 [json_name = "onboardRadiusTlsConfigOld"];</code>
+     */
+    protected $onboard_radius_tls_config_old = null;
+
+    /**
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.TlsConfig onboard_radius_tls_config = 1033 [json_name = "onboardRadiusTlsConfig"];</code>
+     */
+    protected $onboard_radius_tls_config = null;
 
     /**
      * Constructor.
@@ -135,23 +151,26 @@ class Network extends \Google\Protobuf\Internal\Message
      * @type bool $dhcp_disabled
      * @type int $dhcpv4_lease_duration_s
      * @type string $domain
-     * @type array<\SpaceX\API\Device\WifiConfig\BasicServiceSet>|\Google\Protobuf\Internal\RepeatedField $basic_service_sets
+     * @type \SpaceX\API\Device\WifiConfig\BasicServiceSet[] $basic_service_sets
      * @type bool $client_isolation
      * @type bool $guest
      * @type string $landing
      * @type bool $landing_page_v2
      * @type bool $sandbox_enabled
-     * @type array<string>|\Google\Protobuf\Internal\RepeatedField $sandbox_domain_allow_list
+     * @type string[] $sandbox_domain_allow_list
      * @type int $sandbox_id
      * @type bool $internal
      * @type int $vlan
      * @type \SpaceX\API\Device\CaptivePortal $captive_portal
      * @type int $network_groups
-     * @type array<\SpaceX\API\Device\WifiConfig\DnsStaticEntry>|\Google\Protobuf\Internal\RepeatedField $dns_static_entries
-     * @type array<\SpaceX\API\Device\WifiConfig\DnsForwardRule>|\Google\Protobuf\Internal\RepeatedField $dns_forward_rules
+     * @type \SpaceX\API\Device\WifiConfig\DnsStaticEntry[] $dns_static_entries
+     * @type \SpaceX\API\Device\WifiConfig\DnsForwardRule[] $dns_forward_rules
+     * @type bool $disable_when_offline_old
+     * @type \SpaceX\API\Device\WifiConfig\StaticRoute[] $static_routes
      * @type bool $disable_when_offline
-     * @type array<\SpaceX\API\Device\WifiConfig\StaticRoute>|\Google\Protobuf\Internal\RepeatedField $static_routes
-     *                                                                                                }
+     * @type \SpaceX\API\Device\TlsConfig $onboard_radius_tls_config_old
+     * @type \SpaceX\API\Device\TlsConfig $onboard_radius_tls_config
+     *                                    }
      */
     public function __construct($data = null)
     {
@@ -366,7 +385,7 @@ class Network extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiConfig.BasicServiceSet basic_service_sets = 1007 [json_name = "basicServiceSets"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\SpaceX\API\Device\WifiConfig\BasicServiceSet>
      */
     public function getBasicServiceSets()
     {
@@ -376,7 +395,7 @@ class Network extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiConfig.BasicServiceSet basic_service_sets = 1007 [json_name = "basicServiceSets"];</code>
      *
-     * @param  array<\SpaceX\API\Device\WifiConfig\BasicServiceSet>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\WifiConfig\BasicServiceSet[]  $var
      * @return $this
      */
     public function setBasicServiceSets($var)
@@ -560,7 +579,7 @@ class Network extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated string sandbox_domain_allow_list = 1022 [json_name = "sandboxDomainAllowList"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getSandboxDomainAllowList()
     {
@@ -570,7 +589,7 @@ class Network extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated string sandbox_domain_allow_list = 1022 [json_name = "sandboxDomainAllowList"];</code>
      *
-     * @param  array<string>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  string[]  $var
      * @return $this
      */
     public function setSandboxDomainAllowList($var)
@@ -754,7 +773,7 @@ class Network extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiConfig.DnsStaticEntry dns_static_entries = 1027 [json_name = "dnsStaticEntries"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\SpaceX\API\Device\WifiConfig\DnsStaticEntry>
      */
     public function getDnsStaticEntries()
     {
@@ -764,7 +783,7 @@ class Network extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiConfig.DnsStaticEntry dns_static_entries = 1027 [json_name = "dnsStaticEntries"];</code>
      *
-     * @param  array<\SpaceX\API\Device\WifiConfig\DnsStaticEntry>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\WifiConfig\DnsStaticEntry[]  $var
      * @return $this
      */
     public function setDnsStaticEntries($var)
@@ -778,7 +797,7 @@ class Network extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiConfig.DnsForwardRule dns_forward_rules = 1028 [json_name = "dnsForwardRules"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\SpaceX\API\Device\WifiConfig\DnsForwardRule>
      */
     public function getDnsForwardRules()
     {
@@ -788,7 +807,7 @@ class Network extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiConfig.DnsForwardRule dns_forward_rules = 1028 [json_name = "dnsForwardRules"];</code>
      *
-     * @param  array<\SpaceX\API\Device\WifiConfig\DnsForwardRule>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\WifiConfig\DnsForwardRule[]  $var
      * @return $this
      */
     public function setDnsForwardRules($var)
@@ -800,7 +819,65 @@ class Network extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>optional bool disable_when_offline = 1029 [json_name = "disableWhenOffline"];</code>
+     * Generated from protobuf field <code>optional bool disable_when_offline_old = 1029 [json_name = "disableWhenOfflineOld"];</code>
+     *
+     * @return bool
+     */
+    public function getDisableWhenOfflineOld()
+    {
+        return isset($this->disable_when_offline_old) ? $this->disable_when_offline_old : false;
+    }
+
+    public function hasDisableWhenOfflineOld()
+    {
+        return isset($this->disable_when_offline_old);
+    }
+
+    public function clearDisableWhenOfflineOld()
+    {
+        unset($this->disable_when_offline_old);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional bool disable_when_offline_old = 1029 [json_name = "disableWhenOfflineOld"];</code>
+     *
+     * @param  bool  $var
+     * @return $this
+     */
+    public function setDisableWhenOfflineOld($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->disable_when_offline_old = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiConfig.StaticRoute static_routes = 1030 [json_name = "staticRoutes"];</code>
+     *
+     * @return RepeatedField<\SpaceX\API\Device\WifiConfig\StaticRoute>
+     */
+    public function getStaticRoutes()
+    {
+        return $this->static_routes;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiConfig.StaticRoute static_routes = 1030 [json_name = "staticRoutes"];</code>
+     *
+     * @param  \SpaceX\API\Device\WifiConfig\StaticRoute[]  $var
+     * @return $this
+     */
+    public function setStaticRoutes($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SpaceX\API\Device\WifiConfig\StaticRoute::class);
+        $this->static_routes = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional bool disable_when_offline = 1031 [json_name = "disableWhenOffline"];</code>
      *
      * @return bool
      */
@@ -820,7 +897,7 @@ class Network extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>optional bool disable_when_offline = 1029 [json_name = "disableWhenOffline"];</code>
+     * Generated from protobuf field <code>optional bool disable_when_offline = 1031 [json_name = "disableWhenOffline"];</code>
      *
      * @param  bool  $var
      * @return $this
@@ -834,25 +911,69 @@ class Network extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiConfig.StaticRoute static_routes = 1030 [json_name = "staticRoutes"];</code>
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.TlsConfig onboard_radius_tls_config_old = 1032 [json_name = "onboardRadiusTlsConfigOld"];</code>
      *
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return \SpaceX\API\Device\TlsConfig|null
      */
-    public function getStaticRoutes()
+    public function getOnboardRadiusTlsConfigOld()
     {
-        return $this->static_routes;
+        return $this->onboard_radius_tls_config_old;
+    }
+
+    public function hasOnboardRadiusTlsConfigOld()
+    {
+        return isset($this->onboard_radius_tls_config_old);
+    }
+
+    public function clearOnboardRadiusTlsConfigOld()
+    {
+        unset($this->onboard_radius_tls_config_old);
     }
 
     /**
-     * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiConfig.StaticRoute static_routes = 1030 [json_name = "staticRoutes"];</code>
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.TlsConfig onboard_radius_tls_config_old = 1032 [json_name = "onboardRadiusTlsConfigOld"];</code>
      *
-     * @param  array<\SpaceX\API\Device\WifiConfig\StaticRoute>|\Google\Protobuf\Internal\RepeatedField  $var
+     * @param  \SpaceX\API\Device\TlsConfig  $var
      * @return $this
      */
-    public function setStaticRoutes($var)
+    public function setOnboardRadiusTlsConfigOld($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SpaceX\API\Device\WifiConfig\StaticRoute::class);
-        $this->static_routes = $arr;
+        GPBUtil::checkMessage($var, \SpaceX\API\Device\TlsConfig::class);
+        $this->onboard_radius_tls_config_old = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.TlsConfig onboard_radius_tls_config = 1033 [json_name = "onboardRadiusTlsConfig"];</code>
+     *
+     * @return \SpaceX\API\Device\TlsConfig|null
+     */
+    public function getOnboardRadiusTlsConfig()
+    {
+        return $this->onboard_radius_tls_config;
+    }
+
+    public function hasOnboardRadiusTlsConfig()
+    {
+        return isset($this->onboard_radius_tls_config);
+    }
+
+    public function clearOnboardRadiusTlsConfig()
+    {
+        unset($this->onboard_radius_tls_config);
+    }
+
+    /**
+     * Generated from protobuf field <code>optional .SpaceX.API.Device.TlsConfig onboard_radius_tls_config = 1033 [json_name = "onboardRadiusTlsConfig"];</code>
+     *
+     * @param  \SpaceX\API\Device\TlsConfig  $var
+     * @return $this
+     */
+    public function setOnboardRadiusTlsConfig($var)
+    {
+        GPBUtil::checkMessage($var, \SpaceX\API\Device\TlsConfig::class);
+        $this->onboard_radius_tls_config = $var;
 
         return $this;
     }
