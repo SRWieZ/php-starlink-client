@@ -7,11 +7,14 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Dish;
+use SpaceX\API\Device\PLCStats\ProtocolRevision;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.PLCStats</code>
  */
-class PLCStats extends \Google\Protobuf\Internal\Message
+class PLCStats extends Message
 {
     /**
      * Generated from protobuf field <code>optional bool receiving_plc = 1 [json_name = "receivingPlc"];</code>
@@ -101,7 +104,7 @@ class PLCStats extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Dish::initOnce();
+        Dish::initOnce();
         parent::__construct($data);
     }
 
@@ -312,7 +315,7 @@ class PLCStats extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.PLCPortStats port_1_stats = 7 [json_name = "port1Stats"];</code>
      *
-     * @return \SpaceX\API\Device\PLCPortStats|null
+     * @return PLCPortStats|null
      */
     public function getPort1Stats()
     {
@@ -332,12 +335,12 @@ class PLCStats extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.PLCPortStats port_1_stats = 7 [json_name = "port1Stats"];</code>
      *
-     * @param  \SpaceX\API\Device\PLCPortStats  $var
+     * @param  PLCPortStats  $var
      * @return $this
      */
     public function setPort1Stats($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\PLCPortStats::class);
+        GPBUtil::checkMessage($var, PLCPortStats::class);
         $this->port_1_stats = $var;
 
         return $this;
@@ -346,7 +349,7 @@ class PLCStats extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.PLCPortStats port_2_stats = 8 [json_name = "port2Stats"];</code>
      *
-     * @return \SpaceX\API\Device\PLCPortStats|null
+     * @return PLCPortStats|null
      */
     public function getPort2Stats()
     {
@@ -366,12 +369,12 @@ class PLCStats extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.PLCPortStats port_2_stats = 8 [json_name = "port2Stats"];</code>
      *
-     * @param  \SpaceX\API\Device\PLCPortStats  $var
+     * @param  PLCPortStats  $var
      * @return $this
      */
     public function setPort2Stats($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\PLCPortStats::class);
+        GPBUtil::checkMessage($var, PLCPortStats::class);
         $this->port_2_stats = $var;
 
         return $this;
@@ -380,7 +383,7 @@ class PLCStats extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.PLCPortStats port_3_stats = 9 [json_name = "port3Stats"];</code>
      *
-     * @return \SpaceX\API\Device\PLCPortStats|null
+     * @return PLCPortStats|null
      */
     public function getPort3Stats()
     {
@@ -400,12 +403,12 @@ class PLCStats extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.PLCPortStats port_3_stats = 9 [json_name = "port3Stats"];</code>
      *
-     * @param  \SpaceX\API\Device\PLCPortStats  $var
+     * @param  PLCPortStats  $var
      * @return $this
      */
     public function setPort3Stats($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\PLCPortStats::class);
+        GPBUtil::checkMessage($var, PLCPortStats::class);
         $this->port_3_stats = $var;
 
         return $this;
@@ -439,7 +442,7 @@ class PLCStats extends \Google\Protobuf\Internal\Message
      */
     public function setPlcRevision($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\PLCStats\ProtocolRevision::class);
+        GPBUtil::checkEnum($var, ProtocolRevision::class);
         $this->plc_revision = $var;
 
         return $this;

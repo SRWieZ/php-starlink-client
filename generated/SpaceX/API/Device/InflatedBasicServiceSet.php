@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\WifiUtil;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.InflatedBasicServiceSet</code>
  */
-class InflatedBasicServiceSet extends \Google\Protobuf\Internal\Message
+class InflatedBasicServiceSet extends Message
 {
     /**
      * Generated from protobuf field <code>optional string bssid = 1 [json_name = "bssid"];</code>
@@ -71,7 +73,7 @@ class InflatedBasicServiceSet extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\WifiUtil::initOnce();
+        WifiUtil::initOnce();
         parent::__construct($data);
     }
 
@@ -239,7 +241,7 @@ class InflatedBasicServiceSet extends \Google\Protobuf\Internal\Message
      */
     public function setIfaceType($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\IfaceType::class);
+        GPBUtil::checkEnum($var, IfaceType::class);
         $this->iface_type = $var;
 
         return $this;

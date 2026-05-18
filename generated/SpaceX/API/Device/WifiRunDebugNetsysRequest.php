@@ -6,10 +6,13 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Wifi;
+
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiRunDebugNetsysRequest</code>
  */
-class WifiRunDebugNetsysRequest extends \Google\Protobuf\Internal\Message
+class WifiRunDebugNetsysRequest extends Message
 {
     /**
      * Constructor.
@@ -21,7 +24,7 @@ class WifiRunDebugNetsysRequest extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 }

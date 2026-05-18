@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Common;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.AuthenticateRequest</code>
  */
-class AuthenticateRequest extends \Google\Protobuf\Internal\Message
+class AuthenticateRequest extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SignedData challenge = 1 [json_name = "challenge"];</code>
@@ -29,14 +31,14 @@ class AuthenticateRequest extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Common::initOnce();
+        Common::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SignedData challenge = 1 [json_name = "challenge"];</code>
      *
-     * @return \SpaceX\API\Device\SignedData|null
+     * @return SignedData|null
      */
     public function getChallenge()
     {
@@ -56,12 +58,12 @@ class AuthenticateRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SignedData challenge = 1 [json_name = "challenge"];</code>
      *
-     * @param  \SpaceX\API\Device\SignedData  $var
+     * @param  SignedData  $var
      * @return $this
      */
     public function setChallenge($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\SignedData::class);
+        GPBUtil::checkMessage($var, SignedData::class);
         $this->challenge = $var;
 
         return $this;

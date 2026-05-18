@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Wifi;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiGetPingMetricsResponse</code>
  */
-class WifiGetPingMetricsResponse extends \Google\Protobuf\Internal\Message
+class WifiGetPingMetricsResponse extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.PingMetrics internet = 1 [json_name = "internet"];</code>
@@ -29,14 +31,14 @@ class WifiGetPingMetricsResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.PingMetrics internet = 1 [json_name = "internet"];</code>
      *
-     * @return \SpaceX\API\Device\PingMetrics|null
+     * @return PingMetrics|null
      */
     public function getInternet()
     {
@@ -56,12 +58,12 @@ class WifiGetPingMetricsResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.PingMetrics internet = 1 [json_name = "internet"];</code>
      *
-     * @param  \SpaceX\API\Device\PingMetrics  $var
+     * @param  PingMetrics  $var
      * @return $this
      */
     public function setInternet($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\PingMetrics::class);
+        GPBUtil::checkMessage($var, PingMetrics::class);
         $this->internet = $var;
 
         return $this;

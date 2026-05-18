@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device\WifiClient;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Wifi;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiClient.Alerts</code>
  */
-class Alerts extends \Google\Protobuf\Internal\Message
+class Alerts extends Message
 {
     /**
      * Generated from protobuf field <code>optional bool throughput_limited = 1 [json_name = "throughputLimited"];</code>
@@ -29,7 +31,7 @@ class Alerts extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 

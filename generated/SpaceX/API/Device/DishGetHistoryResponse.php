@@ -6,13 +6,16 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
 use Google\Protobuf\RepeatedField;
+use GPBMetadata\SpacexApi\Device\Dish;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.DishGetHistoryResponse</code>
  */
-class DishGetHistoryResponse extends \Google\Protobuf\Internal\Message
+class DishGetHistoryResponse extends Message
 {
     /**
      * Generated from protobuf field <code>optional uint64 current = 1 [json_name = "current"];</code>
@@ -72,7 +75,7 @@ class DishGetHistoryResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Dish::initOnce();
+        Dish::initOnce();
         parent::__construct($data);
     }
 
@@ -128,7 +131,7 @@ class DishGetHistoryResponse extends \Google\Protobuf\Internal\Message
      */
     public function setPopPingDropRate($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::FLOAT);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::FLOAT);
         $this->pop_ping_drop_rate = $arr;
 
         return $this;
@@ -152,7 +155,7 @@ class DishGetHistoryResponse extends \Google\Protobuf\Internal\Message
      */
     public function setPopPingLatencyMs($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::FLOAT);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::FLOAT);
         $this->pop_ping_latency_ms = $arr;
 
         return $this;
@@ -176,7 +179,7 @@ class DishGetHistoryResponse extends \Google\Protobuf\Internal\Message
      */
     public function setDownlinkThroughputBps($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::FLOAT);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::FLOAT);
         $this->downlink_throughput_bps = $arr;
 
         return $this;
@@ -200,7 +203,7 @@ class DishGetHistoryResponse extends \Google\Protobuf\Internal\Message
      */
     public function setUplinkThroughputBps($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::FLOAT);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::FLOAT);
         $this->uplink_throughput_bps = $arr;
 
         return $this;
@@ -209,7 +212,7 @@ class DishGetHistoryResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.DishOutage outages = 1009 [json_name = "outages"];</code>
      *
-     * @return RepeatedField<\SpaceX\API\Device\DishOutage>
+     * @return RepeatedField<DishOutage>
      */
     public function getOutages()
     {
@@ -219,12 +222,12 @@ class DishGetHistoryResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.DishOutage outages = 1009 [json_name = "outages"];</code>
      *
-     * @param  \SpaceX\API\Device\DishOutage[]  $var
+     * @param  DishOutage[]  $var
      * @return $this
      */
     public function setOutages($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SpaceX\API\Device\DishOutage::class);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, DishOutage::class);
         $this->outages = $arr;
 
         return $this;
@@ -248,7 +251,7 @@ class DishGetHistoryResponse extends \Google\Protobuf\Internal\Message
      */
     public function setPowerIn($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::FLOAT);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::FLOAT);
         $this->power_in = $arr;
 
         return $this;
@@ -257,7 +260,7 @@ class DishGetHistoryResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.EventLog event_log = 1011 [json_name = "eventLog"];</code>
      *
-     * @return \SpaceX\API\Device\EventLog|null
+     * @return EventLog|null
      */
     public function getEventLog()
     {
@@ -277,12 +280,12 @@ class DishGetHistoryResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.EventLog event_log = 1011 [json_name = "eventLog"];</code>
      *
-     * @param  \SpaceX\API\Device\EventLog  $var
+     * @param  EventLog  $var
      * @return $this
      */
     public function setEventLog($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\EventLog::class);
+        GPBUtil::checkMessage($var, EventLog::class);
         $this->event_log = $var;
 
         return $this;

@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Device;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.SpeedTestRequest</code>
  */
-class SpeedTestRequest extends \Google\Protobuf\Internal\Message
+class SpeedTestRequest extends Message
 {
     /**
      * Generated from protobuf field <code>optional uint32 id = 4 [json_name = "id"];</code>
@@ -47,7 +49,7 @@ class SpeedTestRequest extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 
@@ -88,7 +90,7 @@ class SpeedTestRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SpeedTestStats client_speedtest = 1 [json_name = "clientSpeedtest"];</code>
      *
-     * @return \SpaceX\API\Device\SpeedTestStats|null
+     * @return SpeedTestStats|null
      */
     public function getClientSpeedtest()
     {
@@ -108,12 +110,12 @@ class SpeedTestRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SpeedTestStats client_speedtest = 1 [json_name = "clientSpeedtest"];</code>
      *
-     * @param  \SpaceX\API\Device\SpeedTestStats  $var
+     * @param  SpeedTestStats  $var
      * @return $this
      */
     public function setClientSpeedtest($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\SpeedTestStats::class);
+        GPBUtil::checkMessage($var, SpeedTestStats::class);
         $this->client_speedtest = $var;
 
         return $this;
@@ -156,7 +158,7 @@ class SpeedTestRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.ClientPlatform client_platform = 3 [json_name = "clientPlatform"];</code>
      *
-     * @return \SpaceX\API\Device\ClientPlatform|null
+     * @return ClientPlatform|null
      */
     public function getClientPlatform()
     {
@@ -176,12 +178,12 @@ class SpeedTestRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.ClientPlatform client_platform = 3 [json_name = "clientPlatform"];</code>
      *
-     * @param  \SpaceX\API\Device\ClientPlatform  $var
+     * @param  ClientPlatform  $var
      * @return $this
      */
     public function setClientPlatform($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\ClientPlatform::class);
+        GPBUtil::checkMessage($var, ClientPlatform::class);
         $this->client_platform = $var;
 
         return $this;

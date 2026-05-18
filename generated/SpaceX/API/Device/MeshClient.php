@@ -4,12 +4,16 @@
 
 namespace SpaceX\API\Device;
 
-class MeshClient extends \Grpc\BaseStub
+use Grpc\BaseStub;
+use Grpc\BidiStreamingCall;
+use Grpc\Channel;
+
+class MeshClient extends BaseStub
 {
     /**
      * @param  string  $hostname  hostname
      * @param  array  $opts  channel options
-     * @param  \Grpc\Channel  $channel  (optional) re-use channel object
+     * @param  Channel  $channel  (optional) re-use channel object
      */
     public function __construct($hostname, $opts, $channel = null)
     {
@@ -19,7 +23,7 @@ class MeshClient extends \Grpc\BaseStub
     /**
      * @param  array  $metadata  metadata
      * @param  array  $options  call options
-     * @return \Grpc\BidiStreamingCall
+     * @return BidiStreamingCall
      */
     public function MeshStream($metadata = [], $options = [])
     {

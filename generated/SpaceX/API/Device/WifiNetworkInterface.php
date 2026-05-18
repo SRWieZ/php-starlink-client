@@ -7,11 +7,14 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Common;
+use SpaceX\API\Device\WifiNetworkInterface\InvalidPacketCounts;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiNetworkInterface</code>
  */
-class WifiNetworkInterface extends \Google\Protobuf\Internal\Message
+class WifiNetworkInterface extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiNetworkInterface.InvalidPacketCounts invalid_packet_counts = 2 [json_name = "invalidPacketCounts"];</code>
@@ -59,14 +62,14 @@ class WifiNetworkInterface extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Common::initOnce();
+        Common::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiNetworkInterface.InvalidPacketCounts invalid_packet_counts = 2 [json_name = "invalidPacketCounts"];</code>
      *
-     * @return \SpaceX\API\Device\WifiNetworkInterface\InvalidPacketCounts|null
+     * @return InvalidPacketCounts|null
      */
     public function getInvalidPacketCounts()
     {
@@ -86,12 +89,12 @@ class WifiNetworkInterface extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiNetworkInterface.InvalidPacketCounts invalid_packet_counts = 2 [json_name = "invalidPacketCounts"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiNetworkInterface\InvalidPacketCounts  $var
+     * @param  InvalidPacketCounts  $var
      * @return $this
      */
     public function setInvalidPacketCounts($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiNetworkInterface\InvalidPacketCounts::class);
+        GPBUtil::checkMessage($var, InvalidPacketCounts::class);
         $this->invalid_packet_counts = $var;
 
         return $this;

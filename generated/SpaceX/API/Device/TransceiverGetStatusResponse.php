@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Transceiver;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.TransceiverGetStatusResponse</code>
  */
-class TransceiverGetStatusResponse extends \Google\Protobuf\Internal\Message
+class TransceiverGetStatusResponse extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.TransceiverModulatorState mod_state = 1 [json_name = "modState"];</code>
@@ -77,7 +79,7 @@ class TransceiverGetStatusResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Transceiver::initOnce();
+        Transceiver::initOnce();
         parent::__construct($data);
     }
 
@@ -109,7 +111,7 @@ class TransceiverGetStatusResponse extends \Google\Protobuf\Internal\Message
      */
     public function setModState($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\TransceiverModulatorState::class);
+        GPBUtil::checkEnum($var, TransceiverModulatorState::class);
         $this->mod_state = $var;
 
         return $this;
@@ -143,7 +145,7 @@ class TransceiverGetStatusResponse extends \Google\Protobuf\Internal\Message
      */
     public function setDemodState($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\TransceiverModulatorState::class);
+        GPBUtil::checkEnum($var, TransceiverModulatorState::class);
         $this->demod_state = $var;
 
         return $this;
@@ -177,7 +179,7 @@ class TransceiverGetStatusResponse extends \Google\Protobuf\Internal\Message
      */
     public function setTxState($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\TransceiverTxRxState::class);
+        GPBUtil::checkEnum($var, TransceiverTxRxState::class);
         $this->tx_state = $var;
 
         return $this;
@@ -211,7 +213,7 @@ class TransceiverGetStatusResponse extends \Google\Protobuf\Internal\Message
      */
     public function setRxState($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\TransceiverTxRxState::class);
+        GPBUtil::checkEnum($var, TransceiverTxRxState::class);
         $this->rx_state = $var;
 
         return $this;
@@ -245,7 +247,7 @@ class TransceiverGetStatusResponse extends \Google\Protobuf\Internal\Message
      */
     public function setState($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\DishState::class);
+        GPBUtil::checkEnum($var, DishState::class);
         $this->state = $var;
 
         return $this;
@@ -254,7 +256,7 @@ class TransceiverGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.TransceiverFaults faults = 1007 [json_name = "faults"];</code>
      *
-     * @return \SpaceX\API\Device\TransceiverFaults|null
+     * @return TransceiverFaults|null
      */
     public function getFaults()
     {
@@ -274,12 +276,12 @@ class TransceiverGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.TransceiverFaults faults = 1007 [json_name = "faults"];</code>
      *
-     * @param  \SpaceX\API\Device\TransceiverFaults  $var
+     * @param  TransceiverFaults  $var
      * @return $this
      */
     public function setFaults($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\TransceiverFaults::class);
+        GPBUtil::checkMessage($var, TransceiverFaults::class);
         $this->faults = $var;
 
         return $this;
@@ -313,7 +315,7 @@ class TransceiverGetStatusResponse extends \Google\Protobuf\Internal\Message
      */
     public function setTransmitBlankingState($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\TransceiverTransmitBlankingState::class);
+        GPBUtil::checkEnum($var, TransceiverTransmitBlankingState::class);
         $this->transmit_blanking_state = $var;
 
         return $this;

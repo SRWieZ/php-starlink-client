@@ -7,11 +7,14 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Device;
+use SpaceX\API\Device\SpeedtestStatus\Direction;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.SpeedtestStatus</code>
  */
-class SpeedtestStatus extends \Google\Protobuf\Internal\Message
+class SpeedtestStatus extends Message
 {
     /**
      * Generated from protobuf field <code>optional bool running = 1 [json_name = "running"];</code>
@@ -47,7 +50,7 @@ class SpeedtestStatus extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 
@@ -122,7 +125,7 @@ class SpeedtestStatus extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SpeedtestStatus.Direction up = 1000 [json_name = "up"];</code>
      *
-     * @return \SpaceX\API\Device\SpeedtestStatus\Direction|null
+     * @return Direction|null
      */
     public function getUp()
     {
@@ -142,12 +145,12 @@ class SpeedtestStatus extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SpeedtestStatus.Direction up = 1000 [json_name = "up"];</code>
      *
-     * @param  \SpaceX\API\Device\SpeedtestStatus\Direction  $var
+     * @param  Direction  $var
      * @return $this
      */
     public function setUp($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\SpeedtestStatus\Direction::class);
+        GPBUtil::checkMessage($var, Direction::class);
         $this->up = $var;
 
         return $this;
@@ -156,7 +159,7 @@ class SpeedtestStatus extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SpeedtestStatus.Direction down = 1001 [json_name = "down"];</code>
      *
-     * @return \SpaceX\API\Device\SpeedtestStatus\Direction|null
+     * @return Direction|null
      */
     public function getDown()
     {
@@ -176,12 +179,12 @@ class SpeedtestStatus extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SpeedtestStatus.Direction down = 1001 [json_name = "down"];</code>
      *
-     * @param  \SpaceX\API\Device\SpeedtestStatus\Direction  $var
+     * @param  Direction  $var
      * @return $this
      */
     public function setDown($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\SpeedtestStatus\Direction::class);
+        GPBUtil::checkMessage($var, Direction::class);
         $this->down = $var;
 
         return $this;

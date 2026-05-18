@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Device;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiCloudStatusEvent</code>
  */
-class WifiCloudStatusEvent extends \Google\Protobuf\Internal\Message
+class WifiCloudStatusEvent extends Message
 {
     /**
      * Generated from protobuf field <code>optional uint32 api_version = 4 [json_name = "apiVersion"];</code>
@@ -47,7 +49,7 @@ class WifiCloudStatusEvent extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 

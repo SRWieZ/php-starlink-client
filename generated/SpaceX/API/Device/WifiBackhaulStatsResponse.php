@@ -6,13 +6,16 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
 use Google\Protobuf\RepeatedField;
+use GPBMetadata\SpacexApi\Device\Wifi;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiBackhaulStatsResponse</code>
  */
-class WifiBackhaulStatsResponse extends \Google\Protobuf\Internal\Message
+class WifiBackhaulStatsResponse extends Message
 {
     /**
      * Generated from protobuf field <code>optional bool success = 1 [json_name = "success"];</code>
@@ -54,7 +57,7 @@ class WifiBackhaulStatsResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 
@@ -154,7 +157,7 @@ class WifiBackhaulStatsResponse extends \Google\Protobuf\Internal\Message
      */
     public function setIface($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\IfaceType::class);
+        GPBUtil::checkEnum($var, IfaceType::class);
         $this->iface = $var;
 
         return $this;
@@ -197,7 +200,7 @@ class WifiBackhaulStatsResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiSiteSurveyResult siteSurveyScan = 5 [json_name = "siteSurveyScan"];</code>
      *
-     * @return RepeatedField<\SpaceX\API\Device\WifiSiteSurveyResult>
+     * @return RepeatedField<WifiSiteSurveyResult>
      */
     public function getSiteSurveyScan()
     {
@@ -207,12 +210,12 @@ class WifiBackhaulStatsResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiSiteSurveyResult siteSurveyScan = 5 [json_name = "siteSurveyScan"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiSiteSurveyResult[]  $var
+     * @param  WifiSiteSurveyResult[]  $var
      * @return $this
      */
     public function setSiteSurveyScan($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SpaceX\API\Device\WifiSiteSurveyResult::class);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, WifiSiteSurveyResult::class);
         $this->siteSurveyScan = $arr;
 
         return $this;

@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device\GetConnectionsResponse;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Device;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.GetConnectionsResponse.ServiceConnection</code>
  */
-class ServiceConnection extends \Google\Protobuf\Internal\Message
+class ServiceConnection extends Message
 {
     /**
      * Generated from protobuf field <code>optional string address = 1 [json_name = "address"];</code>
@@ -35,7 +37,7 @@ class ServiceConnection extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 

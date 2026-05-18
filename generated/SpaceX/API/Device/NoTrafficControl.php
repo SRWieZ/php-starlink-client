@@ -6,10 +6,13 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\WifiConfig;
+
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.NoTrafficControl</code>
  */
-class NoTrafficControl extends \Google\Protobuf\Internal\Message
+class NoTrafficControl extends Message
 {
     /**
      * Constructor.
@@ -21,7 +24,7 @@ class NoTrafficControl extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\WifiConfig::initOnce();
+        WifiConfig::initOnce();
         parent::__construct($data);
     }
 }

@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\WifiConfig;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.AuthRadius</code>
  */
-class AuthRadius extends \Google\Protobuf\Internal\Message
+class AuthRadius extends Message
 {
     /**
      * Generated from protobuf field <code>optional string server = 1 [json_name = "server"];</code>
@@ -53,7 +55,7 @@ class AuthRadius extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\WifiConfig::initOnce();
+        WifiConfig::initOnce();
         parent::__construct($data);
     }
 
@@ -221,7 +223,7 @@ class AuthRadius extends \Google\Protobuf\Internal\Message
      */
     public function setTransport($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\Protocol::class);
+        GPBUtil::checkEnum($var, Protocol::class);
         $this->transport = $var;
 
         return $this;

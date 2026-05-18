@@ -6,10 +6,13 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Wifi;
+
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiResetEthPhyResponse</code>
  */
-class WifiResetEthPhyResponse extends \Google\Protobuf\Internal\Message
+class WifiResetEthPhyResponse extends Message
 {
     /**
      * Constructor.
@@ -21,7 +24,7 @@ class WifiResetEthPhyResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 }

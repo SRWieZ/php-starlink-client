@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Device;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.DishPowerSaveRequest</code>
  */
-class DishPowerSaveRequest extends \Google\Protobuf\Internal\Message
+class DishPowerSaveRequest extends Message
 {
     /**
      * Generated from protobuf field <code>optional uint32 power_save_start_minutes = 1 [json_name = "powerSaveStartMinutes"];</code>
@@ -41,7 +43,7 @@ class DishPowerSaveRequest extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 

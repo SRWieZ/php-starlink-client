@@ -6,13 +6,16 @@
 
 namespace SpaceX\API\Device\WifiConfig;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
 use Google\Protobuf\RepeatedField;
+use GPBMetadata\SpacexApi\Device\WifiConfig;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiConfig.DnsStaticEntry</code>
  */
-class DnsStaticEntry extends \Google\Protobuf\Internal\Message
+class DnsStaticEntry extends Message
 {
     /**
      * Generated from protobuf field <code>repeated string domains = 1000 [json_name = "domains"];</code>
@@ -36,7 +39,7 @@ class DnsStaticEntry extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\WifiConfig::initOnce();
+        WifiConfig::initOnce();
         parent::__construct($data);
     }
 
@@ -58,7 +61,7 @@ class DnsStaticEntry extends \Google\Protobuf\Internal\Message
      */
     public function setDomains($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::STRING);
         $this->domains = $arr;
 
         return $this;
@@ -82,7 +85,7 @@ class DnsStaticEntry extends \Google\Protobuf\Internal\Message
      */
     public function setAddresses($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::STRING);
         $this->addresses = $arr;
 
         return $this;

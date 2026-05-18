@@ -6,13 +6,17 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
 use Google\Protobuf\RepeatedField;
+use GPBMetadata\SpacexApi\Device\Device;
+use SpaceX\API\Device\GetConnectionsResponse\ServicesEntry;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.GetConnectionsResponse</code>
  */
-class GetConnectionsResponse extends \Google\Protobuf\Internal\Message
+class GetConnectionsResponse extends Message
 {
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.GetConnectionsResponse.ServicesEntry services = 1 [json_name = "services"];</code>
@@ -30,14 +34,14 @@ class GetConnectionsResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.GetConnectionsResponse.ServicesEntry services = 1 [json_name = "services"];</code>
      *
-     * @return RepeatedField<\SpaceX\API\Device\GetConnectionsResponse\ServicesEntry>
+     * @return RepeatedField<ServicesEntry>
      */
     public function getServices()
     {
@@ -47,12 +51,12 @@ class GetConnectionsResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.GetConnectionsResponse.ServicesEntry services = 1 [json_name = "services"];</code>
      *
-     * @param  \SpaceX\API\Device\GetConnectionsResponse\ServicesEntry[]  $var
+     * @param  ServicesEntry[]  $var
      * @return $this
      */
     public function setServices($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SpaceX\API\Device\GetConnectionsResponse\ServicesEntry::class);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, ServicesEntry::class);
         $this->services = $arr;
 
         return $this;

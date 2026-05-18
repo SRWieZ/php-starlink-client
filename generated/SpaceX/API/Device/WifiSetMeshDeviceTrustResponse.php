@@ -6,10 +6,13 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Wifi;
+
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiSetMeshDeviceTrustResponse</code>
  */
-class WifiSetMeshDeviceTrustResponse extends \Google\Protobuf\Internal\Message
+class WifiSetMeshDeviceTrustResponse extends Message
 {
     /**
      * Constructor.
@@ -21,7 +24,7 @@ class WifiSetMeshDeviceTrustResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 }

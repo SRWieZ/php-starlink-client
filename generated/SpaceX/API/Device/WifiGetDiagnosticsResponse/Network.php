@@ -6,13 +6,16 @@
 
 namespace SpaceX\API\Device\WifiGetDiagnosticsResponse;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
 use Google\Protobuf\RepeatedField;
+use GPBMetadata\SpacexApi\Device\Device;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiGetDiagnosticsResponse.Network</code>
  */
-class Network extends \Google\Protobuf\Internal\Message
+class Network extends Message
 {
     /**
      * Generated from protobuf field <code>optional string domain = 1 [json_name = "domain"];</code>
@@ -60,7 +63,7 @@ class Network extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 
@@ -150,7 +153,7 @@ class Network extends \Google\Protobuf\Internal\Message
      */
     public function setIpv6($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::STRING);
         $this->ipv6 = $arr;
 
         return $this;

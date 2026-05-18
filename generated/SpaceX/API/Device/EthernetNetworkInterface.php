@@ -7,11 +7,14 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Common;
+use SpaceX\API\Device\EthernetNetworkInterface\Duplex;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.EthernetNetworkInterface</code>
  */
-class EthernetNetworkInterface extends \Google\Protobuf\Internal\Message
+class EthernetNetworkInterface extends Message
 {
     /**
      * Generated from protobuf field <code>optional bool link_detected = 1 [json_name = "linkDetected"];</code>
@@ -47,7 +50,7 @@ class EthernetNetworkInterface extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Common::initOnce();
+        Common::initOnce();
         parent::__construct($data);
     }
 
@@ -181,7 +184,7 @@ class EthernetNetworkInterface extends \Google\Protobuf\Internal\Message
      */
     public function setDuplex($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\EthernetNetworkInterface\Duplex::class);
+        GPBUtil::checkEnum($var, Duplex::class);
         $this->duplex = $var;
 
         return $this;

@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\WifiConfig;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.AckSuppression</code>
  */
-class AckSuppression extends \Google\Protobuf\Internal\Message
+class AckSuppression extends Message
 {
     /**
      * Generated from protobuf field <code>optional uint32 ack_mark = 1 [json_name = "ackMark"];</code>
@@ -59,7 +61,7 @@ class AckSuppression extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\WifiConfig::initOnce();
+        WifiConfig::initOnce();
         parent::__construct($data);
     }
 

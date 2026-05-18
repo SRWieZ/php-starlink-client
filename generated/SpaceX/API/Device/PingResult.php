@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Common;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.PingResult</code>
  */
-class PingResult extends \Google\Protobuf\Internal\Message
+class PingResult extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.PingTarget target = 3 [json_name = "target"];</code>
@@ -41,14 +43,14 @@ class PingResult extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Common::initOnce();
+        Common::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.PingTarget target = 3 [json_name = "target"];</code>
      *
-     * @return \SpaceX\API\Device\PingTarget|null
+     * @return PingTarget|null
      */
     public function getTarget()
     {
@@ -68,12 +70,12 @@ class PingResult extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.PingTarget target = 3 [json_name = "target"];</code>
      *
-     * @param  \SpaceX\API\Device\PingTarget  $var
+     * @param  PingTarget  $var
      * @return $this
      */
     public function setTarget($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\PingTarget::class);
+        GPBUtil::checkMessage($var, PingTarget::class);
         $this->target = $var;
 
         return $this;

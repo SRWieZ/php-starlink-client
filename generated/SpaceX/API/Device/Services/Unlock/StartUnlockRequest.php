@@ -6,10 +6,13 @@
 
 namespace SpaceX\API\Device\Services\Unlock;
 
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Services\Unlock\Service;
+
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.Services.Unlock.StartUnlockRequest</code>
  */
-class StartUnlockRequest extends \Google\Protobuf\Internal\Message
+class StartUnlockRequest extends Message
 {
     /**
      * Constructor.
@@ -21,7 +24,7 @@ class StartUnlockRequest extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Services\Unlock\Service::initOnce();
+        Service::initOnce();
         parent::__construct($data);
     }
 }

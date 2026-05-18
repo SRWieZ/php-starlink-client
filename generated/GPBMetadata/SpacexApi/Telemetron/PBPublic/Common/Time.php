@@ -6,13 +6,15 @@
 
 namespace GPBMetadata\SpacexApi\Telemetron\PBPublic\Common;
 
+use Google\Protobuf\Internal\DescriptorPool;
+
 class Time
 {
     public static $is_initialized = false;
 
     public static function initOnce()
     {
-        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
+        $pool = DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
             return;

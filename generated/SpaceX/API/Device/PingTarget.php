@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Common;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.PingTarget</code>
  */
-class PingTarget extends \Google\Protobuf\Internal\Message
+class PingTarget extends Message
 {
     /**
      * Generated from protobuf field <code>optional string service = 1 [json_name = "service"];</code>
@@ -41,7 +43,7 @@ class PingTarget extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Common::initOnce();
+        Common::initOnce();
         parent::__construct($data);
     }
 

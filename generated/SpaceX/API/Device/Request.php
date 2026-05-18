@@ -7,11 +7,15 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Device;
+use SpaceX\API\Device\Services\Unlock\FinishUnlockRequest;
+use SpaceX\API\Device\Services\Unlock\StartUnlockRequest;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.Request</code>
  */
-class Request extends \Google\Protobuf\Internal\Message
+class Request extends Message
 {
     /**
      * Generated from protobuf field <code>optional uint64 id = 1 [json_name = "id"];</code>
@@ -575,7 +579,7 @@ class Request extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 
@@ -684,7 +688,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SignedData signed_request = 15 [json_name = "signedRequest"];</code>
      *
-     * @return \SpaceX\API\Device\SignedData|null
+     * @return SignedData|null
      */
     public function getSignedRequest()
     {
@@ -704,12 +708,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SignedData signed_request = 15 [json_name = "signedRequest"];</code>
      *
-     * @param  \SpaceX\API\Device\SignedData  $var
+     * @param  SignedData  $var
      * @return $this
      */
     public function setSignedRequest($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\SignedData::class);
+        GPBUtil::checkMessage($var, SignedData::class);
         $this->signed_request = $var;
 
         return $this;
@@ -718,7 +722,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetNextIdRequest get_next_id = 1006 [json_name = "getNextId"];</code>
      *
-     * @return \SpaceX\API\Device\GetNextIdRequest|null
+     * @return GetNextIdRequest|null
      */
     public function getGetNextId()
     {
@@ -738,12 +742,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetNextIdRequest get_next_id = 1006 [json_name = "getNextId"];</code>
      *
-     * @param  \SpaceX\API\Device\GetNextIdRequest  $var
+     * @param  GetNextIdRequest  $var
      * @return $this
      */
     public function setGetNextId($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\GetNextIdRequest::class);
+        GPBUtil::checkMessage($var, GetNextIdRequest::class);
         $this->get_next_id = $var;
 
         return $this;
@@ -752,7 +756,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SignedData sensitive_request = 1078 [json_name = "sensitiveRequest"];</code>
      *
-     * @return \SpaceX\API\Device\SignedData|null
+     * @return SignedData|null
      */
     public function getSensitiveRequest()
     {
@@ -772,12 +776,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SignedData sensitive_request = 1078 [json_name = "sensitiveRequest"];</code>
      *
-     * @param  \SpaceX\API\Device\SignedData  $var
+     * @param  SignedData  $var
      * @return $this
      */
     public function setSensitiveRequest($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\SignedData::class);
+        GPBUtil::checkMessage($var, SignedData::class);
         $this->sensitive_request = $var;
 
         return $this;
@@ -786,7 +790,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.AuthenticateRequest authenticate = 1005 [json_name = "authenticate"];</code>
      *
-     * @return \SpaceX\API\Device\AuthenticateRequest|null
+     * @return AuthenticateRequest|null
      */
     public function getAuthenticate()
     {
@@ -806,12 +810,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.AuthenticateRequest authenticate = 1005 [json_name = "authenticate"];</code>
      *
-     * @param  \SpaceX\API\Device\AuthenticateRequest  $var
+     * @param  AuthenticateRequest  $var
      * @return $this
      */
     public function setAuthenticate($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\AuthenticateRequest::class);
+        GPBUtil::checkMessage($var, AuthenticateRequest::class);
         $this->authenticate = $var;
 
         return $this;
@@ -820,7 +824,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.EnableDebugTelemRequest enable_debug_telem = 1034 [json_name = "enableDebugTelem"];</code>
      *
-     * @return \SpaceX\API\Device\EnableDebugTelemRequest|null
+     * @return EnableDebugTelemRequest|null
      */
     public function getEnableDebugTelem()
     {
@@ -840,12 +844,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.EnableDebugTelemRequest enable_debug_telem = 1034 [json_name = "enableDebugTelem"];</code>
      *
-     * @param  \SpaceX\API\Device\EnableDebugTelemRequest  $var
+     * @param  EnableDebugTelemRequest  $var
      * @return $this
      */
     public function setEnableDebugTelem($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\EnableDebugTelemRequest::class);
+        GPBUtil::checkMessage($var, EnableDebugTelemRequest::class);
         $this->enable_debug_telem = $var;
 
         return $this;
@@ -854,7 +858,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.FactoryResetRequest factory_reset = 1011 [json_name = "factoryReset"];</code>
      *
-     * @return \SpaceX\API\Device\FactoryResetRequest|null
+     * @return FactoryResetRequest|null
      */
     public function getFactoryReset()
     {
@@ -874,12 +878,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.FactoryResetRequest factory_reset = 1011 [json_name = "factoryReset"];</code>
      *
-     * @param  \SpaceX\API\Device\FactoryResetRequest  $var
+     * @param  FactoryResetRequest  $var
      * @return $this
      */
     public function setFactoryReset($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\FactoryResetRequest::class);
+        GPBUtil::checkMessage($var, FactoryResetRequest::class);
         $this->factory_reset = $var;
 
         return $this;
@@ -888,7 +892,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetDeviceInfoRequest get_device_info = 1008 [json_name = "getDeviceInfo"];</code>
      *
-     * @return \SpaceX\API\Device\GetDeviceInfoRequest|null
+     * @return GetDeviceInfoRequest|null
      */
     public function getGetDeviceInfo()
     {
@@ -908,12 +912,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetDeviceInfoRequest get_device_info = 1008 [json_name = "getDeviceInfo"];</code>
      *
-     * @param  \SpaceX\API\Device\GetDeviceInfoRequest  $var
+     * @param  GetDeviceInfoRequest  $var
      * @return $this
      */
     public function setGetDeviceInfo($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\GetDeviceInfoRequest::class);
+        GPBUtil::checkMessage($var, GetDeviceInfoRequest::class);
         $this->get_device_info = $var;
 
         return $this;
@@ -922,7 +926,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetHistoryRequest get_history = 1007 [json_name = "getHistory"];</code>
      *
-     * @return \SpaceX\API\Device\GetHistoryRequest|null
+     * @return GetHistoryRequest|null
      */
     public function getGetHistory()
     {
@@ -942,12 +946,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetHistoryRequest get_history = 1007 [json_name = "getHistory"];</code>
      *
-     * @param  \SpaceX\API\Device\GetHistoryRequest  $var
+     * @param  GetHistoryRequest  $var
      * @return $this
      */
     public function setGetHistory($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\GetHistoryRequest::class);
+        GPBUtil::checkMessage($var, GetHistoryRequest::class);
         $this->get_history = $var;
 
         return $this;
@@ -956,7 +960,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetLogRequest get_log = 1012 [json_name = "getLog"];</code>
      *
-     * @return \SpaceX\API\Device\GetLogRequest|null
+     * @return GetLogRequest|null
      */
     public function getGetLog()
     {
@@ -976,12 +980,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetLogRequest get_log = 1012 [json_name = "getLog"];</code>
      *
-     * @param  \SpaceX\API\Device\GetLogRequest  $var
+     * @param  GetLogRequest  $var
      * @return $this
      */
     public function setGetLog($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\GetLogRequest::class);
+        GPBUtil::checkMessage($var, GetLogRequest::class);
         $this->get_log = $var;
 
         return $this;
@@ -990,7 +994,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetNetworkInterfacesRequest get_network_interfaces = 1015 [json_name = "getNetworkInterfaces"];</code>
      *
-     * @return \SpaceX\API\Device\GetNetworkInterfacesRequest|null
+     * @return GetNetworkInterfacesRequest|null
      */
     public function getGetNetworkInterfaces()
     {
@@ -1010,12 +1014,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetNetworkInterfacesRequest get_network_interfaces = 1015 [json_name = "getNetworkInterfaces"];</code>
      *
-     * @param  \SpaceX\API\Device\GetNetworkInterfacesRequest  $var
+     * @param  GetNetworkInterfacesRequest  $var
      * @return $this
      */
     public function setGetNetworkInterfaces($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\GetNetworkInterfacesRequest::class);
+        GPBUtil::checkMessage($var, GetNetworkInterfacesRequest::class);
         $this->get_network_interfaces = $var;
 
         return $this;
@@ -1024,7 +1028,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetPingRequest get_ping = 1009 [json_name = "getPing"];</code>
      *
-     * @return \SpaceX\API\Device\GetPingRequest|null
+     * @return GetPingRequest|null
      */
     public function getGetPing()
     {
@@ -1044,12 +1048,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetPingRequest get_ping = 1009 [json_name = "getPing"];</code>
      *
-     * @param  \SpaceX\API\Device\GetPingRequest  $var
+     * @param  GetPingRequest  $var
      * @return $this
      */
     public function setGetPing($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\GetPingRequest::class);
+        GPBUtil::checkMessage($var, GetPingRequest::class);
         $this->get_ping = $var;
 
         return $this;
@@ -1058,7 +1062,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.PingHostRequest ping_host = 1016 [json_name = "pingHost"];</code>
      *
-     * @return \SpaceX\API\Device\PingHostRequest|null
+     * @return PingHostRequest|null
      */
     public function getPingHost()
     {
@@ -1078,12 +1082,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.PingHostRequest ping_host = 1016 [json_name = "pingHost"];</code>
      *
-     * @param  \SpaceX\API\Device\PingHostRequest  $var
+     * @param  PingHostRequest  $var
      * @return $this
      */
     public function setPingHost($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\PingHostRequest::class);
+        GPBUtil::checkMessage($var, PingHostRequest::class);
         $this->ping_host = $var;
 
         return $this;
@@ -1092,7 +1096,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetStatusRequest get_status = 1004 [json_name = "getStatus"];</code>
      *
-     * @return \SpaceX\API\Device\GetStatusRequest|null
+     * @return GetStatusRequest|null
      */
     public function getGetStatus()
     {
@@ -1112,12 +1116,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetStatusRequest get_status = 1004 [json_name = "getStatus"];</code>
      *
-     * @param  \SpaceX\API\Device\GetStatusRequest  $var
+     * @param  GetStatusRequest  $var
      * @return $this
      */
     public function setGetStatus($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\GetStatusRequest::class);
+        GPBUtil::checkMessage($var, GetStatusRequest::class);
         $this->get_status = $var;
 
         return $this;
@@ -1126,7 +1130,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.RebootRequest reboot = 1001 [json_name = "reboot"];</code>
      *
-     * @return \SpaceX\API\Device\RebootRequest|null
+     * @return RebootRequest|null
      */
     public function getReboot()
     {
@@ -1146,12 +1150,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.RebootRequest reboot = 1001 [json_name = "reboot"];</code>
      *
-     * @param  \SpaceX\API\Device\RebootRequest  $var
+     * @param  RebootRequest  $var
      * @return $this
      */
     public function setReboot($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\RebootRequest::class);
+        GPBUtil::checkMessage($var, RebootRequest::class);
         $this->reboot = $var;
 
         return $this;
@@ -1160,7 +1164,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SetSkuRequest set_sku = 1013 [json_name = "setSku"];</code>
      *
-     * @return \SpaceX\API\Device\SetSkuRequest|null
+     * @return SetSkuRequest|null
      */
     public function getSetSku()
     {
@@ -1180,12 +1184,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SetSkuRequest set_sku = 1013 [json_name = "setSku"];</code>
      *
-     * @param  \SpaceX\API\Device\SetSkuRequest  $var
+     * @param  SetSkuRequest  $var
      * @return $this
      */
     public function setSetSku($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\SetSkuRequest::class);
+        GPBUtil::checkMessage($var, SetSkuRequest::class);
         $this->set_sku = $var;
 
         return $this;
@@ -1194,7 +1198,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SetTrustedKeysRequest set_trusted_keys = 1010 [json_name = "setTrustedKeys"];</code>
      *
-     * @return \SpaceX\API\Device\SetTrustedKeysRequest|null
+     * @return SetTrustedKeysRequest|null
      */
     public function getSetTrustedKeys()
     {
@@ -1214,12 +1218,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SetTrustedKeysRequest set_trusted_keys = 1010 [json_name = "setTrustedKeys"];</code>
      *
-     * @param  \SpaceX\API\Device\SetTrustedKeysRequest  $var
+     * @param  SetTrustedKeysRequest  $var
      * @return $this
      */
     public function setSetTrustedKeys($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\SetTrustedKeysRequest::class);
+        GPBUtil::checkMessage($var, SetTrustedKeysRequest::class);
         $this->set_trusted_keys = $var;
 
         return $this;
@@ -1228,7 +1232,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SpeedTestRequest speed_test = 1003 [json_name = "speedTest"];</code>
      *
-     * @return \SpaceX\API\Device\SpeedTestRequest|null
+     * @return SpeedTestRequest|null
      */
     public function getSpeedTest()
     {
@@ -1248,12 +1252,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SpeedTestRequest speed_test = 1003 [json_name = "speedTest"];</code>
      *
-     * @param  \SpaceX\API\Device\SpeedTestRequest  $var
+     * @param  SpeedTestRequest  $var
      * @return $this
      */
     public function setSpeedTest($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\SpeedTestRequest::class);
+        GPBUtil::checkMessage($var, SpeedTestRequest::class);
         $this->speed_test = $var;
 
         return $this;
@@ -1262,7 +1266,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.UpdateRequest update = 1014 [json_name = "update"];</code>
      *
-     * @return \SpaceX\API\Device\UpdateRequest|null
+     * @return UpdateRequest|null
      */
     public function getUpdate()
     {
@@ -1282,12 +1286,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.UpdateRequest update = 1014 [json_name = "update"];</code>
      *
-     * @param  \SpaceX\API\Device\UpdateRequest  $var
+     * @param  UpdateRequest  $var
      * @return $this
      */
     public function setUpdate($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\UpdateRequest::class);
+        GPBUtil::checkMessage($var, UpdateRequest::class);
         $this->update = $var;
 
         return $this;
@@ -1296,7 +1300,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetLocationRequest get_location = 1017 [json_name = "getLocation"];</code>
      *
-     * @return \SpaceX\API\Device\GetLocationRequest|null
+     * @return GetLocationRequest|null
      */
     public function getGetLocation()
     {
@@ -1316,12 +1320,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetLocationRequest get_location = 1017 [json_name = "getLocation"];</code>
      *
-     * @param  \SpaceX\API\Device\GetLocationRequest  $var
+     * @param  GetLocationRequest  $var
      * @return $this
      */
     public function setGetLocation($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\GetLocationRequest::class);
+        GPBUtil::checkMessage($var, GetLocationRequest::class);
         $this->get_location = $var;
 
         return $this;
@@ -1330,7 +1334,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetHeapDumpRequest get_heap_dump = 1019 [json_name = "getHeapDump"];</code>
      *
-     * @return \SpaceX\API\Device\GetHeapDumpRequest|null
+     * @return GetHeapDumpRequest|null
      */
     public function getGetHeapDump()
     {
@@ -1350,12 +1354,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetHeapDumpRequest get_heap_dump = 1019 [json_name = "getHeapDump"];</code>
      *
-     * @param  \SpaceX\API\Device\GetHeapDumpRequest  $var
+     * @param  GetHeapDumpRequest  $var
      * @return $this
      */
     public function setGetHeapDump($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\GetHeapDumpRequest::class);
+        GPBUtil::checkMessage($var, GetHeapDumpRequest::class);
         $this->get_heap_dump = $var;
 
         return $this;
@@ -1364,7 +1368,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.RestartControlRequest restart_control = 1020 [json_name = "restartControl"];</code>
      *
-     * @return \SpaceX\API\Device\RestartControlRequest|null
+     * @return RestartControlRequest|null
      */
     public function getRestartControl()
     {
@@ -1384,12 +1388,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.RestartControlRequest restart_control = 1020 [json_name = "restartControl"];</code>
      *
-     * @param  \SpaceX\API\Device\RestartControlRequest  $var
+     * @param  RestartControlRequest  $var
      * @return $this
      */
     public function setRestartControl($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\RestartControlRequest::class);
+        GPBUtil::checkMessage($var, RestartControlRequest::class);
         $this->restart_control = $var;
 
         return $this;
@@ -1398,7 +1402,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.FuseRequest fuse = 1021 [json_name = "fuse"];</code>
      *
-     * @return \SpaceX\API\Device\FuseRequest|null
+     * @return FuseRequest|null
      */
     public function getFuse()
     {
@@ -1418,12 +1422,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.FuseRequest fuse = 1021 [json_name = "fuse"];</code>
      *
-     * @param  \SpaceX\API\Device\FuseRequest  $var
+     * @param  FuseRequest  $var
      * @return $this
      */
     public function setFuse($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\FuseRequest::class);
+        GPBUtil::checkMessage($var, FuseRequest::class);
         $this->fuse = $var;
 
         return $this;
@@ -1432,7 +1436,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetPersistentStatsRequest get_persistent_stats = 1022 [json_name = "getPersistentStats"];</code>
      *
-     * @return \SpaceX\API\Device\GetPersistentStatsRequest|null
+     * @return GetPersistentStatsRequest|null
      */
     public function getGetPersistentStats()
     {
@@ -1452,12 +1456,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetPersistentStatsRequest get_persistent_stats = 1022 [json_name = "getPersistentStats"];</code>
      *
-     * @param  \SpaceX\API\Device\GetPersistentStatsRequest  $var
+     * @param  GetPersistentStatsRequest  $var
      * @return $this
      */
     public function setGetPersistentStats($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\GetPersistentStatsRequest::class);
+        GPBUtil::checkMessage($var, GetPersistentStatsRequest::class);
         $this->get_persistent_stats = $var;
 
         return $this;
@@ -1466,7 +1470,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetConnectionsRequest get_connections = 1023 [json_name = "getConnections"];</code>
      *
-     * @return \SpaceX\API\Device\GetConnectionsRequest|null
+     * @return GetConnectionsRequest|null
      */
     public function getGetConnections()
     {
@@ -1486,12 +1490,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetConnectionsRequest get_connections = 1023 [json_name = "getConnections"];</code>
      *
-     * @param  \SpaceX\API\Device\GetConnectionsRequest  $var
+     * @param  GetConnectionsRequest  $var
      * @return $this
      */
     public function setGetConnections($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\GetConnectionsRequest::class);
+        GPBUtil::checkMessage($var, GetConnectionsRequest::class);
         $this->get_connections = $var;
 
         return $this;
@@ -1500,7 +1504,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.StartSpeedtestRequest start_speedtest = 1027 [json_name = "startSpeedtest"];</code>
      *
-     * @return \SpaceX\API\Device\StartSpeedtestRequest|null
+     * @return StartSpeedtestRequest|null
      */
     public function getStartSpeedtest()
     {
@@ -1520,12 +1524,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.StartSpeedtestRequest start_speedtest = 1027 [json_name = "startSpeedtest"];</code>
      *
-     * @param  \SpaceX\API\Device\StartSpeedtestRequest  $var
+     * @param  StartSpeedtestRequest  $var
      * @return $this
      */
     public function setStartSpeedtest($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\StartSpeedtestRequest::class);
+        GPBUtil::checkMessage($var, StartSpeedtestRequest::class);
         $this->start_speedtest = $var;
 
         return $this;
@@ -1534,7 +1538,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetSpeedtestStatusRequest get_speedtest_status = 1028 [json_name = "getSpeedtestStatus"];</code>
      *
-     * @return \SpaceX\API\Device\GetSpeedtestStatusRequest|null
+     * @return GetSpeedtestStatusRequest|null
      */
     public function getGetSpeedtestStatus()
     {
@@ -1554,12 +1558,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetSpeedtestStatusRequest get_speedtest_status = 1028 [json_name = "getSpeedtestStatus"];</code>
      *
-     * @param  \SpaceX\API\Device\GetSpeedtestStatusRequest  $var
+     * @param  GetSpeedtestStatusRequest  $var
      * @return $this
      */
     public function setGetSpeedtestStatus($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\GetSpeedtestStatusRequest::class);
+        GPBUtil::checkMessage($var, GetSpeedtestStatusRequest::class);
         $this->get_speedtest_status = $var;
 
         return $this;
@@ -1568,7 +1572,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.ReportClientSpeedtestRequest report_client_speedtest = 1029 [json_name = "reportClientSpeedtest"];</code>
      *
-     * @return \SpaceX\API\Device\ReportClientSpeedtestRequest|null
+     * @return ReportClientSpeedtestRequest|null
      */
     public function getReportClientSpeedtest()
     {
@@ -1588,12 +1592,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.ReportClientSpeedtestRequest report_client_speedtest = 1029 [json_name = "reportClientSpeedtest"];</code>
      *
-     * @param  \SpaceX\API\Device\ReportClientSpeedtestRequest  $var
+     * @param  ReportClientSpeedtestRequest  $var
      * @return $this
      */
     public function setReportClientSpeedtest($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\ReportClientSpeedtestRequest::class);
+        GPBUtil::checkMessage($var, ReportClientSpeedtestRequest::class);
         $this->report_client_speedtest = $var;
 
         return $this;
@@ -1602,7 +1606,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.InitiateRemoteSshRequest initiate_remote_ssh = 1030 [json_name = "initiateRemoteSsh"];</code>
      *
-     * @return \SpaceX\API\Device\InitiateRemoteSshRequest|null
+     * @return InitiateRemoteSshRequest|null
      */
     public function getInitiateRemoteSsh()
     {
@@ -1622,12 +1626,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.InitiateRemoteSshRequest initiate_remote_ssh = 1030 [json_name = "initiateRemoteSsh"];</code>
      *
-     * @param  \SpaceX\API\Device\InitiateRemoteSshRequest  $var
+     * @param  InitiateRemoteSshRequest  $var
      * @return $this
      */
     public function setInitiateRemoteSsh($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\InitiateRemoteSshRequest::class);
+        GPBUtil::checkMessage($var, InitiateRemoteSshRequest::class);
         $this->initiate_remote_ssh = $var;
 
         return $this;
@@ -1636,7 +1640,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SelfTestRequest self_test = 1031 [json_name = "selfTest"];</code>
      *
-     * @return \SpaceX\API\Device\SelfTestRequest|null
+     * @return SelfTestRequest|null
      */
     public function getSelfTest()
     {
@@ -1656,12 +1660,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SelfTestRequest self_test = 1031 [json_name = "selfTest"];</code>
      *
-     * @param  \SpaceX\API\Device\SelfTestRequest  $var
+     * @param  SelfTestRequest  $var
      * @return $this
      */
     public function setSelfTest($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\SelfTestRequest::class);
+        GPBUtil::checkMessage($var, SelfTestRequest::class);
         $this->self_test = $var;
 
         return $this;
@@ -1670,7 +1674,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SetTestModeRequest set_test_mode = 1032 [json_name = "setTestMode"];</code>
      *
-     * @return \SpaceX\API\Device\SetTestModeRequest|null
+     * @return SetTestModeRequest|null
      */
     public function getSetTestMode()
     {
@@ -1690,12 +1694,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SetTestModeRequest set_test_mode = 1032 [json_name = "setTestMode"];</code>
      *
-     * @param  \SpaceX\API\Device\SetTestModeRequest  $var
+     * @param  SetTestModeRequest  $var
      * @return $this
      */
     public function setSetTestMode($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\SetTestModeRequest::class);
+        GPBUtil::checkMessage($var, SetTestModeRequest::class);
         $this->set_test_mode = $var;
 
         return $this;
@@ -1704,7 +1708,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SoftwareUpdateRequest software_update = 1033 [json_name = "softwareUpdate"];</code>
      *
-     * @return \SpaceX\API\Device\SoftwareUpdateRequest|null
+     * @return SoftwareUpdateRequest|null
      */
     public function getSoftwareUpdate()
     {
@@ -1724,12 +1728,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SoftwareUpdateRequest software_update = 1033 [json_name = "softwareUpdate"];</code>
      *
-     * @param  \SpaceX\API\Device\SoftwareUpdateRequest  $var
+     * @param  SoftwareUpdateRequest  $var
      * @return $this
      */
     public function setSoftwareUpdate($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\SoftwareUpdateRequest::class);
+        GPBUtil::checkMessage($var, SoftwareUpdateRequest::class);
         $this->software_update = $var;
 
         return $this;
@@ -1738,7 +1742,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.IQCaptureRequest iq_capture = 1035 [json_name = "iqCapture"];</code>
      *
-     * @return \SpaceX\API\Device\IQCaptureRequest|null
+     * @return IQCaptureRequest|null
      */
     public function getIqCapture()
     {
@@ -1758,12 +1762,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.IQCaptureRequest iq_capture = 1035 [json_name = "iqCapture"];</code>
      *
-     * @param  \SpaceX\API\Device\IQCaptureRequest  $var
+     * @param  IQCaptureRequest  $var
      * @return $this
      */
     public function setIqCapture($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\IQCaptureRequest::class);
+        GPBUtil::checkMessage($var, IQCaptureRequest::class);
         $this->iq_capture = $var;
 
         return $this;
@@ -1772,7 +1776,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetRadioStatsRequest get_radio_stats = 1036 [json_name = "getRadioStats"];</code>
      *
-     * @return \SpaceX\API\Device\GetRadioStatsRequest|null
+     * @return GetRadioStatsRequest|null
      */
     public function getGetRadioStats()
     {
@@ -1792,12 +1796,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetRadioStatsRequest get_radio_stats = 1036 [json_name = "getRadioStats"];</code>
      *
-     * @param  \SpaceX\API\Device\GetRadioStatsRequest  $var
+     * @param  GetRadioStatsRequest  $var
      * @return $this
      */
     public function setGetRadioStats($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\GetRadioStatsRequest::class);
+        GPBUtil::checkMessage($var, GetRadioStatsRequest::class);
         $this->get_radio_stats = $var;
 
         return $this;
@@ -1806,7 +1810,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetTimeRequest time = 1037 [json_name = "time"];</code>
      *
-     * @return \SpaceX\API\Device\GetTimeRequest|null
+     * @return GetTimeRequest|null
      */
     public function getTime()
     {
@@ -1826,12 +1830,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetTimeRequest time = 1037 [json_name = "time"];</code>
      *
-     * @param  \SpaceX\API\Device\GetTimeRequest  $var
+     * @param  GetTimeRequest  $var
      * @return $this
      */
     public function setTime($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\GetTimeRequest::class);
+        GPBUtil::checkMessage($var, GetTimeRequest::class);
         $this->time = $var;
 
         return $this;
@@ -1840,7 +1844,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.RunIperfServerRequest run_iperf_server = 1038 [json_name = "runIperfServer"];</code>
      *
-     * @return \SpaceX\API\Device\RunIperfServerRequest|null
+     * @return RunIperfServerRequest|null
      */
     public function getRunIperfServer()
     {
@@ -1860,12 +1864,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.RunIperfServerRequest run_iperf_server = 1038 [json_name = "runIperfServer"];</code>
      *
-     * @param  \SpaceX\API\Device\RunIperfServerRequest  $var
+     * @param  RunIperfServerRequest  $var
      * @return $this
      */
     public function setRunIperfServer($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\RunIperfServerRequest::class);
+        GPBUtil::checkMessage($var, RunIperfServerRequest::class);
         $this->run_iperf_server = $var;
 
         return $this;
@@ -1874,7 +1878,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.TcpConnectivityTestRequest tcp_connectivity_test = 1039 [json_name = "tcpConnectivityTest"];</code>
      *
-     * @return \SpaceX\API\Device\TcpConnectivityTestRequest|null
+     * @return TcpConnectivityTestRequest|null
      */
     public function getTcpConnectivityTest()
     {
@@ -1894,12 +1898,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.TcpConnectivityTestRequest tcp_connectivity_test = 1039 [json_name = "tcpConnectivityTest"];</code>
      *
-     * @param  \SpaceX\API\Device\TcpConnectivityTestRequest  $var
+     * @param  TcpConnectivityTestRequest  $var
      * @return $this
      */
     public function setTcpConnectivityTest($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\TcpConnectivityTestRequest::class);
+        GPBUtil::checkMessage($var, TcpConnectivityTestRequest::class);
         $this->tcp_connectivity_test = $var;
 
         return $this;
@@ -1908,7 +1912,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.UdpConnectivityTestRequest udp_connectivity_test = 1040 [json_name = "udpConnectivityTest"];</code>
      *
-     * @return \SpaceX\API\Device\UdpConnectivityTestRequest|null
+     * @return UdpConnectivityTestRequest|null
      */
     public function getUdpConnectivityTest()
     {
@@ -1928,12 +1932,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.UdpConnectivityTestRequest udp_connectivity_test = 1040 [json_name = "udpConnectivityTest"];</code>
      *
-     * @param  \SpaceX\API\Device\UdpConnectivityTestRequest  $var
+     * @param  UdpConnectivityTestRequest  $var
      * @return $this
      */
     public function setUdpConnectivityTest($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\UdpConnectivityTestRequest::class);
+        GPBUtil::checkMessage($var, UdpConnectivityTestRequest::class);
         $this->udp_connectivity_test = $var;
 
         return $this;
@@ -1942,7 +1946,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetGoroutineStackTracesRequest get_goroutine_stack_traces = 1041 [json_name = "getGoroutineStackTraces"];</code>
      *
-     * @return \SpaceX\API\Device\GetGoroutineStackTracesRequest|null
+     * @return GetGoroutineStackTracesRequest|null
      */
     public function getGetGoroutineStackTraces()
     {
@@ -1962,12 +1966,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetGoroutineStackTracesRequest get_goroutine_stack_traces = 1041 [json_name = "getGoroutineStackTraces"];</code>
      *
-     * @param  \SpaceX\API\Device\GetGoroutineStackTracesRequest  $var
+     * @param  GetGoroutineStackTracesRequest  $var
      * @return $this
      */
     public function setGetGoroutineStackTraces($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\GetGoroutineStackTracesRequest::class);
+        GPBUtil::checkMessage($var, GetGoroutineStackTracesRequest::class);
         $this->get_goroutine_stack_traces = $var;
 
         return $this;
@@ -1976,7 +1980,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishStowRequest dish_stow = 2002 [json_name = "dishStow"];</code>
      *
-     * @return \SpaceX\API\Device\DishStowRequest|null
+     * @return DishStowRequest|null
      */
     public function getDishStow()
     {
@@ -1996,12 +2000,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishStowRequest dish_stow = 2002 [json_name = "dishStow"];</code>
      *
-     * @param  \SpaceX\API\Device\DishStowRequest  $var
+     * @param  DishStowRequest  $var
      * @return $this
      */
     public function setDishStow($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\DishStowRequest::class);
+        GPBUtil::checkMessage($var, DishStowRequest::class);
         $this->dish_stow = $var;
 
         return $this;
@@ -2010,7 +2014,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishGetContextRequest dish_get_context = 2003 [json_name = "dishGetContext"];</code>
      *
-     * @return \SpaceX\API\Device\DishGetContextRequest|null
+     * @return DishGetContextRequest|null
      */
     public function getDishGetContext()
     {
@@ -2030,12 +2034,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishGetContextRequest dish_get_context = 2003 [json_name = "dishGetContext"];</code>
      *
-     * @param  \SpaceX\API\Device\DishGetContextRequest  $var
+     * @param  DishGetContextRequest  $var
      * @return $this
      */
     public function setDishGetContext($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\DishGetContextRequest::class);
+        GPBUtil::checkMessage($var, DishGetContextRequest::class);
         $this->dish_get_context = $var;
 
         return $this;
@@ -2044,7 +2048,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishGetObstructionMapRequest dish_get_obstruction_map = 2008 [json_name = "dishGetObstructionMap"];</code>
      *
-     * @return \SpaceX\API\Device\DishGetObstructionMapRequest|null
+     * @return DishGetObstructionMapRequest|null
      */
     public function getDishGetObstructionMap()
     {
@@ -2064,12 +2068,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishGetObstructionMapRequest dish_get_obstruction_map = 2008 [json_name = "dishGetObstructionMap"];</code>
      *
-     * @param  \SpaceX\API\Device\DishGetObstructionMapRequest  $var
+     * @param  DishGetObstructionMapRequest  $var
      * @return $this
      */
     public function setDishGetObstructionMap($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\DishGetObstructionMapRequest::class);
+        GPBUtil::checkMessage($var, DishGetObstructionMapRequest::class);
         $this->dish_get_obstruction_map = $var;
 
         return $this;
@@ -2078,7 +2082,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishSetEmcRequest dish_set_emc = 2007 [json_name = "dishSetEmc"];</code>
      *
-     * @return \SpaceX\API\Device\DishSetEmcRequest|null
+     * @return DishSetEmcRequest|null
      */
     public function getDishSetEmc()
     {
@@ -2098,12 +2102,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishSetEmcRequest dish_set_emc = 2007 [json_name = "dishSetEmc"];</code>
      *
-     * @param  \SpaceX\API\Device\DishSetEmcRequest  $var
+     * @param  DishSetEmcRequest  $var
      * @return $this
      */
     public function setDishSetEmc($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\DishSetEmcRequest::class);
+        GPBUtil::checkMessage($var, DishSetEmcRequest::class);
         $this->dish_set_emc = $var;
 
         return $this;
@@ -2112,7 +2116,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishGetEmcRequest dish_get_emc = 2009 [json_name = "dishGetEmc"];</code>
      *
-     * @return \SpaceX\API\Device\DishGetEmcRequest|null
+     * @return DishGetEmcRequest|null
      */
     public function getDishGetEmc()
     {
@@ -2132,12 +2136,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishGetEmcRequest dish_get_emc = 2009 [json_name = "dishGetEmc"];</code>
      *
-     * @param  \SpaceX\API\Device\DishGetEmcRequest  $var
+     * @param  DishGetEmcRequest  $var
      * @return $this
      */
     public function setDishGetEmc($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\DishGetEmcRequest::class);
+        GPBUtil::checkMessage($var, DishGetEmcRequest::class);
         $this->dish_get_emc = $var;
 
         return $this;
@@ -2146,7 +2150,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishSetConfigRequest dish_set_config = 2010 [json_name = "dishSetConfig"];</code>
      *
-     * @return \SpaceX\API\Device\DishSetConfigRequest|null
+     * @return DishSetConfigRequest|null
      */
     public function getDishSetConfig()
     {
@@ -2166,12 +2170,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishSetConfigRequest dish_set_config = 2010 [json_name = "dishSetConfig"];</code>
      *
-     * @param  \SpaceX\API\Device\DishSetConfigRequest  $var
+     * @param  DishSetConfigRequest  $var
      * @return $this
      */
     public function setDishSetConfig($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\DishSetConfigRequest::class);
+        GPBUtil::checkMessage($var, DishSetConfigRequest::class);
         $this->dish_set_config = $var;
 
         return $this;
@@ -2180,7 +2184,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishGetConfigRequest dish_get_config = 2011 [json_name = "dishGetConfig"];</code>
      *
-     * @return \SpaceX\API\Device\DishGetConfigRequest|null
+     * @return DishGetConfigRequest|null
      */
     public function getDishGetConfig()
     {
@@ -2200,12 +2204,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishGetConfigRequest dish_get_config = 2011 [json_name = "dishGetConfig"];</code>
      *
-     * @param  \SpaceX\API\Device\DishGetConfigRequest  $var
+     * @param  DishGetConfigRequest  $var
      * @return $this
      */
     public function setDishGetConfig($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\DishGetConfigRequest::class);
+        GPBUtil::checkMessage($var, DishGetConfigRequest::class);
         $this->dish_get_config = $var;
 
         return $this;
@@ -2214,7 +2218,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishPowerSaveRequest dish_power_save = 2013 [json_name = "dishPowerSave"];</code>
      *
-     * @return \SpaceX\API\Device\DishPowerSaveRequest|null
+     * @return DishPowerSaveRequest|null
      */
     public function getDishPowerSave()
     {
@@ -2234,12 +2238,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishPowerSaveRequest dish_power_save = 2013 [json_name = "dishPowerSave"];</code>
      *
-     * @param  \SpaceX\API\Device\DishPowerSaveRequest  $var
+     * @param  DishPowerSaveRequest  $var
      * @return $this
      */
     public function setDishPowerSave($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\DishPowerSaveRequest::class);
+        GPBUtil::checkMessage($var, DishPowerSaveRequest::class);
         $this->dish_power_save = $var;
 
         return $this;
@@ -2248,7 +2252,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishInhibitGpsRequest dish_inhibit_gps = 2014 [json_name = "dishInhibitGps"];</code>
      *
-     * @return \SpaceX\API\Device\DishInhibitGpsRequest|null
+     * @return DishInhibitGpsRequest|null
      */
     public function getDishInhibitGps()
     {
@@ -2268,12 +2272,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishInhibitGpsRequest dish_inhibit_gps = 2014 [json_name = "dishInhibitGps"];</code>
      *
-     * @param  \SpaceX\API\Device\DishInhibitGpsRequest  $var
+     * @param  DishInhibitGpsRequest  $var
      * @return $this
      */
     public function setDishInhibitGps($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\DishInhibitGpsRequest::class);
+        GPBUtil::checkMessage($var, DishInhibitGpsRequest::class);
         $this->dish_inhibit_gps = $var;
 
         return $this;
@@ -2282,7 +2286,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishGetDataRequest dish_get_data = 2015 [json_name = "dishGetData"];</code>
      *
-     * @return \SpaceX\API\Device\DishGetDataRequest|null
+     * @return DishGetDataRequest|null
      */
     public function getDishGetData()
     {
@@ -2302,12 +2306,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishGetDataRequest dish_get_data = 2015 [json_name = "dishGetData"];</code>
      *
-     * @param  \SpaceX\API\Device\DishGetDataRequest  $var
+     * @param  DishGetDataRequest  $var
      * @return $this
      */
     public function setDishGetData($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\DishGetDataRequest::class);
+        GPBUtil::checkMessage($var, DishGetDataRequest::class);
         $this->dish_get_data = $var;
 
         return $this;
@@ -2316,7 +2320,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishClearObstructionMapRequest dish_clear_obstruction_map = 2017 [json_name = "dishClearObstructionMap"];</code>
      *
-     * @return \SpaceX\API\Device\DishClearObstructionMapRequest|null
+     * @return DishClearObstructionMapRequest|null
      */
     public function getDishClearObstructionMap()
     {
@@ -2336,12 +2340,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishClearObstructionMapRequest dish_clear_obstruction_map = 2017 [json_name = "dishClearObstructionMap"];</code>
      *
-     * @param  \SpaceX\API\Device\DishClearObstructionMapRequest  $var
+     * @param  DishClearObstructionMapRequest  $var
      * @return $this
      */
     public function setDishClearObstructionMap($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\DishClearObstructionMapRequest::class);
+        GPBUtil::checkMessage($var, DishClearObstructionMapRequest::class);
         $this->dish_clear_obstruction_map = $var;
 
         return $this;
@@ -2350,7 +2354,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishSetMaxPowerTestModeRequest dish_set_max_power_test_mode = 2018 [json_name = "dishSetMaxPowerTestMode"];</code>
      *
-     * @return \SpaceX\API\Device\DishSetMaxPowerTestModeRequest|null
+     * @return DishSetMaxPowerTestModeRequest|null
      */
     public function getDishSetMaxPowerTestMode()
     {
@@ -2370,12 +2374,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishSetMaxPowerTestModeRequest dish_set_max_power_test_mode = 2018 [json_name = "dishSetMaxPowerTestMode"];</code>
      *
-     * @param  \SpaceX\API\Device\DishSetMaxPowerTestModeRequest  $var
+     * @param  DishSetMaxPowerTestModeRequest  $var
      * @return $this
      */
     public function setDishSetMaxPowerTestMode($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\DishSetMaxPowerTestModeRequest::class);
+        GPBUtil::checkMessage($var, DishSetMaxPowerTestModeRequest::class);
         $this->dish_set_max_power_test_mode = $var;
 
         return $this;
@@ -2384,7 +2388,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishActivateRssiScanRequest dish_activate_rssi_scan = 2019 [json_name = "dishActivateRssiScan"];</code>
      *
-     * @return \SpaceX\API\Device\DishActivateRssiScanRequest|null
+     * @return DishActivateRssiScanRequest|null
      */
     public function getDishActivateRssiScan()
     {
@@ -2404,12 +2408,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishActivateRssiScanRequest dish_activate_rssi_scan = 2019 [json_name = "dishActivateRssiScan"];</code>
      *
-     * @param  \SpaceX\API\Device\DishActivateRssiScanRequest  $var
+     * @param  DishActivateRssiScanRequest  $var
      * @return $this
      */
     public function setDishActivateRssiScan($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\DishActivateRssiScanRequest::class);
+        GPBUtil::checkMessage($var, DishActivateRssiScanRequest::class);
         $this->dish_activate_rssi_scan = $var;
 
         return $this;
@@ -2418,7 +2422,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishGetRssiScanResultRequest dish_get_rssi_scan_result = 2020 [json_name = "dishGetRssiScanResult"];</code>
      *
-     * @return \SpaceX\API\Device\DishGetRssiScanResultRequest|null
+     * @return DishGetRssiScanResultRequest|null
      */
     public function getDishGetRssiScanResult()
     {
@@ -2438,12 +2442,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishGetRssiScanResultRequest dish_get_rssi_scan_result = 2020 [json_name = "dishGetRssiScanResult"];</code>
      *
-     * @param  \SpaceX\API\Device\DishGetRssiScanResultRequest  $var
+     * @param  DishGetRssiScanResultRequest  $var
      * @return $this
      */
     public function setDishGetRssiScanResult($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\DishGetRssiScanResultRequest::class);
+        GPBUtil::checkMessage($var, DishGetRssiScanResultRequest::class);
         $this->dish_get_rssi_scan_result = $var;
 
         return $this;
@@ -2452,7 +2456,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishFactoryResetRequest dish_factory_reset = 2021 [json_name = "dishFactoryReset"];</code>
      *
-     * @return \SpaceX\API\Device\DishFactoryResetRequest|null
+     * @return DishFactoryResetRequest|null
      */
     public function getDishFactoryReset()
     {
@@ -2472,12 +2476,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishFactoryResetRequest dish_factory_reset = 2021 [json_name = "dishFactoryReset"];</code>
      *
-     * @param  \SpaceX\API\Device\DishFactoryResetRequest  $var
+     * @param  DishFactoryResetRequest  $var
      * @return $this
      */
     public function setDishFactoryReset($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\DishFactoryResetRequest::class);
+        GPBUtil::checkMessage($var, DishFactoryResetRequest::class);
         $this->dish_factory_reset = $var;
 
         return $this;
@@ -2486,7 +2490,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.ResetButtonRequest reset_button = 2022 [json_name = "resetButton"];</code>
      *
-     * @return \SpaceX\API\Device\ResetButtonRequest|null
+     * @return ResetButtonRequest|null
      */
     public function getResetButton()
     {
@@ -2506,12 +2510,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.ResetButtonRequest reset_button = 2022 [json_name = "resetButton"];</code>
      *
-     * @param  \SpaceX\API\Device\ResetButtonRequest  $var
+     * @param  ResetButtonRequest  $var
      * @return $this
      */
     public function setResetButton($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\ResetButtonRequest::class);
+        GPBUtil::checkMessage($var, ResetButtonRequest::class);
         $this->reset_button = $var;
 
         return $this;
@@ -2520,7 +2524,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SoftwareUpdateRequest set_per_vehicle_config = 2023 [json_name = "setPerVehicleConfig"];</code>
      *
-     * @return \SpaceX\API\Device\SoftwareUpdateRequest|null
+     * @return SoftwareUpdateRequest|null
      */
     public function getSetPerVehicleConfig()
     {
@@ -2540,12 +2544,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SoftwareUpdateRequest set_per_vehicle_config = 2023 [json_name = "setPerVehicleConfig"];</code>
      *
-     * @param  \SpaceX\API\Device\SoftwareUpdateRequest  $var
+     * @param  SoftwareUpdateRequest  $var
      * @return $this
      */
     public function setSetPerVehicleConfig($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\SoftwareUpdateRequest::class);
+        GPBUtil::checkMessage($var, SoftwareUpdateRequest::class);
         $this->set_per_vehicle_config = $var;
 
         return $this;
@@ -2554,7 +2558,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishAviationTestRequest dish_aviation_test = 2024 [json_name = "dishAviationTest"];</code>
      *
-     * @return \SpaceX\API\Device\DishAviationTestRequest|null
+     * @return DishAviationTestRequest|null
      */
     public function getDishAviationTest()
     {
@@ -2574,12 +2578,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishAviationTestRequest dish_aviation_test = 2024 [json_name = "dishAviationTest"];</code>
      *
-     * @param  \SpaceX\API\Device\DishAviationTestRequest  $var
+     * @param  DishAviationTestRequest  $var
      * @return $this
      */
     public function setDishAviationTest($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\DishAviationTestRequest::class);
+        GPBUtil::checkMessage($var, DishAviationTestRequest::class);
         $this->dish_aviation_test = $var;
 
         return $this;
@@ -2588,7 +2592,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishInhibitRfRequest dish_inhibit_rf = 2026 [json_name = "dishInhibitRf"];</code>
      *
-     * @return \SpaceX\API\Device\DishInhibitRfRequest|null
+     * @return DishInhibitRfRequest|null
      */
     public function getDishInhibitRf()
     {
@@ -2608,12 +2612,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishInhibitRfRequest dish_inhibit_rf = 2026 [json_name = "dishInhibitRf"];</code>
      *
-     * @param  \SpaceX\API\Device\DishInhibitRfRequest  $var
+     * @param  DishInhibitRfRequest  $var
      * @return $this
      */
     public function setDishInhibitRf($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\DishInhibitRfRequest::class);
+        GPBUtil::checkMessage($var, DishInhibitRfRequest::class);
         $this->dish_inhibit_rf = $var;
 
         return $this;
@@ -2622,7 +2626,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiGetClientsRequest wifi_get_clients = 3002 [json_name = "wifiGetClients"];</code>
      *
-     * @return \SpaceX\API\Device\WifiGetClientsRequest|null
+     * @return WifiGetClientsRequest|null
      */
     public function getWifiGetClients()
     {
@@ -2642,12 +2646,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiGetClientsRequest wifi_get_clients = 3002 [json_name = "wifiGetClients"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiGetClientsRequest  $var
+     * @param  WifiGetClientsRequest  $var
      * @return $this
      */
     public function setWifiGetClients($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiGetClientsRequest::class);
+        GPBUtil::checkMessage($var, WifiGetClientsRequest::class);
         $this->wifi_get_clients = $var;
 
         return $this;
@@ -2656,7 +2660,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiGetPingMetricsRequest wifi_get_ping_metrics = 3007 [json_name = "wifiGetPingMetrics"];</code>
      *
-     * @return \SpaceX\API\Device\WifiGetPingMetricsRequest|null
+     * @return WifiGetPingMetricsRequest|null
      */
     public function getWifiGetPingMetrics()
     {
@@ -2676,12 +2680,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiGetPingMetricsRequest wifi_get_ping_metrics = 3007 [json_name = "wifiGetPingMetrics"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiGetPingMetricsRequest  $var
+     * @param  WifiGetPingMetricsRequest  $var
      * @return $this
      */
     public function setWifiGetPingMetrics($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiGetPingMetricsRequest::class);
+        GPBUtil::checkMessage($var, WifiGetPingMetricsRequest::class);
         $this->wifi_get_ping_metrics = $var;
 
         return $this;
@@ -2690,7 +2694,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiSetConfigRequest wifi_set_config = 3001 [json_name = "wifiSetConfig"];</code>
      *
-     * @return \SpaceX\API\Device\WifiSetConfigRequest|null
+     * @return WifiSetConfigRequest|null
      */
     public function getWifiSetConfig()
     {
@@ -2710,12 +2714,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiSetConfigRequest wifi_set_config = 3001 [json_name = "wifiSetConfig"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiSetConfigRequest  $var
+     * @param  WifiSetConfigRequest  $var
      * @return $this
      */
     public function setWifiSetConfig($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiSetConfigRequest::class);
+        GPBUtil::checkMessage($var, WifiSetConfigRequest::class);
         $this->wifi_set_config = $var;
 
         return $this;
@@ -2724,7 +2728,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiGetConfigRequest wifi_get_config = 3009 [json_name = "wifiGetConfig"];</code>
      *
-     * @return \SpaceX\API\Device\WifiGetConfigRequest|null
+     * @return WifiGetConfigRequest|null
      */
     public function getWifiGetConfig()
     {
@@ -2744,12 +2748,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiGetConfigRequest wifi_get_config = 3009 [json_name = "wifiGetConfig"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiGetConfigRequest  $var
+     * @param  WifiGetConfigRequest  $var
      * @return $this
      */
     public function setWifiGetConfig($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiGetConfigRequest::class);
+        GPBUtil::checkMessage($var, WifiGetConfigRequest::class);
         $this->wifi_get_config = $var;
 
         return $this;
@@ -2758,7 +2762,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiSetupRequest wifi_setup = 3003 [json_name = "wifiSetup"];</code>
      *
-     * @return \SpaceX\API\Device\WifiSetupRequest|null
+     * @return WifiSetupRequest|null
      */
     public function getWifiSetup()
     {
@@ -2778,12 +2782,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiSetupRequest wifi_setup = 3003 [json_name = "wifiSetup"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiSetupRequest  $var
+     * @param  WifiSetupRequest  $var
      * @return $this
      */
     public function setWifiSetup($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiSetupRequest::class);
+        GPBUtil::checkMessage($var, WifiSetupRequest::class);
         $this->wifi_setup = $var;
 
         return $this;
@@ -2792,7 +2796,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiSetMeshDeviceTrustRequest wifi_set_mesh_device_trust = 3012 [json_name = "wifiSetMeshDeviceTrust"];</code>
      *
-     * @return \SpaceX\API\Device\WifiSetMeshDeviceTrustRequest|null
+     * @return WifiSetMeshDeviceTrustRequest|null
      */
     public function getWifiSetMeshDeviceTrust()
     {
@@ -2812,12 +2816,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiSetMeshDeviceTrustRequest wifi_set_mesh_device_trust = 3012 [json_name = "wifiSetMeshDeviceTrust"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiSetMeshDeviceTrustRequest  $var
+     * @param  WifiSetMeshDeviceTrustRequest  $var
      * @return $this
      */
     public function setWifiSetMeshDeviceTrust($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiSetMeshDeviceTrustRequest::class);
+        GPBUtil::checkMessage($var, WifiSetMeshDeviceTrustRequest::class);
         $this->wifi_set_mesh_device_trust = $var;
 
         return $this;
@@ -2826,7 +2830,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiSetMeshConfigRequest wifi_set_mesh_config = 3013 [json_name = "wifiSetMeshConfig"];</code>
      *
-     * @return \SpaceX\API\Device\WifiSetMeshConfigRequest|null
+     * @return WifiSetMeshConfigRequest|null
      */
     public function getWifiSetMeshConfig()
     {
@@ -2846,12 +2850,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiSetMeshConfigRequest wifi_set_mesh_config = 3013 [json_name = "wifiSetMeshConfig"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiSetMeshConfigRequest  $var
+     * @param  WifiSetMeshConfigRequest  $var
      * @return $this
      */
     public function setWifiSetMeshConfig($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiSetMeshConfigRequest::class);
+        GPBUtil::checkMessage($var, WifiSetMeshConfigRequest::class);
         $this->wifi_set_mesh_config = $var;
 
         return $this;
@@ -2860,7 +2864,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiGetClientHistoryRequest wifi_get_client_history = 3015 [json_name = "wifiGetClientHistory"];</code>
      *
-     * @return \SpaceX\API\Device\WifiGetClientHistoryRequest|null
+     * @return WifiGetClientHistoryRequest|null
      */
     public function getWifiGetClientHistory()
     {
@@ -2880,12 +2884,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiGetClientHistoryRequest wifi_get_client_history = 3015 [json_name = "wifiGetClientHistory"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiGetClientHistoryRequest  $var
+     * @param  WifiGetClientHistoryRequest  $var
      * @return $this
      */
     public function setWifiGetClientHistory($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiGetClientHistoryRequest::class);
+        GPBUtil::checkMessage($var, WifiGetClientHistoryRequest::class);
         $this->wifi_get_client_history = $var;
 
         return $this;
@@ -2894,7 +2898,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiSetClientGivenNameRequest wifi_set_client_given_name = 3017 [json_name = "wifiSetClientGivenName"];</code>
      *
-     * @return \SpaceX\API\Device\WifiSetClientGivenNameRequest|null
+     * @return WifiSetClientGivenNameRequest|null
      */
     public function getWifiSetClientGivenName()
     {
@@ -2914,12 +2918,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiSetClientGivenNameRequest wifi_set_client_given_name = 3017 [json_name = "wifiSetClientGivenName"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiSetClientGivenNameRequest  $var
+     * @param  WifiSetClientGivenNameRequest  $var
      * @return $this
      */
     public function setWifiSetClientGivenName($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiSetClientGivenNameRequest::class);
+        GPBUtil::checkMessage($var, WifiSetClientGivenNameRequest::class);
         $this->wifi_set_client_given_name = $var;
 
         return $this;
@@ -2928,7 +2932,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiSetAviationConformedRequest wifi_set_aviation_conformed = 3016 [json_name = "wifiSetAviationConformed"];</code>
      *
-     * @return \SpaceX\API\Device\WifiSetAviationConformedRequest|null
+     * @return WifiSetAviationConformedRequest|null
      */
     public function getWifiSetAviationConformed()
     {
@@ -2948,12 +2952,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiSetAviationConformedRequest wifi_set_aviation_conformed = 3016 [json_name = "wifiSetAviationConformed"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiSetAviationConformedRequest  $var
+     * @param  WifiSetAviationConformedRequest  $var
      * @return $this
      */
     public function setWifiSetAviationConformed($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiSetAviationConformedRequest::class);
+        GPBUtil::checkMessage($var, WifiSetAviationConformedRequest::class);
         $this->wifi_set_aviation_conformed = $var;
 
         return $this;
@@ -2962,7 +2966,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiSelfTestRequest wifi_self_test = 3018 [json_name = "wifiSelfTest"];</code>
      *
-     * @return \SpaceX\API\Device\WifiSelfTestRequest|null
+     * @return WifiSelfTestRequest|null
      */
     public function getWifiSelfTest()
     {
@@ -2982,12 +2986,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiSelfTestRequest wifi_self_test = 3018 [json_name = "wifiSelfTest"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiSelfTestRequest  $var
+     * @param  WifiSelfTestRequest  $var
      * @return $this
      */
     public function setWifiSelfTest($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiSelfTestRequest::class);
+        GPBUtil::checkMessage($var, WifiSelfTestRequest::class);
         $this->wifi_self_test = $var;
 
         return $this;
@@ -2996,7 +3000,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiRunSelfTestRequest wifi_run_self_test = 3028 [json_name = "wifiRunSelfTest"];</code>
      *
-     * @return \SpaceX\API\Device\WifiRunSelfTestRequest|null
+     * @return WifiRunSelfTestRequest|null
      */
     public function getWifiRunSelfTest()
     {
@@ -3016,12 +3020,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiRunSelfTestRequest wifi_run_self_test = 3028 [json_name = "wifiRunSelfTest"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiRunSelfTestRequest  $var
+     * @param  WifiRunSelfTestRequest  $var
      * @return $this
      */
     public function setWifiRunSelfTest($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiRunSelfTestRequest::class);
+        GPBUtil::checkMessage($var, WifiRunSelfTestRequest::class);
         $this->wifi_run_self_test = $var;
 
         return $this;
@@ -3030,7 +3034,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiCalibrationModeRequest wifi_calibration_mode = 3019 [json_name = "wifiCalibrationMode"];</code>
      *
-     * @return \SpaceX\API\Device\WifiCalibrationModeRequest|null
+     * @return WifiCalibrationModeRequest|null
      */
     public function getWifiCalibrationMode()
     {
@@ -3050,12 +3054,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiCalibrationModeRequest wifi_calibration_mode = 3019 [json_name = "wifiCalibrationMode"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiCalibrationModeRequest  $var
+     * @param  WifiCalibrationModeRequest  $var
      * @return $this
      */
     public function setWifiCalibrationMode($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiCalibrationModeRequest::class);
+        GPBUtil::checkMessage($var, WifiCalibrationModeRequest::class);
         $this->wifi_calibration_mode = $var;
 
         return $this;
@@ -3064,7 +3068,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiGuestInfoRequest wifi_guest_info = 3020 [json_name = "wifiGuestInfo"];</code>
      *
-     * @return \SpaceX\API\Device\WifiGuestInfoRequest|null
+     * @return WifiGuestInfoRequest|null
      */
     public function getWifiGuestInfo()
     {
@@ -3084,12 +3088,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiGuestInfoRequest wifi_guest_info = 3020 [json_name = "wifiGuestInfo"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiGuestInfoRequest  $var
+     * @param  WifiGuestInfoRequest  $var
      * @return $this
      */
     public function setWifiGuestInfo($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiGuestInfoRequest::class);
+        GPBUtil::checkMessage($var, WifiGuestInfoRequest::class);
         $this->wifi_guest_info = $var;
 
         return $this;
@@ -3098,7 +3102,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiRfTestRequest wifi_rf_test = 3021 [json_name = "wifiRfTest"];</code>
      *
-     * @return \SpaceX\API\Device\WifiRfTestRequest|null
+     * @return WifiRfTestRequest|null
      */
     public function getWifiRfTest()
     {
@@ -3118,12 +3122,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiRfTestRequest wifi_rf_test = 3021 [json_name = "wifiRfTest"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiRfTestRequest  $var
+     * @param  WifiRfTestRequest  $var
      * @return $this
      */
     public function setWifiRfTest($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiRfTestRequest::class);
+        GPBUtil::checkMessage($var, WifiRfTestRequest::class);
         $this->wifi_rf_test = $var;
 
         return $this;
@@ -3132,7 +3136,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiGetFirewallRequest wifi_get_firewall = 3024 [json_name = "wifiGetFirewall"];</code>
      *
-     * @return \SpaceX\API\Device\WifiGetFirewallRequest|null
+     * @return WifiGetFirewallRequest|null
      */
     public function getWifiGetFirewall()
     {
@@ -3152,12 +3156,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiGetFirewallRequest wifi_get_firewall = 3024 [json_name = "wifiGetFirewall"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiGetFirewallRequest  $var
+     * @param  WifiGetFirewallRequest  $var
      * @return $this
      */
     public function setWifiGetFirewall($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiGetFirewallRequest::class);
+        GPBUtil::checkMessage($var, WifiGetFirewallRequest::class);
         $this->wifi_get_firewall = $var;
 
         return $this;
@@ -3166,7 +3170,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiTogglePoeNegotiationRequest wifi_toggle_poe_negotiation = 3025 [json_name = "wifiTogglePoeNegotiation"];</code>
      *
-     * @return \SpaceX\API\Device\WifiTogglePoeNegotiationRequest|null
+     * @return WifiTogglePoeNegotiationRequest|null
      */
     public function getWifiTogglePoeNegotiation()
     {
@@ -3186,12 +3190,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiTogglePoeNegotiationRequest wifi_toggle_poe_negotiation = 3025 [json_name = "wifiTogglePoeNegotiation"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiTogglePoeNegotiationRequest  $var
+     * @param  WifiTogglePoeNegotiationRequest  $var
      * @return $this
      */
     public function setWifiTogglePoeNegotiation($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiTogglePoeNegotiationRequest::class);
+        GPBUtil::checkMessage($var, WifiTogglePoeNegotiationRequest::class);
         $this->wifi_toggle_poe_negotiation = $var;
 
         return $this;
@@ -3200,7 +3204,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiFactoryTestCommandRequest wifi_factory_test_command = 3026 [json_name = "wifiFactoryTestCommand"];</code>
      *
-     * @return \SpaceX\API\Device\WifiFactoryTestCommandRequest|null
+     * @return WifiFactoryTestCommandRequest|null
      */
     public function getWifiFactoryTestCommand()
     {
@@ -3220,12 +3224,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiFactoryTestCommandRequest wifi_factory_test_command = 3026 [json_name = "wifiFactoryTestCommand"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiFactoryTestCommandRequest  $var
+     * @param  WifiFactoryTestCommandRequest  $var
      * @return $this
      */
     public function setWifiFactoryTestCommand($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiFactoryTestCommandRequest::class);
+        GPBUtil::checkMessage($var, WifiFactoryTestCommandRequest::class);
         $this->wifi_factory_test_command = $var;
 
         return $this;
@@ -3234,7 +3238,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiStartLocalTelemProxyRequest wifi_start_local_telem_proxy = 3027 [json_name = "wifiStartLocalTelemProxy"];</code>
      *
-     * @return \SpaceX\API\Device\WifiStartLocalTelemProxyRequest|null
+     * @return WifiStartLocalTelemProxyRequest|null
      */
     public function getWifiStartLocalTelemProxy()
     {
@@ -3254,12 +3258,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiStartLocalTelemProxyRequest wifi_start_local_telem_proxy = 3027 [json_name = "wifiStartLocalTelemProxy"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiStartLocalTelemProxyRequest  $var
+     * @param  WifiStartLocalTelemProxyRequest  $var
      * @return $this
      */
     public function setWifiStartLocalTelemProxy($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiStartLocalTelemProxyRequest::class);
+        GPBUtil::checkMessage($var, WifiStartLocalTelemProxyRequest::class);
         $this->wifi_start_local_telem_proxy = $var;
 
         return $this;
@@ -3268,7 +3272,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiBackhaulStatsRequest wifi_backhaul_stats = 3029 [json_name = "wifiBackhaulStats"];</code>
      *
-     * @return \SpaceX\API\Device\WifiBackhaulStatsRequest|null
+     * @return WifiBackhaulStatsRequest|null
      */
     public function getWifiBackhaulStats()
     {
@@ -3288,12 +3292,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiBackhaulStatsRequest wifi_backhaul_stats = 3029 [json_name = "wifiBackhaulStats"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiBackhaulStatsRequest  $var
+     * @param  WifiBackhaulStatsRequest  $var
      * @return $this
      */
     public function setWifiBackhaulStats($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiBackhaulStatsRequest::class);
+        GPBUtil::checkMessage($var, WifiBackhaulStatsRequest::class);
         $this->wifi_backhaul_stats = $var;
 
         return $this;
@@ -3302,7 +3306,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiToggleUmbilicalModeRequest wifi_toggle_umbilical_mode = 3030 [json_name = "wifiToggleUmbilicalMode"];</code>
      *
-     * @return \SpaceX\API\Device\WifiToggleUmbilicalModeRequest|null
+     * @return WifiToggleUmbilicalModeRequest|null
      */
     public function getWifiToggleUmbilicalMode()
     {
@@ -3322,12 +3326,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiToggleUmbilicalModeRequest wifi_toggle_umbilical_mode = 3030 [json_name = "wifiToggleUmbilicalMode"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiToggleUmbilicalModeRequest  $var
+     * @param  WifiToggleUmbilicalModeRequest  $var
      * @return $this
      */
     public function setWifiToggleUmbilicalMode($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiToggleUmbilicalModeRequest::class);
+        GPBUtil::checkMessage($var, WifiToggleUmbilicalModeRequest::class);
         $this->wifi_toggle_umbilical_mode = $var;
 
         return $this;
@@ -3336,7 +3340,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiClientSandboxRequest wifi_client_sandbox = 3031 [json_name = "wifiClientSandbox"];</code>
      *
-     * @return \SpaceX\API\Device\WifiClientSandboxRequest|null
+     * @return WifiClientSandboxRequest|null
      */
     public function getWifiClientSandbox()
     {
@@ -3356,12 +3360,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiClientSandboxRequest wifi_client_sandbox = 3031 [json_name = "wifiClientSandbox"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiClientSandboxRequest  $var
+     * @param  WifiClientSandboxRequest  $var
      * @return $this
      */
     public function setWifiClientSandbox($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiClientSandboxRequest::class);
+        GPBUtil::checkMessage($var, WifiClientSandboxRequest::class);
         $this->wifi_client_sandbox = $var;
 
         return $this;
@@ -3370,7 +3374,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiRunDebugNetsysRequest wifi_run_debug_netsys = 3032 [json_name = "wifiRunDebugNetsys"];</code>
      *
-     * @return \SpaceX\API\Device\WifiRunDebugNetsysRequest|null
+     * @return WifiRunDebugNetsysRequest|null
      */
     public function getWifiRunDebugNetsys()
     {
@@ -3390,12 +3394,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiRunDebugNetsysRequest wifi_run_debug_netsys = 3032 [json_name = "wifiRunDebugNetsys"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiRunDebugNetsysRequest  $var
+     * @param  WifiRunDebugNetsysRequest  $var
      * @return $this
      */
     public function setWifiRunDebugNetsys($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiRunDebugNetsysRequest::class);
+        GPBUtil::checkMessage($var, WifiRunDebugNetsysRequest::class);
         $this->wifi_run_debug_netsys = $var;
 
         return $this;
@@ -3404,7 +3408,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiResetEthPhyRequest wifi_reset_eth_phy = 3033 [json_name = "wifiResetEthPhy"];</code>
      *
-     * @return \SpaceX\API\Device\WifiResetEthPhyRequest|null
+     * @return WifiResetEthPhyRequest|null
      */
     public function getWifiResetEthPhy()
     {
@@ -3424,12 +3428,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiResetEthPhyRequest wifi_reset_eth_phy = 3033 [json_name = "wifiResetEthPhy"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiResetEthPhyRequest  $var
+     * @param  WifiResetEthPhyRequest  $var
      * @return $this
      */
     public function setWifiResetEthPhy($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiResetEthPhyRequest::class);
+        GPBUtil::checkMessage($var, WifiResetEthPhyRequest::class);
         $this->wifi_reset_eth_phy = $var;
 
         return $this;
@@ -3438,7 +3442,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiFlushHardwareNatRequest wifi_flush_hardware_nat = 3034 [json_name = "wifiFlushHardwareNat"];</code>
      *
-     * @return \SpaceX\API\Device\WifiFlushHardwareNatRequest|null
+     * @return WifiFlushHardwareNatRequest|null
      */
     public function getWifiFlushHardwareNat()
     {
@@ -3458,12 +3462,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiFlushHardwareNatRequest wifi_flush_hardware_nat = 3034 [json_name = "wifiFlushHardwareNat"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiFlushHardwareNatRequest  $var
+     * @param  WifiFlushHardwareNatRequest  $var
      * @return $this
      */
     public function setWifiFlushHardwareNat($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiFlushHardwareNatRequest::class);
+        GPBUtil::checkMessage($var, WifiFlushHardwareNatRequest::class);
         $this->wifi_flush_hardware_nat = $var;
 
         return $this;
@@ -3472,7 +3476,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiWriteCalibrationRequest wifi_write_calibration = 3035 [json_name = "wifiWriteCalibration"];</code>
      *
-     * @return \SpaceX\API\Device\WifiWriteCalibrationRequest|null
+     * @return WifiWriteCalibrationRequest|null
      */
     public function getWifiWriteCalibration()
     {
@@ -3492,12 +3496,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiWriteCalibrationRequest wifi_write_calibration = 3035 [json_name = "wifiWriteCalibration"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiWriteCalibrationRequest  $var
+     * @param  WifiWriteCalibrationRequest  $var
      * @return $this
      */
     public function setWifiWriteCalibration($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiWriteCalibrationRequest::class);
+        GPBUtil::checkMessage($var, WifiWriteCalibrationRequest::class);
         $this->wifi_write_calibration = $var;
 
         return $this;
@@ -3506,7 +3510,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.TransceiverIFLoopbackTestRequest transceiver_if_loopback_test = 4001 [json_name = "transceiverIfLoopbackTest"];</code>
      *
-     * @return \SpaceX\API\Device\TransceiverIFLoopbackTestRequest|null
+     * @return TransceiverIFLoopbackTestRequest|null
      */
     public function getTransceiverIfLoopbackTest()
     {
@@ -3526,12 +3530,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.TransceiverIFLoopbackTestRequest transceiver_if_loopback_test = 4001 [json_name = "transceiverIfLoopbackTest"];</code>
      *
-     * @param  \SpaceX\API\Device\TransceiverIFLoopbackTestRequest  $var
+     * @param  TransceiverIFLoopbackTestRequest  $var
      * @return $this
      */
     public function setTransceiverIfLoopbackTest($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\TransceiverIFLoopbackTestRequest::class);
+        GPBUtil::checkMessage($var, TransceiverIFLoopbackTestRequest::class);
         $this->transceiver_if_loopback_test = $var;
 
         return $this;
@@ -3540,7 +3544,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.TransceiverGetStatusRequest transceiver_get_status = 4003 [json_name = "transceiverGetStatus"];</code>
      *
-     * @return \SpaceX\API\Device\TransceiverGetStatusRequest|null
+     * @return TransceiverGetStatusRequest|null
      */
     public function getTransceiverGetStatus()
     {
@@ -3560,12 +3564,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.TransceiverGetStatusRequest transceiver_get_status = 4003 [json_name = "transceiverGetStatus"];</code>
      *
-     * @param  \SpaceX\API\Device\TransceiverGetStatusRequest  $var
+     * @param  TransceiverGetStatusRequest  $var
      * @return $this
      */
     public function setTransceiverGetStatus($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\TransceiverGetStatusRequest::class);
+        GPBUtil::checkMessage($var, TransceiverGetStatusRequest::class);
         $this->transceiver_get_status = $var;
 
         return $this;
@@ -3574,7 +3578,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.TransceiverGetTelemetryRequest transceiver_get_telemetry = 4004 [json_name = "transceiverGetTelemetry"];</code>
      *
-     * @return \SpaceX\API\Device\TransceiverGetTelemetryRequest|null
+     * @return TransceiverGetTelemetryRequest|null
      */
     public function getTransceiverGetTelemetry()
     {
@@ -3594,12 +3598,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.TransceiverGetTelemetryRequest transceiver_get_telemetry = 4004 [json_name = "transceiverGetTelemetry"];</code>
      *
-     * @param  \SpaceX\API\Device\TransceiverGetTelemetryRequest  $var
+     * @param  TransceiverGetTelemetryRequest  $var
      * @return $this
      */
     public function setTransceiverGetTelemetry($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\TransceiverGetTelemetryRequest::class);
+        GPBUtil::checkMessage($var, TransceiverGetTelemetryRequest::class);
         $this->transceiver_get_telemetry = $var;
 
         return $this;
@@ -3608,7 +3612,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.Services.Unlock.StartUnlockRequest start_unlock = 5000 [json_name = "startUnlock"];</code>
      *
-     * @return \SpaceX\API\Device\Services\Unlock\StartUnlockRequest|null
+     * @return StartUnlockRequest|null
      */
     public function getStartUnlock()
     {
@@ -3628,12 +3632,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.Services.Unlock.StartUnlockRequest start_unlock = 5000 [json_name = "startUnlock"];</code>
      *
-     * @param  \SpaceX\API\Device\Services\Unlock\StartUnlockRequest  $var
+     * @param  StartUnlockRequest  $var
      * @return $this
      */
     public function setStartUnlock($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\Services\Unlock\StartUnlockRequest::class);
+        GPBUtil::checkMessage($var, StartUnlockRequest::class);
         $this->start_unlock = $var;
 
         return $this;
@@ -3642,7 +3646,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.Services.Unlock.FinishUnlockRequest finish_unlock = 5001 [json_name = "finishUnlock"];</code>
      *
-     * @return \SpaceX\API\Device\Services\Unlock\FinishUnlockRequest|null
+     * @return FinishUnlockRequest|null
      */
     public function getFinishUnlock()
     {
@@ -3662,12 +3666,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.Services.Unlock.FinishUnlockRequest finish_unlock = 5001 [json_name = "finishUnlock"];</code>
      *
-     * @param  \SpaceX\API\Device\Services\Unlock\FinishUnlockRequest  $var
+     * @param  FinishUnlockRequest  $var
      * @return $this
      */
     public function setFinishUnlock($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\Services\Unlock\FinishUnlockRequest::class);
+        GPBUtil::checkMessage($var, FinishUnlockRequest::class);
         $this->finish_unlock = $var;
 
         return $this;
@@ -3676,7 +3680,7 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetDiagnosticsRequest get_diagnostics = 6000 [json_name = "getDiagnostics"];</code>
      *
-     * @return \SpaceX\API\Device\GetDiagnosticsRequest|null
+     * @return GetDiagnosticsRequest|null
      */
     public function getGetDiagnostics()
     {
@@ -3696,12 +3700,12 @@ class Request extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetDiagnosticsRequest get_diagnostics = 6000 [json_name = "getDiagnostics"];</code>
      *
-     * @param  \SpaceX\API\Device\GetDiagnosticsRequest  $var
+     * @param  GetDiagnosticsRequest  $var
      * @return $this
      */
     public function setGetDiagnostics($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\GetDiagnosticsRequest::class);
+        GPBUtil::checkMessage($var, GetDiagnosticsRequest::class);
         $this->get_diagnostics = $var;
 
         return $this;

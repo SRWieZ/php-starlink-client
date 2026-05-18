@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Wifi;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiNewClientConnectedEvent</code>
  */
-class WifiNewClientConnectedEvent extends \Google\Protobuf\Internal\Message
+class WifiNewClientConnectedEvent extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiClient client = 1 [json_name = "client"];</code>
@@ -29,14 +31,14 @@ class WifiNewClientConnectedEvent extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiClient client = 1 [json_name = "client"];</code>
      *
-     * @return \SpaceX\API\Device\WifiClient|null
+     * @return WifiClient|null
      */
     public function getClient()
     {
@@ -56,12 +58,12 @@ class WifiNewClientConnectedEvent extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiClient client = 1 [json_name = "client"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiClient  $var
+     * @param  WifiClient  $var
      * @return $this
      */
     public function setClient($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiClient::class);
+        GPBUtil::checkMessage($var, WifiClient::class);
         $this->client = $var;
 
         return $this;

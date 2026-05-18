@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Dish;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.DishAuthenticateResponse</code>
  */
-class DishAuthenticateResponse extends \Google\Protobuf\Internal\Message
+class DishAuthenticateResponse extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.ChallengeResponse dish = 2 [json_name = "dish"];</code>
@@ -29,14 +31,14 @@ class DishAuthenticateResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Dish::initOnce();
+        Dish::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.ChallengeResponse dish = 2 [json_name = "dish"];</code>
      *
-     * @return \SpaceX\API\Device\ChallengeResponse|null
+     * @return ChallengeResponse|null
      */
     public function getDish()
     {
@@ -56,12 +58,12 @@ class DishAuthenticateResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.ChallengeResponse dish = 2 [json_name = "dish"];</code>
      *
-     * @param  \SpaceX\API\Device\ChallengeResponse  $var
+     * @param  ChallengeResponse  $var
      * @return $this
      */
     public function setDish($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\ChallengeResponse::class);
+        GPBUtil::checkMessage($var, ChallengeResponse::class);
         $this->dish = $var;
 
         return $this;

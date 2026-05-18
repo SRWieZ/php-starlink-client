@@ -7,11 +7,14 @@
 namespace SpaceX\API\Device\WifiConfig;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\WifiConfig;
+use SpaceX\API\Device\MeshConfig;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiConfig.MeshConfigsUpdatesEntry</code>
  */
-class MeshConfigsUpdatesEntry extends \Google\Protobuf\Internal\Message
+class MeshConfigsUpdatesEntry extends Message
 {
     /**
      * Generated from protobuf field <code>optional string key = 1 [json_name = "key"];</code>
@@ -35,7 +38,7 @@ class MeshConfigsUpdatesEntry extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\WifiConfig::initOnce();
+        WifiConfig::initOnce();
         parent::__construct($data);
     }
 
@@ -76,7 +79,7 @@ class MeshConfigsUpdatesEntry extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.MeshConfig value = 2 [json_name = "value"];</code>
      *
-     * @return \SpaceX\API\Device\MeshConfig|null
+     * @return MeshConfig|null
      */
     public function getValue()
     {
@@ -96,12 +99,12 @@ class MeshConfigsUpdatesEntry extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.MeshConfig value = 2 [json_name = "value"];</code>
      *
-     * @param  \SpaceX\API\Device\MeshConfig  $var
+     * @param  MeshConfig  $var
      * @return $this
      */
     public function setValue($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\MeshConfig::class);
+        GPBUtil::checkMessage($var, MeshConfig::class);
         $this->value = $var;
 
         return $this;

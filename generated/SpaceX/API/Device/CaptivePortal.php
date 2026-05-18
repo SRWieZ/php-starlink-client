@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\WifiConfig;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.CaptivePortal</code>
  */
-class CaptivePortal extends \Google\Protobuf\Internal\Message
+class CaptivePortal extends Message
 {
     /**
      * Generated from protobuf field <code>optional string url = 1 [json_name = "url"];</code>
@@ -35,7 +37,7 @@ class CaptivePortal extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\WifiConfig::initOnce();
+        WifiConfig::initOnce();
         parent::__construct($data);
     }
 

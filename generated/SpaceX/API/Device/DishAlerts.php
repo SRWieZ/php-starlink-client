@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Dish;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.DishAlerts</code>
  */
-class DishAlerts extends \Google\Protobuf\Internal\Message
+class DishAlerts extends Message
 {
     /**
      * Generated from protobuf field <code>optional bool motors_stuck = 1 [json_name = "motorsStuck"];</code>
@@ -143,7 +145,7 @@ class DishAlerts extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Dish::initOnce();
+        Dish::initOnce();
         parent::__construct($data);
     }
 

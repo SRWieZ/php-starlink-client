@@ -6,10 +6,13 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Transceiver;
+
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.TransceiverGetStatusRequest</code>
  */
-class TransceiverGetStatusRequest extends \Google\Protobuf\Internal\Message
+class TransceiverGetStatusRequest extends Message
 {
     /**
      * Constructor.
@@ -21,7 +24,7 @@ class TransceiverGetStatusRequest extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Transceiver::initOnce();
+        Transceiver::initOnce();
         parent::__construct($data);
     }
 }

@@ -6,13 +6,16 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
 use Google\Protobuf\RepeatedField;
+use GPBMetadata\SpacexApi\Device\Dish;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.DishGetObstructionMapResponse</code>
  */
-class DishGetObstructionMapResponse extends \Google\Protobuf\Internal\Message
+class DishGetObstructionMapResponse extends Message
 {
     /**
      * Generated from protobuf field <code>optional uint32 num_rows = 1 [json_name = "numRows"];</code>
@@ -60,7 +63,7 @@ class DishGetObstructionMapResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Dish::initOnce();
+        Dish::initOnce();
         parent::__construct($data);
     }
 
@@ -150,7 +153,7 @@ class DishGetObstructionMapResponse extends \Google\Protobuf\Internal\Message
      */
     public function setSnr($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::FLOAT);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::FLOAT);
         $this->snr = $arr;
 
         return $this;
@@ -252,7 +255,7 @@ class DishGetObstructionMapResponse extends \Google\Protobuf\Internal\Message
      */
     public function setMapReferenceFrame($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\ObstructionMapReferenceFrame::class);
+        GPBUtil::checkEnum($var, ObstructionMapReferenceFrame::class);
         $this->map_reference_frame = $var;
 
         return $this;

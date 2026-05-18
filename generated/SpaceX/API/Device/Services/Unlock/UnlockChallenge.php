@@ -6,13 +6,16 @@
 
 namespace SpaceX\API\Device\Services\Unlock;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
 use Google\Protobuf\RepeatedField;
+use GPBMetadata\SpacexApi\Device\Services\Unlock\Service;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.Services.Unlock.UnlockChallenge</code>
  */
-class UnlockChallenge extends \Google\Protobuf\Internal\Message
+class UnlockChallenge extends Message
 {
     /**
      * Generated from protobuf field <code>optional string device_id = 1 [json_name = "deviceId"];</code>
@@ -60,7 +63,7 @@ class UnlockChallenge extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Services\Unlock\Service::initOnce();
+        Service::initOnce();
         parent::__construct($data);
     }
 
@@ -252,7 +255,7 @@ class UnlockChallenge extends \Google\Protobuf\Internal\Message
      */
     public function setAuthorityGrants($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::STRING);
         $this->authority_grants = $arr;
 
         return $this;

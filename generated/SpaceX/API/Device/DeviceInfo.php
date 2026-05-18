@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Common;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.DeviceInfo</code>
  */
-class DeviceInfo extends \Google\Protobuf\Internal\Message
+class DeviceInfo extends Message
 {
     /**
      * Generated from protobuf field <code>optional string id = 1 [json_name = "id"];</code>
@@ -119,7 +121,7 @@ class DeviceInfo extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Common::initOnce();
+        Common::initOnce();
         parent::__construct($data);
     }
 
@@ -568,7 +570,7 @@ class DeviceInfo extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.BootInfo boot = 1001 [json_name = "boot"];</code>
      *
-     * @return \SpaceX\API\Device\BootInfo|null
+     * @return BootInfo|null
      */
     public function getBoot()
     {
@@ -588,12 +590,12 @@ class DeviceInfo extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.BootInfo boot = 1001 [json_name = "boot"];</code>
      *
-     * @param  \SpaceX\API\Device\BootInfo  $var
+     * @param  BootInfo  $var
      * @return $this
      */
     public function setBoot($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\BootInfo::class);
+        GPBUtil::checkMessage($var, BootInfo::class);
         $this->boot = $var;
 
         return $this;

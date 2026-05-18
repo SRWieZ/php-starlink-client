@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\WifiConfig;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.AuthWpa2</code>
  */
-class AuthWpa2 extends \Google\Protobuf\Internal\Message
+class AuthWpa2 extends Message
 {
     /**
      * Generated from protobuf field <code>optional string password = 1 [json_name = "password"];</code>
@@ -29,7 +31,7 @@ class AuthWpa2 extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\WifiConfig::initOnce();
+        WifiConfig::initOnce();
         parent::__construct($data);
     }
 

@@ -7,11 +7,14 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Wifi;
+use SpaceX\API\Device\IwprivCommand\Ioctl;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.IwprivCommand</code>
  */
-class IwprivCommand extends \Google\Protobuf\Internal\Message
+class IwprivCommand extends Message
 {
     /**
      * Generated from protobuf field <code>optional string iface = 1 [json_name = "iface"];</code>
@@ -41,7 +44,7 @@ class IwprivCommand extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 
@@ -141,7 +144,7 @@ class IwprivCommand extends \Google\Protobuf\Internal\Message
      */
     public function setIoctl($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\IwprivCommand\Ioctl::class);
+        GPBUtil::checkEnum($var, Ioctl::class);
         $this->ioctl = $var;
 
         return $this;

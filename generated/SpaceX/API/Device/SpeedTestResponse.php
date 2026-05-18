@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Device;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.SpeedTestResponse</code>
  */
-class SpeedTestResponse extends \Google\Protobuf\Internal\Message
+class SpeedTestResponse extends Message
 {
     /**
      * Generated from protobuf field <code>optional float download_bps = 1 [json_name = "downloadBps"];</code>
@@ -113,7 +115,7 @@ class SpeedTestResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 
@@ -324,7 +326,7 @@ class SpeedTestResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SpeedTestStats router_speedtest = 15 [json_name = "routerSpeedtest"];</code>
      *
-     * @return \SpaceX\API\Device\SpeedTestStats|null
+     * @return SpeedTestStats|null
      */
     public function getRouterSpeedtest()
     {
@@ -344,12 +346,12 @@ class SpeedTestResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SpeedTestStats router_speedtest = 15 [json_name = "routerSpeedtest"];</code>
      *
-     * @param  \SpaceX\API\Device\SpeedTestStats  $var
+     * @param  SpeedTestStats  $var
      * @return $this
      */
     public function setRouterSpeedtest($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\SpeedTestStats::class);
+        GPBUtil::checkMessage($var, SpeedTestStats::class);
         $this->router_speedtest = $var;
 
         return $this;

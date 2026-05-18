@@ -6,13 +6,16 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
 use Google\Protobuf\RepeatedField;
+use GPBMetadata\SpacexApi\Device\Device;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.GetNetworkInterfacesResponse</code>
  */
-class GetNetworkInterfacesResponse extends \Google\Protobuf\Internal\Message
+class GetNetworkInterfacesResponse extends Message
 {
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.NetworkInterface network_interfaces = 1006 [json_name = "networkInterfaces"];</code>
@@ -30,14 +33,14 @@ class GetNetworkInterfacesResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.NetworkInterface network_interfaces = 1006 [json_name = "networkInterfaces"];</code>
      *
-     * @return RepeatedField<\SpaceX\API\Device\NetworkInterface>
+     * @return RepeatedField<NetworkInterface>
      */
     public function getNetworkInterfaces()
     {
@@ -47,12 +50,12 @@ class GetNetworkInterfacesResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.NetworkInterface network_interfaces = 1006 [json_name = "networkInterfaces"];</code>
      *
-     * @param  \SpaceX\API\Device\NetworkInterface[]  $var
+     * @param  NetworkInterface[]  $var
      * @return $this
      */
     public function setNetworkInterfaces($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SpaceX\API\Device\NetworkInterface::class);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, NetworkInterface::class);
         $this->network_interfaces = $arr;
 
         return $this;

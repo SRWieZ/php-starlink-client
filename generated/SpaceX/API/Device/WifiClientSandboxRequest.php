@@ -6,13 +6,16 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
 use Google\Protobuf\RepeatedField;
+use GPBMetadata\SpacexApi\Device\Device;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiClientSandboxRequest</code>
  */
-class WifiClientSandboxRequest extends \Google\Protobuf\Internal\Message
+class WifiClientSandboxRequest extends Message
 {
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiClientSandboxStatus client_sandbox_status = 1 [json_name = "clientSandboxStatus"];</code>
@@ -42,14 +45,14 @@ class WifiClientSandboxRequest extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiClientSandboxStatus client_sandbox_status = 1 [json_name = "clientSandboxStatus"];</code>
      *
-     * @return RepeatedField<\SpaceX\API\Device\WifiClientSandboxStatus>
+     * @return RepeatedField<WifiClientSandboxStatus>
      */
     public function getClientSandboxStatus()
     {
@@ -59,12 +62,12 @@ class WifiClientSandboxRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiClientSandboxStatus client_sandbox_status = 1 [json_name = "clientSandboxStatus"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiClientSandboxStatus[]  $var
+     * @param  WifiClientSandboxStatus[]  $var
      * @return $this
      */
     public function setClientSandboxStatus($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SpaceX\API\Device\WifiClientSandboxStatus::class);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, WifiClientSandboxStatus::class);
         $this->client_sandbox_status = $arr;
 
         return $this;
@@ -88,7 +91,7 @@ class WifiClientSandboxRequest extends \Google\Protobuf\Internal\Message
      */
     public function setAlerts($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::ENUM, \SpaceX\API\Device\WifiClientSandboxAlert::class);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::ENUM, WifiClientSandboxAlert::class);
         $this->alerts = $arr;
 
         return $this;

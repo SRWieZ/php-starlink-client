@@ -6,13 +6,22 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
 use Google\Protobuf\RepeatedField;
+use SpaceX\API\Device\WifiConfig\HTBandwidth;
+use SpaceX\API\Device\WifiConfig\MeshConfigsEntry;
+use SpaceX\API\Device\WifiConfig\MeshConfigsUpdatesEntry;
+use SpaceX\API\Device\WifiConfig\Network;
+use SpaceX\API\Device\WifiConfig\UnbridgedEthPort;
+use SpaceX\API\Device\WifiConfig\VHTBandwidth;
+use SpaceX\API\Device\WifiConfig\WirelessMode;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiConfig</code>
  */
-class WifiConfig extends \Google\Protobuf\Internal\Message
+class WifiConfig extends Message
 {
     /**
      * Generated from protobuf field <code>optional string country_code = 3 [json_name = "countryCode"];</code>
@@ -1359,7 +1368,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiConfig.MeshConfigsEntry mesh_configs = 33 [json_name = "meshConfigs"];</code>
      *
-     * @return RepeatedField<\SpaceX\API\Device\WifiConfig\MeshConfigsEntry>
+     * @return RepeatedField<MeshConfigsEntry>
      */
     public function getMeshConfigs()
     {
@@ -1369,12 +1378,12 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiConfig.MeshConfigsEntry mesh_configs = 33 [json_name = "meshConfigs"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiConfig\MeshConfigsEntry[]  $var
+     * @param  MeshConfigsEntry[]  $var
      * @return $this
      */
     public function setMeshConfigs($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SpaceX\API\Device\WifiConfig\MeshConfigsEntry::class);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, MeshConfigsEntry::class);
         $this->mesh_configs = $arr;
 
         return $this;
@@ -1383,7 +1392,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiConfig.MeshConfigsUpdatesEntry mesh_configs_updates = 3033 [json_name = "meshConfigsUpdates"];</code>
      *
-     * @return RepeatedField<\SpaceX\API\Device\WifiConfig\MeshConfigsUpdatesEntry>
+     * @return RepeatedField<MeshConfigsUpdatesEntry>
      */
     public function getMeshConfigsUpdates()
     {
@@ -1393,12 +1402,12 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiConfig.MeshConfigsUpdatesEntry mesh_configs_updates = 3033 [json_name = "meshConfigsUpdates"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiConfig\MeshConfigsUpdatesEntry[]  $var
+     * @param  MeshConfigsUpdatesEntry[]  $var
      * @return $this
      */
     public function setMeshConfigsUpdates($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SpaceX\API\Device\WifiConfig\MeshConfigsUpdatesEntry::class);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, MeshConfigsUpdatesEntry::class);
         $this->mesh_configs_updates = $arr;
 
         return $this;
@@ -1441,7 +1450,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.PublicKey dynamic_keys = 22 [json_name = "dynamicKeys"];</code>
      *
-     * @return RepeatedField<\SpaceX\API\Device\PublicKey>
+     * @return RepeatedField<PublicKey>
      */
     public function getDynamicKeys()
     {
@@ -1451,12 +1460,12 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.PublicKey dynamic_keys = 22 [json_name = "dynamicKeys"];</code>
      *
-     * @param  \SpaceX\API\Device\PublicKey[]  $var
+     * @param  PublicKey[]  $var
      * @return $this
      */
     public function setDynamicKeys($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SpaceX\API\Device\PublicKey::class);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, PublicKey::class);
         $this->dynamic_keys = $arr;
 
         return $this;
@@ -1737,7 +1746,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.BootInfo boot = 3001 [json_name = "boot"];</code>
      *
-     * @return \SpaceX\API\Device\BootInfo|null
+     * @return BootInfo|null
      */
     public function getBoot()
     {
@@ -1757,12 +1766,12 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.BootInfo boot = 3001 [json_name = "boot"];</code>
      *
-     * @param  \SpaceX\API\Device\BootInfo  $var
+     * @param  BootInfo  $var
      * @return $this
      */
     public function setBoot($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\BootInfo::class);
+        GPBUtil::checkMessage($var, BootInfo::class);
         $this->boot = $var;
 
         return $this;
@@ -1786,7 +1795,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
      */
     public function setNameservers($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::STRING);
         $this->nameservers = $arr;
 
         return $this;
@@ -2203,7 +2212,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.HttpServer http_server = 1108 [json_name = "httpServer"];</code>
      *
-     * @return \SpaceX\API\Device\HttpServer|null
+     * @return HttpServer|null
      */
     public function getHttpServer()
     {
@@ -2223,12 +2232,12 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.HttpServer http_server = 1108 [json_name = "httpServer"];</code>
      *
-     * @param  \SpaceX\API\Device\HttpServer  $var
+     * @param  HttpServer  $var
      * @return $this
      */
     public function setHttpServer($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\HttpServer::class);
+        GPBUtil::checkMessage($var, HttpServer::class);
         $this->http_server = $var;
 
         return $this;
@@ -2237,7 +2246,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiConfig.Network networks = 1100 [json_name = "networks"];</code>
      *
-     * @return RepeatedField<\SpaceX\API\Device\WifiConfig\Network>
+     * @return RepeatedField<Network>
      */
     public function getNetworks()
     {
@@ -2247,12 +2256,12 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiConfig.Network networks = 1100 [json_name = "networks"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiConfig\Network[]  $var
+     * @param  Network[]  $var
      * @return $this
      */
     public function setNetworks($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SpaceX\API\Device\WifiConfig\Network::class);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, Network::class);
         $this->networks = $arr;
 
         return $this;
@@ -2354,7 +2363,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
      */
     public function setWirelessMode2Ghz($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\WifiConfig\WirelessMode::class);
+        GPBUtil::checkEnum($var, WirelessMode::class);
         $this->wireless_mode_2ghz = $var;
 
         return $this;
@@ -2422,7 +2431,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
      */
     public function setWirelessMode5Ghz($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\WifiConfig\WirelessMode::class);
+        GPBUtil::checkEnum($var, WirelessMode::class);
         $this->wireless_mode_5ghz = $var;
 
         return $this;
@@ -2490,7 +2499,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
      */
     public function setWirelessMode5GhzHigh($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\WifiConfig\WirelessMode::class);
+        GPBUtil::checkEnum($var, WirelessMode::class);
         $this->wireless_mode_5ghz_high = $var;
 
         return $this;
@@ -2558,7 +2567,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
      */
     public function setHtBandwidth2Ghz($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\WifiConfig\HTBandwidth::class);
+        GPBUtil::checkEnum($var, HTBandwidth::class);
         $this->ht_bandwidth_2ghz = $var;
 
         return $this;
@@ -2626,7 +2635,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
      */
     public function setHtBandwidth5Ghz($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\WifiConfig\HTBandwidth::class);
+        GPBUtil::checkEnum($var, HTBandwidth::class);
         $this->ht_bandwidth_5ghz = $var;
 
         return $this;
@@ -2694,7 +2703,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
      */
     public function setHtBandwidth5GhzHigh($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\WifiConfig\HTBandwidth::class);
+        GPBUtil::checkEnum($var, HTBandwidth::class);
         $this->ht_bandwidth_5ghz_high = $var;
 
         return $this;
@@ -2762,7 +2771,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
      */
     public function setVhtBandwidth($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\WifiConfig\VHTBandwidth::class);
+        GPBUtil::checkEnum($var, VHTBandwidth::class);
         $this->vht_bandwidth = $var;
 
         return $this;
@@ -2830,7 +2839,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
      */
     public function setVhtBandwidth5GhzHigh($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\WifiConfig\VHTBandwidth::class);
+        GPBUtil::checkEnum($var, VHTBandwidth::class);
         $this->vht_bandwidth_5ghz_high = $var;
 
         return $this;
@@ -3077,7 +3086,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.ClientName client_names = 62 [json_name = "clientNames"];</code>
      *
-     * @return RepeatedField<\SpaceX\API\Device\ClientName>
+     * @return RepeatedField<ClientName>
      */
     public function getClientNames()
     {
@@ -3087,12 +3096,12 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.ClientName client_names = 62 [json_name = "clientNames"];</code>
      *
-     * @param  \SpaceX\API\Device\ClientName[]  $var
+     * @param  ClientName[]  $var
      * @return $this
      */
     public function setClientNames($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SpaceX\API\Device\ClientName::class);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, ClientName::class);
         $this->client_names = $arr;
 
         return $this;
@@ -3568,7 +3577,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
      */
     public function setGoldenIfaceType($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\IfaceType::class);
+        GPBUtil::checkEnum($var, IfaceType::class);
         $this->golden_iface_type = $var;
 
         return $this;
@@ -3636,7 +3645,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
      */
     public function setTxPowerLevel2Ghz($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\TxPowerLevel::class);
+        GPBUtil::checkEnum($var, TxPowerLevel::class);
         $this->tx_power_level_2ghz = $var;
 
         return $this;
@@ -3704,7 +3713,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
      */
     public function setTxPowerLevel5Ghz($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\TxPowerLevel::class);
+        GPBUtil::checkEnum($var, TxPowerLevel::class);
         $this->tx_power_level_5ghz = $var;
 
         return $this;
@@ -3772,7 +3781,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
      */
     public function setTxPowerLevel5GhzHigh($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\TxPowerLevel::class);
+        GPBUtil::checkEnum($var, TxPowerLevel::class);
         $this->tx_power_level_5ghz_high = $var;
 
         return $this;
@@ -3883,7 +3892,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.ClientConfig client_configs = 74 [json_name = "clientConfigs"];</code>
      *
-     * @return RepeatedField<\SpaceX\API\Device\ClientConfig>
+     * @return RepeatedField<ClientConfig>
      */
     public function getClientConfigs()
     {
@@ -3893,12 +3902,12 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.ClientConfig client_configs = 74 [json_name = "clientConfigs"];</code>
      *
-     * @param  \SpaceX\API\Device\ClientConfig[]  $var
+     * @param  ClientConfig[]  $var
      * @return $this
      */
     public function setClientConfigs($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SpaceX\API\Device\ClientConfig::class);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, ClientConfig::class);
         $this->client_configs = $arr;
 
         return $this;
@@ -4077,7 +4086,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.NoTrafficControl wan_no_traffic_control = 4001 [json_name = "wanNoTrafficControl"];</code>
      *
-     * @return \SpaceX\API\Device\NoTrafficControl|null
+     * @return NoTrafficControl|null
      */
     public function getWanNoTrafficControl()
     {
@@ -4097,12 +4106,12 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.NoTrafficControl wan_no_traffic_control = 4001 [json_name = "wanNoTrafficControl"];</code>
      *
-     * @param  \SpaceX\API\Device\NoTrafficControl  $var
+     * @param  NoTrafficControl  $var
      * @return $this
      */
     public function setWanNoTrafficControl($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\NoTrafficControl::class);
+        GPBUtil::checkMessage($var, NoTrafficControl::class);
         $this->wan_no_traffic_control = $var;
 
         return $this;
@@ -4111,7 +4120,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.AckSuppression wan_ack_suppression = 4002 [json_name = "wanAckSuppression"];</code>
      *
-     * @return \SpaceX\API\Device\AckSuppression|null
+     * @return AckSuppression|null
      */
     public function getWanAckSuppression()
     {
@@ -4131,12 +4140,12 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.AckSuppression wan_ack_suppression = 4002 [json_name = "wanAckSuppression"];</code>
      *
-     * @param  \SpaceX\API\Device\AckSuppression  $var
+     * @param  AckSuppression  $var
      * @return $this
      */
     public function setWanAckSuppression($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\AckSuppression::class);
+        GPBUtil::checkMessage($var, AckSuppression::class);
         $this->wan_ack_suppression = $var;
 
         return $this;
@@ -4145,7 +4154,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.CakeRateLimit wan_cake_rate_limit = 4003 [json_name = "wanCakeRateLimit"];</code>
      *
-     * @return \SpaceX\API\Device\CakeRateLimit|null
+     * @return CakeRateLimit|null
      */
     public function getWanCakeRateLimit()
     {
@@ -4165,12 +4174,12 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.CakeRateLimit wan_cake_rate_limit = 4003 [json_name = "wanCakeRateLimit"];</code>
      *
-     * @param  \SpaceX\API\Device\CakeRateLimit  $var
+     * @param  CakeRateLimit  $var
      * @return $this
      */
     public function setWanCakeRateLimit($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\CakeRateLimit::class);
+        GPBUtil::checkMessage($var, CakeRateLimit::class);
         $this->wan_cake_rate_limit = $var;
 
         return $this;
@@ -4636,7 +4645,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
      */
     public function setOnlyOverflightCountries($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::STRING);
         $this->only_overflight_countries = $arr;
 
         return $this;
@@ -4713,7 +4722,7 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiConfig.UnbridgedEthPort unbridged_eth_ports = 1112 [json_name = "unbridgedEthPorts"];</code>
      *
-     * @return RepeatedField<\SpaceX\API\Device\WifiConfig\UnbridgedEthPort>
+     * @return RepeatedField<UnbridgedEthPort>
      */
     public function getUnbridgedEthPorts()
     {
@@ -4723,12 +4732,12 @@ class WifiConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiConfig.UnbridgedEthPort unbridged_eth_ports = 1112 [json_name = "unbridgedEthPorts"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiConfig\UnbridgedEthPort[]  $var
+     * @param  UnbridgedEthPort[]  $var
      * @return $this
      */
     public function setUnbridgedEthPorts($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SpaceX\API\Device\WifiConfig\UnbridgedEthPort::class);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, UnbridgedEthPort::class);
         $this->unbridged_eth_ports = $arr;
 
         return $this;

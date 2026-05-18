@@ -7,11 +7,12 @@
 namespace SpaceX\API\Status;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Status.Status</code>
  */
-class Status extends \Google\Protobuf\Internal\Message
+class Status extends Message
 {
     /**
      * Generated from protobuf field <code>optional int32 code = 1 [json_name = "code"];</code>

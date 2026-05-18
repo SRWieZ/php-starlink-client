@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Wifi;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiGuestInfoResponse</code>
  */
-class WifiGuestInfoResponse extends \Google\Protobuf\Internal\Message
+class WifiGuestInfoResponse extends Message
 {
     /**
      * Generated from protobuf field <code>optional bool is_guest = 1 [json_name = "isGuest"];</code>
@@ -53,7 +55,7 @@ class WifiGuestInfoResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 

@@ -7,11 +7,14 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Device;
+use SpaceX\API\Device\ClientPlatform\Platform;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.ClientPlatform</code>
  */
-class ClientPlatform extends \Google\Protobuf\Internal\Message
+class ClientPlatform extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.ClientPlatform.Platform platform = 1 [json_name = "platform"];</code>
@@ -41,7 +44,7 @@ class ClientPlatform extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 
@@ -73,7 +76,7 @@ class ClientPlatform extends \Google\Protobuf\Internal\Message
      */
     public function setPlatform($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\ClientPlatform\Platform::class);
+        GPBUtil::checkEnum($var, Platform::class);
         $this->platform = $var;
 
         return $this;

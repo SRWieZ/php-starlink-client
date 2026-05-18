@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device\WifiBtmRequest;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Wifi;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiBtmRequest.NeighborReport</code>
  */
-class NeighborReport extends \Google\Protobuf\Internal\Message
+class NeighborReport extends Message
 {
     /**
      * Generated from protobuf field <code>optional string bssid = 1 [json_name = "bssid"];</code>
@@ -35,7 +37,7 @@ class NeighborReport extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 

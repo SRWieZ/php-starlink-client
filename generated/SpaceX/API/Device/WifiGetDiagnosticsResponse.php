@@ -6,13 +6,17 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
 use Google\Protobuf\RepeatedField;
+use GPBMetadata\SpacexApi\Device\Device;
+use SpaceX\API\Device\WifiGetDiagnosticsResponse\Network;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiGetDiagnosticsResponse</code>
  */
-class WifiGetDiagnosticsResponse extends \Google\Protobuf\Internal\Message
+class WifiGetDiagnosticsResponse extends Message
 {
     /**
      * Generated from protobuf field <code>optional string id = 1 [json_name = "id"];</code>
@@ -48,7 +52,7 @@ class WifiGetDiagnosticsResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 
@@ -157,7 +161,7 @@ class WifiGetDiagnosticsResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiGetDiagnosticsResponse.Network networks = 4 [json_name = "networks"];</code>
      *
-     * @return RepeatedField<\SpaceX\API\Device\WifiGetDiagnosticsResponse\Network>
+     * @return RepeatedField<Network>
      */
     public function getNetworks()
     {
@@ -167,12 +171,12 @@ class WifiGetDiagnosticsResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiGetDiagnosticsResponse.Network networks = 4 [json_name = "networks"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiGetDiagnosticsResponse\Network[]  $var
+     * @param  Network[]  $var
      * @return $this
      */
     public function setNetworks($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SpaceX\API\Device\WifiGetDiagnosticsResponse\Network::class);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, Network::class);
         $this->networks = $arr;
 
         return $this;

@@ -7,11 +7,14 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Device;
+use SpaceX\API\Device\GetLogResponse\Logs;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.GetLogResponse</code>
  */
-class GetLogResponse extends \Google\Protobuf\Internal\Message
+class GetLogResponse extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetLogResponse.Logs current = 4 [json_name = "current"];</code>
@@ -53,14 +56,14 @@ class GetLogResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetLogResponse.Logs current = 4 [json_name = "current"];</code>
      *
-     * @return \SpaceX\API\Device\GetLogResponse\Logs|null
+     * @return Logs|null
      */
     public function getCurrent()
     {
@@ -80,12 +83,12 @@ class GetLogResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetLogResponse.Logs current = 4 [json_name = "current"];</code>
      *
-     * @param  \SpaceX\API\Device\GetLogResponse\Logs  $var
+     * @param  Logs  $var
      * @return $this
      */
     public function setCurrent($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\GetLogResponse\Logs::class);
+        GPBUtil::checkMessage($var, Logs::class);
         $this->current = $var;
 
         return $this;
@@ -94,7 +97,7 @@ class GetLogResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetLogResponse.Logs saved = 5 [json_name = "saved"];</code>
      *
-     * @return \SpaceX\API\Device\GetLogResponse\Logs|null
+     * @return Logs|null
      */
     public function getSaved()
     {
@@ -114,12 +117,12 @@ class GetLogResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetLogResponse.Logs saved = 5 [json_name = "saved"];</code>
      *
-     * @param  \SpaceX\API\Device\GetLogResponse\Logs  $var
+     * @param  Logs  $var
      * @return $this
      */
     public function setSaved($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\GetLogResponse\Logs::class);
+        GPBUtil::checkMessage($var, Logs::class);
         $this->saved = $var;
 
         return $this;

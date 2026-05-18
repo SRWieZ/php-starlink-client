@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Dish;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.DishActivateRssiScanRequest</code>
  */
-class DishActivateRssiScanRequest extends \Google\Protobuf\Internal\Message
+class DishActivateRssiScanRequest extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishActivateRssiScan scan_query = 1 [json_name = "scanQuery"];</code>
@@ -29,14 +31,14 @@ class DishActivateRssiScanRequest extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Dish::initOnce();
+        Dish::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishActivateRssiScan scan_query = 1 [json_name = "scanQuery"];</code>
      *
-     * @return \SpaceX\API\Device\DishActivateRssiScan|null
+     * @return DishActivateRssiScan|null
      */
     public function getScanQuery()
     {
@@ -56,12 +58,12 @@ class DishActivateRssiScanRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishActivateRssiScan scan_query = 1 [json_name = "scanQuery"];</code>
      *
-     * @param  \SpaceX\API\Device\DishActivateRssiScan  $var
+     * @param  DishActivateRssiScan  $var
      * @return $this
      */
     public function setScanQuery($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\DishActivateRssiScan::class);
+        GPBUtil::checkMessage($var, DishActivateRssiScan::class);
         $this->scan_query = $var;
 
         return $this;

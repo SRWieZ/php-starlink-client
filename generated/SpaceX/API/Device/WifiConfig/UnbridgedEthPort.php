@@ -6,13 +6,19 @@
 
 namespace SpaceX\API\Device\WifiConfig;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
 use Google\Protobuf\RepeatedField;
+use GPBMetadata\SpacexApi\Device\WifiConfig;
+use SpaceX\API\Device\WanNone;
+use SpaceX\API\Device\WanStarlinkRouterPair;
+use SpaceX\API\Device\WifiConfig\UnbridgedEthPort\StaticRoute;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiConfig.UnbridgedEthPort</code>
  */
-class UnbridgedEthPort extends \Google\Protobuf\Internal\Message
+class UnbridgedEthPort extends Message
 {
     /**
      * Generated from protobuf field <code>optional uint32 lan_port_index = 1 [json_name = "lanPortIndex"];</code>
@@ -60,7 +66,7 @@ class UnbridgedEthPort extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\WifiConfig::initOnce();
+        WifiConfig::initOnce();
         parent::__construct($data);
     }
 
@@ -169,7 +175,7 @@ class UnbridgedEthPort extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiConfig.UnbridgedEthPort.StaticRoute static_routes = 4 [json_name = "staticRoutes"];</code>
      *
-     * @return RepeatedField<\SpaceX\API\Device\WifiConfig\UnbridgedEthPort\StaticRoute>
+     * @return RepeatedField<StaticRoute>
      */
     public function getStaticRoutes()
     {
@@ -179,12 +185,12 @@ class UnbridgedEthPort extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiConfig.UnbridgedEthPort.StaticRoute static_routes = 4 [json_name = "staticRoutes"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiConfig\UnbridgedEthPort\StaticRoute[]  $var
+     * @param  StaticRoute[]  $var
      * @return $this
      */
     public function setStaticRoutes($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SpaceX\API\Device\WifiConfig\UnbridgedEthPort\StaticRoute::class);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, StaticRoute::class);
         $this->static_routes = $arr;
 
         return $this;
@@ -193,7 +199,7 @@ class UnbridgedEthPort extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WanNone wan_none = 5 [json_name = "wanNone"];</code>
      *
-     * @return \SpaceX\API\Device\WanNone|null
+     * @return WanNone|null
      */
     public function getWanNone()
     {
@@ -213,12 +219,12 @@ class UnbridgedEthPort extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WanNone wan_none = 5 [json_name = "wanNone"];</code>
      *
-     * @param  \SpaceX\API\Device\WanNone  $var
+     * @param  WanNone  $var
      * @return $this
      */
     public function setWanNone($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WanNone::class);
+        GPBUtil::checkMessage($var, WanNone::class);
         $this->wan_none = $var;
 
         return $this;
@@ -227,7 +233,7 @@ class UnbridgedEthPort extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WanStarlinkRouterPair wan_starlink_router_pair = 6 [json_name = "wanStarlinkRouterPair"];</code>
      *
-     * @return \SpaceX\API\Device\WanStarlinkRouterPair|null
+     * @return WanStarlinkRouterPair|null
      */
     public function getWanStarlinkRouterPair()
     {
@@ -247,12 +253,12 @@ class UnbridgedEthPort extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WanStarlinkRouterPair wan_starlink_router_pair = 6 [json_name = "wanStarlinkRouterPair"];</code>
      *
-     * @param  \SpaceX\API\Device\WanStarlinkRouterPair  $var
+     * @param  WanStarlinkRouterPair  $var
      * @return $this
      */
     public function setWanStarlinkRouterPair($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WanStarlinkRouterPair::class);
+        GPBUtil::checkMessage($var, WanStarlinkRouterPair::class);
         $this->wan_starlink_router_pair = $var;
 
         return $this;

@@ -7,11 +7,14 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Device;
+use SpaceX\API\Device\UdpConnectivityTestRequest\UDPProbeDataType;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.UdpConnectivityTestRequest</code>
  */
-class UdpConnectivityTestRequest extends \Google\Protobuf\Internal\Message
+class UdpConnectivityTestRequest extends Message
 {
     /**
      * Generated from protobuf field <code>optional string target = 1 [json_name = "target"];</code>
@@ -41,7 +44,7 @@ class UdpConnectivityTestRequest extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 
@@ -141,7 +144,7 @@ class UdpConnectivityTestRequest extends \Google\Protobuf\Internal\Message
      */
     public function setProbeData($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\UdpConnectivityTestRequest\UDPProbeDataType::class);
+        GPBUtil::checkEnum($var, UDPProbeDataType::class);
         $this->probe_data = $var;
 
         return $this;

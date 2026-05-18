@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Dish;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.AlignmentStats</code>
  */
-class AlignmentStats extends \Google\Protobuf\Internal\Message
+class AlignmentStats extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.HasActuators has_actuators = 1 [json_name = "hasActuators"];</code>
@@ -77,7 +79,7 @@ class AlignmentStats extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Dish::initOnce();
+        Dish::initOnce();
         parent::__construct($data);
     }
 
@@ -109,7 +111,7 @@ class AlignmentStats extends \Google\Protobuf\Internal\Message
      */
     public function setHasActuators($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\HasActuators::class);
+        GPBUtil::checkEnum($var, HasActuators::class);
         $this->has_actuators = $var;
 
         return $this;
@@ -143,7 +145,7 @@ class AlignmentStats extends \Google\Protobuf\Internal\Message
      */
     public function setActuatorState($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\ActuatorState::class);
+        GPBUtil::checkEnum($var, ActuatorState::class);
         $this->actuator_state = $var;
 
         return $this;
@@ -347,7 +349,7 @@ class AlignmentStats extends \Google\Protobuf\Internal\Message
      */
     public function setAttitudeEstimationState($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\AttitudeEstimationState::class);
+        GPBUtil::checkEnum($var, AttitudeEstimationState::class);
         $this->attitude_estimation_state = $var;
 
         return $this;

@@ -6,13 +6,16 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
 use Google\Protobuf\RepeatedField;
+use GPBMetadata\SpacexApi\Device\Command;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.PublicKey</code>
  */
-class PublicKey extends \Google\Protobuf\Internal\Message
+class PublicKey extends Message
 {
     /**
      * Generated from protobuf field <code>optional string key = 1 [json_name = "key"];</code>
@@ -42,7 +45,7 @@ class PublicKey extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Command::initOnce();
+        Command::initOnce();
         parent::__construct($data);
     }
 
@@ -98,7 +101,7 @@ class PublicKey extends \Google\Protobuf\Internal\Message
      */
     public function setCapabilities($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::ENUM, \SpaceX\API\Device\Capability::class);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::ENUM, Capability::class);
         $this->capabilities = $arr;
 
         return $this;
@@ -132,7 +135,7 @@ class PublicKey extends \Google\Protobuf\Internal\Message
      */
     public function setUser($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\User::class);
+        GPBUtil::checkEnum($var, User::class);
         $this->user = $var;
 
         return $this;

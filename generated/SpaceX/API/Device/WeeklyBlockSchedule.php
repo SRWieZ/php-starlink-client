@@ -6,13 +6,17 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
 use Google\Protobuf\RepeatedField;
+use GPBMetadata\SpacexApi\Device\WifiConfig;
+use SpaceX\API\Device\WeeklyBlockSchedule\BlockRange;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WeeklyBlockSchedule</code>
  */
-class WeeklyBlockSchedule extends \Google\Protobuf\Internal\Message
+class WeeklyBlockSchedule extends Message
 {
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WeeklyBlockSchedule.BlockRange block_ranges = 1 [json_name = "blockRanges"];</code>
@@ -36,14 +40,14 @@ class WeeklyBlockSchedule extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\WifiConfig::initOnce();
+        WifiConfig::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WeeklyBlockSchedule.BlockRange block_ranges = 1 [json_name = "blockRanges"];</code>
      *
-     * @return RepeatedField<\SpaceX\API\Device\WeeklyBlockSchedule\BlockRange>
+     * @return RepeatedField<BlockRange>
      */
     public function getBlockRanges()
     {
@@ -53,12 +57,12 @@ class WeeklyBlockSchedule extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WeeklyBlockSchedule.BlockRange block_ranges = 1 [json_name = "blockRanges"];</code>
      *
-     * @param  \SpaceX\API\Device\WeeklyBlockSchedule\BlockRange[]  $var
+     * @param  BlockRange[]  $var
      * @return $this
      */
     public function setBlockRanges($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SpaceX\API\Device\WeeklyBlockSchedule\BlockRange::class);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, BlockRange::class);
         $this->block_ranges = $arr;
 
         return $this;

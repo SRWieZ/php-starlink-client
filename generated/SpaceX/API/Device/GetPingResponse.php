@@ -6,13 +6,17 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
 use Google\Protobuf\RepeatedField;
+use GPBMetadata\SpacexApi\Device\Device;
+use SpaceX\API\Device\GetPingResponse\ResultsEntry;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.GetPingResponse</code>
  */
-class GetPingResponse extends \Google\Protobuf\Internal\Message
+class GetPingResponse extends Message
 {
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.GetPingResponse.ResultsEntry results = 1 [json_name = "results"];</code>
@@ -30,14 +34,14 @@ class GetPingResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.GetPingResponse.ResultsEntry results = 1 [json_name = "results"];</code>
      *
-     * @return RepeatedField<\SpaceX\API\Device\GetPingResponse\ResultsEntry>
+     * @return RepeatedField<ResultsEntry>
      */
     public function getResults()
     {
@@ -47,12 +51,12 @@ class GetPingResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.GetPingResponse.ResultsEntry results = 1 [json_name = "results"];</code>
      *
-     * @param  \SpaceX\API\Device\GetPingResponse\ResultsEntry[]  $var
+     * @param  ResultsEntry[]  $var
      * @return $this
      */
     public function setResults($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SpaceX\API\Device\GetPingResponse\ResultsEntry::class);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, ResultsEntry::class);
         $this->results = $arr;
 
         return $this;

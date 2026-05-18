@@ -7,11 +7,14 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Dish;
+use SpaceX\API\Device\DishAviationTestRequest\EthSpeed;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.DishAviationTestRequest</code>
  */
-class DishAviationTestRequest extends \Google\Protobuf\Internal\Message
+class DishAviationTestRequest extends Message
 {
     /**
      * Generated from protobuf field <code>optional float thermal_demand_fraction = 1 [json_name = "thermalDemandFraction"];</code>
@@ -59,7 +62,7 @@ class DishAviationTestRequest extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Dish::initOnce();
+        Dish::initOnce();
         parent::__construct($data);
     }
 
@@ -159,7 +162,7 @@ class DishAviationTestRequest extends \Google\Protobuf\Internal\Message
      */
     public function setEthSpeed($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\DishAviationTestRequest\EthSpeed::class);
+        GPBUtil::checkEnum($var, EthSpeed::class);
         $this->eth_speed = $var;
 
         return $this;

@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Wifi;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiSetMeshConfigRequest</code>
  */
-class WifiSetMeshConfigRequest extends \Google\Protobuf\Internal\Message
+class WifiSetMeshConfigRequest extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.MeshConfig mesh_config = 1 [json_name = "meshConfig"];</code>
@@ -35,14 +37,14 @@ class WifiSetMeshConfigRequest extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.MeshConfig mesh_config = 1 [json_name = "meshConfig"];</code>
      *
-     * @return \SpaceX\API\Device\MeshConfig|null
+     * @return MeshConfig|null
      */
     public function getMeshConfig()
     {
@@ -62,12 +64,12 @@ class WifiSetMeshConfigRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.MeshConfig mesh_config = 1 [json_name = "meshConfig"];</code>
      *
-     * @param  \SpaceX\API\Device\MeshConfig  $var
+     * @param  MeshConfig  $var
      * @return $this
      */
     public function setMeshConfig($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\MeshConfig::class);
+        GPBUtil::checkMessage($var, MeshConfig::class);
         $this->mesh_config = $var;
 
         return $this;

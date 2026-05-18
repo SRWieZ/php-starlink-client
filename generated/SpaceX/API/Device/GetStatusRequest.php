@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Device;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.GetStatusRequest</code>
  */
-class GetStatusRequest extends \Google\Protobuf\Internal\Message
+class GetStatusRequest extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.RouterRole router_role = 1 [json_name = "routerRole"];</code>
@@ -29,7 +31,7 @@ class GetStatusRequest extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 
@@ -61,7 +63,7 @@ class GetStatusRequest extends \Google\Protobuf\Internal\Message
      */
     public function setRouterRole($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\RouterRole::class);
+        GPBUtil::checkEnum($var, RouterRole::class);
         $this->router_role = $var;
 
         return $this;

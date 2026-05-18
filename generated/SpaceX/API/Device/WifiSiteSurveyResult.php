@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Wifi;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiSiteSurveyResult</code>
  */
-class WifiSiteSurveyResult extends \Google\Protobuf\Internal\Message
+class WifiSiteSurveyResult extends Message
 {
     /**
      * Generated from protobuf field <code>optional float rssi = 1 [json_name = "rssi"];</code>
@@ -71,7 +73,7 @@ class WifiSiteSurveyResult extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 
@@ -205,7 +207,7 @@ class WifiSiteSurveyResult extends \Google\Protobuf\Internal\Message
      */
     public function setSecurity($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\WifiSecurity::class);
+        GPBUtil::checkEnum($var, WifiSecurity::class);
         $this->security = $var;
 
         return $this;
@@ -239,7 +241,7 @@ class WifiSiteSurveyResult extends \Google\Protobuf\Internal\Message
      */
     public function setWirelessMode($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\WifiMode::class);
+        GPBUtil::checkEnum($var, WifiMode::class);
         $this->wireless_mode = $var;
 
         return $this;
@@ -273,7 +275,7 @@ class WifiSiteSurveyResult extends \Google\Protobuf\Internal\Message
      */
     public function setIface($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\IfaceType::class);
+        GPBUtil::checkEnum($var, IfaceType::class);
         $this->iface = $var;
 
         return $this;

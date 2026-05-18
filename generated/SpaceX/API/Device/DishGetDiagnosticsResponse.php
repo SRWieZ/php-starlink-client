@@ -6,13 +6,22 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
 use Google\Protobuf\RepeatedField;
+use GPBMetadata\SpacexApi\Device\Device;
+use SpaceX\API\Device\DishGetDiagnosticsResponse\Alerts;
+use SpaceX\API\Device\DishGetDiagnosticsResponse\AlignmentStats;
+use SpaceX\API\Device\DishGetDiagnosticsResponse\DisablementCode;
+use SpaceX\API\Device\DishGetDiagnosticsResponse\Location;
+use SpaceX\API\Device\DishGetDiagnosticsResponse\TestResult;
+use SpaceX\API\Device\DishGetDiagnosticsResponse\TestResultCode;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.DishGetDiagnosticsResponse</code>
  */
-class DishGetDiagnosticsResponse extends \Google\Protobuf\Internal\Message
+class DishGetDiagnosticsResponse extends Message
 {
     /**
      * Generated from protobuf field <code>optional string id = 1 [json_name = "id"];</code>
@@ -96,7 +105,7 @@ class DishGetDiagnosticsResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 
@@ -264,7 +273,7 @@ class DishGetDiagnosticsResponse extends \Google\Protobuf\Internal\Message
      */
     public function setHardwareSelfTest($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\DishGetDiagnosticsResponse\TestResult::class);
+        GPBUtil::checkEnum($var, TestResult::class);
         $this->hardware_self_test = $var;
 
         return $this;
@@ -288,7 +297,7 @@ class DishGetDiagnosticsResponse extends \Google\Protobuf\Internal\Message
      */
     public function setHardwareSelfTestCodes($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::ENUM, \SpaceX\API\Device\DishGetDiagnosticsResponse\TestResultCode::class);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::ENUM, TestResultCode::class);
         $this->hardware_self_test_codes = $arr;
 
         return $this;
@@ -297,7 +306,7 @@ class DishGetDiagnosticsResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishGetDiagnosticsResponse.Alerts alerts = 5 [json_name = "alerts"];</code>
      *
-     * @return \SpaceX\API\Device\DishGetDiagnosticsResponse\Alerts|null
+     * @return Alerts|null
      */
     public function getAlerts()
     {
@@ -317,12 +326,12 @@ class DishGetDiagnosticsResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishGetDiagnosticsResponse.Alerts alerts = 5 [json_name = "alerts"];</code>
      *
-     * @param  \SpaceX\API\Device\DishGetDiagnosticsResponse\Alerts  $var
+     * @param  Alerts  $var
      * @return $this
      */
     public function setAlerts($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\DishGetDiagnosticsResponse\Alerts::class);
+        GPBUtil::checkMessage($var, Alerts::class);
         $this->alerts = $var;
 
         return $this;
@@ -356,7 +365,7 @@ class DishGetDiagnosticsResponse extends \Google\Protobuf\Internal\Message
      */
     public function setDisablementCode($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\DishGetDiagnosticsResponse\DisablementCode::class);
+        GPBUtil::checkEnum($var, DisablementCode::class);
         $this->disablement_code = $var;
 
         return $this;
@@ -365,7 +374,7 @@ class DishGetDiagnosticsResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishGetDiagnosticsResponse.Location location = 8 [json_name = "location"];</code>
      *
-     * @return \SpaceX\API\Device\DishGetDiagnosticsResponse\Location|null
+     * @return Location|null
      */
     public function getLocation()
     {
@@ -385,12 +394,12 @@ class DishGetDiagnosticsResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishGetDiagnosticsResponse.Location location = 8 [json_name = "location"];</code>
      *
-     * @param  \SpaceX\API\Device\DishGetDiagnosticsResponse\Location  $var
+     * @param  Location  $var
      * @return $this
      */
     public function setLocation($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\DishGetDiagnosticsResponse\Location::class);
+        GPBUtil::checkMessage($var, Location::class);
         $this->location = $var;
 
         return $this;
@@ -399,7 +408,7 @@ class DishGetDiagnosticsResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishGetDiagnosticsResponse.AlignmentStats alignment_stats = 9 [json_name = "alignmentStats"];</code>
      *
-     * @return \SpaceX\API\Device\DishGetDiagnosticsResponse\AlignmentStats|null
+     * @return AlignmentStats|null
      */
     public function getAlignmentStats()
     {
@@ -419,12 +428,12 @@ class DishGetDiagnosticsResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishGetDiagnosticsResponse.AlignmentStats alignment_stats = 9 [json_name = "alignmentStats"];</code>
      *
-     * @param  \SpaceX\API\Device\DishGetDiagnosticsResponse\AlignmentStats  $var
+     * @param  AlignmentStats  $var
      * @return $this
      */
     public function setAlignmentStats($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\DishGetDiagnosticsResponse\AlignmentStats::class);
+        GPBUtil::checkMessage($var, AlignmentStats::class);
         $this->alignment_stats = $var;
 
         return $this;

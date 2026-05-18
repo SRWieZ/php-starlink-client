@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\WifiUtil;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.DhcpLease</code>
  */
-class DhcpLease extends \Google\Protobuf\Internal\Message
+class DhcpLease extends Message
 {
     /**
      * Generated from protobuf field <code>optional string ip_address = 1 [json_name = "ipAddress"];</code>
@@ -59,7 +61,7 @@ class DhcpLease extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\WifiUtil::initOnce();
+        WifiUtil::initOnce();
         parent::__construct($data);
     }
 

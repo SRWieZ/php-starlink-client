@@ -6,13 +6,16 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
 use Google\Protobuf\RepeatedField;
+use GPBMetadata\SpacexApi\Device\Wifi;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiGlobalMeshStatus</code>
  */
-class WifiGlobalMeshStatus extends \Google\Protobuf\Internal\Message
+class WifiGlobalMeshStatus extends Message
 {
     /**
      * Generated from protobuf field <code>optional string hardware_version = 1 [json_name = "hardwareVersion"];</code>
@@ -48,7 +51,7 @@ class WifiGlobalMeshStatus extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 
@@ -123,7 +126,7 @@ class WifiGlobalMeshStatus extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.InflatedBasicServiceSet bss_list = 3 [json_name = "bssList"];</code>
      *
-     * @return RepeatedField<\SpaceX\API\Device\InflatedBasicServiceSet>
+     * @return RepeatedField<InflatedBasicServiceSet>
      */
     public function getBssList()
     {
@@ -133,12 +136,12 @@ class WifiGlobalMeshStatus extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.InflatedBasicServiceSet bss_list = 3 [json_name = "bssList"];</code>
      *
-     * @param  \SpaceX\API\Device\InflatedBasicServiceSet[]  $var
+     * @param  InflatedBasicServiceSet[]  $var
      * @return $this
      */
     public function setBssList($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SpaceX\API\Device\InflatedBasicServiceSet::class);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, InflatedBasicServiceSet::class);
         $this->bss_list = $arr;
 
         return $this;

@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Device;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.RunIperfServerRequest</code>
  */
-class RunIperfServerRequest extends \Google\Protobuf\Internal\Message
+class RunIperfServerRequest extends Message
 {
     /**
      * Generated from protobuf field <code>optional uint32 duration_s = 1 [json_name = "durationS"];</code>
@@ -29,7 +31,7 @@ class RunIperfServerRequest extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 

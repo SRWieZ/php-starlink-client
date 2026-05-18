@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Transceiver;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.TransceiverIFLoopbackTestRequest</code>
  */
-class TransceiverIFLoopbackTestRequest extends \Google\Protobuf\Internal\Message
+class TransceiverIFLoopbackTestRequest extends Message
 {
     /**
      * Generated from protobuf field <code>optional bool enable_if_loopback = 1 [json_name = "enableIfLoopback"];</code>
@@ -29,7 +31,7 @@ class TransceiverIFLoopbackTestRequest extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Transceiver::initOnce();
+        Transceiver::initOnce();
         parent::__construct($data);
     }
 

@@ -6,13 +6,17 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
 use Google\Protobuf\RepeatedField;
+use GPBMetadata\SpacexApi\Device\Wifi;
+use SpaceX\API\Device\WifiBtmRequest\NeighborReport;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiBtmRequest</code>
  */
-class WifiBtmRequest extends \Google\Protobuf\Internal\Message
+class WifiBtmRequest extends Message
 {
     /**
      * Generated from protobuf field <code>optional uint32 bss_termination_duration_m = 5 [json_name = "bssTerminationDurationM"];</code>
@@ -42,7 +46,7 @@ class WifiBtmRequest extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 
@@ -117,7 +121,7 @@ class WifiBtmRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiBtmRequest.NeighborReport neighbor_report = 4 [json_name = "neighborReport"];</code>
      *
-     * @return RepeatedField<\SpaceX\API\Device\WifiBtmRequest\NeighborReport>
+     * @return RepeatedField<NeighborReport>
      */
     public function getNeighborReport()
     {
@@ -127,12 +131,12 @@ class WifiBtmRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiBtmRequest.NeighborReport neighbor_report = 4 [json_name = "neighborReport"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiBtmRequest\NeighborReport[]  $var
+     * @param  NeighborReport[]  $var
      * @return $this
      */
     public function setNeighborReport($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SpaceX\API\Device\WifiBtmRequest\NeighborReport::class);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, NeighborReport::class);
         $this->neighbor_report = $arr;
 
         return $this;

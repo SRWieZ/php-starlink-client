@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Device;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.ToDevice</code>
  */
-class ToDevice extends \Google\Protobuf\Internal\Message
+class ToDevice extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.Request request = 1 [json_name = "request"];</code>
@@ -35,14 +37,14 @@ class ToDevice extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.Request request = 1 [json_name = "request"];</code>
      *
-     * @return \SpaceX\API\Device\Request|null
+     * @return Request|null
      */
     public function getRequest()
     {
@@ -62,12 +64,12 @@ class ToDevice extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.Request request = 1 [json_name = "request"];</code>
      *
-     * @param  \SpaceX\API\Device\Request  $var
+     * @param  Request  $var
      * @return $this
      */
     public function setRequest($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\Request::class);
+        GPBUtil::checkMessage($var, Request::class);
         $this->request = $var;
 
         return $this;
@@ -76,7 +78,7 @@ class ToDevice extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.HealthCheck health_check = 2 [json_name = "healthCheck"];</code>
      *
-     * @return \SpaceX\API\Device\HealthCheck|null
+     * @return HealthCheck|null
      */
     public function getHealthCheck()
     {
@@ -96,12 +98,12 @@ class ToDevice extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.HealthCheck health_check = 2 [json_name = "healthCheck"];</code>
      *
-     * @param  \SpaceX\API\Device\HealthCheck  $var
+     * @param  HealthCheck  $var
      * @return $this
      */
     public function setHealthCheck($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\HealthCheck::class);
+        GPBUtil::checkMessage($var, HealthCheck::class);
         $this->health_check = $var;
 
         return $this;

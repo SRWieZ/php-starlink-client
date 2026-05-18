@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device\WifiConfig;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\WifiConfig;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiConfig.StaticRoute</code>
  */
-class StaticRoute extends \Google\Protobuf\Internal\Message
+class StaticRoute extends Message
 {
     /**
      * Generated from protobuf field <code>optional string subnet = 1 [json_name = "subnet"];</code>
@@ -35,7 +37,7 @@ class StaticRoute extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\WifiConfig::initOnce();
+        WifiConfig::initOnce();
         parent::__construct($data);
     }
 

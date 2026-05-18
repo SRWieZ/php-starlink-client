@@ -7,11 +7,20 @@
 namespace SpaceX\API\Device\WifiConfig;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\WifiConfig;
+use SpaceX\API\Device\AuthOnboardRadius;
+use SpaceX\API\Device\AuthOpen;
+use SpaceX\API\Device\AuthOpenEncrypted;
+use SpaceX\API\Device\AuthRadius;
+use SpaceX\API\Device\AuthWpa2;
+use SpaceX\API\Device\AuthWpa2Wpa3;
+use SpaceX\API\Device\AuthWpa3;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiConfig.BasicServiceSet</code>
  */
-class BasicServiceSet extends \Google\Protobuf\Internal\Message
+class BasicServiceSet extends Message
 {
     /**
      * Generated from protobuf field <code>optional string bssid = 1003 [json_name = "bssid"];</code>
@@ -101,7 +110,7 @@ class BasicServiceSet extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\WifiConfig::initOnce();
+        WifiConfig::initOnce();
         parent::__construct($data);
     }
 
@@ -176,7 +185,7 @@ class BasicServiceSet extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.AuthOpen auth_open = 2001 [json_name = "authOpen"];</code>
      *
-     * @return \SpaceX\API\Device\AuthOpen|null
+     * @return AuthOpen|null
      */
     public function getAuthOpen()
     {
@@ -196,12 +205,12 @@ class BasicServiceSet extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.AuthOpen auth_open = 2001 [json_name = "authOpen"];</code>
      *
-     * @param  \SpaceX\API\Device\AuthOpen  $var
+     * @param  AuthOpen  $var
      * @return $this
      */
     public function setAuthOpen($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\AuthOpen::class);
+        GPBUtil::checkMessage($var, AuthOpen::class);
         $this->auth_open = $var;
 
         return $this;
@@ -210,7 +219,7 @@ class BasicServiceSet extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.AuthWpa2 auth_wpa2 = 2002 [json_name = "authWpa2"];</code>
      *
-     * @return \SpaceX\API\Device\AuthWpa2|null
+     * @return AuthWpa2|null
      */
     public function getAuthWpa2()
     {
@@ -230,12 +239,12 @@ class BasicServiceSet extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.AuthWpa2 auth_wpa2 = 2002 [json_name = "authWpa2"];</code>
      *
-     * @param  \SpaceX\API\Device\AuthWpa2  $var
+     * @param  AuthWpa2  $var
      * @return $this
      */
     public function setAuthWpa2($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\AuthWpa2::class);
+        GPBUtil::checkMessage($var, AuthWpa2::class);
         $this->auth_wpa2 = $var;
 
         return $this;
@@ -244,7 +253,7 @@ class BasicServiceSet extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.AuthWpa3 auth_wpa3 = 2003 [json_name = "authWpa3"];</code>
      *
-     * @return \SpaceX\API\Device\AuthWpa3|null
+     * @return AuthWpa3|null
      */
     public function getAuthWpa3()
     {
@@ -264,12 +273,12 @@ class BasicServiceSet extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.AuthWpa3 auth_wpa3 = 2003 [json_name = "authWpa3"];</code>
      *
-     * @param  \SpaceX\API\Device\AuthWpa3  $var
+     * @param  AuthWpa3  $var
      * @return $this
      */
     public function setAuthWpa3($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\AuthWpa3::class);
+        GPBUtil::checkMessage($var, AuthWpa3::class);
         $this->auth_wpa3 = $var;
 
         return $this;
@@ -278,7 +287,7 @@ class BasicServiceSet extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.AuthWpa2Wpa3 auth_wpa2_wpa3 = 2004 [json_name = "authWpa2Wpa3"];</code>
      *
-     * @return \SpaceX\API\Device\AuthWpa2Wpa3|null
+     * @return AuthWpa2Wpa3|null
      */
     public function getAuthWpa2Wpa3()
     {
@@ -298,12 +307,12 @@ class BasicServiceSet extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.AuthWpa2Wpa3 auth_wpa2_wpa3 = 2004 [json_name = "authWpa2Wpa3"];</code>
      *
-     * @param  \SpaceX\API\Device\AuthWpa2Wpa3  $var
+     * @param  AuthWpa2Wpa3  $var
      * @return $this
      */
     public function setAuthWpa2Wpa3($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\AuthWpa2Wpa3::class);
+        GPBUtil::checkMessage($var, AuthWpa2Wpa3::class);
         $this->auth_wpa2_wpa3 = $var;
 
         return $this;
@@ -312,7 +321,7 @@ class BasicServiceSet extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.AuthRadius auth_radius = 2005 [json_name = "authRadius"];</code>
      *
-     * @return \SpaceX\API\Device\AuthRadius|null
+     * @return AuthRadius|null
      */
     public function getAuthRadius()
     {
@@ -332,12 +341,12 @@ class BasicServiceSet extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.AuthRadius auth_radius = 2005 [json_name = "authRadius"];</code>
      *
-     * @param  \SpaceX\API\Device\AuthRadius  $var
+     * @param  AuthRadius  $var
      * @return $this
      */
     public function setAuthRadius($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\AuthRadius::class);
+        GPBUtil::checkMessage($var, AuthRadius::class);
         $this->auth_radius = $var;
 
         return $this;
@@ -346,7 +355,7 @@ class BasicServiceSet extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.AuthOpenEncrypted auth_open_encrypted = 2006 [json_name = "authOpenEncrypted"];</code>
      *
-     * @return \SpaceX\API\Device\AuthOpenEncrypted|null
+     * @return AuthOpenEncrypted|null
      */
     public function getAuthOpenEncrypted()
     {
@@ -366,12 +375,12 @@ class BasicServiceSet extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.AuthOpenEncrypted auth_open_encrypted = 2006 [json_name = "authOpenEncrypted"];</code>
      *
-     * @param  \SpaceX\API\Device\AuthOpenEncrypted  $var
+     * @param  AuthOpenEncrypted  $var
      * @return $this
      */
     public function setAuthOpenEncrypted($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\AuthOpenEncrypted::class);
+        GPBUtil::checkMessage($var, AuthOpenEncrypted::class);
         $this->auth_open_encrypted = $var;
 
         return $this;
@@ -380,7 +389,7 @@ class BasicServiceSet extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.AuthOnboardRadius auth_onboard_radius = 2007 [json_name = "authOnboardRadius"];</code>
      *
-     * @return \SpaceX\API\Device\AuthOnboardRadius|null
+     * @return AuthOnboardRadius|null
      */
     public function getAuthOnboardRadius()
     {
@@ -400,12 +409,12 @@ class BasicServiceSet extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.AuthOnboardRadius auth_onboard_radius = 2007 [json_name = "authOnboardRadius"];</code>
      *
-     * @param  \SpaceX\API\Device\AuthOnboardRadius  $var
+     * @param  AuthOnboardRadius  $var
      * @return $this
      */
     public function setAuthOnboardRadius($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\AuthOnboardRadius::class);
+        GPBUtil::checkMessage($var, AuthOnboardRadius::class);
         $this->auth_onboard_radius = $var;
 
         return $this;
@@ -439,7 +448,7 @@ class BasicServiceSet extends \Google\Protobuf\Internal\Message
      */
     public function setBand($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\WifiConfig\Band::class);
+        GPBUtil::checkEnum($var, Band::class);
         $this->band = $var;
 
         return $this;

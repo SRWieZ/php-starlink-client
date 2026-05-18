@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device\GetLogResponse;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Device;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.GetLogResponse.Logs</code>
  */
-class Logs extends \Google\Protobuf\Internal\Message
+class Logs extends Message
 {
     /**
      * Generated from protobuf field <code>optional string syslog = 1 [json_name = "syslog"];</code>
@@ -59,7 +61,7 @@ class Logs extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 

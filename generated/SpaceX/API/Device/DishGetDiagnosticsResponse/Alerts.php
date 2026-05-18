@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device\DishGetDiagnosticsResponse;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Device;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.DishGetDiagnosticsResponse.Alerts</code>
  */
-class Alerts extends \Google\Protobuf\Internal\Message
+class Alerts extends Message
 {
     /**
      * Generated from protobuf field <code>optional bool dish_is_heating = 1 [json_name = "dishIsHeating"];</code>
@@ -77,7 +79,7 @@ class Alerts extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 

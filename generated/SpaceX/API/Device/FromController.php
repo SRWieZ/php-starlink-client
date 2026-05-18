@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Wifi;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.FromController</code>
  */
-class FromController extends \Google\Protobuf\Internal\Message
+class FromController extends Message
 {
     /**
      * Generated from protobuf field <code>optional int32 api_version = 3 [json_name = "apiVersion"];</code>
@@ -65,7 +67,7 @@ class FromController extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 
@@ -106,7 +108,7 @@ class FromController extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiConfig wifi_config = 1 [json_name = "wifiConfig"];</code>
      *
-     * @return \SpaceX\API\Device\WifiConfig|null
+     * @return WifiConfig|null
      */
     public function getWifiConfig()
     {
@@ -126,12 +128,12 @@ class FromController extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiConfig wifi_config = 1 [json_name = "wifiConfig"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiConfig  $var
+     * @param  WifiConfig  $var
      * @return $this
      */
     public function setWifiConfig($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiConfig::class);
+        GPBUtil::checkMessage($var, WifiConfig::class);
         $this->wifi_config = $var;
 
         return $this;
@@ -140,7 +142,7 @@ class FromController extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SteerClientRequest steer_client_request = 2 [json_name = "steerClientRequest"];</code>
      *
-     * @return \SpaceX\API\Device\SteerClientRequest|null
+     * @return SteerClientRequest|null
      */
     public function getSteerClientRequest()
     {
@@ -160,12 +162,12 @@ class FromController extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SteerClientRequest steer_client_request = 2 [json_name = "steerClientRequest"];</code>
      *
-     * @param  \SpaceX\API\Device\SteerClientRequest  $var
+     * @param  SteerClientRequest  $var
      * @return $this
      */
     public function setSteerClientRequest($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\SteerClientRequest::class);
+        GPBUtil::checkMessage($var, SteerClientRequest::class);
         $this->steer_client_request = $var;
 
         return $this;
@@ -174,7 +176,7 @@ class FromController extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiGlobalMeshStatus status = 4 [json_name = "status"];</code>
      *
-     * @return \SpaceX\API\Device\WifiGlobalMeshStatus|null
+     * @return WifiGlobalMeshStatus|null
      */
     public function getStatus()
     {
@@ -194,12 +196,12 @@ class FromController extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiGlobalMeshStatus status = 4 [json_name = "status"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiGlobalMeshStatus  $var
+     * @param  WifiGlobalMeshStatus  $var
      * @return $this
      */
     public function setStatus($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiGlobalMeshStatus::class);
+        GPBUtil::checkMessage($var, WifiGlobalMeshStatus::class);
         $this->status = $var;
 
         return $this;
@@ -208,7 +210,7 @@ class FromController extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.BackhaulRequest backhaul_request = 5 [json_name = "backhaulRequest"];</code>
      *
-     * @return \SpaceX\API\Device\BackhaulRequest|null
+     * @return BackhaulRequest|null
      */
     public function getBackhaulRequest()
     {
@@ -228,12 +230,12 @@ class FromController extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.BackhaulRequest backhaul_request = 5 [json_name = "backhaulRequest"];</code>
      *
-     * @param  \SpaceX\API\Device\BackhaulRequest  $var
+     * @param  BackhaulRequest  $var
      * @return $this
      */
     public function setBackhaulRequest($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\BackhaulRequest::class);
+        GPBUtil::checkMessage($var, BackhaulRequest::class);
         $this->backhaul_request = $var;
 
         return $this;
@@ -242,7 +244,7 @@ class FromController extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.MeshSpeedtestRequest start_speedtest = 6 [json_name = "startSpeedtest"];</code>
      *
-     * @return \SpaceX\API\Device\MeshSpeedtestRequest|null
+     * @return MeshSpeedtestRequest|null
      */
     public function getStartSpeedtest()
     {
@@ -262,12 +264,12 @@ class FromController extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.MeshSpeedtestRequest start_speedtest = 6 [json_name = "startSpeedtest"];</code>
      *
-     * @param  \SpaceX\API\Device\MeshSpeedtestRequest  $var
+     * @param  MeshSpeedtestRequest  $var
      * @return $this
      */
     public function setStartSpeedtest($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\MeshSpeedtestRequest::class);
+        GPBUtil::checkMessage($var, MeshSpeedtestRequest::class);
         $this->start_speedtest = $var;
 
         return $this;
@@ -276,7 +278,7 @@ class FromController extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiBtmRequest wifi_btm_request = 7 [json_name = "wifiBtmRequest"];</code>
      *
-     * @return \SpaceX\API\Device\WifiBtmRequest|null
+     * @return WifiBtmRequest|null
      */
     public function getWifiBtmRequest()
     {
@@ -296,12 +298,12 @@ class FromController extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiBtmRequest wifi_btm_request = 7 [json_name = "wifiBtmRequest"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiBtmRequest  $var
+     * @param  WifiBtmRequest  $var
      * @return $this
      */
     public function setWifiBtmRequest($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiBtmRequest::class);
+        GPBUtil::checkMessage($var, WifiBtmRequest::class);
         $this->wifi_btm_request = $var;
 
         return $this;

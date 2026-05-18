@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device\Services\Unlock;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Services\Unlock\Service;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.Services.Unlock.FinishUnlockRequest</code>
  */
-class FinishUnlockRequest extends \Google\Protobuf\Internal\Message
+class FinishUnlockRequest extends Message
 {
     /**
      * Generated from protobuf field <code>optional bytes challenge = 1 [json_name = "challenge"];</code>
@@ -35,7 +37,7 @@ class FinishUnlockRequest extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Services\Unlock\Service::initOnce();
+        Service::initOnce();
         parent::__construct($data);
     }
 

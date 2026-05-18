@@ -6,13 +6,16 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
 use Google\Protobuf\RepeatedField;
+use GPBMetadata\SpacexApi\Device\Common;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.BridgeNetworkInterface</code>
  */
-class BridgeNetworkInterface extends \Google\Protobuf\Internal\Message
+class BridgeNetworkInterface extends Message
 {
     /**
      * Generated from protobuf field <code>repeated string member_names = 1 [json_name = "memberNames"];</code>
@@ -30,7 +33,7 @@ class BridgeNetworkInterface extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Common::initOnce();
+        Common::initOnce();
         parent::__construct($data);
     }
 
@@ -52,7 +55,7 @@ class BridgeNetworkInterface extends \Google\Protobuf\Internal\Message
      */
     public function setMemberNames($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::STRING);
         $this->member_names = $arr;
 
         return $this;

@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device\WifiNetworkInterface;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Common;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiNetworkInterface.InvalidPacketCounts</code>
  */
-class InvalidPacketCounts extends \Google\Protobuf\Internal\Message
+class InvalidPacketCounts extends Message
 {
     /**
      * Generated from protobuf field <code>optional uint32 rx_invalid_nwid = 1 [json_name = "rxInvalidNwid"];</code>
@@ -53,7 +55,7 @@ class InvalidPacketCounts extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Common::initOnce();
+        Common::initOnce();
         parent::__construct($data);
     }
 

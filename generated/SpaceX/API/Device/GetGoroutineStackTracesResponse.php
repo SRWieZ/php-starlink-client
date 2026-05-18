@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Device;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.GetGoroutineStackTracesResponse</code>
  */
-class GetGoroutineStackTracesResponse extends \Google\Protobuf\Internal\Message
+class GetGoroutineStackTracesResponse extends Message
 {
     /**
      * Generated from protobuf field <code>optional string stack_traces = 1 [json_name = "stackTraces"];</code>
@@ -29,7 +31,7 @@ class GetGoroutineStackTracesResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 

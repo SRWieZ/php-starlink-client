@@ -6,13 +6,16 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
 use Google\Protobuf\RepeatedField;
+use GPBMetadata\SpacexApi\Device\WifiUtil;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.DhcpServer</code>
  */
-class DhcpServer extends \Google\Protobuf\Internal\Message
+class DhcpServer extends Message
 {
     /**
      * Generated from protobuf field <code>optional string domain = 1 [json_name = "domain"];</code>
@@ -48,7 +51,7 @@ class DhcpServer extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\WifiUtil::initOnce();
+        WifiUtil::initOnce();
         parent::__construct($data);
     }
 
@@ -123,7 +126,7 @@ class DhcpServer extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.DhcpLease leases = 3 [json_name = "leases"];</code>
      *
-     * @return RepeatedField<\SpaceX\API\Device\DhcpLease>
+     * @return RepeatedField<DhcpLease>
      */
     public function getLeases()
     {
@@ -133,12 +136,12 @@ class DhcpServer extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.DhcpLease leases = 3 [json_name = "leases"];</code>
      *
-     * @param  \SpaceX\API\Device\DhcpLease[]  $var
+     * @param  DhcpLease[]  $var
      * @return $this
      */
     public function setLeases($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SpaceX\API\Device\DhcpLease::class);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, DhcpLease::class);
         $this->leases = $arr;
 
         return $this;

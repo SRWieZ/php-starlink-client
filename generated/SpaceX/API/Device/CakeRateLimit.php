@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\WifiConfig;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.CakeRateLimit</code>
  */
-class CakeRateLimit extends \Google\Protobuf\Internal\Message
+class CakeRateLimit extends Message
 {
     /**
      * Generated from protobuf field <code>optional uint32 host_mark = 1 [json_name = "hostMark"];</code>
@@ -53,7 +55,7 @@ class CakeRateLimit extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\WifiConfig::initOnce();
+        WifiConfig::initOnce();
         parent::__construct($data);
     }
 
@@ -153,7 +155,7 @@ class CakeRateLimit extends \Google\Protobuf\Internal\Message
      */
     public function setPriorityQueueParameter($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\CakePriorityQueueParameter::class);
+        GPBUtil::checkEnum($var, CakePriorityQueueParameter::class);
         $this->priority_queue_parameter = $var;
 
         return $this;
@@ -187,7 +189,7 @@ class CakeRateLimit extends \Google\Protobuf\Internal\Message
      */
     public function setAckFilter($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\CakeAckFilter::class);
+        GPBUtil::checkEnum($var, CakeAckFilter::class);
         $this->ack_filter = $var;
 
         return $this;

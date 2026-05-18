@@ -1,6 +1,7 @@
 #!/usr/bin/env php
 <?php
 
+use NunoMaduro\Collision\Provider;
 use SRWieZ\StarlinkClient\Dishy;
 use SRWieZ\StarlinkClient\ObstructionMapGenerator;
 use SRWieZ\StarlinkClient\Wifi;
@@ -13,7 +14,7 @@ if (! class_exists('\Composer\InstalledVersions')) {
 
 if (class_exists('\NunoMaduro\Collision\Provider')) {
     /** @phpstan-ignore-next-line */
-    (new \NunoMaduro\Collision\Provider)->register();
+    (new Provider)->register();
 }
 
 $dishy = new Dishy;

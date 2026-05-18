@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Transceiver;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.TransceiverGetTelemetryResponse</code>
  */
-class TransceiverGetTelemetryResponse extends \Google\Protobuf\Internal\Message
+class TransceiverGetTelemetryResponse extends Message
 {
     /**
      * Generated from protobuf field <code>optional uint32 antenna_pointing_mode = 1001 [json_name = "antennaPointingMode"];</code>
@@ -203,7 +205,7 @@ class TransceiverGetTelemetryResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Transceiver::initOnce();
+        Transceiver::initOnce();
         parent::__construct($data);
     }
 

@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Common;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.UXEvent</code>
  */
-class UXEvent extends \Google\Protobuf\Internal\Message
+class UXEvent extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.EventSeverity severity = 1 [json_name = "severity"];</code>
@@ -47,7 +49,7 @@ class UXEvent extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Common::initOnce();
+        Common::initOnce();
         parent::__construct($data);
     }
 
@@ -79,7 +81,7 @@ class UXEvent extends \Google\Protobuf\Internal\Message
      */
     public function setSeverity($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\EventSeverity::class);
+        GPBUtil::checkEnum($var, EventSeverity::class);
         $this->severity = $var;
 
         return $this;
@@ -113,7 +115,7 @@ class UXEvent extends \Google\Protobuf\Internal\Message
      */
     public function setReason($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\EventReason::class);
+        GPBUtil::checkEnum($var, EventReason::class);
         $this->reason = $var;
 
         return $this;

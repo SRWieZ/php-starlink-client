@@ -7,11 +7,14 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Wifi;
+use SpaceX\API\Device\WifiPersistentStats\Event;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiPersistentStats</code>
  */
-class WifiPersistentStats extends \Google\Protobuf\Internal\Message
+class WifiPersistentStats extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiPersistentStats.Event factory_reset_button = 1 [json_name = "factoryResetButton"];</code>
@@ -53,14 +56,14 @@ class WifiPersistentStats extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiPersistentStats.Event factory_reset_button = 1 [json_name = "factoryResetButton"];</code>
      *
-     * @return \SpaceX\API\Device\WifiPersistentStats\Event|null
+     * @return Event|null
      */
     public function getFactoryResetButton()
     {
@@ -80,12 +83,12 @@ class WifiPersistentStats extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiPersistentStats.Event factory_reset_button = 1 [json_name = "factoryResetButton"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiPersistentStats\Event  $var
+     * @param  Event  $var
      * @return $this
      */
     public function setFactoryResetButton($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiPersistentStats\Event::class);
+        GPBUtil::checkMessage($var, Event::class);
         $this->factory_reset_button = $var;
 
         return $this;
@@ -94,7 +97,7 @@ class WifiPersistentStats extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiPersistentStats.Event factory_reset_plug_unplug = 2 [json_name = "factoryResetPlugUnplug"];</code>
      *
-     * @return \SpaceX\API\Device\WifiPersistentStats\Event|null
+     * @return Event|null
      */
     public function getFactoryResetPlugUnplug()
     {
@@ -114,12 +117,12 @@ class WifiPersistentStats extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiPersistentStats.Event factory_reset_plug_unplug = 2 [json_name = "factoryResetPlugUnplug"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiPersistentStats\Event  $var
+     * @param  Event  $var
      * @return $this
      */
     public function setFactoryResetPlugUnplug($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiPersistentStats\Event::class);
+        GPBUtil::checkMessage($var, Event::class);
         $this->factory_reset_plug_unplug = $var;
 
         return $this;
@@ -128,7 +131,7 @@ class WifiPersistentStats extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiPersistentStats.Event factory_reset_command = 3 [json_name = "factoryResetCommand"];</code>
      *
-     * @return \SpaceX\API\Device\WifiPersistentStats\Event|null
+     * @return Event|null
      */
     public function getFactoryResetCommand()
     {
@@ -148,12 +151,12 @@ class WifiPersistentStats extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiPersistentStats.Event factory_reset_command = 3 [json_name = "factoryResetCommand"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiPersistentStats\Event  $var
+     * @param  Event  $var
      * @return $this
      */
     public function setFactoryResetCommand($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiPersistentStats\Event::class);
+        GPBUtil::checkMessage($var, Event::class);
         $this->factory_reset_command = $var;
 
         return $this;
@@ -162,7 +165,7 @@ class WifiPersistentStats extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiPersistentStats.Event factory_reset_failed_load_wifi_config = 4 [json_name = "factoryResetFailedLoadWifiConfig"];</code>
      *
-     * @return \SpaceX\API\Device\WifiPersistentStats\Event|null
+     * @return Event|null
      */
     public function getFactoryResetFailedLoadWifiConfig()
     {
@@ -182,12 +185,12 @@ class WifiPersistentStats extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiPersistentStats.Event factory_reset_failed_load_wifi_config = 4 [json_name = "factoryResetFailedLoadWifiConfig"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiPersistentStats\Event  $var
+     * @param  Event  $var
      * @return $this
      */
     public function setFactoryResetFailedLoadWifiConfig($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiPersistentStats\Event::class);
+        GPBUtil::checkMessage($var, Event::class);
         $this->factory_reset_failed_load_wifi_config = $var;
 
         return $this;
@@ -196,7 +199,7 @@ class WifiPersistentStats extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiPersistentStats.Event reboot_from_software_update = 5 [json_name = "rebootFromSoftwareUpdate"];</code>
      *
-     * @return \SpaceX\API\Device\WifiPersistentStats\Event|null
+     * @return Event|null
      */
     public function getRebootFromSoftwareUpdate()
     {
@@ -216,12 +219,12 @@ class WifiPersistentStats extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiPersistentStats.Event reboot_from_software_update = 5 [json_name = "rebootFromSoftwareUpdate"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiPersistentStats\Event  $var
+     * @param  Event  $var
      * @return $this
      */
     public function setRebootFromSoftwareUpdate($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiPersistentStats\Event::class);
+        GPBUtil::checkMessage($var, Event::class);
         $this->reboot_from_software_update = $var;
 
         return $this;

@@ -6,13 +6,17 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
 use Google\Protobuf\RepeatedField;
+use GPBMetadata\SpacexApi\Device\Wifi;
+use SpaceX\API\Device\SteerClientRequest\SteerTarget;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.SteerClientRequest</code>
  */
-class SteerClientRequest extends \Google\Protobuf\Internal\Message
+class SteerClientRequest extends Message
 {
     /**
      * Generated from protobuf field <code>optional string client_mac_addr = 1 [json_name = "clientMacAddr"];</code>
@@ -36,7 +40,7 @@ class SteerClientRequest extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 
@@ -77,7 +81,7 @@ class SteerClientRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.SteerClientRequest.SteerTarget targets = 2 [json_name = "targets"];</code>
      *
-     * @return RepeatedField<\SpaceX\API\Device\SteerClientRequest\SteerTarget>
+     * @return RepeatedField<SteerTarget>
      */
     public function getTargets()
     {
@@ -87,12 +91,12 @@ class SteerClientRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.SteerClientRequest.SteerTarget targets = 2 [json_name = "targets"];</code>
      *
-     * @param  \SpaceX\API\Device\SteerClientRequest\SteerTarget[]  $var
+     * @param  SteerTarget[]  $var
      * @return $this
      */
     public function setTargets($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SpaceX\API\Device\SteerClientRequest\SteerTarget::class);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, SteerTarget::class);
         $this->targets = $arr;
 
         return $this;

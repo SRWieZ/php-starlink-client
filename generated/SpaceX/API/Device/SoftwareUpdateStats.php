@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Dish;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.SoftwareUpdateStats</code>
  */
-class SoftwareUpdateStats extends \Google\Protobuf\Internal\Message
+class SoftwareUpdateStats extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SoftwareUpdateState software_update_state = 1 [json_name = "softwareUpdateState"];</code>
@@ -47,7 +49,7 @@ class SoftwareUpdateStats extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Dish::initOnce();
+        Dish::initOnce();
         parent::__construct($data);
     }
 
@@ -79,7 +81,7 @@ class SoftwareUpdateStats extends \Google\Protobuf\Internal\Message
      */
     public function setSoftwareUpdateState($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\SoftwareUpdateState::class);
+        GPBUtil::checkEnum($var, SoftwareUpdateState::class);
         $this->software_update_state = $var;
 
         return $this;

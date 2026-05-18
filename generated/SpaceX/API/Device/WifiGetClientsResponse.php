@@ -6,13 +6,16 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
 use Google\Protobuf\RepeatedField;
+use GPBMetadata\SpacexApi\Device\Wifi;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiGetClientsResponse</code>
  */
-class WifiGetClientsResponse extends \Google\Protobuf\Internal\Message
+class WifiGetClientsResponse extends Message
 {
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiClient clients = 1 [json_name = "clients"];</code>
@@ -42,14 +45,14 @@ class WifiGetClientsResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiClient clients = 1 [json_name = "clients"];</code>
      *
-     * @return RepeatedField<\SpaceX\API\Device\WifiClient>
+     * @return RepeatedField<WifiClient>
      */
     public function getClients()
     {
@@ -59,12 +62,12 @@ class WifiGetClientsResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiClient clients = 1 [json_name = "clients"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiClient[]  $var
+     * @param  WifiClient[]  $var
      * @return $this
      */
     public function setClients($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SpaceX\API\Device\WifiClient::class);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, WifiClient::class);
         $this->clients = $arr;
 
         return $this;

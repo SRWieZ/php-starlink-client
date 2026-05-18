@@ -1,17 +1,25 @@
 <?php
 
+use SpaceX\API\Device\DishClearObstructionMapRequest;
+use SpaceX\API\Device\DishGetObstructionMapRequest;
+use SpaceX\API\Device\DishPowerSaveRequest;
+use SpaceX\API\Device\DishStowRequest;
+use SpaceX\API\Device\GetHistoryRequest;
+use SpaceX\API\Device\GetLocationRequest;
+use SpaceX\API\Device\GetStatusRequest;
+use SpaceX\API\Device\RebootRequest;
 use SRWieZ\StarlinkClient\Dishy;
 
 it('returns the correct key', function ($class, $expected) {
     expect(Dishy::getRequestKey(new $class))
         ->toBe($expected);
 })->with([
-    [\SpaceX\API\Device\GetStatusRequest::class, 'get_status'],
-    [\SpaceX\API\Device\GetLocationRequest::class, 'get_location'],
-    [\SpaceX\API\Device\GetHistoryRequest::class, 'get_history'],
-    [\SpaceX\API\Device\RebootRequest::class, 'reboot'],
-    [\SpaceX\API\Device\DishStowRequest::class, 'dish_stow'],
-    [\SpaceX\API\Device\DishPowerSaveRequest::class, 'dish_power_save'],
-    [\SpaceX\API\Device\DishGetObstructionMapRequest::class, 'dish_get_obstruction_map'],
-    [\SpaceX\API\Device\DishClearObstructionMapRequest::class, 'dish_clear_obstruction_map'],
+    [GetStatusRequest::class, 'get_status'],
+    [GetLocationRequest::class, 'get_location'],
+    [GetHistoryRequest::class, 'get_history'],
+    [RebootRequest::class, 'reboot'],
+    [DishStowRequest::class, 'dish_stow'],
+    [DishPowerSaveRequest::class, 'dish_power_save'],
+    [DishGetObstructionMapRequest::class, 'dish_get_obstruction_map'],
+    [DishClearObstructionMapRequest::class, 'dish_clear_obstruction_map'],
 ]);

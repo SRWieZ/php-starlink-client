@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Device;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.RunIperfServerResponse</code>
  */
-class RunIperfServerResponse extends \Google\Protobuf\Internal\Message
+class RunIperfServerResponse extends Message
 {
     /**
      * Generated from protobuf field <code>optional uint32 port = 1 [json_name = "port"];</code>
@@ -29,7 +31,7 @@ class RunIperfServerResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 

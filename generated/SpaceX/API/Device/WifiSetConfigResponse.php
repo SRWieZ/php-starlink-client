@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Wifi;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiSetConfigResponse</code>
  */
-class WifiSetConfigResponse extends \Google\Protobuf\Internal\Message
+class WifiSetConfigResponse extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiConfig updated_wifi_config = 1 [json_name = "updatedWifiConfig"];</code>
@@ -29,14 +31,14 @@ class WifiSetConfigResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiConfig updated_wifi_config = 1 [json_name = "updatedWifiConfig"];</code>
      *
-     * @return \SpaceX\API\Device\WifiConfig|null
+     * @return WifiConfig|null
      */
     public function getUpdatedWifiConfig()
     {
@@ -56,12 +58,12 @@ class WifiSetConfigResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiConfig updated_wifi_config = 1 [json_name = "updatedWifiConfig"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiConfig  $var
+     * @param  WifiConfig  $var
      * @return $this
      */
     public function setUpdatedWifiConfig($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiConfig::class);
+        GPBUtil::checkMessage($var, WifiConfig::class);
         $this->updated_wifi_config = $var;
 
         return $this;

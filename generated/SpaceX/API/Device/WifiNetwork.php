@@ -7,11 +7,14 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Wifi;
+use SpaceX\API\Device\WifiNetwork\Band;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiNetwork</code>
  */
-class WifiNetwork extends \Google\Protobuf\Internal\Message
+class WifiNetwork extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiNetwork.Band band = 1 [json_name = "band"];</code>
@@ -47,7 +50,7 @@ class WifiNetwork extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 
@@ -79,7 +82,7 @@ class WifiNetwork extends \Google\Protobuf\Internal\Message
      */
     public function setBand($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\WifiNetwork\Band::class);
+        GPBUtil::checkEnum($var, Band::class);
         $this->band = $var;
 
         return $this;

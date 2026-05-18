@@ -6,13 +6,16 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
 use Google\Protobuf\RepeatedField;
+use GPBMetadata\SpacexApi\Device\WifiConfig;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.ClientConfig</code>
  */
-class ClientConfig extends \Google\Protobuf\Internal\Message
+class ClientConfig extends Message
 {
     /**
      * Generated from protobuf field <code>optional uint32 client_id = 1 [json_name = "clientId"];</code>
@@ -54,7 +57,7 @@ class ClientConfig extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\WifiConfig::initOnce();
+        WifiConfig::initOnce();
         parent::__construct($data);
     }
 
@@ -163,7 +166,7 @@ class ClientConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WeeklyBlockSchedule weekly_block_schedules = 5 [json_name = "weeklyBlockSchedules"];</code>
      *
-     * @return RepeatedField<\SpaceX\API\Device\WeeklyBlockSchedule>
+     * @return RepeatedField<WeeklyBlockSchedule>
      */
     public function getWeeklyBlockSchedules()
     {
@@ -173,12 +176,12 @@ class ClientConfig extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WeeklyBlockSchedule weekly_block_schedules = 5 [json_name = "weeklyBlockSchedules"];</code>
      *
-     * @param  \SpaceX\API\Device\WeeklyBlockSchedule[]  $var
+     * @param  WeeklyBlockSchedule[]  $var
      * @return $this
      */
     public function setWeeklyBlockSchedules($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SpaceX\API\Device\WeeklyBlockSchedule::class);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, WeeklyBlockSchedule::class);
         $this->weekly_block_schedules = $arr;
 
         return $this;

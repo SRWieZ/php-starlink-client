@@ -4,12 +4,16 @@
 
 namespace SpaceX\API\Device\Services\Unlock;
 
-class UnlockServiceClient extends \Grpc\BaseStub
+use Grpc\BaseStub;
+use Grpc\Channel;
+use Grpc\UnaryCall;
+
+class UnlockServiceClient extends BaseStub
 {
     /**
      * @param  string  $hostname  hostname
      * @param  array  $opts  channel options
-     * @param  \Grpc\Channel  $channel  (optional) re-use channel object
+     * @param  Channel  $channel  (optional) re-use channel object
      */
     public function __construct($hostname, $opts, $channel = null)
     {
@@ -17,12 +21,12 @@ class UnlockServiceClient extends \Grpc\BaseStub
     }
 
     /**
-     * @param  \SpaceX\API\Device\Services\Unlock\StartUnlockRequest  $argument  input argument
+     * @param  StartUnlockRequest  $argument  input argument
      * @param  array  $metadata  metadata
      * @param  array  $options  call options
-     * @return \Grpc\UnaryCall<\SpaceX\API\Device\Services\Unlock\StartUnlockResponse>
+     * @return UnaryCall<StartUnlockResponse>
      */
-    public function StartUnlock(\SpaceX\API\Device\Services\Unlock\StartUnlockRequest $argument,
+    public function StartUnlock(StartUnlockRequest $argument,
         $metadata = [], $options = [])
     {
         return $this->_simpleRequest('/SpaceX.API.Device.Services.Unlock.UnlockService/StartUnlock',
@@ -32,12 +36,12 @@ class UnlockServiceClient extends \Grpc\BaseStub
     }
 
     /**
-     * @param  \SpaceX\API\Device\Services\Unlock\FinishUnlockRequest  $argument  input argument
+     * @param  FinishUnlockRequest  $argument  input argument
      * @param  array  $metadata  metadata
      * @param  array  $options  call options
-     * @return \Grpc\UnaryCall<\SpaceX\API\Device\Services\Unlock\FinishUnlockResponse>
+     * @return UnaryCall<FinishUnlockResponse>
      */
-    public function FinishUnlock(\SpaceX\API\Device\Services\Unlock\FinishUnlockRequest $argument,
+    public function FinishUnlock(FinishUnlockRequest $argument,
         $metadata = [], $options = [])
     {
         return $this->_simpleRequest('/SpaceX.API.Device.Services.Unlock.UnlockService/FinishUnlock',

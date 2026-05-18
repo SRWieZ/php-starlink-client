@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Wifi;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiFactoryTestCommandRequest</code>
  */
-class WifiFactoryTestCommandRequest extends \Google\Protobuf\Internal\Message
+class WifiFactoryTestCommandRequest extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.IwprivCommand iwpriv_command = 1 [json_name = "iwprivCommand"];</code>
@@ -41,14 +43,14 @@ class WifiFactoryTestCommandRequest extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.IwprivCommand iwpriv_command = 1 [json_name = "iwprivCommand"];</code>
      *
-     * @return \SpaceX\API\Device\IwprivCommand|null
+     * @return IwprivCommand|null
      */
     public function getIwprivCommand()
     {
@@ -68,12 +70,12 @@ class WifiFactoryTestCommandRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.IwprivCommand iwpriv_command = 1 [json_name = "iwprivCommand"];</code>
      *
-     * @param  \SpaceX\API\Device\IwprivCommand  $var
+     * @param  IwprivCommand  $var
      * @return $this
      */
     public function setIwprivCommand($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\IwprivCommand::class);
+        GPBUtil::checkMessage($var, IwprivCommand::class);
         $this->iwpriv_command = $var;
 
         return $this;
@@ -82,7 +84,7 @@ class WifiFactoryTestCommandRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.IpLinkSetCommand ip_link_set_command = 2 [json_name = "ipLinkSetCommand"];</code>
      *
-     * @return \SpaceX\API\Device\IpLinkSetCommand|null
+     * @return IpLinkSetCommand|null
      */
     public function getIpLinkSetCommand()
     {
@@ -102,12 +104,12 @@ class WifiFactoryTestCommandRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.IpLinkSetCommand ip_link_set_command = 2 [json_name = "ipLinkSetCommand"];</code>
      *
-     * @param  \SpaceX\API\Device\IpLinkSetCommand  $var
+     * @param  IpLinkSetCommand  $var
      * @return $this
      */
     public function setIpLinkSetCommand($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\IpLinkSetCommand::class);
+        GPBUtil::checkMessage($var, IpLinkSetCommand::class);
         $this->ip_link_set_command = $var;
 
         return $this;
@@ -116,7 +118,7 @@ class WifiFactoryTestCommandRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.IpAddrSetCommand ip_addr_set_command = 3 [json_name = "ipAddrSetCommand"];</code>
      *
-     * @return \SpaceX\API\Device\IpAddrSetCommand|null
+     * @return IpAddrSetCommand|null
      */
     public function getIpAddrSetCommand()
     {
@@ -136,12 +138,12 @@ class WifiFactoryTestCommandRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.IpAddrSetCommand ip_addr_set_command = 3 [json_name = "ipAddrSetCommand"];</code>
      *
-     * @param  \SpaceX\API\Device\IpAddrSetCommand  $var
+     * @param  IpAddrSetCommand  $var
      * @return $this
      */
     public function setIpAddrSetCommand($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\IpAddrSetCommand::class);
+        GPBUtil::checkMessage($var, IpAddrSetCommand::class);
         $this->ip_addr_set_command = $var;
 
         return $this;

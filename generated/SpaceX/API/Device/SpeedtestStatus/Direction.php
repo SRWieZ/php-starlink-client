@@ -6,13 +6,17 @@
 
 namespace SpaceX\API\Device\SpeedtestStatus;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
 use Google\Protobuf\RepeatedField;
+use GPBMetadata\SpacexApi\Device\Device;
+use SpaceX\API\Device\SpeedtestError;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.SpeedtestStatus.Direction</code>
  */
-class Direction extends \Google\Protobuf\Internal\Message
+class Direction extends Message
 {
     /**
      * Generated from protobuf field <code>repeated float throughputs_mbps = 1 [json_name = "throughputsMbps"];</code>
@@ -36,7 +40,7 @@ class Direction extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 
@@ -58,7 +62,7 @@ class Direction extends \Google\Protobuf\Internal\Message
      */
     public function setThroughputsMbps($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::FLOAT);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::FLOAT);
         $this->throughputs_mbps = $arr;
 
         return $this;
@@ -92,7 +96,7 @@ class Direction extends \Google\Protobuf\Internal\Message
      */
     public function setErr($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\SpeedtestError::class);
+        GPBUtil::checkEnum($var, SpeedtestError::class);
         $this->err = $var;
 
         return $this;

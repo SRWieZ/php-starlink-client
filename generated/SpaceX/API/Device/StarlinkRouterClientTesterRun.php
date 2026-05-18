@@ -6,12 +6,19 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\BoolValue;
+use Google\Protobuf\FloatValue;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use Google\Protobuf\StringValue;
+use Google\Protobuf\UInt32Value;
+use GPBMetadata\SpacexApi\Device\Wifi;
+use SpaceX\API\Telemetron\PBPublic\Common\TimestampInfo;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.StarlinkRouterClientTesterRun</code>
  */
-class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
+class StarlinkRouterClientTesterRun extends Message
 {
     /**
      * Generated from protobuf field <code>optional string client_tester_router_id = 1 [json_name = "clientTesterRouterId"];</code>
@@ -173,7 +180,7 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 
@@ -214,7 +221,7 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Telemetron.Public.Common.TimestampInfo timestamp = 2 [json_name = "timestamp"];</code>
      *
-     * @return \SpaceX\API\Telemetron\PBPublic\Common\TimestampInfo|null
+     * @return TimestampInfo|null
      */
     public function getTimestamp()
     {
@@ -234,12 +241,12 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Telemetron.Public.Common.TimestampInfo timestamp = 2 [json_name = "timestamp"];</code>
      *
-     * @param  \SpaceX\API\Telemetron\PBPublic\Common\TimestampInfo  $var
+     * @param  TimestampInfo  $var
      * @return $this
      */
     public function setTimestamp($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Telemetron\PBPublic\Common\TimestampInfo::class);
+        GPBUtil::checkMessage($var, TimestampInfo::class);
         $this->timestamp = $var;
 
         return $this;
@@ -248,7 +255,7 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.StringValue client_iface_name = 3 [json_name = "clientIfaceName"];</code>
      *
-     * @return \Google\Protobuf\StringValue|null
+     * @return StringValue|null
      */
     public function getClientIfaceName()
     {
@@ -280,12 +287,12 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.StringValue client_iface_name = 3 [json_name = "clientIfaceName"];</code>
      *
-     * @param  \Google\Protobuf\StringValue  $var
+     * @param  StringValue  $var
      * @return $this
      */
     public function setClientIfaceName($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\StringValue::class);
+        GPBUtil::checkMessage($var, StringValue::class);
         $this->client_iface_name = $var;
 
         return $this;
@@ -309,7 +316,7 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.StringValue target_ssid = 4 [json_name = "targetSsid"];</code>
      *
-     * @return \Google\Protobuf\StringValue|null
+     * @return StringValue|null
      */
     public function getTargetSsid()
     {
@@ -341,12 +348,12 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.StringValue target_ssid = 4 [json_name = "targetSsid"];</code>
      *
-     * @param  \Google\Protobuf\StringValue  $var
+     * @param  StringValue  $var
      * @return $this
      */
     public function setTargetSsid($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\StringValue::class);
+        GPBUtil::checkMessage($var, StringValue::class);
         $this->target_ssid = $var;
 
         return $this;
@@ -370,7 +377,7 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.BoolValue target_has_password = 5 [json_name = "targetHasPassword"];</code>
      *
-     * @return \Google\Protobuf\BoolValue|null
+     * @return BoolValue|null
      */
     public function getTargetHasPassword()
     {
@@ -402,12 +409,12 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.BoolValue target_has_password = 5 [json_name = "targetHasPassword"];</code>
      *
-     * @param  \Google\Protobuf\BoolValue  $var
+     * @param  BoolValue  $var
      * @return $this
      */
     public function setTargetHasPassword($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\BoolValue::class);
+        GPBUtil::checkMessage($var, BoolValue::class);
         $this->target_has_password = $var;
 
         return $this;
@@ -431,7 +438,7 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.StringValue target_auth = 6 [json_name = "targetAuth"];</code>
      *
-     * @return \Google\Protobuf\StringValue|null
+     * @return StringValue|null
      */
     public function getTargetAuth()
     {
@@ -463,12 +470,12 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.StringValue target_auth = 6 [json_name = "targetAuth"];</code>
      *
-     * @param  \Google\Protobuf\StringValue  $var
+     * @param  StringValue  $var
      * @return $this
      */
     public function setTargetAuth($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\StringValue::class);
+        GPBUtil::checkMessage($var, StringValue::class);
         $this->target_auth = $var;
 
         return $this;
@@ -492,7 +499,7 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.StringValue target_encryption = 7 [json_name = "targetEncryption"];</code>
      *
-     * @return \Google\Protobuf\StringValue|null
+     * @return StringValue|null
      */
     public function getTargetEncryption()
     {
@@ -524,12 +531,12 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.StringValue target_encryption = 7 [json_name = "targetEncryption"];</code>
      *
-     * @param  \Google\Protobuf\StringValue  $var
+     * @param  StringValue  $var
      * @return $this
      */
     public function setTargetEncryption($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\StringValue::class);
+        GPBUtil::checkMessage($var, StringValue::class);
         $this->target_encryption = $var;
 
         return $this;
@@ -553,7 +560,7 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.StringValue target_bssid = 8 [json_name = "targetBssid"];</code>
      *
-     * @return \Google\Protobuf\StringValue|null
+     * @return StringValue|null
      */
     public function getTargetBssid()
     {
@@ -585,12 +592,12 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.StringValue target_bssid = 8 [json_name = "targetBssid"];</code>
      *
-     * @param  \Google\Protobuf\StringValue  $var
+     * @param  StringValue  $var
      * @return $this
      */
     public function setTargetBssid($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\StringValue::class);
+        GPBUtil::checkMessage($var, StringValue::class);
         $this->target_bssid = $var;
 
         return $this;
@@ -614,7 +621,7 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.StringValue target_irtt_server = 25 [json_name = "targetIrttServer"];</code>
      *
-     * @return \Google\Protobuf\StringValue|null
+     * @return StringValue|null
      */
     public function getTargetIrttServer()
     {
@@ -646,12 +653,12 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.StringValue target_irtt_server = 25 [json_name = "targetIrttServer"];</code>
      *
-     * @param  \Google\Protobuf\StringValue  $var
+     * @param  StringValue  $var
      * @return $this
      */
     public function setTargetIrttServer($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\StringValue::class);
+        GPBUtil::checkMessage($var, StringValue::class);
         $this->target_irtt_server = $var;
 
         return $this;
@@ -675,7 +682,7 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value iteration = 9 [json_name = "iteration"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getIteration()
     {
@@ -707,12 +714,12 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value iteration = 9 [json_name = "iteration"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setIteration($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->iteration = $var;
 
         return $this;
@@ -736,7 +743,7 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.StringValue error_code = 10 [json_name = "errorCode"];</code>
      *
-     * @return \Google\Protobuf\StringValue|null
+     * @return StringValue|null
      */
     public function getErrorCode()
     {
@@ -768,12 +775,12 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.StringValue error_code = 10 [json_name = "errorCode"];</code>
      *
-     * @param  \Google\Protobuf\StringValue  $var
+     * @param  StringValue  $var
      * @return $this
      */
     public function setErrorCode($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\StringValue::class);
+        GPBUtil::checkMessage($var, StringValue::class);
         $this->error_code = $var;
 
         return $this;
@@ -797,7 +804,7 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue seconds_to_associate = 11 [json_name = "secondsToAssociate"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getSecondsToAssociate()
     {
@@ -829,12 +836,12 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue seconds_to_associate = 11 [json_name = "secondsToAssociate"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setSecondsToAssociate($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->seconds_to_associate = $var;
 
         return $this;
@@ -858,7 +865,7 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue seconds_to_lease = 12 [json_name = "secondsToLease"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getSecondsToLease()
     {
@@ -890,12 +897,12 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue seconds_to_lease = 12 [json_name = "secondsToLease"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setSecondsToLease($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->seconds_to_lease = $var;
 
         return $this;
@@ -919,7 +926,7 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue seconds_to_resolve_router = 13 [json_name = "secondsToResolveRouter"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getSecondsToResolveRouter()
     {
@@ -951,12 +958,12 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue seconds_to_resolve_router = 13 [json_name = "secondsToResolveRouter"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setSecondsToResolveRouter($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->seconds_to_resolve_router = $var;
 
         return $this;
@@ -980,7 +987,7 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue seconds_to_resolve_internet = 14 [json_name = "secondsToResolveInternet"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getSecondsToResolveInternet()
     {
@@ -1012,12 +1019,12 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue seconds_to_resolve_internet = 14 [json_name = "secondsToResolveInternet"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setSecondsToResolveInternet($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->seconds_to_resolve_internet = $var;
 
         return $this;
@@ -1041,7 +1048,7 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue seconds_to_ping_dish = 15 [json_name = "secondsToPingDish"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getSecondsToPingDish()
     {
@@ -1073,12 +1080,12 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue seconds_to_ping_dish = 15 [json_name = "secondsToPingDish"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setSecondsToPingDish($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->seconds_to_ping_dish = $var;
 
         return $this;
@@ -1102,7 +1109,7 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue v4_irtt_test_duration_s = 16 [json_name = "v4IrttTestDurationS"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getV4IrttTestDurationS()
     {
@@ -1134,12 +1141,12 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue v4_irtt_test_duration_s = 16 [json_name = "v4IrttTestDurationS"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setV4IrttTestDurationS($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->v4_irtt_test_duration_s = $var;
 
         return $this;
@@ -1163,7 +1170,7 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue v4_irtt_rtt_latency_min_ms = 17 [json_name = "v4IrttRttLatencyMinMs"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getV4IrttRttLatencyMinMs()
     {
@@ -1195,12 +1202,12 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue v4_irtt_rtt_latency_min_ms = 17 [json_name = "v4IrttRttLatencyMinMs"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setV4IrttRttLatencyMinMs($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->v4_irtt_rtt_latency_min_ms = $var;
 
         return $this;
@@ -1224,7 +1231,7 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue v4_irtt_rtt_latency_mean_ms = 18 [json_name = "v4IrttRttLatencyMeanMs"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getV4IrttRttLatencyMeanMs()
     {
@@ -1256,12 +1263,12 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue v4_irtt_rtt_latency_mean_ms = 18 [json_name = "v4IrttRttLatencyMeanMs"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setV4IrttRttLatencyMeanMs($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->v4_irtt_rtt_latency_mean_ms = $var;
 
         return $this;
@@ -1285,7 +1292,7 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue v4_irtt_rtt_latency_median_ms = 19 [json_name = "v4IrttRttLatencyMedianMs"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getV4IrttRttLatencyMedianMs()
     {
@@ -1317,12 +1324,12 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue v4_irtt_rtt_latency_median_ms = 19 [json_name = "v4IrttRttLatencyMedianMs"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setV4IrttRttLatencyMedianMs($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->v4_irtt_rtt_latency_median_ms = $var;
 
         return $this;
@@ -1346,7 +1353,7 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue v4_irtt_rtt_latency_max_ms = 20 [json_name = "v4IrttRttLatencyMaxMs"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getV4IrttRttLatencyMaxMs()
     {
@@ -1378,12 +1385,12 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue v4_irtt_rtt_latency_max_ms = 20 [json_name = "v4IrttRttLatencyMaxMs"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setV4IrttRttLatencyMaxMs($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->v4_irtt_rtt_latency_max_ms = $var;
 
         return $this;
@@ -1407,7 +1414,7 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue v4_irtt_rtt_latency_std_dev_ms = 21 [json_name = "v4IrttRttLatencyStdDevMs"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getV4IrttRttLatencyStdDevMs()
     {
@@ -1439,12 +1446,12 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue v4_irtt_rtt_latency_std_dev_ms = 21 [json_name = "v4IrttRttLatencyStdDevMs"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setV4IrttRttLatencyStdDevMs($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->v4_irtt_rtt_latency_std_dev_ms = $var;
 
         return $this;
@@ -1468,7 +1475,7 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value v4_irtt_pkts_sent = 22 [json_name = "v4IrttPktsSent"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getV4IrttPktsSent()
     {
@@ -1500,12 +1507,12 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value v4_irtt_pkts_sent = 22 [json_name = "v4IrttPktsSent"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setV4IrttPktsSent($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->v4_irtt_pkts_sent = $var;
 
         return $this;
@@ -1529,7 +1536,7 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value v4_irtt_pkts_recv = 23 [json_name = "v4IrttPktsRecv"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getV4IrttPktsRecv()
     {
@@ -1561,12 +1568,12 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value v4_irtt_pkts_recv = 23 [json_name = "v4IrttPktsRecv"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setV4IrttPktsRecv($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->v4_irtt_pkts_recv = $var;
 
         return $this;
@@ -1590,7 +1597,7 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue v4_irtt_loss_percent = 24 [json_name = "v4IrttLossPercent"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getV4IrttLossPercent()
     {
@@ -1622,12 +1629,12 @@ class StarlinkRouterClientTesterRun extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue v4_irtt_loss_percent = 24 [json_name = "v4IrttLossPercent"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setV4IrttLossPercent($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->v4_irtt_loss_percent = $var;
 
         return $this;

@@ -7,11 +7,14 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Wifi;
+use SpaceX\API\Telemetron\PBPublic\Common\TimestampInfo;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.starlink_router_alerts</code>
  */
-class starlink_router_alerts extends \Google\Protobuf\Internal\Message
+class starlink_router_alerts extends Message
 {
     /**
      * Generated from protobuf field <code>optional string name = 1 [json_name = "name"];</code>
@@ -71,7 +74,7 @@ class starlink_router_alerts extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 
@@ -180,7 +183,7 @@ class starlink_router_alerts extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Telemetron.Public.Common.TimestampInfo start = 4 [json_name = "start"];</code>
      *
-     * @return \SpaceX\API\Telemetron\PBPublic\Common\TimestampInfo|null
+     * @return TimestampInfo|null
      */
     public function getStart()
     {
@@ -200,12 +203,12 @@ class starlink_router_alerts extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Telemetron.Public.Common.TimestampInfo start = 4 [json_name = "start"];</code>
      *
-     * @param  \SpaceX\API\Telemetron\PBPublic\Common\TimestampInfo  $var
+     * @param  TimestampInfo  $var
      * @return $this
      */
     public function setStart($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Telemetron\PBPublic\Common\TimestampInfo::class);
+        GPBUtil::checkMessage($var, TimestampInfo::class);
         $this->start = $var;
 
         return $this;
@@ -214,7 +217,7 @@ class starlink_router_alerts extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Telemetron.Public.Common.TimestampInfo end = 5 [json_name = "end"];</code>
      *
-     * @return \SpaceX\API\Telemetron\PBPublic\Common\TimestampInfo|null
+     * @return TimestampInfo|null
      */
     public function getEnd()
     {
@@ -234,12 +237,12 @@ class starlink_router_alerts extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Telemetron.Public.Common.TimestampInfo end = 5 [json_name = "end"];</code>
      *
-     * @param  \SpaceX\API\Telemetron\PBPublic\Common\TimestampInfo  $var
+     * @param  TimestampInfo  $var
      * @return $this
      */
     public function setEnd($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Telemetron\PBPublic\Common\TimestampInfo::class);
+        GPBUtil::checkMessage($var, TimestampInfo::class);
         $this->end = $var;
 
         return $this;

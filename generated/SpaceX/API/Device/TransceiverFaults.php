@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Transceiver;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.TransceiverFaults</code>
  */
-class TransceiverFaults extends \Google\Protobuf\Internal\Message
+class TransceiverFaults extends Message
 {
     /**
      * Generated from protobuf field <code>optional bool over_temp_modem_asic_fault = 1 [json_name = "overTempModemAsicFault"];</code>
@@ -41,7 +43,7 @@ class TransceiverFaults extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Transceiver::initOnce();
+        Transceiver::initOnce();
         parent::__construct($data);
     }
 

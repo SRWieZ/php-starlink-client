@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device\WifiClient;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Wifi;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiClient.FqcodelInfo</code>
  */
-class FqcodelInfo extends \Google\Protobuf\Internal\Message
+class FqcodelInfo extends Message
 {
     /**
      * Generated from protobuf field <code>optional uint64 enqs_hi_prio = 1 [json_name = "enqsHiPrio"];</code>
@@ -89,7 +91,7 @@ class FqcodelInfo extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 

@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Dish;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.DishReadyStates</code>
  */
-class DishReadyStates extends \Google\Protobuf\Internal\Message
+class DishReadyStates extends Message
 {
     /**
      * Generated from protobuf field <code>optional bool cady = 1 [json_name = "cady"];</code>
@@ -59,7 +61,7 @@ class DishReadyStates extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Dish::initOnce();
+        Dish::initOnce();
         parent::__construct($data);
     }
 

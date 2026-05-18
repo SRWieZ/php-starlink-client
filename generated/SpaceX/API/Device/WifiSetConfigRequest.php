@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Wifi;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiSetConfigRequest</code>
  */
-class WifiSetConfigRequest extends \Google\Protobuf\Internal\Message
+class WifiSetConfigRequest extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiConfig wifi_config = 1 [json_name = "wifiConfig"];</code>
@@ -29,14 +31,14 @@ class WifiSetConfigRequest extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiConfig wifi_config = 1 [json_name = "wifiConfig"];</code>
      *
-     * @return \SpaceX\API\Device\WifiConfig|null
+     * @return WifiConfig|null
      */
     public function getWifiConfig()
     {
@@ -56,12 +58,12 @@ class WifiSetConfigRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiConfig wifi_config = 1 [json_name = "wifiConfig"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiConfig  $var
+     * @param  WifiConfig  $var
      * @return $this
      */
     public function setWifiConfig($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiConfig::class);
+        GPBUtil::checkMessage($var, WifiConfig::class);
         $this->wifi_config = $var;
 
         return $this;

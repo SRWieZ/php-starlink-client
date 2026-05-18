@@ -6,13 +6,17 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
 use Google\Protobuf\RepeatedField;
+use GPBMetadata\SpacexApi\Device\Wifi;
+use SpaceX\API\Device\WifiGetClientHistoryResponse\WifiLimitedReason;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiGetClientHistoryResponse</code>
  */
-class WifiGetClientHistoryResponse extends \Google\Protobuf\Internal\Message
+class WifiGetClientHistoryResponse extends Message
 {
     /**
      * Generated from protobuf field <code>optional uint64 current = 1 [json_name = "current"];</code>
@@ -60,7 +64,7 @@ class WifiGetClientHistoryResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 
@@ -116,7 +120,7 @@ class WifiGetClientHistoryResponse extends \Google\Protobuf\Internal\Message
      */
     public function setTxThroughputMbps($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::FLOAT);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::FLOAT);
         $this->tx_throughput_mbps = $arr;
 
         return $this;
@@ -140,7 +144,7 @@ class WifiGetClientHistoryResponse extends \Google\Protobuf\Internal\Message
      */
     public function setRxThroughputMbps($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::FLOAT);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::FLOAT);
         $this->rx_throughput_mbps = $arr;
 
         return $this;
@@ -164,7 +168,7 @@ class WifiGetClientHistoryResponse extends \Google\Protobuf\Internal\Message
      */
     public function setThroughputLimited($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::ENUM, \SpaceX\API\Device\WifiGetClientHistoryResponse\WifiLimitedReason::class);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::ENUM, WifiLimitedReason::class);
         $this->throughput_limited = $arr;
 
         return $this;
@@ -188,7 +192,7 @@ class WifiGetClientHistoryResponse extends \Google\Protobuf\Internal\Message
      */
     public function setRxRateMbps($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::FLOAT);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::FLOAT);
         $this->rx_rate_mbps = $arr;
 
         return $this;

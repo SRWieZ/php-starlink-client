@@ -7,11 +7,14 @@
 namespace SpaceX\API\Device\DishGetStatusResponse;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Dish;
+use SpaceX\API\Device\RouterInfo;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.DishGetStatusResponse.DownstreamRoutersEntry</code>
  */
-class DownstreamRoutersEntry extends \Google\Protobuf\Internal\Message
+class DownstreamRoutersEntry extends Message
 {
     /**
      * Generated from protobuf field <code>optional string key = 1 [json_name = "key"];</code>
@@ -35,7 +38,7 @@ class DownstreamRoutersEntry extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Dish::initOnce();
+        Dish::initOnce();
         parent::__construct($data);
     }
 
@@ -76,7 +79,7 @@ class DownstreamRoutersEntry extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.RouterInfo value = 2 [json_name = "value"];</code>
      *
-     * @return \SpaceX\API\Device\RouterInfo|null
+     * @return RouterInfo|null
      */
     public function getValue()
     {
@@ -96,12 +99,12 @@ class DownstreamRoutersEntry extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.RouterInfo value = 2 [json_name = "value"];</code>
      *
-     * @param  \SpaceX\API\Device\RouterInfo  $var
+     * @param  RouterInfo  $var
      * @return $this
      */
     public function setValue($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\RouterInfo::class);
+        GPBUtil::checkMessage($var, RouterInfo::class);
         $this->value = $var;
 
         return $this;

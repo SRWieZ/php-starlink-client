@@ -6,10 +6,13 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Device;
+
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.GetHeapDumpRequest</code>
  */
-class GetHeapDumpRequest extends \Google\Protobuf\Internal\Message
+class GetHeapDumpRequest extends Message
 {
     /**
      * Constructor.
@@ -21,7 +24,7 @@ class GetHeapDumpRequest extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 }

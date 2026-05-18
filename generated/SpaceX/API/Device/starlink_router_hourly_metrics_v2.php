@@ -6,12 +6,19 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\BoolValue;
+use Google\Protobuf\FloatValue;
+use Google\Protobuf\Int32Value;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use Google\Protobuf\StringValue;
+use Google\Protobuf\UInt32Value;
+use GPBMetadata\SpacexApi\Device\Wifi;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.starlink_router_hourly_metrics_v2</code>
  */
-class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Message
+class starlink_router_hourly_metrics_v2 extends Message
 {
     /**
      * Generated from protobuf field <code>optional .google.protobuf.StringValue id = 1 [json_name = "id"];</code>
@@ -827,14 +834,14 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>optional .google.protobuf.StringValue id = 1 [json_name = "id"];</code>
      *
-     * @return \Google\Protobuf\StringValue|null
+     * @return StringValue|null
      */
     public function getId()
     {
@@ -866,12 +873,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.StringValue id = 1 [json_name = "id"];</code>
      *
-     * @param  \Google\Protobuf\StringValue  $var
+     * @param  StringValue  $var
      * @return $this
      */
     public function setId($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\StringValue::class);
+        GPBUtil::checkMessage($var, StringValue::class);
         $this->id = $var;
 
         return $this;
@@ -895,7 +902,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.StringValue timestamp_date = 2 [json_name = "timestampDate"];</code>
      *
-     * @return \Google\Protobuf\StringValue|null
+     * @return StringValue|null
      */
     public function getTimestampDate()
     {
@@ -927,12 +934,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.StringValue timestamp_date = 2 [json_name = "timestampDate"];</code>
      *
-     * @param  \Google\Protobuf\StringValue  $var
+     * @param  StringValue  $var
      * @return $this
      */
     public function setTimestampDate($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\StringValue::class);
+        GPBUtil::checkMessage($var, StringValue::class);
         $this->timestamp_date = $var;
 
         return $this;
@@ -956,7 +963,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value timestamp_hour = 3 [json_name = "timestampHour"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getTimestampHour()
     {
@@ -988,12 +995,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value timestamp_hour = 3 [json_name = "timestampHour"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setTimestampHour($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->timestamp_hour = $var;
 
         return $this;
@@ -1017,7 +1024,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value sys_hw_gen = 4 [json_name = "sysHwGen"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getSysHwGen()
     {
@@ -1049,12 +1056,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value sys_hw_gen = 4 [json_name = "sysHwGen"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setSysHwGen($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->sys_hw_gen = $var;
 
         return $this;
@@ -1078,7 +1085,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.StringValue sys_sw = 5 [json_name = "sysSw"];</code>
      *
-     * @return \Google\Protobuf\StringValue|null
+     * @return StringValue|null
      */
     public function getSysSw()
     {
@@ -1110,12 +1117,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.StringValue sys_sw = 5 [json_name = "sysSw"];</code>
      *
-     * @param  \Google\Protobuf\StringValue  $var
+     * @param  StringValue  $var
      * @return $this
      */
     public function setSysSw($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\StringValue::class);
+        GPBUtil::checkMessage($var, StringValue::class);
         $this->sys_sw = $var;
 
         return $this;
@@ -1139,7 +1146,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.StringValue sys_country = 6 [json_name = "sysCountry"];</code>
      *
-     * @return \Google\Protobuf\StringValue|null
+     * @return StringValue|null
      */
     public function getSysCountry()
     {
@@ -1171,12 +1178,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.StringValue sys_country = 6 [json_name = "sysCountry"];</code>
      *
-     * @param  \Google\Protobuf\StringValue  $var
+     * @param  StringValue  $var
      * @return $this
      */
     public function setSysCountry($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\StringValue::class);
+        GPBUtil::checkMessage($var, StringValue::class);
         $this->sys_country = $var;
 
         return $this;
@@ -1200,7 +1207,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.BoolValue sys_is_dev = 7 [json_name = "sysIsDev"];</code>
      *
-     * @return \Google\Protobuf\BoolValue|null
+     * @return BoolValue|null
      */
     public function getSysIsDev()
     {
@@ -1232,12 +1239,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.BoolValue sys_is_dev = 7 [json_name = "sysIsDev"];</code>
      *
-     * @param  \Google\Protobuf\BoolValue  $var
+     * @param  BoolValue  $var
      * @return $this
      */
     public function setSysIsDev($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\BoolValue::class);
+        GPBUtil::checkMessage($var, BoolValue::class);
         $this->sys_is_dev = $var;
 
         return $this;
@@ -1261,7 +1268,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value sys_alloc_fds = 8 [json_name = "sysAllocFds"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getSysAllocFds()
     {
@@ -1293,12 +1300,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value sys_alloc_fds = 8 [json_name = "sysAllocFds"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setSysAllocFds($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->sys_alloc_fds = $var;
 
         return $this;
@@ -1322,7 +1329,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue sys_cpu_usage = 9 [json_name = "sysCpuUsage"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getSysCpuUsage()
     {
@@ -1354,12 +1361,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue sys_cpu_usage = 9 [json_name = "sysCpuUsage"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setSysCpuUsage($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->sys_cpu_usage = $var;
 
         return $this;
@@ -1383,7 +1390,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue sys_mem_free_kb = 10 [json_name = "sysMemFreeKb"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getSysMemFreeKb()
     {
@@ -1415,12 +1422,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue sys_mem_free_kb = 10 [json_name = "sysMemFreeKb"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setSysMemFreeKb($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->sys_mem_free_kb = $var;
 
         return $this;
@@ -1444,7 +1451,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.Int32Value sys_bootcount = 11 [json_name = "sysBootcount"];</code>
      *
-     * @return \Google\Protobuf\Int32Value|null
+     * @return Int32Value|null
      */
     public function getSysBootcount()
     {
@@ -1476,12 +1483,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.Int32Value sys_bootcount = 11 [json_name = "sysBootcount"];</code>
      *
-     * @param  \Google\Protobuf\Int32Value  $var
+     * @param  Int32Value  $var
      * @return $this
      */
     public function setSysBootcount($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Int32Value::class);
+        GPBUtil::checkMessage($var, Int32Value::class);
         $this->sys_bootcount = $var;
 
         return $this;
@@ -1505,7 +1512,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.BoolValue sys_partitions_equal = 12 [json_name = "sysPartitionsEqual"];</code>
      *
-     * @return \Google\Protobuf\BoolValue|null
+     * @return BoolValue|null
      */
     public function getSysPartitionsEqual()
     {
@@ -1537,12 +1544,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.BoolValue sys_partitions_equal = 12 [json_name = "sysPartitionsEqual"];</code>
      *
-     * @param  \Google\Protobuf\BoolValue  $var
+     * @param  BoolValue  $var
      * @return $this
      */
     public function setSysPartitionsEqual($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\BoolValue::class);
+        GPBUtil::checkMessage($var, BoolValue::class);
         $this->sys_partitions_equal = $var;
 
         return $this;
@@ -1566,7 +1573,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value sys_uptime_seconds = 13 [json_name = "sysUptimeSeconds"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getSysUptimeSeconds()
     {
@@ -1598,12 +1605,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value sys_uptime_seconds = 13 [json_name = "sysUptimeSeconds"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setSysUptimeSeconds($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->sys_uptime_seconds = $var;
 
         return $this;
@@ -1627,7 +1634,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.Int32Value sys_anti_rollback_version = 14 [json_name = "sysAntiRollbackVersion"];</code>
      *
-     * @return \Google\Protobuf\Int32Value|null
+     * @return Int32Value|null
      */
     public function getSysAntiRollbackVersion()
     {
@@ -1659,12 +1666,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.Int32Value sys_anti_rollback_version = 14 [json_name = "sysAntiRollbackVersion"];</code>
      *
-     * @param  \Google\Protobuf\Int32Value  $var
+     * @param  Int32Value  $var
      * @return $this
      */
     public function setSysAntiRollbackVersion($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Int32Value::class);
+        GPBUtil::checkMessage($var, Int32Value::class);
         $this->sys_anti_rollback_version = $var;
 
         return $this;
@@ -1688,7 +1695,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_2ghz_channel = 100 [json_name = "radios2ghzChannel"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getRadios2GhzChannel()
     {
@@ -1720,12 +1727,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_2ghz_channel = 100 [json_name = "radios2ghzChannel"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setRadios2GhzChannel($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->radios_2ghz_channel = $var;
 
         return $this;
@@ -1749,7 +1756,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_2ghz_antenna1_rssi = 101 [json_name = "radios2ghzAntenna1Rssi"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getRadios2GhzAntenna1Rssi()
     {
@@ -1781,12 +1788,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_2ghz_antenna1_rssi = 101 [json_name = "radios2ghzAntenna1Rssi"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setRadios2GhzAntenna1Rssi($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->radios_2ghz_antenna1_rssi = $var;
 
         return $this;
@@ -1810,7 +1817,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_2ghz_antenna2_rssi = 102 [json_name = "radios2ghzAntenna2Rssi"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getRadios2GhzAntenna2Rssi()
     {
@@ -1842,12 +1849,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_2ghz_antenna2_rssi = 102 [json_name = "radios2ghzAntenna2Rssi"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setRadios2GhzAntenna2Rssi($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->radios_2ghz_antenna2_rssi = $var;
 
         return $this;
@@ -1871,7 +1878,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_2ghz_antenna3_rssi = 103 [json_name = "radios2ghzAntenna3Rssi"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getRadios2GhzAntenna3Rssi()
     {
@@ -1903,12 +1910,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_2ghz_antenna3_rssi = 103 [json_name = "radios2ghzAntenna3Rssi"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setRadios2GhzAntenna3Rssi($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->radios_2ghz_antenna3_rssi = $var;
 
         return $this;
@@ -1932,7 +1939,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_2ghz_iface_count = 104 [json_name = "radios2ghzIfaceCount"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getRadios2GhzIfaceCount()
     {
@@ -1964,12 +1971,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_2ghz_iface_count = 104 [json_name = "radios2ghzIfaceCount"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setRadios2GhzIfaceCount($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->radios_2ghz_iface_count = $var;
 
         return $this;
@@ -1993,7 +2000,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_2ghz_chan_busy_fraction = 105 [json_name = "radios2ghzChanBusyFraction"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getRadios2GhzChanBusyFraction()
     {
@@ -2025,12 +2032,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_2ghz_chan_busy_fraction = 105 [json_name = "radios2ghzChanBusyFraction"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setRadios2GhzChanBusyFraction($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->radios_2ghz_chan_busy_fraction = $var;
 
         return $this;
@@ -2054,7 +2061,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_2ghz_edcca_fraction = 106 [json_name = "radios2ghzEdccaFraction"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getRadios2GhzEdccaFraction()
     {
@@ -2086,12 +2093,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_2ghz_edcca_fraction = 106 [json_name = "radios2ghzEdccaFraction"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setRadios2GhzEdccaFraction($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->radios_2ghz_edcca_fraction = $var;
 
         return $this;
@@ -2115,7 +2122,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_2ghz_overlapping_bss_fraction = 107 [json_name = "radios2ghzOverlappingBssFraction"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getRadios2GhzOverlappingBssFraction()
     {
@@ -2147,12 +2154,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_2ghz_overlapping_bss_fraction = 107 [json_name = "radios2ghzOverlappingBssFraction"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setRadios2GhzOverlappingBssFraction($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->radios_2ghz_overlapping_bss_fraction = $var;
 
         return $this;
@@ -2176,7 +2183,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_2ghz_rx_bytes = 108 [json_name = "radios2ghzRxBytes"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getRadios2GhzRxBytes()
     {
@@ -2208,12 +2215,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_2ghz_rx_bytes = 108 [json_name = "radios2ghzRxBytes"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setRadios2GhzRxBytes($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->radios_2ghz_rx_bytes = $var;
 
         return $this;
@@ -2237,7 +2244,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_2ghz_rx_packets = 109 [json_name = "radios2ghzRxPackets"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getRadios2GhzRxPackets()
     {
@@ -2269,12 +2276,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_2ghz_rx_packets = 109 [json_name = "radios2ghzRxPackets"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setRadios2GhzRxPackets($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->radios_2ghz_rx_packets = $var;
 
         return $this;
@@ -2298,7 +2305,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_2ghz_rx_errors = 110 [json_name = "radios2ghzRxErrors"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getRadios2GhzRxErrors()
     {
@@ -2330,12 +2337,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_2ghz_rx_errors = 110 [json_name = "radios2ghzRxErrors"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setRadios2GhzRxErrors($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->radios_2ghz_rx_errors = $var;
 
         return $this;
@@ -2359,7 +2366,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_2ghz_rx_frame_errors = 111 [json_name = "radios2ghzRxFrameErrors"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getRadios2GhzRxFrameErrors()
     {
@@ -2391,12 +2398,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_2ghz_rx_frame_errors = 111 [json_name = "radios2ghzRxFrameErrors"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setRadios2GhzRxFrameErrors($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->radios_2ghz_rx_frame_errors = $var;
 
         return $this;
@@ -2420,7 +2427,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_2ghz_rx_packet_error_rate = 112 [json_name = "radios2ghzRxPacketErrorRate"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getRadios2GhzRxPacketErrorRate()
     {
@@ -2452,12 +2459,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_2ghz_rx_packet_error_rate = 112 [json_name = "radios2ghzRxPacketErrorRate"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setRadios2GhzRxPacketErrorRate($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->radios_2ghz_rx_packet_error_rate = $var;
 
         return $this;
@@ -2481,7 +2488,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_2ghz_rx_airtime_fraction = 113 [json_name = "radios2ghzRxAirtimeFraction"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getRadios2GhzRxAirtimeFraction()
     {
@@ -2513,12 +2520,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_2ghz_rx_airtime_fraction = 113 [json_name = "radios2ghzRxAirtimeFraction"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setRadios2GhzRxAirtimeFraction($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->radios_2ghz_rx_airtime_fraction = $var;
 
         return $this;
@@ -2542,7 +2549,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_2ghz_tx_bytes = 114 [json_name = "radios2ghzTxBytes"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getRadios2GhzTxBytes()
     {
@@ -2574,12 +2581,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_2ghz_tx_bytes = 114 [json_name = "radios2ghzTxBytes"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setRadios2GhzTxBytes($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->radios_2ghz_tx_bytes = $var;
 
         return $this;
@@ -2603,7 +2610,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_2ghz_tx_packets = 115 [json_name = "radios2ghzTxPackets"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getRadios2GhzTxPackets()
     {
@@ -2635,12 +2642,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_2ghz_tx_packets = 115 [json_name = "radios2ghzTxPackets"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setRadios2GhzTxPackets($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->radios_2ghz_tx_packets = $var;
 
         return $this;
@@ -2664,7 +2671,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_2ghz_tx_errors = 116 [json_name = "radios2ghzTxErrors"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getRadios2GhzTxErrors()
     {
@@ -2696,12 +2703,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_2ghz_tx_errors = 116 [json_name = "radios2ghzTxErrors"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setRadios2GhzTxErrors($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->radios_2ghz_tx_errors = $var;
 
         return $this;
@@ -2725,7 +2732,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_2ghz_tx_packet_error_rate = 117 [json_name = "radios2ghzTxPacketErrorRate"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getRadios2GhzTxPacketErrorRate()
     {
@@ -2757,12 +2764,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_2ghz_tx_packet_error_rate = 117 [json_name = "radios2ghzTxPacketErrorRate"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setRadios2GhzTxPacketErrorRate($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->radios_2ghz_tx_packet_error_rate = $var;
 
         return $this;
@@ -2786,7 +2793,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_2ghz_tx_airtime_fraction = 118 [json_name = "radios2ghzTxAirtimeFraction"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getRadios2GhzTxAirtimeFraction()
     {
@@ -2818,12 +2825,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_2ghz_tx_airtime_fraction = 118 [json_name = "radios2ghzTxAirtimeFraction"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setRadios2GhzTxAirtimeFraction($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->radios_2ghz_tx_airtime_fraction = $var;
 
         return $this;
@@ -2847,7 +2854,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_5ghz_channel = 119 [json_name = "radios5ghzChannel"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getRadios5GhzChannel()
     {
@@ -2879,12 +2886,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_5ghz_channel = 119 [json_name = "radios5ghzChannel"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setRadios5GhzChannel($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->radios_5ghz_channel = $var;
 
         return $this;
@@ -2908,7 +2915,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_5ghz_antenna1_rssi = 120 [json_name = "radios5ghzAntenna1Rssi"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getRadios5GhzAntenna1Rssi()
     {
@@ -2940,12 +2947,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_5ghz_antenna1_rssi = 120 [json_name = "radios5ghzAntenna1Rssi"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setRadios5GhzAntenna1Rssi($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->radios_5ghz_antenna1_rssi = $var;
 
         return $this;
@@ -2969,7 +2976,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_5ghz_antenna2_rssi = 121 [json_name = "radios5ghzAntenna2Rssi"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getRadios5GhzAntenna2Rssi()
     {
@@ -3001,12 +3008,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_5ghz_antenna2_rssi = 121 [json_name = "radios5ghzAntenna2Rssi"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setRadios5GhzAntenna2Rssi($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->radios_5ghz_antenna2_rssi = $var;
 
         return $this;
@@ -3030,7 +3037,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_5ghz_antenna3_rssi = 122 [json_name = "radios5ghzAntenna3Rssi"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getRadios5GhzAntenna3Rssi()
     {
@@ -3062,12 +3069,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_5ghz_antenna3_rssi = 122 [json_name = "radios5ghzAntenna3Rssi"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setRadios5GhzAntenna3Rssi($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->radios_5ghz_antenna3_rssi = $var;
 
         return $this;
@@ -3091,7 +3098,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_5ghz_iface_count = 123 [json_name = "radios5ghzIfaceCount"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getRadios5GhzIfaceCount()
     {
@@ -3123,12 +3130,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_5ghz_iface_count = 123 [json_name = "radios5ghzIfaceCount"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setRadios5GhzIfaceCount($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->radios_5ghz_iface_count = $var;
 
         return $this;
@@ -3152,7 +3159,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_5ghz_chan_busy_fraction = 124 [json_name = "radios5ghzChanBusyFraction"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getRadios5GhzChanBusyFraction()
     {
@@ -3184,12 +3191,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_5ghz_chan_busy_fraction = 124 [json_name = "radios5ghzChanBusyFraction"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setRadios5GhzChanBusyFraction($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->radios_5ghz_chan_busy_fraction = $var;
 
         return $this;
@@ -3213,7 +3220,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_5ghz_edcca_fraction = 125 [json_name = "radios5ghzEdccaFraction"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getRadios5GhzEdccaFraction()
     {
@@ -3245,12 +3252,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_5ghz_edcca_fraction = 125 [json_name = "radios5ghzEdccaFraction"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setRadios5GhzEdccaFraction($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->radios_5ghz_edcca_fraction = $var;
 
         return $this;
@@ -3274,7 +3281,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_5ghz_overlapping_bss_fraction = 126 [json_name = "radios5ghzOverlappingBssFraction"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getRadios5GhzOverlappingBssFraction()
     {
@@ -3306,12 +3313,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_5ghz_overlapping_bss_fraction = 126 [json_name = "radios5ghzOverlappingBssFraction"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setRadios5GhzOverlappingBssFraction($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->radios_5ghz_overlapping_bss_fraction = $var;
 
         return $this;
@@ -3335,7 +3342,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_5ghz_rx_bytes = 127 [json_name = "radios5ghzRxBytes"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getRadios5GhzRxBytes()
     {
@@ -3367,12 +3374,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_5ghz_rx_bytes = 127 [json_name = "radios5ghzRxBytes"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setRadios5GhzRxBytes($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->radios_5ghz_rx_bytes = $var;
 
         return $this;
@@ -3396,7 +3403,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_5ghz_rx_packets = 128 [json_name = "radios5ghzRxPackets"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getRadios5GhzRxPackets()
     {
@@ -3428,12 +3435,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_5ghz_rx_packets = 128 [json_name = "radios5ghzRxPackets"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setRadios5GhzRxPackets($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->radios_5ghz_rx_packets = $var;
 
         return $this;
@@ -3457,7 +3464,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_5ghz_rx_errors = 129 [json_name = "radios5ghzRxErrors"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getRadios5GhzRxErrors()
     {
@@ -3489,12 +3496,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_5ghz_rx_errors = 129 [json_name = "radios5ghzRxErrors"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setRadios5GhzRxErrors($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->radios_5ghz_rx_errors = $var;
 
         return $this;
@@ -3518,7 +3525,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_5ghz_rx_frame_errors = 130 [json_name = "radios5ghzRxFrameErrors"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getRadios5GhzRxFrameErrors()
     {
@@ -3550,12 +3557,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_5ghz_rx_frame_errors = 130 [json_name = "radios5ghzRxFrameErrors"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setRadios5GhzRxFrameErrors($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->radios_5ghz_rx_frame_errors = $var;
 
         return $this;
@@ -3579,7 +3586,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_5ghz_rx_packet_error_rate = 131 [json_name = "radios5ghzRxPacketErrorRate"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getRadios5GhzRxPacketErrorRate()
     {
@@ -3611,12 +3618,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_5ghz_rx_packet_error_rate = 131 [json_name = "radios5ghzRxPacketErrorRate"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setRadios5GhzRxPacketErrorRate($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->radios_5ghz_rx_packet_error_rate = $var;
 
         return $this;
@@ -3640,7 +3647,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_5ghz_rx_airtime_fraction = 132 [json_name = "radios5ghzRxAirtimeFraction"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getRadios5GhzRxAirtimeFraction()
     {
@@ -3672,12 +3679,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_5ghz_rx_airtime_fraction = 132 [json_name = "radios5ghzRxAirtimeFraction"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setRadios5GhzRxAirtimeFraction($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->radios_5ghz_rx_airtime_fraction = $var;
 
         return $this;
@@ -3701,7 +3708,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_5ghz_tx_bytes = 133 [json_name = "radios5ghzTxBytes"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getRadios5GhzTxBytes()
     {
@@ -3733,12 +3740,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_5ghz_tx_bytes = 133 [json_name = "radios5ghzTxBytes"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setRadios5GhzTxBytes($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->radios_5ghz_tx_bytes = $var;
 
         return $this;
@@ -3762,7 +3769,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_5ghz_tx_packets = 134 [json_name = "radios5ghzTxPackets"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getRadios5GhzTxPackets()
     {
@@ -3794,12 +3801,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_5ghz_tx_packets = 134 [json_name = "radios5ghzTxPackets"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setRadios5GhzTxPackets($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->radios_5ghz_tx_packets = $var;
 
         return $this;
@@ -3823,7 +3830,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_5ghz_tx_errors = 135 [json_name = "radios5ghzTxErrors"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getRadios5GhzTxErrors()
     {
@@ -3855,12 +3862,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_5ghz_tx_errors = 135 [json_name = "radios5ghzTxErrors"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setRadios5GhzTxErrors($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->radios_5ghz_tx_errors = $var;
 
         return $this;
@@ -3884,7 +3891,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_5ghz_tx_packet_error_rate = 136 [json_name = "radios5ghzTxPacketErrorRate"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getRadios5GhzTxPacketErrorRate()
     {
@@ -3916,12 +3923,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_5ghz_tx_packet_error_rate = 136 [json_name = "radios5ghzTxPacketErrorRate"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setRadios5GhzTxPacketErrorRate($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->radios_5ghz_tx_packet_error_rate = $var;
 
         return $this;
@@ -3945,7 +3952,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_5ghz_tx_airtime_fraction = 137 [json_name = "radios5ghzTxAirtimeFraction"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getRadios5GhzTxAirtimeFraction()
     {
@@ -3977,12 +3984,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_5ghz_tx_airtime_fraction = 137 [json_name = "radios5ghzTxAirtimeFraction"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setRadios5GhzTxAirtimeFraction($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->radios_5ghz_tx_airtime_fraction = $var;
 
         return $this;
@@ -4006,7 +4013,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_2ghz_thermal_temp = 200 [json_name = "radios2ghzThermalTemp"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getRadios2GhzThermalTemp()
     {
@@ -4038,12 +4045,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_2ghz_thermal_temp = 200 [json_name = "radios2ghzThermalTemp"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setRadios2GhzThermalTemp($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->radios_2ghz_thermal_temp = $var;
 
         return $this;
@@ -4067,7 +4074,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_5ghz_thermal_temp = 201 [json_name = "radios5ghzThermalTemp"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getRadios5GhzThermalTemp()
     {
@@ -4099,12 +4106,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_5ghz_thermal_temp = 201 [json_name = "radios5ghzThermalTemp"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setRadios5GhzThermalTemp($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->radios_5ghz_thermal_temp = $var;
 
         return $this;
@@ -4128,7 +4135,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_2ghz_thermal_duty_cycle = 202 [json_name = "radios2ghzThermalDutyCycle"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getRadios2GhzThermalDutyCycle()
     {
@@ -4160,12 +4167,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_2ghz_thermal_duty_cycle = 202 [json_name = "radios2ghzThermalDutyCycle"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setRadios2GhzThermalDutyCycle($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->radios_2ghz_thermal_duty_cycle = $var;
 
         return $this;
@@ -4189,7 +4196,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_5ghz_thermal_duty_cycle = 203 [json_name = "radios5ghzThermalDutyCycle"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getRadios5GhzThermalDutyCycle()
     {
@@ -4221,12 +4228,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue radios_5ghz_thermal_duty_cycle = 203 [json_name = "radios5ghzThermalDutyCycle"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setRadios5GhzThermalDutyCycle($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->radios_5ghz_thermal_duty_cycle = $var;
 
         return $this;
@@ -4250,7 +4257,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_2ghz_thermal_throttled_seconds = 204 [json_name = "radios2ghzThermalThrottledSeconds"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getRadios2GhzThermalThrottledSeconds()
     {
@@ -4282,12 +4289,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_2ghz_thermal_throttled_seconds = 204 [json_name = "radios2ghzThermalThrottledSeconds"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setRadios2GhzThermalThrottledSeconds($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->radios_2ghz_thermal_throttled_seconds = $var;
 
         return $this;
@@ -4311,7 +4318,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_5ghz_thermal_throttled_seconds = 205 [json_name = "radios5ghzThermalThrottledSeconds"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getRadios5GhzThermalThrottledSeconds()
     {
@@ -4343,12 +4350,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value radios_5ghz_thermal_throttled_seconds = 205 [json_name = "radios5ghzThermalThrottledSeconds"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setRadios5GhzThermalThrottledSeconds($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->radios_5ghz_thermal_throttled_seconds = $var;
 
         return $this;
@@ -4372,7 +4379,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value ifaces_lan_eth_rx_bytes = 300 [json_name = "ifacesLanEthRxBytes"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getIfacesLanEthRxBytes()
     {
@@ -4404,12 +4411,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value ifaces_lan_eth_rx_bytes = 300 [json_name = "ifacesLanEthRxBytes"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setIfacesLanEthRxBytes($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->ifaces_lan_eth_rx_bytes = $var;
 
         return $this;
@@ -4433,7 +4440,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value ifaces_lan_eth_rx_packets = 301 [json_name = "ifacesLanEthRxPackets"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getIfacesLanEthRxPackets()
     {
@@ -4465,12 +4472,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value ifaces_lan_eth_rx_packets = 301 [json_name = "ifacesLanEthRxPackets"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setIfacesLanEthRxPackets($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->ifaces_lan_eth_rx_packets = $var;
 
         return $this;
@@ -4494,7 +4501,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value ifaces_lan_eth_rx_errors = 302 [json_name = "ifacesLanEthRxErrors"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getIfacesLanEthRxErrors()
     {
@@ -4526,12 +4533,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value ifaces_lan_eth_rx_errors = 302 [json_name = "ifacesLanEthRxErrors"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setIfacesLanEthRxErrors($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->ifaces_lan_eth_rx_errors = $var;
 
         return $this;
@@ -4555,7 +4562,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value ifaces_lan_eth_rx_frame_errors = 303 [json_name = "ifacesLanEthRxFrameErrors"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getIfacesLanEthRxFrameErrors()
     {
@@ -4587,12 +4594,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value ifaces_lan_eth_rx_frame_errors = 303 [json_name = "ifacesLanEthRxFrameErrors"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setIfacesLanEthRxFrameErrors($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->ifaces_lan_eth_rx_frame_errors = $var;
 
         return $this;
@@ -4616,7 +4623,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value ifaces_lan_eth_tx_bytes = 304 [json_name = "ifacesLanEthTxBytes"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getIfacesLanEthTxBytes()
     {
@@ -4648,12 +4655,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value ifaces_lan_eth_tx_bytes = 304 [json_name = "ifacesLanEthTxBytes"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setIfacesLanEthTxBytes($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->ifaces_lan_eth_tx_bytes = $var;
 
         return $this;
@@ -4677,7 +4684,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value ifaces_lan_eth_tx_packets = 305 [json_name = "ifacesLanEthTxPackets"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getIfacesLanEthTxPackets()
     {
@@ -4709,12 +4716,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value ifaces_lan_eth_tx_packets = 305 [json_name = "ifacesLanEthTxPackets"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setIfacesLanEthTxPackets($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->ifaces_lan_eth_tx_packets = $var;
 
         return $this;
@@ -4738,7 +4745,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value ifaces_lan_eth_tx_errors = 306 [json_name = "ifacesLanEthTxErrors"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getIfacesLanEthTxErrors()
     {
@@ -4770,12 +4777,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value ifaces_lan_eth_tx_errors = 306 [json_name = "ifacesLanEthTxErrors"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setIfacesLanEthTxErrors($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->ifaces_lan_eth_tx_errors = $var;
 
         return $this;
@@ -4799,7 +4806,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value ifaces_wan_eth_rx_bytes = 307 [json_name = "ifacesWanEthRxBytes"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getIfacesWanEthRxBytes()
     {
@@ -4831,12 +4838,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value ifaces_wan_eth_rx_bytes = 307 [json_name = "ifacesWanEthRxBytes"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setIfacesWanEthRxBytes($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->ifaces_wan_eth_rx_bytes = $var;
 
         return $this;
@@ -4860,7 +4867,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value ifaces_wan_eth_rx_packets = 308 [json_name = "ifacesWanEthRxPackets"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getIfacesWanEthRxPackets()
     {
@@ -4892,12 +4899,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value ifaces_wan_eth_rx_packets = 308 [json_name = "ifacesWanEthRxPackets"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setIfacesWanEthRxPackets($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->ifaces_wan_eth_rx_packets = $var;
 
         return $this;
@@ -4921,7 +4928,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value ifaces_wan_eth_rx_errors = 309 [json_name = "ifacesWanEthRxErrors"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getIfacesWanEthRxErrors()
     {
@@ -4953,12 +4960,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value ifaces_wan_eth_rx_errors = 309 [json_name = "ifacesWanEthRxErrors"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setIfacesWanEthRxErrors($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->ifaces_wan_eth_rx_errors = $var;
 
         return $this;
@@ -4982,7 +4989,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value ifaces_wan_eth_rx_frame_errors = 310 [json_name = "ifacesWanEthRxFrameErrors"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getIfacesWanEthRxFrameErrors()
     {
@@ -5014,12 +5021,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value ifaces_wan_eth_rx_frame_errors = 310 [json_name = "ifacesWanEthRxFrameErrors"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setIfacesWanEthRxFrameErrors($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->ifaces_wan_eth_rx_frame_errors = $var;
 
         return $this;
@@ -5043,7 +5050,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value ifaces_wan_eth_tx_bytes = 311 [json_name = "ifacesWanEthTxBytes"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getIfacesWanEthTxBytes()
     {
@@ -5075,12 +5082,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value ifaces_wan_eth_tx_bytes = 311 [json_name = "ifacesWanEthTxBytes"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setIfacesWanEthTxBytes($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->ifaces_wan_eth_tx_bytes = $var;
 
         return $this;
@@ -5104,7 +5111,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value ifaces_wan_eth_tx_packets = 312 [json_name = "ifacesWanEthTxPackets"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getIfacesWanEthTxPackets()
     {
@@ -5136,12 +5143,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value ifaces_wan_eth_tx_packets = 312 [json_name = "ifacesWanEthTxPackets"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setIfacesWanEthTxPackets($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->ifaces_wan_eth_tx_packets = $var;
 
         return $this;
@@ -5165,7 +5172,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value ifaces_wan_eth_tx_errors = 313 [json_name = "ifacesWanEthTxErrors"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getIfacesWanEthTxErrors()
     {
@@ -5197,12 +5204,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value ifaces_wan_eth_tx_errors = 313 [json_name = "ifacesWanEthTxErrors"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setIfacesWanEthTxErrors($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->ifaces_wan_eth_tx_errors = $var;
 
         return $this;
@@ -5226,7 +5233,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value clients = 400 [json_name = "clients"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getClients()
     {
@@ -5258,12 +5265,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value clients = 400 [json_name = "clients"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setClients($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->clients = $var;
 
         return $this;
@@ -5287,7 +5294,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value clients_2ghz = 401 [json_name = "clients2ghz"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getClients2Ghz()
     {
@@ -5319,12 +5326,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value clients_2ghz = 401 [json_name = "clients2ghz"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setClients2Ghz($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->clients_2ghz = $var;
 
         return $this;
@@ -5348,7 +5355,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value clients_5ghz = 402 [json_name = "clients5ghz"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getClients5Ghz()
     {
@@ -5380,12 +5387,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value clients_5ghz = 402 [json_name = "clients5ghz"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setClients5Ghz($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->clients_5ghz = $var;
 
         return $this;
@@ -5409,7 +5416,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value clients_eth = 403 [json_name = "clientsEth"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getClientsEth()
     {
@@ -5441,12 +5448,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value clients_eth = 403 [json_name = "clientsEth"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setClientsEth($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->clients_eth = $var;
 
         return $this;
@@ -5470,7 +5477,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value clients_repeater = 404 [json_name = "clientsRepeater"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getClientsRepeater()
     {
@@ -5502,12 +5509,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value clients_repeater = 404 [json_name = "clientsRepeater"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setClientsRepeater($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->clients_repeater = $var;
 
         return $this;
@@ -5531,7 +5538,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value clients_repeater_2ghz = 405 [json_name = "clientsRepeater2ghz"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getClientsRepeater2Ghz()
     {
@@ -5563,12 +5570,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value clients_repeater_2ghz = 405 [json_name = "clientsRepeater2ghz"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setClientsRepeater2Ghz($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->clients_repeater_2ghz = $var;
 
         return $this;
@@ -5592,7 +5599,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value clients_repeater_5ghz = 406 [json_name = "clientsRepeater5ghz"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getClientsRepeater5Ghz()
     {
@@ -5624,12 +5631,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value clients_repeater_5ghz = 406 [json_name = "clientsRepeater5ghz"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setClientsRepeater5Ghz($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->clients_repeater_5ghz = $var;
 
         return $this;
@@ -5653,7 +5660,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value clients_repeater_eth = 407 [json_name = "clientsRepeaterEth"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getClientsRepeaterEth()
     {
@@ -5685,12 +5692,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value clients_repeater_eth = 407 [json_name = "clientsRepeaterEth"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setClientsRepeaterEth($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->clients_repeater_eth = $var;
 
         return $this;
@@ -5714,7 +5721,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value mesh_hops = 408 [json_name = "meshHops"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getMeshHops()
     {
@@ -5746,12 +5753,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value mesh_hops = 408 [json_name = "meshHops"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setMeshHops($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->mesh_hops = $var;
 
         return $this;
@@ -5775,7 +5782,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue mesh_one_hop_rssi_avg_2ghz = 409 [json_name = "meshOneHopRssiAvg2ghz"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getMeshOneHopRssiAvg2Ghz()
     {
@@ -5807,12 +5814,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue mesh_one_hop_rssi_avg_2ghz = 409 [json_name = "meshOneHopRssiAvg2ghz"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setMeshOneHopRssiAvg2Ghz($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->mesh_one_hop_rssi_avg_2ghz = $var;
 
         return $this;
@@ -5836,7 +5843,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue mesh_one_hop_rssi_avg_5ghz = 410 [json_name = "meshOneHopRssiAvg5ghz"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getMeshOneHopRssiAvg5Ghz()
     {
@@ -5868,12 +5875,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue mesh_one_hop_rssi_avg_5ghz = 410 [json_name = "meshOneHopRssiAvg5ghz"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setMeshOneHopRssiAvg5Ghz($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->mesh_one_hop_rssi_avg_5ghz = $var;
 
         return $this;
@@ -5897,7 +5904,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue mesh_two_hop_rssi_avg_2ghz = 411 [json_name = "meshTwoHopRssiAvg2ghz"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getMeshTwoHopRssiAvg2Ghz()
     {
@@ -5929,12 +5936,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue mesh_two_hop_rssi_avg_2ghz = 411 [json_name = "meshTwoHopRssiAvg2ghz"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setMeshTwoHopRssiAvg2Ghz($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->mesh_two_hop_rssi_avg_2ghz = $var;
 
         return $this;
@@ -5958,7 +5965,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue mesh_two_hop_rssi_avg_5ghz = 412 [json_name = "meshTwoHopRssiAvg5ghz"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getMeshTwoHopRssiAvg5Ghz()
     {
@@ -5990,12 +5997,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue mesh_two_hop_rssi_avg_5ghz = 412 [json_name = "meshTwoHopRssiAvg5ghz"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setMeshTwoHopRssiAvg5Ghz($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->mesh_two_hop_rssi_avg_5ghz = $var;
 
         return $this;
@@ -6019,7 +6026,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue ping_seconds_since_last_1s_outage = 600 [json_name = "pingSecondsSinceLast1sOutage"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getPingSecondsSinceLast1SOutage()
     {
@@ -6051,12 +6058,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue ping_seconds_since_last_1s_outage = 600 [json_name = "pingSecondsSinceLast1sOutage"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setPingSecondsSinceLast1SOutage($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->ping_seconds_since_last_1s_outage = $var;
 
         return $this;
@@ -6080,7 +6087,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue ping_seconds_since_last_2s_outage = 601 [json_name = "pingSecondsSinceLast2sOutage"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getPingSecondsSinceLast2SOutage()
     {
@@ -6112,12 +6119,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue ping_seconds_since_last_2s_outage = 601 [json_name = "pingSecondsSinceLast2sOutage"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setPingSecondsSinceLast2SOutage($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->ping_seconds_since_last_2s_outage = $var;
 
         return $this;
@@ -6141,7 +6148,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue ping_seconds_since_last_5s_outage = 602 [json_name = "pingSecondsSinceLast5sOutage"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getPingSecondsSinceLast5SOutage()
     {
@@ -6173,12 +6180,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue ping_seconds_since_last_5s_outage = 602 [json_name = "pingSecondsSinceLast5sOutage"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setPingSecondsSinceLast5SOutage($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->ping_seconds_since_last_5s_outage = $var;
 
         return $this;
@@ -6202,7 +6209,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue ping_seconds_since_last_60s_outage = 603 [json_name = "pingSecondsSinceLast60sOutage"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getPingSecondsSinceLast60SOutage()
     {
@@ -6234,12 +6241,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue ping_seconds_since_last_60s_outage = 603 [json_name = "pingSecondsSinceLast60sOutage"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setPingSecondsSinceLast60SOutage($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->ping_seconds_since_last_60s_outage = $var;
 
         return $this;
@@ -6263,7 +6270,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue ping_seconds_since_last_300s_outage = 604 [json_name = "pingSecondsSinceLast300sOutage"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getPingSecondsSinceLast300SOutage()
     {
@@ -6295,12 +6302,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue ping_seconds_since_last_300s_outage = 604 [json_name = "pingSecondsSinceLast300sOutage"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setPingSecondsSinceLast300SOutage($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->ping_seconds_since_last_300s_outage = $var;
 
         return $this;
@@ -6324,7 +6331,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue ping_drop_rate = 605 [json_name = "pingDropRate"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getPingDropRate()
     {
@@ -6356,12 +6363,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue ping_drop_rate = 605 [json_name = "pingDropRate"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setPingDropRate($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->ping_drop_rate = $var;
 
         return $this;
@@ -6385,7 +6392,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue ping_drop_rate_last_1h = 606 [json_name = "pingDropRateLast1h"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getPingDropRateLast1H()
     {
@@ -6417,12 +6424,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue ping_drop_rate_last_1h = 606 [json_name = "pingDropRateLast1h"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setPingDropRateLast1H($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->ping_drop_rate_last_1h = $var;
 
         return $this;
@@ -6446,7 +6453,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue ping_latency = 607 [json_name = "pingLatency"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getPingLatency()
     {
@@ -6478,12 +6485,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue ping_latency = 607 [json_name = "pingLatency"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setPingLatency($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->ping_latency = $var;
 
         return $this;
@@ -6507,7 +6514,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue ping_dish_seconds_since_last_1s_outage = 610 [json_name = "pingDishSecondsSinceLast1sOutage"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getPingDishSecondsSinceLast1SOutage()
     {
@@ -6539,12 +6546,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue ping_dish_seconds_since_last_1s_outage = 610 [json_name = "pingDishSecondsSinceLast1sOutage"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setPingDishSecondsSinceLast1SOutage($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->ping_dish_seconds_since_last_1s_outage = $var;
 
         return $this;
@@ -6568,7 +6575,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue ping_dish_seconds_since_last_2s_outage = 611 [json_name = "pingDishSecondsSinceLast2sOutage"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getPingDishSecondsSinceLast2SOutage()
     {
@@ -6600,12 +6607,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue ping_dish_seconds_since_last_2s_outage = 611 [json_name = "pingDishSecondsSinceLast2sOutage"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setPingDishSecondsSinceLast2SOutage($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->ping_dish_seconds_since_last_2s_outage = $var;
 
         return $this;
@@ -6629,7 +6636,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue ping_dish_seconds_since_last_5s_outage = 612 [json_name = "pingDishSecondsSinceLast5sOutage"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getPingDishSecondsSinceLast5SOutage()
     {
@@ -6661,12 +6668,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue ping_dish_seconds_since_last_5s_outage = 612 [json_name = "pingDishSecondsSinceLast5sOutage"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setPingDishSecondsSinceLast5SOutage($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->ping_dish_seconds_since_last_5s_outage = $var;
 
         return $this;
@@ -6690,7 +6697,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue ping_dish_seconds_since_last_60s_outage = 613 [json_name = "pingDishSecondsSinceLast60sOutage"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getPingDishSecondsSinceLast60SOutage()
     {
@@ -6722,12 +6729,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue ping_dish_seconds_since_last_60s_outage = 613 [json_name = "pingDishSecondsSinceLast60sOutage"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setPingDishSecondsSinceLast60SOutage($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->ping_dish_seconds_since_last_60s_outage = $var;
 
         return $this;
@@ -6751,7 +6758,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue ping_dish_seconds_since_last_300s_outage = 614 [json_name = "pingDishSecondsSinceLast300sOutage"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getPingDishSecondsSinceLast300SOutage()
     {
@@ -6783,12 +6790,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue ping_dish_seconds_since_last_300s_outage = 614 [json_name = "pingDishSecondsSinceLast300sOutage"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setPingDishSecondsSinceLast300SOutage($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->ping_dish_seconds_since_last_300s_outage = $var;
 
         return $this;
@@ -6812,7 +6819,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue ping_dish_drop_rate = 615 [json_name = "pingDishDropRate"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getPingDishDropRate()
     {
@@ -6844,12 +6851,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue ping_dish_drop_rate = 615 [json_name = "pingDishDropRate"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setPingDishDropRate($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->ping_dish_drop_rate = $var;
 
         return $this;
@@ -6873,7 +6880,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue ping_dish_drop_rate_last_1h = 616 [json_name = "pingDishDropRateLast1h"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getPingDishDropRateLast1H()
     {
@@ -6905,12 +6912,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue ping_dish_drop_rate_last_1h = 616 [json_name = "pingDishDropRateLast1h"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setPingDishDropRateLast1H($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->ping_dish_drop_rate_last_1h = $var;
 
         return $this;
@@ -6934,7 +6941,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue ping_dish_latency = 617 [json_name = "pingDishLatency"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getPingDishLatency()
     {
@@ -6966,12 +6973,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue ping_dish_latency = 617 [json_name = "pingDishLatency"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setPingDishLatency($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->ping_dish_latency = $var;
 
         return $this;
@@ -6995,7 +7002,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue client_speedtest_router_download_mbps = 700 [json_name = "clientSpeedtestRouterDownloadMbps"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getClientSpeedtestRouterDownloadMbps()
     {
@@ -7027,12 +7034,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue client_speedtest_router_download_mbps = 700 [json_name = "clientSpeedtestRouterDownloadMbps"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setClientSpeedtestRouterDownloadMbps($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->client_speedtest_router_download_mbps = $var;
 
         return $this;
@@ -7056,7 +7063,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue client_speedtest_router_upload_mbps = 701 [json_name = "clientSpeedtestRouterUploadMbps"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getClientSpeedtestRouterUploadMbps()
     {
@@ -7088,12 +7095,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue client_speedtest_router_upload_mbps = 701 [json_name = "clientSpeedtestRouterUploadMbps"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setClientSpeedtestRouterUploadMbps($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->client_speedtest_router_upload_mbps = $var;
 
         return $this;
@@ -7117,7 +7124,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue client_speedtest_router_rssi = 702 [json_name = "clientSpeedtestRouterRssi"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getClientSpeedtestRouterRssi()
     {
@@ -7149,12 +7156,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue client_speedtest_router_rssi = 702 [json_name = "clientSpeedtestRouterRssi"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setClientSpeedtestRouterRssi($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->client_speedtest_router_rssi = $var;
 
         return $this;
@@ -7178,7 +7185,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue client_speedtest_wifi_download_mbps = 703 [json_name = "clientSpeedtestWifiDownloadMbps"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getClientSpeedtestWifiDownloadMbps()
     {
@@ -7210,12 +7217,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue client_speedtest_wifi_download_mbps = 703 [json_name = "clientSpeedtestWifiDownloadMbps"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setClientSpeedtestWifiDownloadMbps($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->client_speedtest_wifi_download_mbps = $var;
 
         return $this;
@@ -7239,7 +7246,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue client_speedtest_wifi_upload_mbps = 704 [json_name = "clientSpeedtestWifiUploadMbps"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getClientSpeedtestWifiUploadMbps()
     {
@@ -7271,12 +7278,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue client_speedtest_wifi_upload_mbps = 704 [json_name = "clientSpeedtestWifiUploadMbps"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setClientSpeedtestWifiUploadMbps($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->client_speedtest_wifi_upload_mbps = $var;
 
         return $this;
@@ -7300,7 +7307,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue client_speedtest_client_download_mbps = 705 [json_name = "clientSpeedtestClientDownloadMbps"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getClientSpeedtestClientDownloadMbps()
     {
@@ -7332,12 +7339,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue client_speedtest_client_download_mbps = 705 [json_name = "clientSpeedtestClientDownloadMbps"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setClientSpeedtestClientDownloadMbps($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->client_speedtest_client_download_mbps = $var;
 
         return $this;
@@ -7361,7 +7368,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue client_speedtest_client_upload_mbps = 706 [json_name = "clientSpeedtestClientUploadMbps"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getClientSpeedtestClientUploadMbps()
     {
@@ -7393,12 +7400,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue client_speedtest_client_upload_mbps = 706 [json_name = "clientSpeedtestClientUploadMbps"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setClientSpeedtestClientUploadMbps($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->client_speedtest_client_upload_mbps = $var;
 
         return $this;
@@ -7422,7 +7429,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue client_speedtest_client_rssi = 707 [json_name = "clientSpeedtestClientRssi"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getClientSpeedtestClientRssi()
     {
@@ -7454,12 +7461,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue client_speedtest_client_rssi = 707 [json_name = "clientSpeedtestClientRssi"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setClientSpeedtestClientRssi($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->client_speedtest_client_rssi = $var;
 
         return $this;
@@ -7483,7 +7490,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value client_speedtest_client_iface = 708 [json_name = "clientSpeedtestClientIface"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getClientSpeedtestClientIface()
     {
@@ -7515,12 +7522,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value client_speedtest_client_iface = 708 [json_name = "clientSpeedtestClientIface"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setClientSpeedtestClientIface($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->client_speedtest_client_iface = $var;
 
         return $this;
@@ -7544,7 +7551,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.StringValue client_speedtest_client_oui = 709 [json_name = "clientSpeedtestClientOui"];</code>
      *
-     * @return \Google\Protobuf\StringValue|null
+     * @return StringValue|null
      */
     public function getClientSpeedtestClientOui()
     {
@@ -7576,12 +7583,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.StringValue client_speedtest_client_oui = 709 [json_name = "clientSpeedtestClientOui"];</code>
      *
-     * @param  \Google\Protobuf\StringValue  $var
+     * @param  StringValue  $var
      * @return $this
      */
     public function setClientSpeedtestClientOui($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\StringValue::class);
+        GPBUtil::checkMessage($var, StringValue::class);
         $this->client_speedtest_client_oui = $var;
 
         return $this;
@@ -7605,7 +7612,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value client_speedtest_client_tx_rate = 710 [json_name = "clientSpeedtestClientTxRate"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getClientSpeedtestClientTxRate()
     {
@@ -7637,12 +7644,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value client_speedtest_client_tx_rate = 710 [json_name = "clientSpeedtestClientTxRate"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setClientSpeedtestClientTxRate($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->client_speedtest_client_tx_rate = $var;
 
         return $this;
@@ -7666,7 +7673,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value client_speedtest_client_rx_rate = 711 [json_name = "clientSpeedtestClientRxRate"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getClientSpeedtestClientRxRate()
     {
@@ -7698,12 +7705,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value client_speedtest_client_rx_rate = 711 [json_name = "clientSpeedtestClientRxRate"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setClientSpeedtestClientRxRate($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->client_speedtest_client_rx_rate = $var;
 
         return $this;
@@ -7727,7 +7734,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value client_speedtest_client_platform_type = 712 [json_name = "clientSpeedtestClientPlatformType"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getClientSpeedtestClientPlatformType()
     {
@@ -7759,12 +7766,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value client_speedtest_client_platform_type = 712 [json_name = "clientSpeedtestClientPlatformType"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setClientSpeedtestClientPlatformType($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->client_speedtest_client_platform_type = $var;
 
         return $this;
@@ -7788,7 +7795,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue speedtest_tcp_8_download_mbps_avg = 800 [json_name = "speedtestTcp8DownloadMbpsAvg"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getSpeedtestTcp8DownloadMbpsAvg()
     {
@@ -7820,12 +7827,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue speedtest_tcp_8_download_mbps_avg = 800 [json_name = "speedtestTcp8DownloadMbpsAvg"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setSpeedtestTcp8DownloadMbpsAvg($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->speedtest_tcp_8_download_mbps_avg = $var;
 
         return $this;
@@ -7849,7 +7856,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue speedtest_tcp_8_download_mbps_max = 801 [json_name = "speedtestTcp8DownloadMbpsMax"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getSpeedtestTcp8DownloadMbpsMax()
     {
@@ -7881,12 +7888,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue speedtest_tcp_8_download_mbps_max = 801 [json_name = "speedtestTcp8DownloadMbpsMax"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setSpeedtestTcp8DownloadMbpsMax($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->speedtest_tcp_8_download_mbps_max = $var;
 
         return $this;
@@ -7910,7 +7917,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue speedtest_tcp_8_upload_mbps_avg = 802 [json_name = "speedtestTcp8UploadMbpsAvg"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getSpeedtestTcp8UploadMbpsAvg()
     {
@@ -7942,12 +7949,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue speedtest_tcp_8_upload_mbps_avg = 802 [json_name = "speedtestTcp8UploadMbpsAvg"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setSpeedtestTcp8UploadMbpsAvg($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->speedtest_tcp_8_upload_mbps_avg = $var;
 
         return $this;
@@ -7971,7 +7978,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue speedtest_tcp_8_upload_mbps_max = 803 [json_name = "speedtestTcp8UploadMbpsMax"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getSpeedtestTcp8UploadMbpsMax()
     {
@@ -8003,12 +8010,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue speedtest_tcp_8_upload_mbps_max = 803 [json_name = "speedtestTcp8UploadMbpsMax"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setSpeedtestTcp8UploadMbpsMax($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->speedtest_tcp_8_upload_mbps_max = $var;
 
         return $this;
@@ -8032,7 +8039,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue speedtest_tcp_64_download_mbps_avg = 804 [json_name = "speedtestTcp64DownloadMbpsAvg"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getSpeedtestTcp64DownloadMbpsAvg()
     {
@@ -8064,12 +8071,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue speedtest_tcp_64_download_mbps_avg = 804 [json_name = "speedtestTcp64DownloadMbpsAvg"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setSpeedtestTcp64DownloadMbpsAvg($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->speedtest_tcp_64_download_mbps_avg = $var;
 
         return $this;
@@ -8093,7 +8100,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue speedtest_tcp_64_download_mbps_max = 805 [json_name = "speedtestTcp64DownloadMbpsMax"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getSpeedtestTcp64DownloadMbpsMax()
     {
@@ -8125,12 +8132,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue speedtest_tcp_64_download_mbps_max = 805 [json_name = "speedtestTcp64DownloadMbpsMax"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setSpeedtestTcp64DownloadMbpsMax($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->speedtest_tcp_64_download_mbps_max = $var;
 
         return $this;
@@ -8154,7 +8161,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue speedtest_tcp_64_upload_mbps_avg = 806 [json_name = "speedtestTcp64UploadMbpsAvg"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getSpeedtestTcp64UploadMbpsAvg()
     {
@@ -8186,12 +8193,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue speedtest_tcp_64_upload_mbps_avg = 806 [json_name = "speedtestTcp64UploadMbpsAvg"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setSpeedtestTcp64UploadMbpsAvg($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->speedtest_tcp_64_upload_mbps_avg = $var;
 
         return $this;
@@ -8215,7 +8222,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue speedtest_tcp_64_upload_mbps_max = 807 [json_name = "speedtestTcp64UploadMbpsMax"];</code>
      *
-     * @return \Google\Protobuf\FloatValue|null
+     * @return FloatValue|null
      */
     public function getSpeedtestTcp64UploadMbpsMax()
     {
@@ -8247,12 +8254,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.FloatValue speedtest_tcp_64_upload_mbps_max = 807 [json_name = "speedtestTcp64UploadMbpsMax"];</code>
      *
-     * @param  \Google\Protobuf\FloatValue  $var
+     * @param  FloatValue  $var
      * @return $this
      */
     public function setSpeedtestTcp64UploadMbpsMax($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\FloatValue::class);
+        GPBUtil::checkMessage($var, FloatValue::class);
         $this->speedtest_tcp_64_upload_mbps_max = $var;
 
         return $this;
@@ -8276,7 +8283,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value dish_cell_id = 900 [json_name = "dishCellId"];</code>
      *
-     * @return \Google\Protobuf\UInt32Value|null
+     * @return UInt32Value|null
      */
     public function getDishCellId()
     {
@@ -8308,12 +8315,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.UInt32Value dish_cell_id = 900 [json_name = "dishCellId"];</code>
      *
-     * @param  \Google\Protobuf\UInt32Value  $var
+     * @param  UInt32Value  $var
      * @return $this
      */
     public function setDishCellId($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\UInt32Value::class);
+        GPBUtil::checkMessage($var, UInt32Value::class);
         $this->dish_cell_id = $var;
 
         return $this;
@@ -8337,7 +8344,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.BoolValue config_setup_complete = 1000 [json_name = "configSetupComplete"];</code>
      *
-     * @return \Google\Protobuf\BoolValue|null
+     * @return BoolValue|null
      */
     public function getConfigSetupComplete()
     {
@@ -8369,12 +8376,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.BoolValue config_setup_complete = 1000 [json_name = "configSetupComplete"];</code>
      *
-     * @param  \Google\Protobuf\BoolValue  $var
+     * @param  BoolValue  $var
      * @return $this
      */
     public function setConfigSetupComplete($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\BoolValue::class);
+        GPBUtil::checkMessage($var, BoolValue::class);
         $this->config_setup_complete = $var;
 
         return $this;
@@ -8398,7 +8405,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.BoolValue config_bands_split = 1001 [json_name = "configBandsSplit"];</code>
      *
-     * @return \Google\Protobuf\BoolValue|null
+     * @return BoolValue|null
      */
     public function getConfigBandsSplit()
     {
@@ -8430,12 +8437,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.BoolValue config_bands_split = 1001 [json_name = "configBandsSplit"];</code>
      *
-     * @param  \Google\Protobuf\BoolValue  $var
+     * @param  BoolValue  $var
      * @return $this
      */
     public function setConfigBandsSplit($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\BoolValue::class);
+        GPBUtil::checkMessage($var, BoolValue::class);
         $this->config_bands_split = $var;
 
         return $this;
@@ -8459,7 +8466,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.BoolValue config_is_repeater = 1002 [json_name = "configIsRepeater"];</code>
      *
-     * @return \Google\Protobuf\BoolValue|null
+     * @return BoolValue|null
      */
     public function getConfigIsRepeater()
     {
@@ -8491,12 +8498,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.BoolValue config_is_repeater = 1002 [json_name = "configIsRepeater"];</code>
      *
-     * @param  \Google\Protobuf\BoolValue  $var
+     * @param  BoolValue  $var
      * @return $this
      */
     public function setConfigIsRepeater($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\BoolValue::class);
+        GPBUtil::checkMessage($var, BoolValue::class);
         $this->config_is_repeater = $var;
 
         return $this;
@@ -8520,7 +8527,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.BoolValue config_open_network = 1003 [json_name = "configOpenNetwork"];</code>
      *
-     * @return \Google\Protobuf\BoolValue|null
+     * @return BoolValue|null
      */
     public function getConfigOpenNetwork()
     {
@@ -8552,12 +8559,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.BoolValue config_open_network = 1003 [json_name = "configOpenNetwork"];</code>
      *
-     * @param  \Google\Protobuf\BoolValue  $var
+     * @param  BoolValue  $var
      * @return $this
      */
     public function setConfigOpenNetwork($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\BoolValue::class);
+        GPBUtil::checkMessage($var, BoolValue::class);
         $this->config_open_network = $var;
 
         return $this;
@@ -8581,7 +8588,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.BoolValue config_is_aviation = 1004 [json_name = "configIsAviation"];</code>
      *
-     * @return \Google\Protobuf\BoolValue|null
+     * @return BoolValue|null
      */
     public function getConfigIsAviation()
     {
@@ -8613,12 +8620,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.BoolValue config_is_aviation = 1004 [json_name = "configIsAviation"];</code>
      *
-     * @param  \Google\Protobuf\BoolValue  $var
+     * @param  BoolValue  $var
      * @return $this
      */
     public function setConfigIsAviation($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\BoolValue::class);
+        GPBUtil::checkMessage($var, BoolValue::class);
         $this->config_is_aviation = $var;
 
         return $this;
@@ -8642,7 +8649,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.BoolValue config_secure_dns = 1005 [json_name = "configSecureDns"];</code>
      *
-     * @return \Google\Protobuf\BoolValue|null
+     * @return BoolValue|null
      */
     public function getConfigSecureDns()
     {
@@ -8674,12 +8681,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.BoolValue config_secure_dns = 1005 [json_name = "configSecureDns"];</code>
      *
-     * @param  \Google\Protobuf\BoolValue  $var
+     * @param  BoolValue  $var
      * @return $this
      */
     public function setConfigSecureDns($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\BoolValue::class);
+        GPBUtil::checkMessage($var, BoolValue::class);
         $this->config_secure_dns = $var;
 
         return $this;
@@ -8703,7 +8710,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.BoolValue config_legacy = 1006 [json_name = "configLegacy"];</code>
      *
-     * @return \Google\Protobuf\BoolValue|null
+     * @return BoolValue|null
      */
     public function getConfigLegacy()
     {
@@ -8735,12 +8742,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.BoolValue config_legacy = 1006 [json_name = "configLegacy"];</code>
      *
-     * @param  \Google\Protobuf\BoolValue  $var
+     * @param  BoolValue  $var
      * @return $this
      */
     public function setConfigLegacy($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\BoolValue::class);
+        GPBUtil::checkMessage($var, BoolValue::class);
         $this->config_legacy = $var;
 
         return $this;
@@ -8764,7 +8771,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.BoolValue config_ap_mode = 1007 [json_name = "configApMode"];</code>
      *
-     * @return \Google\Protobuf\BoolValue|null
+     * @return BoolValue|null
      */
     public function getConfigApMode()
     {
@@ -8796,12 +8803,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.BoolValue config_ap_mode = 1007 [json_name = "configApMode"];</code>
      *
-     * @param  \Google\Protobuf\BoolValue  $var
+     * @param  BoolValue  $var
      * @return $this
      */
     public function setConfigApMode($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\BoolValue::class);
+        GPBUtil::checkMessage($var, BoolValue::class);
         $this->config_ap_mode = $var;
 
         return $this;
@@ -8825,7 +8832,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.BoolValue config_dfs_enabled = 1008 [json_name = "configDfsEnabled"];</code>
      *
-     * @return \Google\Protobuf\BoolValue|null
+     * @return BoolValue|null
      */
     public function getConfigDfsEnabled()
     {
@@ -8857,12 +8864,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.BoolValue config_dfs_enabled = 1008 [json_name = "configDfsEnabled"];</code>
      *
-     * @param  \Google\Protobuf\BoolValue  $var
+     * @param  BoolValue  $var
      * @return $this
      */
     public function setConfigDfsEnabled($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\BoolValue::class);
+        GPBUtil::checkMessage($var, BoolValue::class);
         $this->config_dfs_enabled = $var;
 
         return $this;
@@ -8886,7 +8893,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.BoolValue config_network_name_is_default = 1009 [json_name = "configNetworkNameIsDefault"];</code>
      *
-     * @return \Google\Protobuf\BoolValue|null
+     * @return BoolValue|null
      */
     public function getConfigNetworkNameIsDefault()
     {
@@ -8918,12 +8925,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.BoolValue config_network_name_is_default = 1009 [json_name = "configNetworkNameIsDefault"];</code>
      *
-     * @param  \Google\Protobuf\BoolValue  $var
+     * @param  BoolValue  $var
      * @return $this
      */
     public function setConfigNetworkNameIsDefault($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\BoolValue::class);
+        GPBUtil::checkMessage($var, BoolValue::class);
         $this->config_network_name_is_default = $var;
 
         return $this;
@@ -8947,7 +8954,7 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.BoolValue config_remote_ssh_enabled = 1010 [json_name = "configRemoteSshEnabled"];</code>
      *
-     * @return \Google\Protobuf\BoolValue|null
+     * @return BoolValue|null
      */
     public function getConfigRemoteSshEnabled()
     {
@@ -8979,12 +8986,12 @@ class starlink_router_hourly_metrics_v2 extends \Google\Protobuf\Internal\Messag
     /**
      * Generated from protobuf field <code>optional .google.protobuf.BoolValue config_remote_ssh_enabled = 1010 [json_name = "configRemoteSshEnabled"];</code>
      *
-     * @param  \Google\Protobuf\BoolValue  $var
+     * @param  BoolValue  $var
      * @return $this
      */
     public function setConfigRemoteSshEnabled($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\BoolValue::class);
+        GPBUtil::checkMessage($var, BoolValue::class);
         $this->config_remote_ssh_enabled = $var;
 
         return $this;

@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Wifi;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiGetPersistentStatsResponse</code>
  */
-class WifiGetPersistentStatsResponse extends \Google\Protobuf\Internal\Message
+class WifiGetPersistentStatsResponse extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiPersistentStats stats = 1 [json_name = "stats"];</code>
@@ -29,14 +31,14 @@ class WifiGetPersistentStatsResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiPersistentStats stats = 1 [json_name = "stats"];</code>
      *
-     * @return \SpaceX\API\Device\WifiPersistentStats|null
+     * @return WifiPersistentStats|null
      */
     public function getStats()
     {
@@ -56,12 +58,12 @@ class WifiGetPersistentStatsResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiPersistentStats stats = 1 [json_name = "stats"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiPersistentStats  $var
+     * @param  WifiPersistentStats  $var
      * @return $this
      */
     public function setStats($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiPersistentStats::class);
+        GPBUtil::checkMessage($var, WifiPersistentStats::class);
         $this->stats = $var;
 
         return $this;

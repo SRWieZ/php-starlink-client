@@ -7,11 +7,14 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Dish;
+use SpaceX\API\Device\DishOutage\Cause;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.DishOutage</code>
  */
-class DishOutage extends \Google\Protobuf\Internal\Message
+class DishOutage extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishOutage.Cause cause = 1 [json_name = "cause"];</code>
@@ -47,7 +50,7 @@ class DishOutage extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Dish::initOnce();
+        Dish::initOnce();
         parent::__construct($data);
     }
 
@@ -79,7 +82,7 @@ class DishOutage extends \Google\Protobuf\Internal\Message
      */
     public function setCause($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\DishOutage\Cause::class);
+        GPBUtil::checkEnum($var, Cause::class);
         $this->cause = $var;
 
         return $this;

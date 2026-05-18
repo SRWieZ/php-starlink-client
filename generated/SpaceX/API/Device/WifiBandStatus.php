@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Wifi;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiBandStatus</code>
  */
-class WifiBandStatus extends \Google\Protobuf\Internal\Message
+class WifiBandStatus extends Message
 {
     /**
      * Generated from protobuf field <code>optional float chan_busy_time_fraction = 1 [json_name = "chanBusyTimeFraction"];</code>
@@ -53,7 +55,7 @@ class WifiBandStatus extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 

@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Common;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.BondingChallenge</code>
  */
-class BondingChallenge extends \Google\Protobuf\Internal\Message
+class BondingChallenge extends Message
 {
     /**
      * Generated from protobuf field <code>optional string dish_id = 1 [json_name = "dishId"];</code>
@@ -41,7 +43,7 @@ class BondingChallenge extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Common::initOnce();
+        Common::initOnce();
         parent::__construct($data);
     }
 

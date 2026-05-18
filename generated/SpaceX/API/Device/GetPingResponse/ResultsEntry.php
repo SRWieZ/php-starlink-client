@@ -7,11 +7,14 @@
 namespace SpaceX\API\Device\GetPingResponse;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Device;
+use SpaceX\API\Device\PingResult;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.GetPingResponse.ResultsEntry</code>
  */
-class ResultsEntry extends \Google\Protobuf\Internal\Message
+class ResultsEntry extends Message
 {
     /**
      * Generated from protobuf field <code>optional string key = 1 [json_name = "key"];</code>
@@ -35,7 +38,7 @@ class ResultsEntry extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 
@@ -76,7 +79,7 @@ class ResultsEntry extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.PingResult value = 2 [json_name = "value"];</code>
      *
-     * @return \SpaceX\API\Device\PingResult|null
+     * @return PingResult|null
      */
     public function getValue()
     {
@@ -96,12 +99,12 @@ class ResultsEntry extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.PingResult value = 2 [json_name = "value"];</code>
      *
-     * @param  \SpaceX\API\Device\PingResult  $var
+     * @param  PingResult  $var
      * @return $this
      */
     public function setValue($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\PingResult::class);
+        GPBUtil::checkMessage($var, PingResult::class);
         $this->value = $var;
 
         return $this;

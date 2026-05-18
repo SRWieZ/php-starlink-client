@@ -6,13 +6,15 @@
 
 namespace GPBMetadata\SpacexApi\Satellites\Network;
 
+use Google\Protobuf\Internal\DescriptorPool;
+
 class UtDisablementCodes
 {
     public static $is_initialized = false;
 
     public static function initOnce()
     {
-        $pool = \Google\Protobuf\Internal\DescriptorPool::getGeneratedPool();
+        $pool = DescriptorPool::getGeneratedPool();
 
         if (static::$is_initialized == true) {
             return;

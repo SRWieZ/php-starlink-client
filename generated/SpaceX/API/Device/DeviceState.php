@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Common;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.DeviceState</code>
  */
-class DeviceState extends \Google\Protobuf\Internal\Message
+class DeviceState extends Message
 {
     /**
      * Generated from protobuf field <code>optional uint64 uptime_s = 1 [json_name = "uptimeS"];</code>
@@ -29,7 +31,7 @@ class DeviceState extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Common::initOnce();
+        Common::initOnce();
         parent::__construct($data);
     }
 

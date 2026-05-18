@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Wifi;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiUpdateResponse</code>
  */
-class WifiUpdateResponse extends \Google\Protobuf\Internal\Message
+class WifiUpdateResponse extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiSoftwareUpdateStats stats = 1 [json_name = "stats"];</code>
@@ -29,14 +31,14 @@ class WifiUpdateResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiSoftwareUpdateStats stats = 1 [json_name = "stats"];</code>
      *
-     * @return \SpaceX\API\Device\WifiSoftwareUpdateStats|null
+     * @return WifiSoftwareUpdateStats|null
      */
     public function getStats()
     {
@@ -56,12 +58,12 @@ class WifiUpdateResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiSoftwareUpdateStats stats = 1 [json_name = "stats"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiSoftwareUpdateStats  $var
+     * @param  WifiSoftwareUpdateStats  $var
      * @return $this
      */
     public function setStats($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiSoftwareUpdateStats::class);
+        GPBUtil::checkMessage($var, WifiSoftwareUpdateStats::class);
         $this->stats = $var;
 
         return $this;

@@ -6,13 +6,16 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
 use Google\Protobuf\RepeatedField;
+use GPBMetadata\SpacexApi\Device\Device;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.SetTrustedKeysRequest</code>
  */
-class SetTrustedKeysRequest extends \Google\Protobuf\Internal\Message
+class SetTrustedKeysRequest extends Message
 {
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.PublicKey keys = 1 [json_name = "keys"];</code>
@@ -30,14 +33,14 @@ class SetTrustedKeysRequest extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.PublicKey keys = 1 [json_name = "keys"];</code>
      *
-     * @return RepeatedField<\SpaceX\API\Device\PublicKey>
+     * @return RepeatedField<PublicKey>
      */
     public function getKeys()
     {
@@ -47,12 +50,12 @@ class SetTrustedKeysRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.PublicKey keys = 1 [json_name = "keys"];</code>
      *
-     * @param  \SpaceX\API\Device\PublicKey[]  $var
+     * @param  PublicKey[]  $var
      * @return $this
      */
     public function setKeys($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SpaceX\API\Device\PublicKey::class);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, PublicKey::class);
         $this->keys = $arr;
 
         return $this;

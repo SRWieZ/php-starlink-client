@@ -6,13 +6,16 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
 use Google\Protobuf\RepeatedField;
+use GPBMetadata\SpacexApi\Device\WifiConfig;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.HttpServer</code>
  */
-class HttpServer extends \Google\Protobuf\Internal\Message
+class HttpServer extends Message
 {
     /**
      * Generated from protobuf field <code>optional string domain_name = 1 [json_name = "domainName"];</code>
@@ -54,7 +57,7 @@ class HttpServer extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\WifiConfig::initOnce();
+        WifiConfig::initOnce();
         parent::__construct($data);
     }
 
@@ -95,7 +98,7 @@ class HttpServer extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.TlsConfig tls = 2 [json_name = "tls"];</code>
      *
-     * @return \SpaceX\API\Device\TlsConfig|null
+     * @return TlsConfig|null
      */
     public function getTls()
     {
@@ -115,12 +118,12 @@ class HttpServer extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.TlsConfig tls = 2 [json_name = "tls"];</code>
      *
-     * @param  \SpaceX\API\Device\TlsConfig  $var
+     * @param  TlsConfig  $var
      * @return $this
      */
     public function setTls($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\TlsConfig::class);
+        GPBUtil::checkMessage($var, TlsConfig::class);
         $this->tls = $var;
 
         return $this;
@@ -212,7 +215,7 @@ class HttpServer extends \Google\Protobuf\Internal\Message
      */
     public function setAccessControlAllowOrigins($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::STRING);
         $this->access_control_allow_origins = $arr;
 
         return $this;

@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Wifi;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiSelfTestResponse</code>
  */
-class WifiSelfTestResponse extends \Google\Protobuf\Internal\Message
+class WifiSelfTestResponse extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiSelfTest self_test = 1 [json_name = "selfTest"];</code>
@@ -35,14 +37,14 @@ class WifiSelfTestResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiSelfTest self_test = 1 [json_name = "selfTest"];</code>
      *
-     * @return \SpaceX\API\Device\WifiSelfTest|null
+     * @return WifiSelfTest|null
      */
     public function getSelfTest()
     {
@@ -62,12 +64,12 @@ class WifiSelfTestResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiSelfTest self_test = 1 [json_name = "selfTest"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiSelfTest  $var
+     * @param  WifiSelfTest  $var
      * @return $this
      */
     public function setSelfTest($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiSelfTest::class);
+        GPBUtil::checkMessage($var, WifiSelfTest::class);
         $this->self_test = $var;
 
         return $this;

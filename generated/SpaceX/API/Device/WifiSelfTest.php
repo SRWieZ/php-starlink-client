@@ -6,13 +6,17 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
 use Google\Protobuf\RepeatedField;
+use GPBMetadata\SpacexApi\Device\Wifi;
+use SpaceX\API\Device\WifiSelfTest\TestResult;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiSelfTest</code>
  */
-class WifiSelfTest extends \Google\Protobuf\Internal\Message
+class WifiSelfTest extends Message
 {
     /**
      * Generated from protobuf field <code>optional bool total_success = 1 [json_name = "totalSuccess"];</code>
@@ -54,7 +58,7 @@ class WifiSelfTest extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 
@@ -95,7 +99,7 @@ class WifiSelfTest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiSelfTest.TestResult fused = 2 [json_name = "fused"];</code>
      *
-     * @return \SpaceX\API\Device\WifiSelfTest\TestResult|null
+     * @return TestResult|null
      */
     public function getFused()
     {
@@ -115,12 +119,12 @@ class WifiSelfTest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiSelfTest.TestResult fused = 2 [json_name = "fused"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiSelfTest\TestResult  $var
+     * @param  TestResult  $var
      * @return $this
      */
     public function setFused($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiSelfTest\TestResult::class);
+        GPBUtil::checkMessage($var, TestResult::class);
         $this->fused = $var;
 
         return $this;
@@ -129,7 +133,7 @@ class WifiSelfTest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiSelfTest.TestResult eth_phys = 3 [json_name = "ethPhys"];</code>
      *
-     * @return RepeatedField<\SpaceX\API\Device\WifiSelfTest\TestResult>
+     * @return RepeatedField<TestResult>
      */
     public function getEthPhys()
     {
@@ -139,12 +143,12 @@ class WifiSelfTest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiSelfTest.TestResult eth_phys = 3 [json_name = "ethPhys"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiSelfTest\TestResult[]  $var
+     * @param  TestResult[]  $var
      * @return $this
      */
     public function setEthPhys($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SpaceX\API\Device\WifiSelfTest\TestResult::class);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, TestResult::class);
         $this->eth_phys = $arr;
 
         return $this;
@@ -153,7 +157,7 @@ class WifiSelfTest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiSelfTest.TestResult pcis = 4 [json_name = "pcis"];</code>
      *
-     * @return RepeatedField<\SpaceX\API\Device\WifiSelfTest\TestResult>
+     * @return RepeatedField<TestResult>
      */
     public function getPcis()
     {
@@ -163,12 +167,12 @@ class WifiSelfTest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiSelfTest.TestResult pcis = 4 [json_name = "pcis"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiSelfTest\TestResult[]  $var
+     * @param  TestResult[]  $var
      * @return $this
      */
     public function setPcis($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SpaceX\API\Device\WifiSelfTest\TestResult::class);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, TestResult::class);
         $this->pcis = $arr;
 
         return $this;
@@ -177,7 +181,7 @@ class WifiSelfTest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiSelfTest.TestResult bl2_prod = 5 [json_name = "bl2Prod"];</code>
      *
-     * @return \SpaceX\API\Device\WifiSelfTest\TestResult|null
+     * @return TestResult|null
      */
     public function getBl2Prod()
     {
@@ -197,12 +201,12 @@ class WifiSelfTest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiSelfTest.TestResult bl2_prod = 5 [json_name = "bl2Prod"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiSelfTest\TestResult  $var
+     * @param  TestResult  $var
      * @return $this
      */
     public function setBl2Prod($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiSelfTest\TestResult::class);
+        GPBUtil::checkMessage($var, TestResult::class);
         $this->bl2_prod = $var;
 
         return $this;

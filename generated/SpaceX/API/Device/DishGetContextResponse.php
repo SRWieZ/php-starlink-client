@@ -7,11 +7,14 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Dish;
+use SpaceX\API\Satellites\Network\UtDisablementCode;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.DishGetContextResponse</code>
  */
-class DishGetContextResponse extends \Google\Protobuf\Internal\Message
+class DishGetContextResponse extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DeviceInfo device_info = 1 [json_name = "deviceInfo"];</code>
@@ -173,14 +176,14 @@ class DishGetContextResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Dish::initOnce();
+        Dish::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DeviceInfo device_info = 1 [json_name = "deviceInfo"];</code>
      *
-     * @return \SpaceX\API\Device\DeviceInfo|null
+     * @return DeviceInfo|null
      */
     public function getDeviceInfo()
     {
@@ -200,12 +203,12 @@ class DishGetContextResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DeviceInfo device_info = 1 [json_name = "deviceInfo"];</code>
      *
-     * @param  \SpaceX\API\Device\DeviceInfo  $var
+     * @param  DeviceInfo  $var
      * @return $this
      */
     public function setDeviceInfo($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\DeviceInfo::class);
+        GPBUtil::checkMessage($var, DeviceInfo::class);
         $this->device_info = $var;
 
         return $this;
@@ -214,7 +217,7 @@ class DishGetContextResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DeviceState device_state = 7 [json_name = "deviceState"];</code>
      *
-     * @return \SpaceX\API\Device\DeviceState|null
+     * @return DeviceState|null
      */
     public function getDeviceState()
     {
@@ -234,12 +237,12 @@ class DishGetContextResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DeviceState device_state = 7 [json_name = "deviceState"];</code>
      *
-     * @param  \SpaceX\API\Device\DeviceState  $var
+     * @param  DeviceState  $var
      * @return $this
      */
     public function setDeviceState($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\DeviceState::class);
+        GPBUtil::checkMessage($var, DeviceState::class);
         $this->device_state = $var;
 
         return $this;
@@ -987,7 +990,7 @@ class DishGetContextResponse extends \Google\Protobuf\Internal\Message
      */
     public function setDisablementCode($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Satellites\Network\UtDisablementCode::class);
+        GPBUtil::checkEnum($var, UtDisablementCode::class);
         $this->disablement_code = $var;
 
         return $this;

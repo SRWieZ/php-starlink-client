@@ -7,11 +7,14 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Dish;
+use SpaceX\API\Device\PLCPortStats\PortStatus;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.PLCPortStats</code>
  */
-class PLCPortStats extends \Google\Protobuf\Internal\Message
+class PLCPortStats extends Message
 {
     /**
      * Generated from protobuf field <code>optional uint32 power = 1 [json_name = "power"];</code>
@@ -35,7 +38,7 @@ class PLCPortStats extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Dish::initOnce();
+        Dish::initOnce();
         parent::__construct($data);
     }
 
@@ -101,7 +104,7 @@ class PLCPortStats extends \Google\Protobuf\Internal\Message
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\PLCPortStats\PortStatus::class);
+        GPBUtil::checkEnum($var, PortStatus::class);
         $this->status = $var;
 
         return $this;

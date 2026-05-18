@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Device;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.Event</code>
  */
-class Event extends \Google\Protobuf\Internal\Message
+class Event extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiNewClientConnectedEvent wifi_new_client_connected = 3001 [json_name = "wifiNewClientConnected"];</code>
@@ -53,14 +55,14 @@ class Event extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiNewClientConnectedEvent wifi_new_client_connected = 3001 [json_name = "wifiNewClientConnected"];</code>
      *
-     * @return \SpaceX\API\Device\WifiNewClientConnectedEvent|null
+     * @return WifiNewClientConnectedEvent|null
      */
     public function getWifiNewClientConnected()
     {
@@ -80,12 +82,12 @@ class Event extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiNewClientConnectedEvent wifi_new_client_connected = 3001 [json_name = "wifiNewClientConnected"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiNewClientConnectedEvent  $var
+     * @param  WifiNewClientConnectedEvent  $var
      * @return $this
      */
     public function setWifiNewClientConnected($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiNewClientConnectedEvent::class);
+        GPBUtil::checkMessage($var, WifiNewClientConnectedEvent::class);
         $this->wifi_new_client_connected = $var;
 
         return $this;
@@ -94,7 +96,7 @@ class Event extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiAccountBondingEvent wifi_account_bonding = 3002 [json_name = "wifiAccountBonding"];</code>
      *
-     * @return \SpaceX\API\Device\WifiAccountBondingEvent|null
+     * @return WifiAccountBondingEvent|null
      */
     public function getWifiAccountBonding()
     {
@@ -114,12 +116,12 @@ class Event extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiAccountBondingEvent wifi_account_bonding = 3002 [json_name = "wifiAccountBonding"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiAccountBondingEvent  $var
+     * @param  WifiAccountBondingEvent  $var
      * @return $this
      */
     public function setWifiAccountBonding($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiAccountBondingEvent::class);
+        GPBUtil::checkMessage($var, WifiAccountBondingEvent::class);
         $this->wifi_account_bonding = $var;
 
         return $this;
@@ -128,7 +130,7 @@ class Event extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiNewPeerEvent wifi_new_peer = 3003 [json_name = "wifiNewPeer"];</code>
      *
-     * @return \SpaceX\API\Device\WifiNewPeerEvent|null
+     * @return WifiNewPeerEvent|null
      */
     public function getWifiNewPeer()
     {
@@ -148,12 +150,12 @@ class Event extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiNewPeerEvent wifi_new_peer = 3003 [json_name = "wifiNewPeer"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiNewPeerEvent  $var
+     * @param  WifiNewPeerEvent  $var
      * @return $this
      */
     public function setWifiNewPeer($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiNewPeerEvent::class);
+        GPBUtil::checkMessage($var, WifiNewPeerEvent::class);
         $this->wifi_new_peer = $var;
 
         return $this;
@@ -162,7 +164,7 @@ class Event extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiCloudStatusEvent wifi_cloud_status = 3004 [json_name = "wifiCloudStatus"];</code>
      *
-     * @return \SpaceX\API\Device\WifiCloudStatusEvent|null
+     * @return WifiCloudStatusEvent|null
      */
     public function getWifiCloudStatus()
     {
@@ -182,12 +184,12 @@ class Event extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiCloudStatusEvent wifi_cloud_status = 3004 [json_name = "wifiCloudStatus"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiCloudStatusEvent  $var
+     * @param  WifiCloudStatusEvent  $var
      * @return $this
      */
     public function setWifiCloudStatus($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiCloudStatusEvent::class);
+        GPBUtil::checkMessage($var, WifiCloudStatusEvent::class);
         $this->wifi_cloud_status = $var;
 
         return $this;
@@ -196,7 +198,7 @@ class Event extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiClientSandboxRequest wifi_client_sandbox = 3005 [json_name = "wifiClientSandbox"];</code>
      *
-     * @return \SpaceX\API\Device\WifiClientSandboxRequest|null
+     * @return WifiClientSandboxRequest|null
      */
     public function getWifiClientSandbox()
     {
@@ -216,12 +218,12 @@ class Event extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiClientSandboxRequest wifi_client_sandbox = 3005 [json_name = "wifiClientSandbox"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiClientSandboxRequest  $var
+     * @param  WifiClientSandboxRequest  $var
      * @return $this
      */
     public function setWifiClientSandbox($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiClientSandboxRequest::class);
+        GPBUtil::checkMessage($var, WifiClientSandboxRequest::class);
         $this->wifi_client_sandbox = $var;
 
         return $this;

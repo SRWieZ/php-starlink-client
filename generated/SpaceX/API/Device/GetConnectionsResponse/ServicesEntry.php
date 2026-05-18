@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device\GetConnectionsResponse;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Device;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.GetConnectionsResponse.ServicesEntry</code>
  */
-class ServicesEntry extends \Google\Protobuf\Internal\Message
+class ServicesEntry extends Message
 {
     /**
      * Generated from protobuf field <code>optional string key = 1 [json_name = "key"];</code>
@@ -35,7 +37,7 @@ class ServicesEntry extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 
@@ -76,7 +78,7 @@ class ServicesEntry extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetConnectionsResponse.ServiceConnection value = 2 [json_name = "value"];</code>
      *
-     * @return \SpaceX\API\Device\GetConnectionsResponse\ServiceConnection|null
+     * @return ServiceConnection|null
      */
     public function getValue()
     {
@@ -96,12 +98,12 @@ class ServicesEntry extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetConnectionsResponse.ServiceConnection value = 2 [json_name = "value"];</code>
      *
-     * @param  \SpaceX\API\Device\GetConnectionsResponse\ServiceConnection  $var
+     * @param  ServiceConnection  $var
      * @return $this
      */
     public function setValue($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\GetConnectionsResponse\ServiceConnection::class);
+        GPBUtil::checkMessage($var, ServiceConnection::class);
         $this->value = $var;
 
         return $this;

@@ -7,11 +7,14 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use Google\Protobuf\Timestamp;
+use GPBMetadata\SpacexApi\Device\Device;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.SensitiveCommand</code>
  */
-class SensitiveCommand extends \Google\Protobuf\Internal\Message
+class SensitiveCommand extends Message
 {
     /**
      * Generated from protobuf field <code>optional .google.protobuf.Timestamp timestamp = 1 [json_name = "timestamp"];</code>
@@ -41,14 +44,14 @@ class SensitiveCommand extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>optional .google.protobuf.Timestamp timestamp = 1 [json_name = "timestamp"];</code>
      *
-     * @return \Google\Protobuf\Timestamp|null
+     * @return Timestamp|null
      */
     public function getTimestamp()
     {
@@ -68,12 +71,12 @@ class SensitiveCommand extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .google.protobuf.Timestamp timestamp = 1 [json_name = "timestamp"];</code>
      *
-     * @param  \Google\Protobuf\Timestamp  $var
+     * @param  Timestamp  $var
      * @return $this
      */
     public function setTimestamp($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
+        GPBUtil::checkMessage($var, Timestamp::class);
         $this->timestamp = $var;
 
         return $this;
@@ -116,7 +119,7 @@ class SensitiveCommand extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetLocationRequest get_location = 3 [json_name = "getLocation"];</code>
      *
-     * @return \SpaceX\API\Device\GetLocationRequest|null
+     * @return GetLocationRequest|null
      */
     public function getGetLocation()
     {
@@ -136,12 +139,12 @@ class SensitiveCommand extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.GetLocationRequest get_location = 3 [json_name = "getLocation"];</code>
      *
-     * @param  \SpaceX\API\Device\GetLocationRequest  $var
+     * @param  GetLocationRequest  $var
      * @return $this
      */
     public function setGetLocation($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\GetLocationRequest::class);
+        GPBUtil::checkMessage($var, GetLocationRequest::class);
         $this->get_location = $var;
 
         return $this;

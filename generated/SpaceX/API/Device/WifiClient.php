@@ -6,13 +6,23 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
 use Google\Protobuf\RepeatedField;
+use GPBMetadata\SpacexApi\Device\Wifi;
+use SpaceX\API\Device\WifiClient\Alerts;
+use SpaceX\API\Device\WifiClient\FqcodelInfo;
+use SpaceX\API\Device\WifiClient\PBInterface;
+use SpaceX\API\Device\WifiClient\PingMetrics;
+use SpaceX\API\Device\WifiClient\Role;
+use SpaceX\API\Device\WifiClient\RxStats;
+use SpaceX\API\Device\WifiClient\TxStats;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiClient</code>
  */
-class WifiClient extends \Google\Protobuf\Internal\Message
+class WifiClient extends Message
 {
     /**
      * Generated from protobuf field <code>optional string name = 1 [json_name = "name"];</code>
@@ -330,7 +340,7 @@ class WifiClient extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 
@@ -658,7 +668,7 @@ class WifiClient extends \Google\Protobuf\Internal\Message
      */
     public function setIpv6Addresses($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::STRING);
         $this->ipv6_addresses = $arr;
 
         return $this;
@@ -735,7 +745,7 @@ class WifiClient extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiClient.RxStats rx_stats = 5 [json_name = "rxStats"];</code>
      *
-     * @return \SpaceX\API\Device\WifiClient\RxStats|null
+     * @return RxStats|null
      */
     public function getRxStats()
     {
@@ -755,12 +765,12 @@ class WifiClient extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiClient.RxStats rx_stats = 5 [json_name = "rxStats"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiClient\RxStats  $var
+     * @param  RxStats  $var
      * @return $this
      */
     public function setRxStats($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiClient\RxStats::class);
+        GPBUtil::checkMessage($var, RxStats::class);
         $this->rx_stats = $var;
 
         return $this;
@@ -803,7 +813,7 @@ class WifiClient extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiClient.TxStats tx_stats = 6 [json_name = "txStats"];</code>
      *
-     * @return \SpaceX\API\Device\WifiClient\TxStats|null
+     * @return TxStats|null
      */
     public function getTxStats()
     {
@@ -823,12 +833,12 @@ class WifiClient extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiClient.TxStats tx_stats = 6 [json_name = "txStats"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiClient\TxStats  $var
+     * @param  TxStats  $var
      * @return $this
      */
     public function setTxStats($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiClient\TxStats::class);
+        GPBUtil::checkMessage($var, TxStats::class);
         $this->tx_stats = $var;
 
         return $this;
@@ -998,7 +1008,7 @@ class WifiClient extends \Google\Protobuf\Internal\Message
      */
     public function setIface($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\WifiClient\PBInterface::class);
+        GPBUtil::checkEnum($var, PBInterface::class);
         $this->iface = $var;
 
         return $this;
@@ -1168,7 +1178,7 @@ class WifiClient extends \Google\Protobuf\Internal\Message
      */
     public function setRole($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\WifiClient\Role::class);
+        GPBUtil::checkEnum($var, Role::class);
         $this->role = $var;
 
         return $this;
@@ -1789,7 +1799,7 @@ class WifiClient extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiClient.PingMetrics ping_metrics = 40 [json_name = "pingMetrics"];</code>
      *
-     * @return \SpaceX\API\Device\WifiClient\PingMetrics|null
+     * @return PingMetrics|null
      */
     public function getPingMetrics()
     {
@@ -1809,12 +1819,12 @@ class WifiClient extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiClient.PingMetrics ping_metrics = 40 [json_name = "pingMetrics"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiClient\PingMetrics  $var
+     * @param  PingMetrics  $var
      * @return $this
      */
     public function setPingMetrics($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiClient\PingMetrics::class);
+        GPBUtil::checkMessage($var, PingMetrics::class);
         $this->ping_metrics = $var;
 
         return $this;
@@ -1925,7 +1935,7 @@ class WifiClient extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiClient.FqcodelInfo fqcodel_info = 44 [json_name = "fqcodelInfo"];</code>
      *
-     * @return \SpaceX\API\Device\WifiClient\FqcodelInfo|null
+     * @return FqcodelInfo|null
      */
     public function getFqcodelInfo()
     {
@@ -1945,12 +1955,12 @@ class WifiClient extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiClient.FqcodelInfo fqcodel_info = 44 [json_name = "fqcodelInfo"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiClient\FqcodelInfo  $var
+     * @param  FqcodelInfo  $var
      * @return $this
      */
     public function setFqcodelInfo($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiClient\FqcodelInfo::class);
+        GPBUtil::checkMessage($var, FqcodelInfo::class);
         $this->fqcodel_info = $var;
 
         return $this;
@@ -1959,7 +1969,7 @@ class WifiClient extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiClient.Alerts alerts = 52 [json_name = "alerts"];</code>
      *
-     * @return \SpaceX\API\Device\WifiClient\Alerts|null
+     * @return Alerts|null
      */
     public function getAlerts()
     {
@@ -1979,12 +1989,12 @@ class WifiClient extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiClient.Alerts alerts = 52 [json_name = "alerts"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiClient\Alerts  $var
+     * @param  Alerts  $var
      * @return $this
      */
     public function setAlerts($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiClient\Alerts::class);
+        GPBUtil::checkMessage($var, Alerts::class);
         $this->alerts = $var;
 
         return $this;

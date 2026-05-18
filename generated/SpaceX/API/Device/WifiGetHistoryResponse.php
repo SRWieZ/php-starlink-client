@@ -6,13 +6,17 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
 use Google\Protobuf\RepeatedField;
+use GPBMetadata\SpacexApi\Device\Wifi;
+use SpaceX\API\Device\WifiGetHistoryResponse\DnsResolverDropRateEntry;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiGetHistoryResponse</code>
  */
-class WifiGetHistoryResponse extends \Google\Protobuf\Internal\Message
+class WifiGetHistoryResponse extends Message
 {
     /**
      * Generated from protobuf field <code>optional uint64 current = 1 [json_name = "current"];</code>
@@ -96,7 +100,7 @@ class WifiGetHistoryResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 
@@ -152,7 +156,7 @@ class WifiGetHistoryResponse extends \Google\Protobuf\Internal\Message
      */
     public function setPingDropRate($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::FLOAT);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::FLOAT);
         $this->ping_drop_rate = $arr;
 
         return $this;
@@ -176,7 +180,7 @@ class WifiGetHistoryResponse extends \Google\Protobuf\Internal\Message
      */
     public function setPingLatencyMs($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::FLOAT);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::FLOAT);
         $this->ping_latency_ms = $arr;
 
         return $this;
@@ -234,7 +238,7 @@ class WifiGetHistoryResponse extends \Google\Protobuf\Internal\Message
      */
     public function setPopIpv4PingDropRateLast15S($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::FLOAT);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::FLOAT);
         $this->pop_ipv4_ping_drop_rate_last_15s = $arr;
 
         return $this;
@@ -258,7 +262,7 @@ class WifiGetHistoryResponse extends \Google\Protobuf\Internal\Message
      */
     public function setPopIpv6PingDropRateLast15S($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::FLOAT);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::FLOAT);
         $this->pop_ipv6_ping_drop_rate_last_15s = $arr;
 
         return $this;
@@ -282,7 +286,7 @@ class WifiGetHistoryResponse extends \Google\Protobuf\Internal\Message
      */
     public function setGoogleIpv4PingDropRateLast15S($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::FLOAT);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::FLOAT);
         $this->google_ipv4_ping_drop_rate_last_15s = $arr;
 
         return $this;
@@ -306,7 +310,7 @@ class WifiGetHistoryResponse extends \Google\Protobuf\Internal\Message
      */
     public function setGoogleIpv6PingDropRateLast15S($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::FLOAT);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::FLOAT);
         $this->google_ipv6_ping_drop_rate_last_15s = $arr;
 
         return $this;
@@ -330,7 +334,7 @@ class WifiGetHistoryResponse extends \Google\Protobuf\Internal\Message
      */
     public function setCloudflareIpv4PingDropRateLast15S($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::FLOAT);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::FLOAT);
         $this->cloudflare_ipv4_ping_drop_rate_last_15s = $arr;
 
         return $this;
@@ -354,7 +358,7 @@ class WifiGetHistoryResponse extends \Google\Protobuf\Internal\Message
      */
     public function setCloudflareIpv6PingDropRateLast15S($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::FLOAT);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::FLOAT);
         $this->cloudflare_ipv6_ping_drop_rate_last_15s = $arr;
 
         return $this;
@@ -363,7 +367,7 @@ class WifiGetHistoryResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiGetHistoryResponse.DnsResolverDropRateEntry dns_resolver_drop_rate = 1009 [json_name = "dnsResolverDropRate"];</code>
      *
-     * @return RepeatedField<\SpaceX\API\Device\WifiGetHistoryResponse\DnsResolverDropRateEntry>
+     * @return RepeatedField<DnsResolverDropRateEntry>
      */
     public function getDnsResolverDropRate()
     {
@@ -373,12 +377,12 @@ class WifiGetHistoryResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiGetHistoryResponse.DnsResolverDropRateEntry dns_resolver_drop_rate = 1009 [json_name = "dnsResolverDropRate"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiGetHistoryResponse\DnsResolverDropRateEntry[]  $var
+     * @param  DnsResolverDropRateEntry[]  $var
      * @return $this
      */
     public function setDnsResolverDropRate($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SpaceX\API\Device\WifiGetHistoryResponse\DnsResolverDropRateEntry::class);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, DnsResolverDropRateEntry::class);
         $this->dns_resolver_drop_rate = $arr;
 
         return $this;
@@ -387,7 +391,7 @@ class WifiGetHistoryResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.EventLog event_log = 1010 [json_name = "eventLog"];</code>
      *
-     * @return \SpaceX\API\Device\EventLog|null
+     * @return EventLog|null
      */
     public function getEventLog()
     {
@@ -407,12 +411,12 @@ class WifiGetHistoryResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.EventLog event_log = 1010 [json_name = "eventLog"];</code>
      *
-     * @param  \SpaceX\API\Device\EventLog  $var
+     * @param  EventLog  $var
      * @return $this
      */
     public function setEventLog($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\EventLog::class);
+        GPBUtil::checkMessage($var, EventLog::class);
         $this->event_log = $var;
 
         return $this;

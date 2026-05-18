@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Device;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.GetLocationRequest</code>
  */
-class GetLocationRequest extends \Google\Protobuf\Internal\Message
+class GetLocationRequest extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.PositionSource source = 1 [json_name = "source"];</code>
@@ -29,7 +31,7 @@ class GetLocationRequest extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 
@@ -61,7 +63,7 @@ class GetLocationRequest extends \Google\Protobuf\Internal\Message
      */
     public function setSource($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\PositionSource::class);
+        GPBUtil::checkEnum($var, PositionSource::class);
         $this->source = $var;
 
         return $this;

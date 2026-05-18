@@ -4,12 +4,17 @@
 
 namespace SpaceX\API\Device;
 
-class DeviceClient extends \Grpc\BaseStub
+use Grpc\BaseStub;
+use Grpc\BidiStreamingCall;
+use Grpc\Channel;
+use Grpc\UnaryCall;
+
+class DeviceClient extends BaseStub
 {
     /**
      * @param  string  $hostname  hostname
      * @param  array  $opts  channel options
-     * @param  \Grpc\Channel  $channel  (optional) re-use channel object
+     * @param  Channel  $channel  (optional) re-use channel object
      */
     public function __construct($hostname, $opts, $channel = null)
     {
@@ -19,7 +24,7 @@ class DeviceClient extends \Grpc\BaseStub
     /**
      * @param  array  $metadata  metadata
      * @param  array  $options  call options
-     * @return \Grpc\BidiStreamingCall
+     * @return BidiStreamingCall
      */
     public function Stream($metadata = [], $options = [])
     {
@@ -29,12 +34,12 @@ class DeviceClient extends \Grpc\BaseStub
     }
 
     /**
-     * @param  \SpaceX\API\Device\Request  $argument  input argument
+     * @param  Request  $argument  input argument
      * @param  array  $metadata  metadata
      * @param  array  $options  call options
-     * @return \Grpc\UnaryCall<\SpaceX\API\Device\Response>
+     * @return UnaryCall<Response>
      */
-    public function Handle(\SpaceX\API\Device\Request $argument,
+    public function Handle(Request $argument,
         $metadata = [], $options = [])
     {
         return $this->_simpleRequest('/SpaceX.API.Device.Device/Handle',

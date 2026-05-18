@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Device;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.FromDevice</code>
  */
-class FromDevice extends \Google\Protobuf\Internal\Message
+class FromDevice extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.Response response = 1 [json_name = "response"];</code>
@@ -41,14 +43,14 @@ class FromDevice extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.Response response = 1 [json_name = "response"];</code>
      *
-     * @return \SpaceX\API\Device\Response|null
+     * @return Response|null
      */
     public function getResponse()
     {
@@ -68,12 +70,12 @@ class FromDevice extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.Response response = 1 [json_name = "response"];</code>
      *
-     * @param  \SpaceX\API\Device\Response  $var
+     * @param  Response  $var
      * @return $this
      */
     public function setResponse($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\Response::class);
+        GPBUtil::checkMessage($var, Response::class);
         $this->response = $var;
 
         return $this;
@@ -82,7 +84,7 @@ class FromDevice extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.Event event = 2 [json_name = "event"];</code>
      *
-     * @return \SpaceX\API\Device\Event|null
+     * @return Event|null
      */
     public function getEvent()
     {
@@ -102,12 +104,12 @@ class FromDevice extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.Event event = 2 [json_name = "event"];</code>
      *
-     * @param  \SpaceX\API\Device\Event  $var
+     * @param  Event  $var
      * @return $this
      */
     public function setEvent($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\Event::class);
+        GPBUtil::checkMessage($var, Event::class);
         $this->event = $var;
 
         return $this;
@@ -116,7 +118,7 @@ class FromDevice extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.HealthCheck health_check = 3 [json_name = "healthCheck"];</code>
      *
-     * @return \SpaceX\API\Device\HealthCheck|null
+     * @return HealthCheck|null
      */
     public function getHealthCheck()
     {
@@ -136,12 +138,12 @@ class FromDevice extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.HealthCheck health_check = 3 [json_name = "healthCheck"];</code>
      *
-     * @param  \SpaceX\API\Device\HealthCheck  $var
+     * @param  HealthCheck  $var
      * @return $this
      */
     public function setHealthCheck($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\HealthCheck::class);
+        GPBUtil::checkMessage($var, HealthCheck::class);
         $this->health_check = $var;
 
         return $this;

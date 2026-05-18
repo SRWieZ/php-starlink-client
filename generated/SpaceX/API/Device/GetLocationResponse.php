@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Device;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.GetLocationResponse</code>
  */
-class GetLocationResponse extends \Google\Protobuf\Internal\Message
+class GetLocationResponse extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.LLAPosition lla = 1 [json_name = "lla"];</code>
@@ -53,14 +55,14 @@ class GetLocationResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.LLAPosition lla = 1 [json_name = "lla"];</code>
      *
-     * @return \SpaceX\API\Device\LLAPosition|null
+     * @return LLAPosition|null
      */
     public function getLla()
     {
@@ -80,12 +82,12 @@ class GetLocationResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.LLAPosition lla = 1 [json_name = "lla"];</code>
      *
-     * @param  \SpaceX\API\Device\LLAPosition  $var
+     * @param  LLAPosition  $var
      * @return $this
      */
     public function setLla($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\LLAPosition::class);
+        GPBUtil::checkMessage($var, LLAPosition::class);
         $this->lla = $var;
 
         return $this;
@@ -153,7 +155,7 @@ class GetLocationResponse extends \Google\Protobuf\Internal\Message
      */
     public function setSource($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\PositionSource::class);
+        GPBUtil::checkEnum($var, PositionSource::class);
         $this->source = $var;
 
         return $this;

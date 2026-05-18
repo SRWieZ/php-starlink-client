@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\WifiUtil;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiSoftwareUpdateStats</code>
  */
-class WifiSoftwareUpdateStats extends \Google\Protobuf\Internal\Message
+class WifiSoftwareUpdateStats extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiSoftwareUpdateState state = 1 [json_name = "state"];</code>
@@ -53,7 +55,7 @@ class WifiSoftwareUpdateStats extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\WifiUtil::initOnce();
+        WifiUtil::initOnce();
         parent::__construct($data);
     }
 
@@ -85,7 +87,7 @@ class WifiSoftwareUpdateStats extends \Google\Protobuf\Internal\Message
      */
     public function setState($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\WifiSoftwareUpdateState::class);
+        GPBUtil::checkEnum($var, WifiSoftwareUpdateState::class);
         $this->state = $var;
 
         return $this;

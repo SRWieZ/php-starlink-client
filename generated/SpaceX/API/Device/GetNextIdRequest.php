@@ -6,10 +6,13 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Common;
+
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.GetNextIdRequest</code>
  */
-class GetNextIdRequest extends \Google\Protobuf\Internal\Message
+class GetNextIdRequest extends Message
 {
     /**
      * Constructor.
@@ -21,7 +24,7 @@ class GetNextIdRequest extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Common::initOnce();
+        Common::initOnce();
         parent::__construct($data);
     }
 }

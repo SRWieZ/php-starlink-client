@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device\NetworkInterface;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Common;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.NetworkInterface.TxStats</code>
  */
-class TxStats extends \Google\Protobuf\Internal\Message
+class TxStats extends Message
 {
     /**
      * Generated from protobuf field <code>optional uint64 bytes = 1 [json_name = "bytes"];</code>
@@ -35,7 +37,7 @@ class TxStats extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Common::initOnce();
+        Common::initOnce();
         parent::__construct($data);
     }
 

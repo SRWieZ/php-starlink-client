@@ -6,13 +6,16 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
 use Google\Protobuf\RepeatedField;
+use GPBMetadata\SpacexApi\Device\Common;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.EventLog</code>
  */
-class EventLog extends \Google\Protobuf\Internal\Message
+class EventLog extends Message
 {
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.UXEvent events = 1 [json_name = "events"];</code>
@@ -42,14 +45,14 @@ class EventLog extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Common::initOnce();
+        Common::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.UXEvent events = 1 [json_name = "events"];</code>
      *
-     * @return RepeatedField<\SpaceX\API\Device\UXEvent>
+     * @return RepeatedField<UXEvent>
      */
     public function getEvents()
     {
@@ -59,12 +62,12 @@ class EventLog extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.UXEvent events = 1 [json_name = "events"];</code>
      *
-     * @param  \SpaceX\API\Device\UXEvent[]  $var
+     * @param  UXEvent[]  $var
      * @return $this
      */
     public function setEvents($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SpaceX\API\Device\UXEvent::class);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, UXEvent::class);
         $this->events = $arr;
 
         return $this;

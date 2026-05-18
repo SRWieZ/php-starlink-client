@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device\WifiClient;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Wifi;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiClient.PingMetrics</code>
  */
-class PingMetrics extends \Google\Protobuf\Internal\Message
+class PingMetrics extends Message
 {
     /**
      * Generated from protobuf field <code>optional bool in_unhappy_hour_2s = 1 [json_name = "inUnhappyHour2s"];</code>
@@ -47,7 +49,7 @@ class PingMetrics extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 

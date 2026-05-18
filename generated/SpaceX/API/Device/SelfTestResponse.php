@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Dish;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.SelfTestResponse</code>
  */
-class SelfTestResponse extends \Google\Protobuf\Internal\Message
+class SelfTestResponse extends Message
 {
     /**
      * Generated from protobuf field <code>optional bool passed = 1 [json_name = "passed"];</code>
@@ -35,7 +37,7 @@ class SelfTestResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Dish::initOnce();
+        Dish::initOnce();
         parent::__construct($data);
     }
 

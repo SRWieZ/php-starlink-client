@@ -6,13 +6,17 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
 use Google\Protobuf\RepeatedField;
+use GPBMetadata\SpacexApi\Device\Wifi;
+use SpaceX\API\Satellites\Network\UtDisablementCode;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiGetStatusResponse</code>
  */
-class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
+class WifiGetStatusResponse extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DeviceInfo device_info = 3 [json_name = "deviceInfo"];</code>
@@ -252,14 +256,14 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DeviceInfo device_info = 3 [json_name = "deviceInfo"];</code>
      *
-     * @return \SpaceX\API\Device\DeviceInfo|null
+     * @return DeviceInfo|null
      */
     public function getDeviceInfo()
     {
@@ -279,12 +283,12 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DeviceInfo device_info = 3 [json_name = "deviceInfo"];</code>
      *
-     * @param  \SpaceX\API\Device\DeviceInfo  $var
+     * @param  DeviceInfo  $var
      * @return $this
      */
     public function setDeviceInfo($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\DeviceInfo::class);
+        GPBUtil::checkMessage($var, DeviceInfo::class);
         $this->device_info = $var;
 
         return $this;
@@ -293,7 +297,7 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DeviceState device_state = 4 [json_name = "deviceState"];</code>
      *
-     * @return \SpaceX\API\Device\DeviceState|null
+     * @return DeviceState|null
      */
     public function getDeviceState()
     {
@@ -313,12 +317,12 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DeviceState device_state = 4 [json_name = "deviceState"];</code>
      *
-     * @param  \SpaceX\API\Device\DeviceState  $var
+     * @param  DeviceState  $var
      * @return $this
      */
     public function setDeviceState($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\DeviceState::class);
+        GPBUtil::checkMessage($var, DeviceState::class);
         $this->device_state = $var;
 
         return $this;
@@ -410,7 +414,7 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
      */
     public function setIpv6WanAddresses($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::STRING);
         $this->ipv6_wan_addresses = $arr;
 
         return $this;
@@ -861,7 +865,7 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiBandStatus rf_2ghz_status = 1008 [json_name = "rf2ghzStatus"];</code>
      *
-     * @return \SpaceX\API\Device\WifiBandStatus|null
+     * @return WifiBandStatus|null
      */
     public function getRf2GhzStatus()
     {
@@ -881,12 +885,12 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiBandStatus rf_2ghz_status = 1008 [json_name = "rf2ghzStatus"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiBandStatus  $var
+     * @param  WifiBandStatus  $var
      * @return $this
      */
     public function setRf2GhzStatus($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiBandStatus::class);
+        GPBUtil::checkMessage($var, WifiBandStatus::class);
         $this->rf_2ghz_status = $var;
 
         return $this;
@@ -895,7 +899,7 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiBandStatus rf_5ghz_status = 1009 [json_name = "rf5ghzStatus"];</code>
      *
-     * @return \SpaceX\API\Device\WifiBandStatus|null
+     * @return WifiBandStatus|null
      */
     public function getRf5GhzStatus()
     {
@@ -915,12 +919,12 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiBandStatus rf_5ghz_status = 1009 [json_name = "rf5ghzStatus"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiBandStatus  $var
+     * @param  WifiBandStatus  $var
      * @return $this
      */
     public function setRf5GhzStatus($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiBandStatus::class);
+        GPBUtil::checkMessage($var, WifiBandStatus::class);
         $this->rf_5ghz_status = $var;
 
         return $this;
@@ -929,7 +933,7 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiAlerts alerts = 1010 [json_name = "alerts"];</code>
      *
-     * @return \SpaceX\API\Device\WifiAlerts|null
+     * @return WifiAlerts|null
      */
     public function getAlerts()
     {
@@ -949,12 +953,12 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiAlerts alerts = 1010 [json_name = "alerts"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiAlerts  $var
+     * @param  WifiAlerts  $var
      * @return $this
      */
     public function setAlerts($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiAlerts::class);
+        GPBUtil::checkMessage($var, WifiAlerts::class);
         $this->alerts = $var;
 
         return $this;
@@ -997,7 +1001,7 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiConfig config = 2000 [json_name = "config"];</code>
      *
-     * @return \SpaceX\API\Device\WifiConfig|null
+     * @return WifiConfig|null
      */
     public function getConfig()
     {
@@ -1017,12 +1021,12 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiConfig config = 2000 [json_name = "config"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiConfig  $var
+     * @param  WifiConfig  $var
      * @return $this
      */
     public function setConfig($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiConfig::class);
+        GPBUtil::checkMessage($var, WifiConfig::class);
         $this->config = $var;
 
         return $this;
@@ -1031,7 +1035,7 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiClient clients = 3000 [json_name = "clients"];</code>
      *
-     * @return RepeatedField<\SpaceX\API\Device\WifiClient>
+     * @return RepeatedField<WifiClient>
      */
     public function getClients()
     {
@@ -1041,12 +1045,12 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.WifiClient clients = 3000 [json_name = "clients"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiClient[]  $var
+     * @param  WifiClient[]  $var
      * @return $this
      */
     public function setClients($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SpaceX\API\Device\WifiClient::class);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, WifiClient::class);
         $this->clients = $arr;
 
         return $this;
@@ -1157,7 +1161,7 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.RadiusStatsMap radius_stats = 3003 [json_name = "radiusStats"];</code>
      *
-     * @return \SpaceX\API\Device\RadiusStatsMap|null
+     * @return RadiusStatsMap|null
      */
     public function getRadiusStats()
     {
@@ -1177,12 +1181,12 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.RadiusStatsMap radius_stats = 3003 [json_name = "radiusStats"];</code>
      *
-     * @param  \SpaceX\API\Device\RadiusStatsMap  $var
+     * @param  RadiusStatsMap  $var
      * @return $this
      */
     public function setRadiusStats($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\RadiusStatsMap::class);
+        GPBUtil::checkMessage($var, RadiusStatsMap::class);
         $this->radius_stats = $var;
 
         return $this;
@@ -1191,7 +1195,7 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.DhcpServer dhcp_servers = 1019 [json_name = "dhcpServers"];</code>
      *
-     * @return RepeatedField<\SpaceX\API\Device\DhcpServer>
+     * @return RepeatedField<DhcpServer>
      */
     public function getDhcpServers()
     {
@@ -1201,12 +1205,12 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.DhcpServer dhcp_servers = 1019 [json_name = "dhcpServers"];</code>
      *
-     * @param  \SpaceX\API\Device\DhcpServer[]  $var
+     * @param  DhcpServer[]  $var
      * @return $this
      */
     public function setDhcpServers($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SpaceX\API\Device\DhcpServer::class);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, DhcpServer::class);
         $this->dhcp_servers = $arr;
 
         return $this;
@@ -1215,7 +1219,7 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.PoeStats poe_stats = 1022 [json_name = "poeStats"];</code>
      *
-     * @return \SpaceX\API\Device\PoeStats|null
+     * @return PoeStats|null
      */
     public function getPoeStats()
     {
@@ -1235,12 +1239,12 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.PoeStats poe_stats = 1022 [json_name = "poeStats"];</code>
      *
-     * @param  \SpaceX\API\Device\PoeStats  $var
+     * @param  PoeStats  $var
      * @return $this
      */
     public function setPoeStats($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\PoeStats::class);
+        GPBUtil::checkMessage($var, PoeStats::class);
         $this->poe_stats = $var;
 
         return $this;
@@ -1308,7 +1312,7 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
      */
     public function setDishDisablementCode($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Satellites\Network\UtDisablementCode::class);
+        GPBUtil::checkEnum($var, UtDisablementCode::class);
         $this->dish_disablement_code = $var;
 
         return $this;
@@ -1351,7 +1355,7 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiSoftwareUpdateStats software_update_stats = 1025 [json_name = "softwareUpdateStats"];</code>
      *
-     * @return \SpaceX\API\Device\WifiSoftwareUpdateStats|null
+     * @return WifiSoftwareUpdateStats|null
      */
     public function getSoftwareUpdateStats()
     {
@@ -1371,12 +1375,12 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiSoftwareUpdateStats software_update_stats = 1025 [json_name = "softwareUpdateStats"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiSoftwareUpdateStats  $var
+     * @param  WifiSoftwareUpdateStats  $var
      * @return $this
      */
     public function setSoftwareUpdateStats($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiSoftwareUpdateStats::class);
+        GPBUtil::checkMessage($var, WifiSoftwareUpdateStats::class);
         $this->software_update_stats = $var;
 
         return $this;
@@ -1385,7 +1389,7 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiSetupRequirement setup_requirement = 1026 [json_name = "setupRequirement"];</code>
      *
-     * @return \SpaceX\API\Device\WifiSetupRequirement|null
+     * @return WifiSetupRequirement|null
      */
     public function getSetupRequirement()
     {
@@ -1405,12 +1409,12 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiSetupRequirement setup_requirement = 1026 [json_name = "setupRequirement"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiSetupRequirement  $var
+     * @param  WifiSetupRequirement  $var
      * @return $this
      */
     public function setSetupRequirement($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiSetupRequirement::class);
+        GPBUtil::checkMessage($var, WifiSetupRequirement::class);
         $this->setup_requirement = $var;
 
         return $this;
@@ -1512,7 +1516,7 @@ class WifiGetStatusResponse extends \Google\Protobuf\Internal\Message
      */
     public function setCalibrationPartitionsState($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\CalibrationPartitionsState::class);
+        GPBUtil::checkEnum($var, CalibrationPartitionsState::class);
         $this->calibration_partitions_state = $var;
 
         return $this;

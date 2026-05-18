@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device\RadiusStatsMap;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\WifiUtil;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.RadiusStatsMap.RadiusStats</code>
  */
-class RadiusStats extends \Google\Protobuf\Internal\Message
+class RadiusStats extends Message
 {
     /**
      * Generated from protobuf field <code>optional string iface_name = 1 [json_name = "ifaceName"];</code>
@@ -71,7 +73,7 @@ class RadiusStats extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\WifiUtil::initOnce();
+        WifiUtil::initOnce();
         parent::__construct($data);
     }
 

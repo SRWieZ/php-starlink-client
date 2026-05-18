@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Common;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.ECEFPosition</code>
  */
-class ECEFPosition extends \Google\Protobuf\Internal\Message
+class ECEFPosition extends Message
 {
     /**
      * Generated from protobuf field <code>optional double x = 1 [json_name = "x"];</code>
@@ -41,7 +43,7 @@ class ECEFPosition extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Common::initOnce();
+        Common::initOnce();
         parent::__construct($data);
     }
 

@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Wifi;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiAuthenticateResponse</code>
  */
-class WifiAuthenticateResponse extends \Google\Protobuf\Internal\Message
+class WifiAuthenticateResponse extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.ChallengeResponse wifi = 1 [json_name = "wifi"];</code>
@@ -35,14 +37,14 @@ class WifiAuthenticateResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.ChallengeResponse wifi = 1 [json_name = "wifi"];</code>
      *
-     * @return \SpaceX\API\Device\ChallengeResponse|null
+     * @return ChallengeResponse|null
      */
     public function getWifi()
     {
@@ -62,12 +64,12 @@ class WifiAuthenticateResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.ChallengeResponse wifi = 1 [json_name = "wifi"];</code>
      *
-     * @param  \SpaceX\API\Device\ChallengeResponse  $var
+     * @param  ChallengeResponse  $var
      * @return $this
      */
     public function setWifi($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\ChallengeResponse::class);
+        GPBUtil::checkMessage($var, ChallengeResponse::class);
         $this->wifi = $var;
 
         return $this;
@@ -76,7 +78,7 @@ class WifiAuthenticateResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.ChallengeResponse dish = 2 [json_name = "dish"];</code>
      *
-     * @return \SpaceX\API\Device\ChallengeResponse|null
+     * @return ChallengeResponse|null
      */
     public function getDish()
     {
@@ -96,12 +98,12 @@ class WifiAuthenticateResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.ChallengeResponse dish = 2 [json_name = "dish"];</code>
      *
-     * @param  \SpaceX\API\Device\ChallengeResponse  $var
+     * @param  ChallengeResponse  $var
      * @return $this
      */
     public function setDish($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\ChallengeResponse::class);
+        GPBUtil::checkMessage($var, ChallengeResponse::class);
         $this->dish = $var;
 
         return $this;

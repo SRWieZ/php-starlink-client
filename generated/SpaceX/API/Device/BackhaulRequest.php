@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Wifi;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.BackhaulRequest</code>
  */
-class BackhaulRequest extends \Google\Protobuf\Internal\Message
+class BackhaulRequest extends Message
 {
     /**
      * Generated from protobuf field <code>optional bool retry_backhaul = 1 [json_name = "retryBackhaul"];</code>
@@ -35,7 +37,7 @@ class BackhaulRequest extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 
@@ -76,7 +78,7 @@ class BackhaulRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiConfig golden_bss = 2 [json_name = "goldenBss"];</code>
      *
-     * @return \SpaceX\API\Device\WifiConfig|null
+     * @return WifiConfig|null
      */
     public function getGoldenBss()
     {
@@ -96,12 +98,12 @@ class BackhaulRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiConfig golden_bss = 2 [json_name = "goldenBss"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiConfig  $var
+     * @param  WifiConfig  $var
      * @return $this
      */
     public function setGoldenBss($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiConfig::class);
+        GPBUtil::checkMessage($var, WifiConfig::class);
         $this->golden_bss = $var;
 
         return $this;

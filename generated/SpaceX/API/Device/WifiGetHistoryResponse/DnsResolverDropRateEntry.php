@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device\WifiGetHistoryResponse;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Wifi;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiGetHistoryResponse.DnsResolverDropRateEntry</code>
  */
-class DnsResolverDropRateEntry extends \Google\Protobuf\Internal\Message
+class DnsResolverDropRateEntry extends Message
 {
     /**
      * Generated from protobuf field <code>optional string key = 1 [json_name = "key"];</code>
@@ -35,7 +37,7 @@ class DnsResolverDropRateEntry extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 
@@ -76,7 +78,7 @@ class DnsResolverDropRateEntry extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiGetHistoryResponse.DnsResolverHistory value = 2 [json_name = "value"];</code>
      *
-     * @return \SpaceX\API\Device\WifiGetHistoryResponse\DnsResolverHistory|null
+     * @return DnsResolverHistory|null
      */
     public function getValue()
     {
@@ -96,12 +98,12 @@ class DnsResolverDropRateEntry extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiGetHistoryResponse.DnsResolverHistory value = 2 [json_name = "value"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiGetHistoryResponse\DnsResolverHistory  $var
+     * @param  DnsResolverHistory  $var
      * @return $this
      */
     public function setValue($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiGetHistoryResponse\DnsResolverHistory::class);
+        GPBUtil::checkMessage($var, DnsResolverHistory::class);
         $this->value = $var;
 
         return $this;

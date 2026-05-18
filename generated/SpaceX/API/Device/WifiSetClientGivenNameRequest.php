@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Wifi;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiSetClientGivenNameRequest</code>
  */
-class WifiSetClientGivenNameRequest extends \Google\Protobuf\Internal\Message
+class WifiSetClientGivenNameRequest extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.ClientName client_name = 1 [json_name = "clientName"];</code>
@@ -35,14 +37,14 @@ class WifiSetClientGivenNameRequest extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.ClientName client_name = 1 [json_name = "clientName"];</code>
      *
-     * @return \SpaceX\API\Device\ClientName|null
+     * @return ClientName|null
      */
     public function getClientName()
     {
@@ -62,12 +64,12 @@ class WifiSetClientGivenNameRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.ClientName client_name = 1 [json_name = "clientName"];</code>
      *
-     * @param  \SpaceX\API\Device\ClientName  $var
+     * @param  ClientName  $var
      * @return $this
      */
     public function setClientName($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\ClientName::class);
+        GPBUtil::checkMessage($var, ClientName::class);
         $this->client_name = $var;
 
         return $this;
@@ -76,7 +78,7 @@ class WifiSetClientGivenNameRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.ClientConfig client_config = 2 [json_name = "clientConfig"];</code>
      *
-     * @return \SpaceX\API\Device\ClientConfig|null
+     * @return ClientConfig|null
      */
     public function getClientConfig()
     {
@@ -96,12 +98,12 @@ class WifiSetClientGivenNameRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.ClientConfig client_config = 2 [json_name = "clientConfig"];</code>
      *
-     * @param  \SpaceX\API\Device\ClientConfig  $var
+     * @param  ClientConfig  $var
      * @return $this
      */
     public function setClientConfig($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\ClientConfig::class);
+        GPBUtil::checkMessage($var, ClientConfig::class);
         $this->client_config = $var;
 
         return $this;

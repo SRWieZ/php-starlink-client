@@ -6,13 +6,18 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
 use Google\Protobuf\RepeatedField;
+use GPBMetadata\SpacexApi\Device\Common;
+use SpaceX\API\Device\BootInfo\CountByReasonDeltaEntry;
+use SpaceX\API\Device\BootInfo\CountByReasonEntry;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.BootInfo</code>
  */
-class BootInfo extends \Google\Protobuf\Internal\Message
+class BootInfo extends Message
 {
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.BootInfo.CountByReasonEntry count_by_reason = 1 [json_name = "countByReason"];</code>
@@ -84,14 +89,14 @@ class BootInfo extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Common::initOnce();
+        Common::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.BootInfo.CountByReasonEntry count_by_reason = 1 [json_name = "countByReason"];</code>
      *
-     * @return RepeatedField<\SpaceX\API\Device\BootInfo\CountByReasonEntry>
+     * @return RepeatedField<CountByReasonEntry>
      */
     public function getCountByReason()
     {
@@ -101,12 +106,12 @@ class BootInfo extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.BootInfo.CountByReasonEntry count_by_reason = 1 [json_name = "countByReason"];</code>
      *
-     * @param  \SpaceX\API\Device\BootInfo\CountByReasonEntry[]  $var
+     * @param  CountByReasonEntry[]  $var
      * @return $this
      */
     public function setCountByReason($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SpaceX\API\Device\BootInfo\CountByReasonEntry::class);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, CountByReasonEntry::class);
         $this->count_by_reason = $arr;
 
         return $this;
@@ -115,7 +120,7 @@ class BootInfo extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.BootInfo.CountByReasonDeltaEntry count_by_reason_delta = 4 [json_name = "countByReasonDelta"];</code>
      *
-     * @return RepeatedField<\SpaceX\API\Device\BootInfo\CountByReasonDeltaEntry>
+     * @return RepeatedField<CountByReasonDeltaEntry>
      */
     public function getCountByReasonDelta()
     {
@@ -125,12 +130,12 @@ class BootInfo extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.BootInfo.CountByReasonDeltaEntry count_by_reason_delta = 4 [json_name = "countByReasonDelta"];</code>
      *
-     * @param  \SpaceX\API\Device\BootInfo\CountByReasonDeltaEntry[]  $var
+     * @param  CountByReasonDeltaEntry[]  $var
      * @return $this
      */
     public function setCountByReasonDelta($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SpaceX\API\Device\BootInfo\CountByReasonDeltaEntry::class);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, CountByReasonDeltaEntry::class);
         $this->count_by_reason_delta = $arr;
 
         return $this;
@@ -164,7 +169,7 @@ class BootInfo extends \Google\Protobuf\Internal\Message
      */
     public function setLastReason($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\BootReason::class);
+        GPBUtil::checkEnum($var, BootReason::class);
         $this->last_reason = $var;
 
         return $this;

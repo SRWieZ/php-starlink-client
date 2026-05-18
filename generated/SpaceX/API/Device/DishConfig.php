@@ -7,11 +7,15 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use SpaceX\API\Device\DishConfig\LevelDishMode;
+use SpaceX\API\Device\DishConfig\LocationRequestMode;
+use SpaceX\API\Device\DishConfig\SnowMeltMode;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.DishConfig</code>
  */
-class DishConfig extends \Google\Protobuf\Internal\Message
+class DishConfig extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishConfig.SnowMeltMode snow_melt_mode = 1 [json_name = "snowMeltMode"];</code>
@@ -163,7 +167,7 @@ class DishConfig extends \Google\Protobuf\Internal\Message
      */
     public function setSnowMeltMode($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\DishConfig\SnowMeltMode::class);
+        GPBUtil::checkEnum($var, SnowMeltMode::class);
         $this->snow_melt_mode = $var;
 
         return $this;
@@ -231,7 +235,7 @@ class DishConfig extends \Google\Protobuf\Internal\Message
      */
     public function setLocationRequestMode($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\DishConfig\LocationRequestMode::class);
+        GPBUtil::checkEnum($var, LocationRequestMode::class);
         $this->location_request_mode = $var;
 
         return $this;
@@ -299,7 +303,7 @@ class DishConfig extends \Google\Protobuf\Internal\Message
      */
     public function setLevelDishMode($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\DishConfig\LevelDishMode::class);
+        GPBUtil::checkEnum($var, LevelDishMode::class);
         $this->level_dish_mode = $var;
 
         return $this;

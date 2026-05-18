@@ -6,10 +6,13 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Device;
+
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.FactoryResetRequest</code>
  */
-class FactoryResetRequest extends \Google\Protobuf\Internal\Message
+class FactoryResetRequest extends Message
 {
     /**
      * Constructor.
@@ -21,7 +24,7 @@ class FactoryResetRequest extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 }

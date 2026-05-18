@@ -7,11 +7,14 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Dish;
+use SpaceX\API\Device\SetTestModeRequest\RfMode;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.SetTestModeRequest</code>
  */
-class SetTestModeRequest extends \Google\Protobuf\Internal\Message
+class SetTestModeRequest extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SetTestModeRequest.RfMode rf_mode = 1 [json_name = "rfMode"];</code>
@@ -41,7 +44,7 @@ class SetTestModeRequest extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Dish::initOnce();
+        Dish::initOnce();
         parent::__construct($data);
     }
 
@@ -73,7 +76,7 @@ class SetTestModeRequest extends \Google\Protobuf\Internal\Message
      */
     public function setRfMode($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\SetTestModeRequest\RfMode::class);
+        GPBUtil::checkEnum($var, RfMode::class);
         $this->rf_mode = $var;
 
         return $this;

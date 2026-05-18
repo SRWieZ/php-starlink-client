@@ -7,11 +7,18 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Wifi;
+use SpaceX\API\Device\NetworkInterface\RxStats;
+use SpaceX\API\Device\NetworkInterface\TxStats;
+use SpaceX\API\Device\RadioStats\AntennaStatus;
+use SpaceX\API\Device\RadioStats\ThermalStatus;
+use SpaceX\API\Device\WifiConfig\Band;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.RadioStats</code>
  */
-class RadioStats extends \Google\Protobuf\Internal\Message
+class RadioStats extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiConfig.Band band = 1 [json_name = "band"];</code>
@@ -53,7 +60,7 @@ class RadioStats extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 
@@ -85,7 +92,7 @@ class RadioStats extends \Google\Protobuf\Internal\Message
      */
     public function setBand($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\WifiConfig\Band::class);
+        GPBUtil::checkEnum($var, Band::class);
         $this->band = $var;
 
         return $this;
@@ -94,7 +101,7 @@ class RadioStats extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.NetworkInterface.RxStats rx_stats = 2 [json_name = "rxStats"];</code>
      *
-     * @return \SpaceX\API\Device\NetworkInterface\RxStats|null
+     * @return RxStats|null
      */
     public function getRxStats()
     {
@@ -114,12 +121,12 @@ class RadioStats extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.NetworkInterface.RxStats rx_stats = 2 [json_name = "rxStats"];</code>
      *
-     * @param  \SpaceX\API\Device\NetworkInterface\RxStats  $var
+     * @param  RxStats  $var
      * @return $this
      */
     public function setRxStats($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\NetworkInterface\RxStats::class);
+        GPBUtil::checkMessage($var, RxStats::class);
         $this->rx_stats = $var;
 
         return $this;
@@ -128,7 +135,7 @@ class RadioStats extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.NetworkInterface.TxStats tx_stats = 3 [json_name = "txStats"];</code>
      *
-     * @return \SpaceX\API\Device\NetworkInterface\TxStats|null
+     * @return TxStats|null
      */
     public function getTxStats()
     {
@@ -148,12 +155,12 @@ class RadioStats extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.NetworkInterface.TxStats tx_stats = 3 [json_name = "txStats"];</code>
      *
-     * @param  \SpaceX\API\Device\NetworkInterface\TxStats  $var
+     * @param  TxStats  $var
      * @return $this
      */
     public function setTxStats($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\NetworkInterface\TxStats::class);
+        GPBUtil::checkMessage($var, TxStats::class);
         $this->tx_stats = $var;
 
         return $this;
@@ -162,7 +169,7 @@ class RadioStats extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.RadioStats.ThermalStatus thermal_status = 4 [json_name = "thermalStatus"];</code>
      *
-     * @return \SpaceX\API\Device\RadioStats\ThermalStatus|null
+     * @return ThermalStatus|null
      */
     public function getThermalStatus()
     {
@@ -182,12 +189,12 @@ class RadioStats extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.RadioStats.ThermalStatus thermal_status = 4 [json_name = "thermalStatus"];</code>
      *
-     * @param  \SpaceX\API\Device\RadioStats\ThermalStatus  $var
+     * @param  ThermalStatus  $var
      * @return $this
      */
     public function setThermalStatus($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\RadioStats\ThermalStatus::class);
+        GPBUtil::checkMessage($var, ThermalStatus::class);
         $this->thermal_status = $var;
 
         return $this;
@@ -196,7 +203,7 @@ class RadioStats extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.RadioStats.AntennaStatus antenna_status = 5 [json_name = "antennaStatus"];</code>
      *
-     * @return \SpaceX\API\Device\RadioStats\AntennaStatus|null
+     * @return AntennaStatus|null
      */
     public function getAntennaStatus()
     {
@@ -216,12 +223,12 @@ class RadioStats extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.RadioStats.AntennaStatus antenna_status = 5 [json_name = "antennaStatus"];</code>
      *
-     * @param  \SpaceX\API\Device\RadioStats\AntennaStatus  $var
+     * @param  AntennaStatus  $var
      * @return $this
      */
     public function setAntennaStatus($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\RadioStats\AntennaStatus::class);
+        GPBUtil::checkMessage($var, AntennaStatus::class);
         $this->antenna_status = $var;
 
         return $this;

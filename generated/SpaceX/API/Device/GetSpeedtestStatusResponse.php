@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Device;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.GetSpeedtestStatusResponse</code>
  */
-class GetSpeedtestStatusResponse extends \Google\Protobuf\Internal\Message
+class GetSpeedtestStatusResponse extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SpeedtestStatus status = 1 [json_name = "status"];</code>
@@ -29,14 +31,14 @@ class GetSpeedtestStatusResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SpeedtestStatus status = 1 [json_name = "status"];</code>
      *
-     * @return \SpaceX\API\Device\SpeedtestStatus|null
+     * @return SpeedtestStatus|null
      */
     public function getStatus()
     {
@@ -56,12 +58,12 @@ class GetSpeedtestStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SpeedtestStatus status = 1 [json_name = "status"];</code>
      *
-     * @param  \SpaceX\API\Device\SpeedtestStatus  $var
+     * @param  SpeedtestStatus  $var
      * @return $this
      */
     public function setStatus($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\SpeedtestStatus::class);
+        GPBUtil::checkMessage($var, SpeedtestStatus::class);
         $this->status = $var;
 
         return $this;

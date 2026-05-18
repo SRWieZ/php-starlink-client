@@ -7,11 +7,14 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Device;
+use SpaceX\API\Device\SpeedTestStats\Target;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.SpeedTestStats</code>
  */
-class SpeedTestStats extends \Google\Protobuf\Internal\Message
+class SpeedTestStats extends Message
 {
     /**
      * Generated from protobuf field <code>optional float latency_ms = 3 [json_name = "latencyMs"];</code>
@@ -71,7 +74,7 @@ class SpeedTestStats extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 
@@ -307,7 +310,7 @@ class SpeedTestStats extends \Google\Protobuf\Internal\Message
      */
     public function setTarget($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\SpeedTestStats\Target::class);
+        GPBUtil::checkEnum($var, Target::class);
         $this->target = $var;
 
         return $this;

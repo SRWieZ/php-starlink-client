@@ -6,13 +6,16 @@
 
 namespace SpaceX\API\Device\WifiGetHistoryResponse;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
 use Google\Protobuf\RepeatedField;
+use GPBMetadata\SpacexApi\Device\Wifi;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiGetHistoryResponse.DnsResolverHistory</code>
  */
-class DnsResolverHistory extends \Google\Protobuf\Internal\Message
+class DnsResolverHistory extends Message
 {
     /**
      * Generated from protobuf field <code>repeated float drop_rate_last_15s = 2 [json_name = "dropRateLast15s"];</code>
@@ -30,7 +33,7 @@ class DnsResolverHistory extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 
@@ -52,7 +55,7 @@ class DnsResolverHistory extends \Google\Protobuf\Internal\Message
      */
     public function setDropRateLast15S($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::FLOAT);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::FLOAT);
         $this->drop_rate_last_15s = $arr;
 
         return $this;

@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Common;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.InitiateRemoteSshResponse</code>
  */
-class InitiateRemoteSshResponse extends \Google\Protobuf\Internal\Message
+class InitiateRemoteSshResponse extends Message
 {
     /**
      * Generated from protobuf field <code>optional uint32 port = 1 [json_name = "port"];</code>
@@ -41,7 +43,7 @@ class InitiateRemoteSshResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Common::initOnce();
+        Common::initOnce();
         parent::__construct($data);
     }
 

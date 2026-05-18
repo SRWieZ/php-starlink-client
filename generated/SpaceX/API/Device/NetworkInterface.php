@@ -6,13 +6,18 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
 use Google\Protobuf\RepeatedField;
+use GPBMetadata\SpacexApi\Device\Common;
+use SpaceX\API\Device\NetworkInterface\RxStats;
+use SpaceX\API\Device\NetworkInterface\TxStats;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.NetworkInterface</code>
  */
-class NetworkInterface extends \Google\Protobuf\Internal\Message
+class NetworkInterface extends Message
 {
     /**
      * Generated from protobuf field <code>optional string name = 1 [json_name = "name"];</code>
@@ -84,7 +89,7 @@ class NetworkInterface extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Common::initOnce();
+        Common::initOnce();
         parent::__construct($data);
     }
 
@@ -208,7 +213,7 @@ class NetworkInterface extends \Google\Protobuf\Internal\Message
      */
     public function setIpv4Addresses($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::STRING);
         $this->ipv4_addresses = $arr;
 
         return $this;
@@ -232,7 +237,7 @@ class NetworkInterface extends \Google\Protobuf\Internal\Message
      */
     public function setIpv6Addresses($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::STRING);
         $this->ipv6_addresses = $arr;
 
         return $this;
@@ -241,7 +246,7 @@ class NetworkInterface extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.NetworkInterface.RxStats rx_stats = 2 [json_name = "rxStats"];</code>
      *
-     * @return \SpaceX\API\Device\NetworkInterface\RxStats|null
+     * @return RxStats|null
      */
     public function getRxStats()
     {
@@ -261,12 +266,12 @@ class NetworkInterface extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.NetworkInterface.RxStats rx_stats = 2 [json_name = "rxStats"];</code>
      *
-     * @param  \SpaceX\API\Device\NetworkInterface\RxStats  $var
+     * @param  RxStats  $var
      * @return $this
      */
     public function setRxStats($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\NetworkInterface\RxStats::class);
+        GPBUtil::checkMessage($var, RxStats::class);
         $this->rx_stats = $var;
 
         return $this;
@@ -275,7 +280,7 @@ class NetworkInterface extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.NetworkInterface.TxStats tx_stats = 3 [json_name = "txStats"];</code>
      *
-     * @return \SpaceX\API\Device\NetworkInterface\TxStats|null
+     * @return TxStats|null
      */
     public function getTxStats()
     {
@@ -295,12 +300,12 @@ class NetworkInterface extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.NetworkInterface.TxStats tx_stats = 3 [json_name = "txStats"];</code>
      *
-     * @param  \SpaceX\API\Device\NetworkInterface\TxStats  $var
+     * @param  TxStats  $var
      * @return $this
      */
     public function setTxStats($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\NetworkInterface\TxStats::class);
+        GPBUtil::checkMessage($var, TxStats::class);
         $this->tx_stats = $var;
 
         return $this;
@@ -309,7 +314,7 @@ class NetworkInterface extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.EthernetNetworkInterface ethernet = 1000 [json_name = "ethernet"];</code>
      *
-     * @return \SpaceX\API\Device\EthernetNetworkInterface|null
+     * @return EthernetNetworkInterface|null
      */
     public function getEthernet()
     {
@@ -329,12 +334,12 @@ class NetworkInterface extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.EthernetNetworkInterface ethernet = 1000 [json_name = "ethernet"];</code>
      *
-     * @param  \SpaceX\API\Device\EthernetNetworkInterface  $var
+     * @param  EthernetNetworkInterface  $var
      * @return $this
      */
     public function setEthernet($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\EthernetNetworkInterface::class);
+        GPBUtil::checkMessage($var, EthernetNetworkInterface::class);
         $this->ethernet = $var;
 
         return $this;
@@ -343,7 +348,7 @@ class NetworkInterface extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiNetworkInterface wifi = 1001 [json_name = "wifi"];</code>
      *
-     * @return \SpaceX\API\Device\WifiNetworkInterface|null
+     * @return WifiNetworkInterface|null
      */
     public function getWifi()
     {
@@ -363,12 +368,12 @@ class NetworkInterface extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiNetworkInterface wifi = 1001 [json_name = "wifi"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiNetworkInterface  $var
+     * @param  WifiNetworkInterface  $var
      * @return $this
      */
     public function setWifi($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiNetworkInterface::class);
+        GPBUtil::checkMessage($var, WifiNetworkInterface::class);
         $this->wifi = $var;
 
         return $this;
@@ -377,7 +382,7 @@ class NetworkInterface extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.BridgeNetworkInterface bridge = 1002 [json_name = "bridge"];</code>
      *
-     * @return \SpaceX\API\Device\BridgeNetworkInterface|null
+     * @return BridgeNetworkInterface|null
      */
     public function getBridge()
     {
@@ -397,12 +402,12 @@ class NetworkInterface extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.BridgeNetworkInterface bridge = 1002 [json_name = "bridge"];</code>
      *
-     * @param  \SpaceX\API\Device\BridgeNetworkInterface  $var
+     * @param  BridgeNetworkInterface  $var
      * @return $this
      */
     public function setBridge($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\BridgeNetworkInterface::class);
+        GPBUtil::checkMessage($var, BridgeNetworkInterface::class);
         $this->bridge = $var;
 
         return $this;

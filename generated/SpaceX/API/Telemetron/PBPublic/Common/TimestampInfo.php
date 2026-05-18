@@ -7,11 +7,13 @@
 namespace SpaceX\API\Telemetron\PBPublic\Common;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Telemetron\PBPublic\Common\Time;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Telemetron.Public.Common.TimestampInfo</code>
  */
-class TimestampInfo extends \Google\Protobuf\Internal\Message
+class TimestampInfo extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Telemetron.Public.Common.Epoch epoch = 1 [json_name = "epoch"];</code>
@@ -35,7 +37,7 @@ class TimestampInfo extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Telemetron\PBPublic\Common\Time::initOnce();
+        Time::initOnce();
         parent::__construct($data);
     }
 
@@ -67,7 +69,7 @@ class TimestampInfo extends \Google\Protobuf\Internal\Message
      */
     public function setEpoch($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Telemetron\PBPublic\Common\Epoch::class);
+        GPBUtil::checkEnum($var, Epoch::class);
         $this->epoch = $var;
 
         return $this;

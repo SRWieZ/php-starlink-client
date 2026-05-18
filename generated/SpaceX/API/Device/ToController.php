@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Wifi;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.ToController</code>
  */
-class ToController extends \Google\Protobuf\Internal\Message
+class ToController extends Message
 {
     /**
      * Generated from protobuf field <code>optional int32 api_version = 4 [json_name = "apiVersion"];</code>
@@ -65,7 +67,7 @@ class ToController extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 
@@ -174,7 +176,7 @@ class ToController extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiClients clients = 1 [json_name = "clients"];</code>
      *
-     * @return \SpaceX\API\Device\WifiClients|null
+     * @return WifiClients|null
      */
     public function getClients()
     {
@@ -194,12 +196,12 @@ class ToController extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiClients clients = 1 [json_name = "clients"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiClients  $var
+     * @param  WifiClients  $var
      * @return $this
      */
     public function setClients($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiClients::class);
+        GPBUtil::checkMessage($var, WifiClients::class);
         $this->clients = $var;
 
         return $this;
@@ -208,7 +210,7 @@ class ToController extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiMeshJoin mesh_join = 2 [json_name = "meshJoin"];</code>
      *
-     * @return \SpaceX\API\Device\WifiMeshJoin|null
+     * @return WifiMeshJoin|null
      */
     public function getMeshJoin()
     {
@@ -228,12 +230,12 @@ class ToController extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiMeshJoin mesh_join = 2 [json_name = "meshJoin"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiMeshJoin  $var
+     * @param  WifiMeshJoin  $var
      * @return $this
      */
     public function setMeshJoin($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiMeshJoin::class);
+        GPBUtil::checkMessage($var, WifiMeshJoin::class);
         $this->mesh_join = $var;
 
         return $this;
@@ -242,7 +244,7 @@ class ToController extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiMeshStatus status = 3 [json_name = "status"];</code>
      *
-     * @return \SpaceX\API\Device\WifiMeshStatus|null
+     * @return WifiMeshStatus|null
      */
     public function getStatus()
     {
@@ -262,12 +264,12 @@ class ToController extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.WifiMeshStatus status = 3 [json_name = "status"];</code>
      *
-     * @param  \SpaceX\API\Device\WifiMeshStatus  $var
+     * @param  WifiMeshStatus  $var
      * @return $this
      */
     public function setStatus($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\WifiMeshStatus::class);
+        GPBUtil::checkMessage($var, WifiMeshStatus::class);
         $this->status = $var;
 
         return $this;
@@ -276,7 +278,7 @@ class ToController extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.MeshSpeedtest speedtest = 5 [json_name = "speedtest"];</code>
      *
-     * @return \SpaceX\API\Device\MeshSpeedtest|null
+     * @return MeshSpeedtest|null
      */
     public function getSpeedtest()
     {
@@ -296,12 +298,12 @@ class ToController extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.MeshSpeedtest speedtest = 5 [json_name = "speedtest"];</code>
      *
-     * @param  \SpaceX\API\Device\MeshSpeedtest  $var
+     * @param  MeshSpeedtest  $var
      * @return $this
      */
     public function setSpeedtest($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\MeshSpeedtest::class);
+        GPBUtil::checkMessage($var, MeshSpeedtest::class);
         $this->speedtest = $var;
 
         return $this;

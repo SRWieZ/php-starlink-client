@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device\RadiusStatsMap;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\WifiUtil;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.RadiusStatsMap.RadiusStatsEntry</code>
  */
-class RadiusStatsEntry extends \Google\Protobuf\Internal\Message
+class RadiusStatsEntry extends Message
 {
     /**
      * Generated from protobuf field <code>optional string key = 1 [json_name = "key"];</code>
@@ -35,7 +37,7 @@ class RadiusStatsEntry extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\WifiUtil::initOnce();
+        WifiUtil::initOnce();
         parent::__construct($data);
     }
 
@@ -76,7 +78,7 @@ class RadiusStatsEntry extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.RadiusStatsMap.RadiusStats value = 2 [json_name = "value"];</code>
      *
-     * @return \SpaceX\API\Device\RadiusStatsMap\RadiusStats|null
+     * @return RadiusStats|null
      */
     public function getValue()
     {
@@ -96,12 +98,12 @@ class RadiusStatsEntry extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.RadiusStatsMap.RadiusStats value = 2 [json_name = "value"];</code>
      *
-     * @param  \SpaceX\API\Device\RadiusStatsMap\RadiusStats  $var
+     * @param  RadiusStats  $var
      * @return $this
      */
     public function setValue($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\RadiusStatsMap\RadiusStats::class);
+        GPBUtil::checkMessage($var, RadiusStats::class);
         $this->value = $var;
 
         return $this;

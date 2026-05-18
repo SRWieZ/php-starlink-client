@@ -6,13 +6,19 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
 use Google\Protobuf\RepeatedField;
+use GPBMetadata\SpacexApi\Device\Dish;
+use SpaceX\API\Device\DishGetStatusResponse\DownstreamRoutersEntry;
+use SpaceX\API\Satellites\Network\UtDisablementCode;
+use SpaceX\API\Telemetron\PBPublic\Integrations\RateLimitReason;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.DishGetStatusResponse</code>
  */
-class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
+class DishGetStatusResponse extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DeviceInfo device_info = 1 [json_name = "deviceInfo"];</code>
@@ -282,14 +288,14 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Dish::initOnce();
+        Dish::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DeviceInfo device_info = 1 [json_name = "deviceInfo"];</code>
      *
-     * @return \SpaceX\API\Device\DeviceInfo|null
+     * @return DeviceInfo|null
      */
     public function getDeviceInfo()
     {
@@ -309,12 +315,12 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DeviceInfo device_info = 1 [json_name = "deviceInfo"];</code>
      *
-     * @param  \SpaceX\API\Device\DeviceInfo  $var
+     * @param  DeviceInfo  $var
      * @return $this
      */
     public function setDeviceInfo($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\DeviceInfo::class);
+        GPBUtil::checkMessage($var, DeviceInfo::class);
         $this->device_info = $var;
 
         return $this;
@@ -323,7 +329,7 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DeviceState device_state = 2 [json_name = "deviceState"];</code>
      *
-     * @return \SpaceX\API\Device\DeviceState|null
+     * @return DeviceState|null
      */
     public function getDeviceState()
     {
@@ -343,12 +349,12 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DeviceState device_state = 2 [json_name = "deviceState"];</code>
      *
-     * @param  \SpaceX\API\Device\DeviceState  $var
+     * @param  DeviceState  $var
      * @return $this
      */
     public function setDeviceState($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\DeviceState::class);
+        GPBUtil::checkMessage($var, DeviceState::class);
         $this->device_state = $var;
 
         return $this;
@@ -357,7 +363,7 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishAlerts alerts = 1005 [json_name = "alerts"];</code>
      *
-     * @return \SpaceX\API\Device\DishAlerts|null
+     * @return DishAlerts|null
      */
     public function getAlerts()
     {
@@ -377,12 +383,12 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishAlerts alerts = 1005 [json_name = "alerts"];</code>
      *
-     * @param  \SpaceX\API\Device\DishAlerts  $var
+     * @param  DishAlerts  $var
      * @return $this
      */
     public function setAlerts($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\DishAlerts::class);
+        GPBUtil::checkMessage($var, DishAlerts::class);
         $this->alerts = $var;
 
         return $this;
@@ -391,7 +397,7 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishOutage outage = 1014 [json_name = "outage"];</code>
      *
-     * @return \SpaceX\API\Device\DishOutage|null
+     * @return DishOutage|null
      */
     public function getOutage()
     {
@@ -411,12 +417,12 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishOutage outage = 1014 [json_name = "outage"];</code>
      *
-     * @param  \SpaceX\API\Device\DishOutage  $var
+     * @param  DishOutage  $var
      * @return $this
      */
     public function setOutage($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\DishOutage::class);
+        GPBUtil::checkMessage($var, DishOutage::class);
         $this->outage = $var;
 
         return $this;
@@ -425,7 +431,7 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishGpsStats gps_stats = 1015 [json_name = "gpsStats"];</code>
      *
-     * @return \SpaceX\API\Device\DishGpsStats|null
+     * @return DishGpsStats|null
      */
     public function getGpsStats()
     {
@@ -445,12 +451,12 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishGpsStats gps_stats = 1015 [json_name = "gpsStats"];</code>
      *
-     * @param  \SpaceX\API\Device\DishGpsStats  $var
+     * @param  DishGpsStats  $var
      * @return $this
      */
     public function setGpsStats($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\DishGpsStats::class);
+        GPBUtil::checkMessage($var, DishGpsStats::class);
         $this->gps_stats = $var;
 
         return $this;
@@ -629,7 +635,7 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishObstructionStats obstruction_stats = 1004 [json_name = "obstructionStats"];</code>
      *
-     * @return \SpaceX\API\Device\DishObstructionStats|null
+     * @return DishObstructionStats|null
      */
     public function getObstructionStats()
     {
@@ -649,12 +655,12 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishObstructionStats obstruction_stats = 1004 [json_name = "obstructionStats"];</code>
      *
-     * @param  \SpaceX\API\Device\DishObstructionStats  $var
+     * @param  DishObstructionStats  $var
      * @return $this
      */
     public function setObstructionStats($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\DishObstructionStats::class);
+        GPBUtil::checkMessage($var, DishObstructionStats::class);
         $this->obstruction_stats = $var;
 
         return $this;
@@ -824,7 +830,7 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
      */
     public function setMobilityClass($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\UserMobilityClass::class);
+        GPBUtil::checkEnum($var, UserMobilityClass::class);
         $this->mobility_class = $var;
 
         return $this;
@@ -867,7 +873,7 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishReadyStates ready_states = 1019 [json_name = "readyStates"];</code>
      *
-     * @return \SpaceX\API\Device\DishReadyStates|null
+     * @return DishReadyStates|null
      */
     public function getReadyStates()
     {
@@ -887,12 +893,12 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishReadyStates ready_states = 1019 [json_name = "readyStates"];</code>
      *
-     * @param  \SpaceX\API\Device\DishReadyStates  $var
+     * @param  DishReadyStates  $var
      * @return $this
      */
     public function setReadyStates($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\DishReadyStates::class);
+        GPBUtil::checkMessage($var, DishReadyStates::class);
         $this->ready_states = $var;
 
         return $this;
@@ -926,7 +932,7 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
      */
     public function setClassOfService($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\UserClassOfService::class);
+        GPBUtil::checkEnum($var, UserClassOfService::class);
         $this->class_of_service = $var;
 
         return $this;
@@ -960,7 +966,7 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
      */
     public function setSoftwareUpdateState($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\SoftwareUpdateState::class);
+        GPBUtil::checkEnum($var, SoftwareUpdateState::class);
         $this->software_update_state = $var;
 
         return $this;
@@ -1028,7 +1034,7 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
      */
     public function setRebootReason($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\RebootReason::class);
+        GPBUtil::checkEnum($var, RebootReason::class);
         $this->reboot_reason = $var;
 
         return $this;
@@ -1037,7 +1043,7 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SoftwareUpdateStats software_update_stats = 1026 [json_name = "softwareUpdateStats"];</code>
      *
-     * @return \SpaceX\API\Device\SoftwareUpdateStats|null
+     * @return SoftwareUpdateStats|null
      */
     public function getSoftwareUpdateStats()
     {
@@ -1057,12 +1063,12 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.SoftwareUpdateStats software_update_stats = 1026 [json_name = "softwareUpdateStats"];</code>
      *
-     * @param  \SpaceX\API\Device\SoftwareUpdateStats  $var
+     * @param  SoftwareUpdateStats  $var
      * @return $this
      */
     public function setSoftwareUpdateStats($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\SoftwareUpdateStats::class);
+        GPBUtil::checkMessage($var, SoftwareUpdateStats::class);
         $this->software_update_stats = $var;
 
         return $this;
@@ -1071,7 +1077,7 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.AlignmentStats alignment_stats = 1027 [json_name = "alignmentStats"];</code>
      *
-     * @return \SpaceX\API\Device\AlignmentStats|null
+     * @return AlignmentStats|null
      */
     public function getAlignmentStats()
     {
@@ -1091,12 +1097,12 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.AlignmentStats alignment_stats = 1027 [json_name = "alignmentStats"];</code>
      *
-     * @param  \SpaceX\API\Device\AlignmentStats  $var
+     * @param  AlignmentStats  $var
      * @return $this
      */
     public function setAlignmentStats($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\AlignmentStats::class);
+        GPBUtil::checkMessage($var, AlignmentStats::class);
         $this->alignment_stats = $var;
 
         return $this;
@@ -1164,7 +1170,7 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
      */
     public function setHasActuators($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\HasActuators::class);
+        GPBUtil::checkEnum($var, HasActuators::class);
         $this->has_actuators = $var;
 
         return $this;
@@ -1198,7 +1204,7 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
      */
     public function setDisablementCode($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Satellites\Network\UtDisablementCode::class);
+        GPBUtil::checkEnum($var, UtDisablementCode::class);
         $this->disablement_code = $var;
 
         return $this;
@@ -1232,7 +1238,7 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
      */
     public function setDlBandwidthRestrictedReason($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Telemetron\PBPublic\Integrations\RateLimitReason::class);
+        GPBUtil::checkEnum($var, RateLimitReason::class);
         $this->dl_bandwidth_restricted_reason = $var;
 
         return $this;
@@ -1266,7 +1272,7 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
      */
     public function setUlBandwidthRestrictedReason($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Telemetron\PBPublic\Integrations\RateLimitReason::class);
+        GPBUtil::checkEnum($var, RateLimitReason::class);
         $this->ul_bandwidth_restricted_reason = $var;
 
         return $this;
@@ -1309,7 +1315,7 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishConfig config = 2000 [json_name = "config"];</code>
      *
-     * @return \SpaceX\API\Device\DishConfig|null
+     * @return DishConfig|null
      */
     public function getConfig()
     {
@@ -1329,12 +1335,12 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishConfig config = 2000 [json_name = "config"];</code>
      *
-     * @param  \SpaceX\API\Device\DishConfig  $var
+     * @param  DishConfig  $var
      * @return $this
      */
     public function setConfig($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\DishConfig::class);
+        GPBUtil::checkMessage($var, DishConfig::class);
         $this->config = $var;
 
         return $this;
@@ -1343,7 +1349,7 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.InitializationDurationSeconds initialization_duration_seconds = 1028 [json_name = "initializationDurationSeconds"];</code>
      *
-     * @return \SpaceX\API\Device\InitializationDurationSeconds|null
+     * @return InitializationDurationSeconds|null
      */
     public function getInitializationDurationSeconds()
     {
@@ -1363,12 +1369,12 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.InitializationDurationSeconds initialization_duration_seconds = 1028 [json_name = "initializationDurationSeconds"];</code>
      *
-     * @param  \SpaceX\API\Device\InitializationDurationSeconds  $var
+     * @param  InitializationDurationSeconds  $var
      * @return $this
      */
     public function setInitializationDurationSeconds($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\InitializationDurationSeconds::class);
+        GPBUtil::checkMessage($var, InitializationDurationSeconds::class);
         $this->initialization_duration_seconds = $var;
 
         return $this;
@@ -1494,7 +1500,7 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
      */
     public function setConnectedRouters($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::STRING);
         $this->connected_routers = $arr;
 
         return $this;
@@ -1503,7 +1509,7 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.PLCStats plc_stats = 1041 [json_name = "plcStats"];</code>
      *
-     * @return \SpaceX\API\Device\PLCStats|null
+     * @return PLCStats|null
      */
     public function getPlcStats()
     {
@@ -1523,12 +1529,12 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.PLCStats plc_stats = 1041 [json_name = "plcStats"];</code>
      *
-     * @param  \SpaceX\API\Device\PLCStats  $var
+     * @param  PLCStats  $var
      * @return $this
      */
     public function setPlcStats($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\PLCStats::class);
+        GPBUtil::checkMessage($var, PLCStats::class);
         $this->plc_stats = $var;
 
         return $this;
@@ -1571,7 +1577,7 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishUpsuStats upsu_stats = 1043 [json_name = "upsuStats"];</code>
      *
-     * @return \SpaceX\API\Device\DishUpsuStats|null
+     * @return DishUpsuStats|null
      */
     public function getUpsuStats()
     {
@@ -1591,12 +1597,12 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishUpsuStats upsu_stats = 1043 [json_name = "upsuStats"];</code>
      *
-     * @param  \SpaceX\API\Device\DishUpsuStats  $var
+     * @param  DishUpsuStats  $var
      * @return $this
      */
     public function setUpsuStats($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\DishUpsuStats::class);
+        GPBUtil::checkMessage($var, DishUpsuStats::class);
         $this->upsu_stats = $var;
 
         return $this;
@@ -1605,7 +1611,7 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishApsStats aps_stats = 1048 [json_name = "apsStats"];</code>
      *
-     * @return \SpaceX\API\Device\DishApsStats|null
+     * @return DishApsStats|null
      */
     public function getApsStats()
     {
@@ -1625,12 +1631,12 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishApsStats aps_stats = 1048 [json_name = "apsStats"];</code>
      *
-     * @param  \SpaceX\API\Device\DishApsStats  $var
+     * @param  DishApsStats  $var
      * @return $this
      */
     public function setApsStats($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\DishApsStats::class);
+        GPBUtil::checkMessage($var, DishApsStats::class);
         $this->aps_stats = $var;
 
         return $this;
@@ -1639,7 +1645,7 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.Quaternion ned2dish_quaternion = 1049 [json_name = "ned2dishQuaternion"];</code>
      *
-     * @return \SpaceX\API\Device\Quaternion|null
+     * @return Quaternion|null
      */
     public function getNed2DishQuaternion()
     {
@@ -1659,12 +1665,12 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.Quaternion ned2dish_quaternion = 1049 [json_name = "ned2dishQuaternion"];</code>
      *
-     * @param  \SpaceX\API\Device\Quaternion  $var
+     * @param  Quaternion  $var
      * @return $this
      */
     public function setNed2DishQuaternion($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\Quaternion::class);
+        GPBUtil::checkMessage($var, Quaternion::class);
         $this->ned2dish_quaternion = $var;
 
         return $this;
@@ -1673,7 +1679,7 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.DishGetStatusResponse.DownstreamRoutersEntry downstream_routers = 1050 [json_name = "downstreamRouters"];</code>
      *
-     * @return RepeatedField<\SpaceX\API\Device\DishGetStatusResponse\DownstreamRoutersEntry>
+     * @return RepeatedField<DownstreamRoutersEntry>
      */
     public function getDownstreamRouters()
     {
@@ -1683,12 +1689,12 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>repeated .SpaceX.API.Device.DishGetStatusResponse.DownstreamRoutersEntry downstream_routers = 1050 [json_name = "downstreamRouters"];</code>
      *
-     * @param  \SpaceX\API\Device\DishGetStatusResponse\DownstreamRoutersEntry[]  $var
+     * @param  DownstreamRoutersEntry[]  $var
      * @return $this
      */
     public function setDownstreamRouters($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SpaceX\API\Device\DishGetStatusResponse\DownstreamRoutersEntry::class);
+        $arr = GPBUtil::checkRepeatedField($var, GPBType::MESSAGE, DownstreamRoutersEntry::class);
         $this->downstream_routers = $arr;
 
         return $this;
@@ -1722,7 +1728,7 @@ class DishGetStatusResponse extends \Google\Protobuf\Internal\Message
      */
     public function setAccountShard($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\AccountShard::class);
+        GPBUtil::checkEnum($var, AccountShard::class);
         $this->account_shard = $var;
 
         return $this;

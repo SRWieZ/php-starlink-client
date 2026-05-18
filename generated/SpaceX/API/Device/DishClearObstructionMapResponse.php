@@ -6,10 +6,13 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Dish;
+
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.DishClearObstructionMapResponse</code>
  */
-class DishClearObstructionMapResponse extends \Google\Protobuf\Internal\Message
+class DishClearObstructionMapResponse extends Message
 {
     /**
      * Constructor.
@@ -21,7 +24,7 @@ class DishClearObstructionMapResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Dish::initOnce();
+        Dish::initOnce();
         parent::__construct($data);
     }
 }

@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Device;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.DishGetEmcResponse</code>
  */
-class DishGetEmcResponse extends \Google\Protobuf\Internal\Message
+class DishGetEmcResponse extends Message
 {
     /**
      * Generated from protobuf field <code>optional string uuid = 2 [json_name = "uuid"];</code>
@@ -329,7 +331,7 @@ class DishGetEmcResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Device::initOnce();
+        Device::initOnce();
         parent::__construct($data);
     }
 

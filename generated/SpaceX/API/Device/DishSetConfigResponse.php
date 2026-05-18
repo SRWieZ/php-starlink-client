@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Dish;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.DishSetConfigResponse</code>
  */
-class DishSetConfigResponse extends \Google\Protobuf\Internal\Message
+class DishSetConfigResponse extends Message
 {
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishConfig updated_dish_config = 1 [json_name = "updatedDishConfig"];</code>
@@ -35,14 +37,14 @@ class DishSetConfigResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Dish::initOnce();
+        Dish::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishConfig updated_dish_config = 1 [json_name = "updatedDishConfig"];</code>
      *
-     * @return \SpaceX\API\Device\DishConfig|null
+     * @return DishConfig|null
      */
     public function getUpdatedDishConfig()
     {
@@ -62,12 +64,12 @@ class DishSetConfigResponse extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>optional .SpaceX.API.Device.DishConfig updated_dish_config = 1 [json_name = "updatedDishConfig"];</code>
      *
-     * @param  \SpaceX\API\Device\DishConfig  $var
+     * @param  DishConfig  $var
      * @return $this
      */
     public function setUpdatedDishConfig($var)
     {
-        GPBUtil::checkMessage($var, \SpaceX\API\Device\DishConfig::class);
+        GPBUtil::checkMessage($var, DishConfig::class);
         $this->updated_dish_config = $var;
 
         return $this;

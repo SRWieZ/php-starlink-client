@@ -7,11 +7,13 @@
 namespace SpaceX\API\Device;
 
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Wifi;
 
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.WifiSetMeshDeviceTrustRequest</code>
  */
-class WifiSetMeshDeviceTrustRequest extends \Google\Protobuf\Internal\Message
+class WifiSetMeshDeviceTrustRequest extends Message
 {
     /**
      * Generated from protobuf field <code>optional string device_id = 1 [json_name = "deviceId"];</code>
@@ -35,7 +37,7 @@ class WifiSetMeshDeviceTrustRequest extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Wifi::initOnce();
+        Wifi::initOnce();
         parent::__construct($data);
     }
 
@@ -101,7 +103,7 @@ class WifiSetMeshDeviceTrustRequest extends \Google\Protobuf\Internal\Message
      */
     public function setAuth($var)
     {
-        GPBUtil::checkEnum($var, \SpaceX\API\Device\MeshAuth::class);
+        GPBUtil::checkEnum($var, MeshAuth::class);
         $this->auth = $var;
 
         return $this;

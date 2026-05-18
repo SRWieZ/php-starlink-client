@@ -6,10 +6,13 @@
 
 namespace SpaceX\API\Device;
 
+use Google\Protobuf\Internal\Message;
+use GPBMetadata\SpacexApi\Device\Dish;
+
 /**
  * Generated from protobuf message <code>SpaceX.API.Device.DishFactoryResetResponse</code>
  */
-class DishFactoryResetResponse extends \Google\Protobuf\Internal\Message
+class DishFactoryResetResponse extends Message
 {
     /**
      * Constructor.
@@ -21,7 +24,7 @@ class DishFactoryResetResponse extends \Google\Protobuf\Internal\Message
      */
     public function __construct($data = null)
     {
-        \GPBMetadata\SpacexApi\Device\Dish::initOnce();
+        Dish::initOnce();
         parent::__construct($data);
     }
 }
